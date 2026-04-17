@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary, #002B5B);
+  --color-primary-container: var(--primary-container, #046BD2);
+  --color-primary-fixed: var(--primary-fixed, #D6E3FF);
+  --color-on-primary: var(--on-primary, #FFFFFF);
+  --color-on-primary-container: var(--on-primary-container, #EBEFFF);
+  
+  --color-secondary: var(--secondary, #111C2D);
+  --color-secondary-cyan: var(--secondary-cyan, #06D3AA);
+  --color-secondary-fixed: var(--secondary-fixed, #57FCD1);
+  --color-on-secondary: var(--on-secondary, #FFFFFF);
+  
+  --color-surface: #F9F9FF;
+  --color-surface-low: #F0F3FF;
+  --color-surface-lowest: #FFFFFF;
+  --color-surface-dim: #CFDAF2;
+  --color-surface-variant: #D8E3FB;
+  --color-surface-bright: #F9F9FF;
+  
+  --color-on-surface: #111C2D;
+  --color-on-surface-variant: #414753;
+  --color-outline-variant: #C1C6D5;
+  
+  --font-manrope: "Manrope", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  
+  --shadow-ambient: 0 12px 32px -4px rgba(17, 28, 45, 0.06);
+  --shadow-premium: 0 24px 64px -12px rgba(17, 28, 45, 0.12);
+  
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-primary font-inter antialiased;
+  }
+
+  h1 { @apply text-7xl md:text-9xl; }
+  h2 { @apply text-5xl md:text-8xl; }
+  h3 { @apply text-4xl md:text-6xl; }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-manrope font-black tracking-tighter leading-[1.05];
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-surface/80 backdrop-blur-xl border border-surface-lowest/20;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl bg-gradient-to-r from-secondary-cyan to-primary-container text-white font-manrope font-semibold transition-all hover:scale-105 active:scale-95 shadow-ambient;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-xl border-2 border-primary-container/20 text-primary font-manrope font-semibold transition-all hover:bg-primary-container/5 active:scale-95;
+  }
+
+  .card-glass {
+    @apply bg-surface-lowest rounded-2xl p-6 shadow-ambient border border-surface-variant/50 transition-all hover:-translate-y-1 hover:shadow-lg;
+  }
+}
