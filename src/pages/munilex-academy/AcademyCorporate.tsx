@@ -165,7 +165,7 @@ const AcademyCorporate = () => {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-2xl text-white/50 max-w-2xl mx-auto mb-12 font-medium leading-relaxed"
           >
-            Digitaliza tu centro con tecnología de grado militar. Más eficiencia para tus tutores, mejores resultados para tus alumnos.
+            No somos un CRM. Somos el ecosistema de IA que lleva la formación de tu centro al **Next Level**. Digitaliza tu academia con tecnología de vanguardia y escala tu éxito.
           </motion.p>
 
           <motion.div
@@ -197,6 +197,61 @@ const AcademyCorporate = () => {
                 <p className="text-white/40 font-medium leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Next Level Value Proposition */}
+      <section className="py-32 px-6 relative overflow-hidden bg-gradient-to-b from-[#0E0E0E] to-black">
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-secondary-cyan/5 rounded-full blur-[120px] -translate-y-1/2 -ml-64" />
+        
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
+          <div className="flex-1">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-xs font-black uppercase tracking-[0.4em] text-[#d4af37] mb-6"
+            >
+              MUNILEX CORPORATE ECOSYSTEM
+            </motion.div>
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-tight">
+              Llevando tu academia al <span className="text-secondary-cyan italic">Siguiente Nivel</span>
+            </h2>
+            <div className="space-y-6">
+              {[
+                { title: "Escalabilidad Exponencial", text: "Multiplica tu capacidad de alumnos sin aumentar tus costes de personal. Nuestra IA absorbe la carga operativa." },
+                { title: "Prestigio Tecnológico", text: "Posiciónate como el centro más avanzado de tu sector. Ofrece herramientas de estudio que la competencia no puede replicar." },
+                { title: "Analítica Predictiva", text: "Adelántate a los resultados de tus alumnos. Detecta debilidades en bloques temáticos antes de los exámenes oficiales." }
+              ].map((point, i) => (
+                <div key={i} className="flex gap-5 group">
+                  <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full mt-2.5 group-hover:scale-150 transition-transform" />
+                  <div>
+                    <h4 className="text-xl font-bold mb-1 group-hover:text-white transition-colors">{point.title}</h4>
+                    <p className="text-white/40 leading-relaxed">{point.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex-1 relative">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative p-2 bg-gradient-to-br from-[#d4af37]/20 to-transparent rounded-[3rem] overflow-hidden"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000" 
+                alt="High-tech classroom" 
+                className="rounded-[2.8rem] opacity-70 grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+              <div className="absolute bottom-10 left-10 right-10 p-8 bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl">
+                <div className="text-secondary-cyan font-black text-2xl mb-2 tracking-tighter">EFICIENCIA +90%</div>
+                <p className="text-xs text-white/60 font-medium">Automatización de contenidos y tutoría proactiva.</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

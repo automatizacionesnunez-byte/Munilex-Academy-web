@@ -60,16 +60,16 @@ const ScrollToTop = () => {
 // Site Layout Manager
 const SiteLayout = ({ children, scaleX }: { children: React.ReactNode, scaleX: any }) => {
   const { pathname } = useLocation();
-  const isAcademy = pathname.startsWith('/academy');
+  const isAcademySection = pathname.startsWith('/academy') || pathname.startsWith('/munilex-corporate');
 
   return (
     <div className="min-h-screen bg-surface">
       <motion.div
-        className={`fixed top-0 left-0 right-0 h-1 z-[60] origin-left ${isAcademy ? 'bg-secondary-cyan' : 'bg-primary-container'}`}
+        className={`fixed top-0 left-0 right-0 h-1 z-[60] origin-left ${isAcademySection ? 'bg-secondary-cyan' : 'bg-primary-container'}`}
         style={{ scaleX }}
       />
       
-      {isAcademy ? <AcademyNavbar /> : <Navbar />}
+      {isAcademySection ? <AcademyNavbar /> : <Navbar />}
       
       <main>
         {children}
