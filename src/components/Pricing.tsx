@@ -111,7 +111,7 @@ const Pricing = ({ hideHeader = false }: PricingProps) => {
               viewport={{ once: true }}
               className="text-5xl md:text-8xl font-black mb-8 text-on-surface tracking-tighter"
             >
-              Planes para el <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-cyan">presente y futuro</span> administrativo
+              Planes para tu <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-cyan">presente y tu futura</span> carrera profesional
             </motion.h2>
             <p className="text-xl text-on-surface-variant font-medium">
               Elegir Munilex es apostar por una herramienta que crece contigo: desde tu primer tema hasta tu informe de secretaría más complejo.

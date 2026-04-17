@@ -86,7 +86,7 @@ const Home = () => {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-8xl font-black tracking-tighter mb-12 leading-[0.9] max-w-5xl mx-auto text-secondary italic"
           >
-            La Inteligencia que <span className="text-primary-container not-italic">revoluciona</span> el Sector Jurídico-Académico
+            La Inteligencia que <span className="text-primary-container not-italic">revoluciona</span> tu presente y potencia tu futuro profesional
           </motion.h1>
           
           <motion.p
@@ -95,7 +95,7 @@ const Home = () => {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-16 font-medium leading-relaxed opacity-80"
           >
-            Desde la preparación de élite hasta la gestión administrativa de alto nivel. Munilex une el poder del conocimiento con la precisión de la ejecución.
+            Dominio legal total para tu día a día profesional y la preparación más avanzada para tu próximo gran salto en la Administración.
           </motion.p>
 
           <motion.div
@@ -105,11 +105,11 @@ const Home = () => {
             className="flex flex-wrap justify-center gap-6"
           >
             <Link to="/servicios" className="group bg-secondary text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-premium border border-white/10 flex items-center gap-3">
-              Munilex para Funcionarios
+              Soluciones para Funcionarios
               <ShieldCheck className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity" />
             </Link>
             <Link to="/academy" className="group bg-gradient-to-br from-[#241a00] to-black text-[#d4af37] px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(212,175,55,0.1)] border border-[#d4af37]/30 flex items-center gap-3">
-              Munilex Academy
+              Acceso a la Academia
               <Landmark className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity" />
             </Link>
           </motion.div>
@@ -119,6 +119,18 @@ const Home = () => {
       {/* Bento Dual Path Section */}
       <section className="py-24 px-6 md:px-8 border-y border-outline-variant bg-surface-low relative">
         <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+             <motion.h3 
+               initial={{ opacity: 0, scale: 0.9 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               className="text-3xl md:text-5xl font-black text-secondary tracking-tight mb-4 uppercase"
+             >
+               ¿Cómo quieres transformar tu <span className="text-primary-container">carrera</span> hoy?
+             </motion.h3>
+             <p className="text-xl text-on-surface-variant font-medium opacity-60">Selecciona el ecosistema que mejor se adapta a tu momento vital.</p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Officials Path */}
             <motion.div
@@ -129,15 +141,15 @@ const Home = () => {
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-3xl -mr-32 -mt-32" />
               <div>
-                <div className="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform text-primary-container">
-                  <Scale className="w-8 h-8" />
+                <div className="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform text-primary-container font-black text-xl">
+                  v3
                 </div>
-                <h3 className="text-4xl font-black text-secondary tracking-tight mb-6">Poder Público</h3>
+                <h3 className="text-4xl font-black text-secondary tracking-tight mb-6 italic">Munilex <span className="text-primary-container not-italic">para Funcionarios</span></h3>
                 <p className="text-xl text-on-surface-variant font-medium mb-10 leading-relaxed opacity-70">
-                  Herramientas de IA diseñadas para Secretarios, Interventores y Administrativos. Redacte informes, valide normativa y agilice expedientes en segundos.
+                  Potencia tu desempeño profesional diario. Herramientas de IA soberana para la gestión administrativa de élite y formación continua corporate.
                 </p>
                 <ul className="space-y-4 mb-12">
-                   {["Redacción de informes jurídicos", "Buscador semántico BOE/DOG", "Validación de pliegos LCSP"].map((item, i) => (
+                   {["Informes técnicos en segundos", "Auditoría normativa real-time", "Red de inteligencia inter-municipal"].map((item, i) => (
                      <li key={i} className="flex items-center gap-3 text-secondary font-bold text-sm">
                        <CheckCircle className="w-5 h-5 text-primary-container" />
                        {item}
@@ -147,9 +159,9 @@ const Home = () => {
               </div>
               <Link 
                 to="/servicios" 
-                className="w-full py-5 bg-surface-lowest border border-outline-variant text-secondary font-black text-xs uppercase tracking-widest rounded-2xl text-center hover:bg-secondary hover:text-white transition-all shadow-sm"
+                className="w-full py-5 bg-secondary text-white font-black text-xs uppercase tracking-widest rounded-2xl text-center hover:scale-[1.02] transition-all shadow-lg active:scale-95"
               >
-                Explorar Soluciones Profesionales
+                Potenciar mi Carrer Profesional
               </Link>
             </motion.div>
 
@@ -162,17 +174,17 @@ const Home = () => {
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 blur-3xl -mr-32 -mt-32" />
               <div>
-                <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform text-[#d4af37]">
-                  <GraduationCap className="w-8 h-8" />
+                <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
+                   <Sparkles className="w-8 h-8 text-[#d4af37]" />
                 </div>
-                <h3 className="text-4xl font-black text-white tracking-tight mb-6">Poder Formativo</h3>
+                <h3 className="text-4xl font-black text-white tracking-tight mb-6 italic">Munilex <span className="text-[#d4af37] not-italic">Academy</span></h3>
                 <p className="text-xl text-white/50 font-medium mb-10 leading-relaxed">
-                  La academia que redefine la preparación de oposiciones. Metodología de élite asistida por IA para aspirantes que no permiten el fallo.
+                  Asegura tu futuro en la Administración. La metodología de preparación más avanzada asistida por IA para opositores que buscan la excelencia.
                 </p>
                 <ul className="space-y-4 mb-12">
-                   {["Simulacros infinitos adaptativos", "Tutoría legal IA 24/7", "Temarios vivos auto-actualizables"].map((item, i) => (
+                   {["Simulacros de examen adaptativos", "Tutoría legal IA 24/7", "Temarios actualizados al minuto"].map((item, i) => (
                      <li key={i} className="flex items-center gap-3 text-white/80 font-bold text-sm">
-                       <Sparkles className="w-5 h-5 text-[#d4af37]" />
+                       <ShieldCheck className="w-5 h-5 text-[#d4af37]" />
                        {item}
                      </li>
                    ))}
@@ -180,9 +192,9 @@ const Home = () => {
               </div>
               <Link 
                 to="/academy" 
-                className="w-full py-5 bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00] font-black text-xs uppercase tracking-widest rounded-2xl text-center hover:shadow-[0_10px_30px_#d4af3750] transition-all"
+                className="w-full py-5 bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00] font-black text-xs uppercase tracking-widest rounded-2xl text-center hover:scale-[1.02] transition-all shadow-lg active:scale-95"
               >
-                Acceder a la Academia de Élite
+                Asegurar mi Futuro Profesional
               </Link>
             </motion.div>
           </div>
