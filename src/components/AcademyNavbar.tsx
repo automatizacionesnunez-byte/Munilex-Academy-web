@@ -4,27 +4,28 @@ import { ChevronDown, GraduationCap, ArrowUpRight } from 'lucide-react';
 
 const AcademyNavbar = () => {
   const navItems = [
-    { name: 'Inicio', path: '/' },
+    { name: 'Inicio', path: '/academy' },
     { 
       name: 'Oposiciones', 
-      path: '/#rutas',
+      path: '/academy#rutas',
       subItems: [
-        { name: 'Habilitados Nacionales', path: '/habilitados' },
-        { name: 'Administración General (AGE)', path: '/age' },
-        { name: 'Policía Nacional', path: '/policia' },
-        { name: 'Guardia Civil', path: '/guardiacivil' },
-        { name: 'Instituciones Penitenciarias', path: '/iipp' },
+        { name: 'Habilitados Nacionales', path: '/academy/habilitados' },
+        { name: 'Administración General (AGE)', path: '/academy/age' },
+        { name: 'Policía Nacional', path: '/academy/policia' },
+        { name: 'Guardia Civil', path: '/academy/guardiacivil' },
+        { name: 'Instituciones Penitenciarias', path: '/academy/iipp' },
       ]
     },
-    { name: 'Precios', path: '/precios' },
-    { name: 'Sobre Nosotros', path: '/sobre-nosotros' },
-    { name: 'Contacto', path: '/contacto' },
+    { name: 'Para Academias', path: '/academy/corporate' },
+    { name: 'Precios', path: '/academy/precios' },
+    { name: 'Sobre Nosotros', path: '/academy/sobre-nosotros' },
+    { name: 'Contacto', path: '/academy/contacto' },
   ];
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex justify-between items-center text-[#E5E2E1]">
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link to="/academy" className="flex items-center gap-3 group">
           <motion.div 
             whileHover={{ scale: 1.05, rotate: 2 }}
             className="w-10 h-10 bg-[#d4af37] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all"

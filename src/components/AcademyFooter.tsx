@@ -30,21 +30,22 @@ const AcademyFooter = () => {
         <div>
           <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-secondary-cyan">Campus</h4>
           <ul className="space-y-4 font-bold text-lg">
-            <li><Link to="/" className="text-white/60 hover:text-white transition-colors">Inicio</Link></li>
-            <li><Link to="/precios" className="text-white/60 hover:text-white transition-colors">Planes y Precios</Link></li>
-            <li><Link to="/sobre-nosotros" className="text-white/60 hover:text-white transition-colors">Sobre la Academia</Link></li>
-            <li><Link to="/contacto" className="text-white/60 hover:text-white transition-colors">Contacto Alumnos</Link></li>
+            <li><Link to="/academy" className="text-white/60 hover:text-white transition-colors">Inicio</Link></li>
+            <li><Link to="/academy/corporate" className="text-white/60 hover:text-white transition-colors">Para Academias</Link></li>
+            <li><Link to="/academy/precios" className="text-white/60 hover:text-white transition-colors">Planes y Precios</Link></li>
+            <li><Link to="/academy/sobre-nosotros" className="text-white/60 hover:text-white transition-colors">Sobre la Academia</Link></li>
+            <li><Link to="/academy/contacto" className="text-white/60 hover:text-white transition-colors">Contacto Alumnos</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-secondary-cyan">Oposiciones</h4>
           <ul className="space-y-4 font-bold">
-            <li><Link to="/habilitados" className="text-white/60 hover:text-white transition-colors text-sm">Habilitados Nacionales</Link></li>
-            <li><Link to="/age" className="text-white/60 hover:text-white transition-colors text-sm">Administración AGE</Link></li>
-            <li><Link to="/policia" className="text-white/60 hover:text-white transition-colors text-sm">Policía Nacional</Link></li>
-            <li><Link to="/guardiacivil" className="text-white/60 hover:text-white transition-colors text-sm">Guardia Civil</Link></li>
-            <li><Link to="/iipp" className="text-white/60 hover:text-white transition-colors text-sm">Prisiones (IIPP)</Link></li>
+            <li><Link to="/academy/habilitados" className="text-white/60 hover:text-white transition-colors text-sm">Habilitados Nacionales</Link></li>
+            <li><Link to="/academy/age" className="text-white/60 hover:text-white transition-colors text-sm">Administración AGE</Link></li>
+            <li><Link to="/academy/policia" className="text-white/60 hover:text-white transition-colors text-sm">Policía Nacional</Link></li>
+            <li><Link to="/academy/guardiacivil" className="text-white/60 hover:text-white transition-colors text-sm">Guardia Civil</Link></li>
+            <li><Link to="/academy/iipp" className="text-white/60 hover:text-white transition-colors text-sm">Prisiones (IIPP)</Link></li>
           </ul>
         </div>
       </div>
@@ -52,9 +53,9 @@ const AcademyFooter = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8 mt-24 pt-12 border-t border-white/10 text-center flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-[13px] text-white/40 font-medium">© 2026 Munilex Academy. El éxito es táctico. Todos los derechos reservados.</p>
         <div className="flex gap-8 text-[13px] font-bold text-white/30">
-          <Link to="/aviso-legal" className="hover:text-white transition-colors">Aviso Legal</Link>
-          <Link to="/privacidad" className="hover:text-white transition-colors">Privacidad</Link>
-          <Link to="/terminos" className="hover:text-white transition-colors">Términos</Link>
+          <Link to="/academy/aviso-legal" className="hover:text-white transition-colors">Aviso Legal</Link>
+          <Link to="/academy/privacidad" className="hover:text-white transition-colors">Privacidad</Link>
+          <Link to="/academy/terminos" className="hover:text-white transition-colors">Términos</Link>
         </div>
       </div>
     </footer>

@@ -1,8 +1,23 @@
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider, useTheme } from './contexts/ThemeContext';
+import Navbar from './components/Navbar';
 import AcademyNavbar from './components/AcademyNavbar';
+import Footer from './components/Footer';
 import AcademyFooter from './components/AcademyFooter';
+
+// Corporate Pages
+import Home from './pages/munilex/Home';
+import Services from './pages/munilex/Services';
+import PricingPage from './pages/munilex/Pricing';
+import About from './pages/munilex/About';
+import Contacto from './pages/munilex/Contacto';
+import AvisoLegalCorp from './pages/munilex/AvisoLegal';
+import PrivacidadCorp from './pages/munilex/Privacidad';
+import TerminosCorp from './pages/munilex/Terminos';
+
+// Academy Pages
+import AcademyHome from './pages/munilex-academy/Academy';
 import AcademyPricing from './pages/munilex-academy/AcademyPricing';
 import AcademyAbout from './pages/munilex-academy/AcademyAbout';
 import AcademyContact from './pages/munilex-academy/AcademyContact';
@@ -11,18 +26,24 @@ import AcademyHabilitados from './pages/munilex-academy/AcademyHabilitados';
 import AcademyIIPP from './pages/munilex-academy/AcademyIIPP';
 import AcademyPolicia from './pages/munilex-academy/AcademyPolicia';
 import AcademyGuardiaCivil from './pages/munilex-academy/AcademyGuardiaCivil';
-import Academy from './pages/munilex-academy/Academy';
+import AcademyCorporate from './pages/munilex-academy/AcademyCorporate';
 import { AvisoLegal, Privacidad, Terminos } from './pages/munilex-academy/AcademyLegal';
+
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect } from 'react';
 
-// Theme controller to ensure we are in academy mode
+// Theme controller to switch themes based on route
 const ThemeController = () => {
+  const { pathname } = useLocation();
   const { setMode } = useTheme();
 
   useEffect(() => {
-    setMode('academy');
-  }, [setMode]);
+    if (pathname.startsWith('/academy')) {
+      setMode('academy');
+    } else {
+      setMode('corporate');
+    }
+  }, [pathname, setMode]);
 
   return null;
 };
@@ -38,20 +59,23 @@ const ScrollToTop = () => {
 
 // Site Layout Manager
 const SiteLayout = ({ children, scaleX }: { children: React.ReactNode, scaleX: any }) => {
+  const { pathname } = useLocation();
+  const isAcademy = pathname.startsWith('/academy');
+
   return (
     <div className="min-h-screen bg-surface">
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 z-[60] origin-left bg-secondary-cyan"
+        className={`fixed top-0 left-0 right-0 h-1 z-[60] origin-left ${isAcademy ? 'bg-secondary-cyan' : 'bg-primary-container'}`}
         style={{ scaleX }}
       />
       
-      <AcademyNavbar />
+      {isAcademy ? <AcademyNavbar /> : <Navbar />}
       
       <main>
         {children}
       </main>
 
-      <AcademyFooter />
+      {isAcademy ? <AcademyFooter /> : <Footer />}
     </div>
   );
 };
@@ -72,24 +96,18 @@ function App() {
           <ScrollToTop />
           <SiteLayout scaleX={scaleX}>
             <Routes>
-              {/* Home redirect to academy or keeping the path structure if desired */}
-              <Route path="/" element={<Academy />} />
-              <Route path="/academy" element={<Navigate to="/" replace />} />
-              
-              <Route path="/precios" element={<AcademyPricing />} />
-              <Route path="/sobre-nosotros" element={<AcademyAbout />} />
-              <Route path="/contacto" element={<AcademyContact />} />
-              <Route path="/age" element={<AcademyAge />} />
-              <Route path="/habilitados" element={<AcademyHabilitados />} />
-              <Route path="/iipp" element={<AcademyIIPP />} />
-              <Route path="/policia" element={<AcademyPolicia />} />
-              <Route path="/guardiacivil" element={<AcademyGuardiaCivil />} />
-              
-              <Route path="/aviso-legal" element={<AvisoLegal />} />
-              <Route path="/privacidad" element={<Privacidad />} />
-              <Route path="/terminos" element={<Terminos />} />
-              
-              {/* Fallback for old /academy paths if the user keeps them */}
+              {/* Corporate Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/servicios" element={<Services />} />
+              <Route path="/precios" element={<PricingPage />} />
+              <Route path="/sobre-nosotros" element={<About />} />
+              <Route path="/contacto" element={<Contacto />} />
+              <Route path="/aviso-legal" element={<AvisoLegalCorp />} />
+              <Route path="/privacidad" element={<PrivacidadCorp />} />
+              <Route path="/terminos" element={<TerminosCorp />} />
+
+              {/* Academy Routes */}
+              <Route path="/academy" element={<AcademyHome />} />
               <Route path="/academy/precios" element={<AcademyPricing />} />
               <Route path="/academy/sobre-nosotros" element={<AcademyAbout />} />
               <Route path="/academy/contacto" element={<AcademyContact />} />
@@ -98,6 +116,13 @@ function App() {
               <Route path="/academy/iipp" element={<AcademyIIPP />} />
               <Route path="/academy/policia" element={<AcademyPolicia />} />
               <Route path="/academy/guardiacivil" element={<AcademyGuardiaCivil />} />
+              <Route path="/academy/corporate" element={<AcademyCorporate />} />
+              <Route path="/academy/aviso-legal" element={<AvisoLegal />} />
+              <Route path="/academy/privacidad" element={<Privacidad />} />
+              <Route path="/academy/terminos" element={<Terminos />} />
+              
+              {/* Fallback for root routes if they are in academy */}
+              <Route path="/precios-academia" element={<Navigate to="/academy/precios" replace />} />
             </Routes>
           </SiteLayout>
         </ThemeProvider>
