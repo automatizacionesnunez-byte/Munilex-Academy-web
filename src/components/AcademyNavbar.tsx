@@ -108,7 +108,3 @@ const AcademyNavbar = () => {
 };
 
 export default AcademyNavbar;
-  );
-};
-
-export default AcademyNavbar;
