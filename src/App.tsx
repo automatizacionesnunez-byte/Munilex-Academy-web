@@ -75,7 +75,7 @@ const SiteLayout = ({ children, scaleX }: { children: React.ReactNode, scaleX: a
         {children}
       </main>
 
-      {isAcademy ? <AcademyFooter /> : <Footer />}
+      {isAcademySection ? <AcademyFooter /> : <Footer />}
     </div>
   );
 };
