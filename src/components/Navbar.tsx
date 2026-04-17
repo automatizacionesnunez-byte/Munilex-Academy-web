@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Servicios', path: '/servicios' },
+    { name: 'Para Funcionarios', path: '/servicios' },
     { 
       name: 'Munilex Academy', 
       path: '/academy',
