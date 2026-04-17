@@ -1,6 +1,7 @@
 import Hero from '../../components/Hero';
 import Features from '../../components/Features';
 import Pricing from '../../components/Pricing';
+import { motion } from 'framer-motion';
 import { Clock, ShieldCheck, Zap, Activity, Landmark, Shield, Lock, Cpu, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -174,7 +175,7 @@ const Home = () => {
       </section>
 
       <Pricing />
-    </>
+    </div>
   );
 };
 
