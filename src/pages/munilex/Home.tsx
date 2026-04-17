@@ -17,10 +17,13 @@ import {
   FileText,
   Smartphone,
   CheckCircle,
-  Sparkles
+  Sparkles,
+  Layers,
+  Globe,
+  BarChart3,
+  Rocket
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Pricing from '../../components/Pricing';
 
 const Home = () => {
   const academyBodies = [
@@ -161,7 +164,7 @@ const Home = () => {
                 to="/servicios" 
                 className="w-full py-5 bg-secondary text-white font-black text-xs uppercase tracking-widest rounded-2xl text-center hover:scale-[1.02] transition-all shadow-lg active:scale-95"
               >
-                Potenciar mi Carrer Profesional
+                Potenciar mi Carrera Profesional
               </Link>
             </motion.div>
 
@@ -201,12 +204,111 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sinergy Ecosystem Section (Replaces Features) */}
+      {/* SaaS for Academies Section (NEW) */}
+      <section className="py-32 bg-surface-lowest relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-40">
+           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/10 rounded-full blur-[160px]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-outline-variant text-[10px] font-black uppercase tracking-widest mb-8 text-secondary">
+                 <Layers className="w-4 h-4 text-primary-container" />
+                 Soluciones White-Label
+              </div>
+              <h2 className="text-4xl md:text-7xl font-black text-secondary tracking-tighter mb-8 leading-[0.9]">
+                Cree su propia <span className="text-primary-container">Academia de Élite</span> con nuestra tecnología
+              </h2>
+              <p className="text-xl text-on-surface-variant font-medium mb-12 leading-relaxed">
+                ¿Gestiona una academia? Le entregamos una plataforma marca blanca completa, con su propia identidad visual y toda la potencia de la IA de Munilex integrada.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+                {[
+                  { icon: <Globe className="w-6 h-6" />, t: "Dominio Propio", d: "Su marca es la protagonista absoluta." },
+                  { icon: <Clock className="w-6 h-6" />, t: "Acceso 24/7", d: "Alumnos conectados sin interrupciones." },
+                  { icon: <Sparkles className="w-6 h-6" />, t: "Generador IA", t2: "Tests y material en segundos." },
+                  { icon: <BarChart3 className="w-6 h-6" />, t: "Analítica Pro", d: "Control total del progreso alumno." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                     <div className="w-12 h-12 bg-white rounded-xl shadow-ambient border border-outline-variant flex items-center justify-center text-primary-container flex-shrink-0">
+                        {item.icon}
+                     </div>
+                     <div>
+                        <h4 className="font-black text-secondary text-sm mb-1">{item.t}</h4>
+                        <p className="text-xs text-on-surface-variant font-medium opacity-70">{item.d || item.t2}</p>
+                     </div>
+                  </div>
+                ))}
+              </div>
+
+              <a 
+                href="https://wa.me/34605392912?text=Hola,%20me%20gustaría%20solicitar%20una%20plataforma%20Munilex%20para%20mi%20academia."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-secondary text-white rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-primary transition-all shadow-xl group"
+              >
+                Solicitar Demo Corporativa
+                <Rocket className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative z-10 bg-white rounded-[3rem] p-4 shadow-premium border border-outline-variant overflow-hidden">
+                 <div className="bg-surface-low rounded-[2.5rem] p-1 md:p-12 border border-outline-variant/50">
+                    <div className="flex items-center justify-between mb-8 pb-8 border-b border-outline-variant">
+                       <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 bg-secondary rounded-lg" />
+                          <div className="font-black text-secondary text-sm">Tu Academia <span className="text-[10px] opacity-40 block tracking-widest">DASHBOARD PROFESOR</span></div>
+                       </div>
+                       <div className="flex gap-2">
+                          <div className="w-3 h-3 rounded-full bg-red-400" />
+                          <div className="w-3 h-3 rounded-full bg-amber-400" />
+                          <div className="w-3 h-3 rounded-full bg-green-400" />
+                       </div>
+                    </div>
+                    <div className="space-y-6">
+                       <div className="h-4 w-1/3 bg-outline-variant rounded-full" />
+                       <div className="grid grid-cols-2 gap-4">
+                          <div className="h-24 bg-white rounded-2xl border border-outline-variant p-4">
+                             <div className="h-2 w-1/2 bg-primary-container/20 rounded-full mb-4" />
+                             <div className="h-8 w-3/4 bg-primary-container rounded-lg" />
+                          </div>
+                          <div className="h-24 bg-white rounded-2xl border border-outline-variant p-4">
+                             <div className="h-2 w-1/2 bg-secondary-cyan/20 rounded-full mb-4" />
+                             <div className="h-8 w-3/4 bg-secondary-cyan rounded-lg" />
+                          </div>
+                       </div>
+                       <div className="h-32 bg-white rounded-2xl border border-outline-variant p-6 flex items-center justify-center">
+                          <Brain className="w-12 h-12 text-primary-container/20" />
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary-container/20 rounded-full blur-3xl" />
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary-cyan/20 rounded-full blur-3xl" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sinergy Ecosystem Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="mb-24 text-center">
-            <h2 className="text-4xl md:text-6xl font-black text-secondary tracking-tighter mb-6 uppercase">Un solo motor, <span className="text-primary-container">dos revoluciones</span></h2>
-            <p className="text-xl text-on-surface-variant font-medium opacity-60">Tecnología soberana entrenada para dominar el marco legal español.</p>
+            <h2 className="text-4xl md:text-6xl font-black text-secondary tracking-tighter mb-6 uppercase">Un solo motor, <span className="text-primary-container">tres dimensiones</span></h2>
+            <p className="text-xl text-on-surface-variant font-medium opacity-60">Tecnología soberana entrenada para dominar el marco legal español en todos los niveles.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -358,8 +460,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <Pricing />
     </div>
   );
 };
