@@ -29,7 +29,7 @@ const Home = () => {
     },
     { 
       name: "Guardia Civil", 
-      path: "/academy/guardia-civil", 
+      path: "/academy/guardiacivil", 
       icon: <ShieldCheck className="w-6 h-6" />,
       color: "bg-green-500/10 text-green-600",
       desc: "Ingreso Benemérita"

@@ -31,7 +31,7 @@ const AcademyFooter = () => {
           <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-secondary-cyan">Campus</h4>
           <ul className="space-y-4 font-bold text-lg">
             <li><Link to="/academy" className="text-white/60 hover:text-white transition-colors">Inicio</Link></li>
-            <li><Link to="/academy/corporate" className="text-white/60 hover:text-white transition-colors">Para Academias</Link></li>
+            <li><Link to="/munilex-corporate" className="text-white/60 hover:text-white transition-colors">Impulsa tu Academia</Link></li>
             <li><Link to="/academy/precios" className="text-white/60 hover:text-white transition-colors">Planes y Precios</Link></li>
             <li><Link to="/academy/sobre-nosotros" className="text-white/60 hover:text-white transition-colors">Sobre la Academia</Link></li>
             <li><Link to="/academy/contacto" className="text-white/60 hover:text-white transition-colors">Contacto Alumnos</Link></li>
