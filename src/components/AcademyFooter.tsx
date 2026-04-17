@@ -9,7 +9,7 @@ const AcademyFooter = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 grid grid-cols-1 md:grid-cols-4 gap-16">
         <div className="md:col-span-2">
-          <Link to="/academy" className="text-3xl font-black tracking-tighter mb-8 inline-block">
+          <Link to="/" className="text-3xl font-black tracking-tighter mb-8 inline-block">
             MUNILEX<span className="text-secondary-cyan">ACADEMY</span>
           </Link>
           <p className="text-white/50 text-xl leading-relaxed max-w-sm font-manrope">
@@ -30,21 +30,21 @@ const AcademyFooter = () => {
         <div>
           <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-secondary-cyan">Campus</h4>
           <ul className="space-y-4 font-bold text-lg">
-            <li><Link to="/academy" className="text-white/60 hover:text-white transition-colors">Inicio</Link></li>
-            <li><Link to="/academy/precios" className="text-white/60 hover:text-white transition-colors">Planes y Precios</Link></li>
-            <li><Link to="/academy/sobre-nosotros" className="text-white/60 hover:text-white transition-colors">Sobre la Academia</Link></li>
-            <li><Link to="/academy/contacto" className="text-white/60 hover:text-white transition-colors">Contacto Alumnos</Link></li>
+            <li><Link to="/" className="text-white/60 hover:text-white transition-colors">Inicio</Link></li>
+            <li><Link to="/precios" className="text-white/60 hover:text-white transition-colors">Planes y Precios</Link></li>
+            <li><Link to="/sobre-nosotros" className="text-white/60 hover:text-white transition-colors">Sobre la Academia</Link></li>
+            <li><Link to="/contacto" className="text-white/60 hover:text-white transition-colors">Contacto Alumnos</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-secondary-cyan">Oposiciones</h4>
           <ul className="space-y-4 font-bold">
-            <li><Link to="/academy/habilitados" className="text-white/60 hover:text-white transition-colors text-sm">Habilitados Nacionales</Link></li>
-            <li><Link to="/academy/age" className="text-white/60 hover:text-white transition-colors text-sm">Administración AGE</Link></li>
-            <li><Link to="/academy/policia" className="text-white/60 hover:text-white transition-colors text-sm">Policía Nacional</Link></li>
-            <li><Link to="/academy/guardiacivil" className="text-white/60 hover:text-white transition-colors text-sm">Guardia Civil</Link></li>
-            <li><Link to="/academy/iipp" className="text-white/60 hover:text-white transition-colors text-sm">Prisiones (IIPP)</Link></li>
+            <li><Link to="/habilitados" className="text-white/60 hover:text-white transition-colors text-sm">Habilitados Nacionales</Link></li>
+            <li><Link to="/age" className="text-white/60 hover:text-white transition-colors text-sm">Administración AGE</Link></li>
+            <li><Link to="/policia" className="text-white/60 hover:text-white transition-colors text-sm">Policía Nacional</Link></li>
+            <li><Link to="/guardiacivil" className="text-white/60 hover:text-white transition-colors text-sm">Guardia Civil</Link></li>
+            <li><Link to="/iipp" className="text-white/60 hover:text-white transition-colors text-sm">Prisiones (IIPP)</Link></li>
           </ul>
         </div>
       </div>
