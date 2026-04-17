@@ -1,9 +1,26 @@
-import Hero from '../../components/Hero';
-import Features from '../../components/Features';
-import Pricing from '../../components/Pricing';
 import { motion } from 'framer-motion';
-import { Clock, ShieldCheck, Zap, Activity, Landmark, Shield, Lock, Cpu, ArrowUpRight } from 'lucide-react';
+import { 
+  Clock, 
+  ShieldCheck, 
+  Zap, 
+  Activity, 
+  Landmark, 
+  Shield, 
+  Lock, 
+  Cpu, 
+  ArrowUpRight, 
+  UserCheck, 
+  GraduationCap, 
+  Scale, 
+  Brain,
+  MessageCircle,
+  FileText,
+  Smartphone,
+  CheckCircle,
+  Sparkles
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Pricing from '../../components/Pricing';
 
 const Home = () => {
   const academyBodies = [
@@ -45,7 +62,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-surface">
+    <div className="bg-surface overflow-hidden">
       {/* Dynamic Dual Hero */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
@@ -69,7 +86,7 @@ const Home = () => {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-8xl font-black tracking-tighter mb-12 leading-[0.9] max-w-5xl mx-auto text-secondary italic"
           >
-            Munilex: La Inteligencia que <span className="text-primary-container not-italic">transforma</span> el Sector Público
+            La Inteligencia que <span className="text-primary-container not-italic">revoluciona</span> el Sector Jurídico-Académico
           </motion.h1>
           
           <motion.p
@@ -78,7 +95,7 @@ const Home = () => {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-16 font-medium leading-relaxed opacity-80"
           >
-            Desde la preparación de élite de futuros funcionarios hasta la gestión administrativa del día a día. Tu aliado estratégico en cada etapa de la carrera pública.
+            Desde la preparación de élite hasta la gestión administrativa de alto nivel. Munilex une el poder del conocimiento con la precisión de la ejecución.
           </motion.p>
 
           <motion.div
@@ -100,7 +117,7 @@ const Home = () => {
       </section>
 
       {/* Bento Dual Path Section */}
-      <section className="py-24 px-6 md:px-8 border-y border-outline-variant bg-surface-low">
+      <section className="py-24 px-6 md:px-8 border-y border-outline-variant bg-surface-low relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Officials Path */}
@@ -112,13 +129,21 @@ const Home = () => {
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-3xl -mr-32 -mt-32" />
               <div>
-                <div className="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
-                  <Activity className="w-8 h-8 text-primary-container" />
+                <div className="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform text-primary-container">
+                  <Scale className="w-8 h-8" />
                 </div>
                 <h3 className="text-4xl font-black text-secondary tracking-tight mb-6">Poder Público</h3>
                 <p className="text-xl text-on-surface-variant font-medium mb-10 leading-relaxed opacity-70">
                   Herramientas de IA diseñadas para Secretarios, Interventores y Administrativos. Redacte informes, valide normativa y agilice expedientes en segundos.
                 </p>
+                <ul className="space-y-4 mb-12">
+                   {["Redacción de informes jurídicos", "Buscador semántico BOE/DOG", "Validación de pliegos LCSP"].map((item, i) => (
+                     <li key={i} className="flex items-center gap-3 text-secondary font-bold text-sm">
+                       <CheckCircle className="w-5 h-5 text-primary-container" />
+                       {item}
+                     </li>
+                   ))}
+                </ul>
               </div>
               <Link 
                 to="/servicios" 
@@ -137,13 +162,21 @@ const Home = () => {
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 blur-3xl -mr-32 -mt-32" />
               <div>
-                <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
-                  <Landmark className="w-8 h-8 text-[#d4af37]" />
+                <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform text-[#d4af37]">
+                  <GraduationCap className="w-8 h-8" />
                 </div>
                 <h3 className="text-4xl font-black text-white tracking-tight mb-6">Poder Formativo</h3>
                 <p className="text-xl text-white/50 font-medium mb-10 leading-relaxed">
                   La academia que redefine la preparación de oposiciones. Metodología de élite asistida por IA para aspirantes que no permiten el fallo.
                 </p>
+                <ul className="space-y-4 mb-12">
+                   {["Simulacros infinitos adaptativos", "Tutoría legal IA 24/7", "Temarios vivos auto-actualizables"].map((item, i) => (
+                     <li key={i} className="flex items-center gap-3 text-white/80 font-bold text-sm">
+                       <Sparkles className="w-5 h-5 text-[#d4af37]" />
+                       {item}
+                     </li>
+                   ))}
+                </ul>
               </div>
               <Link 
                 to="/academy" 
@@ -156,20 +189,160 @@ const Home = () => {
         </div>
       </section>
 
-      <Features />
+      {/* Sinergy Ecosystem Section (Replaces Features) */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="mb-24 text-center">
+            <h2 className="text-4xl md:text-6xl font-black text-secondary tracking-tighter mb-6 uppercase">Un solo motor, <span className="text-primary-container">dos revoluciones</span></h2>
+            <p className="text-xl text-on-surface-variant font-medium opacity-60">Tecnología soberana entrenada para dominar el marco legal español.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { 
+                title: "IA Soberana", 
+                desc: "Algoritmos entrenados exclusivamente en jurisprudencia y normativa española. Sin sesgos, solo rigor legal.",
+                icon: <Cpu className="w-10 h-10" />,
+                color: "bg-surface-lowest"
+              },
+              { 
+                title: "Actualización Síncrona", 
+                desc: "Si el BOE cambia, Munilex cambia. Tanto tu temario de estudio como tus borradores de informe se mantienen al día.",
+                icon: <Activity className="w-10 h-10" />,
+                color: "bg-surface-lowest"
+              },
+              { 
+                title: "Seguridad ENS", 
+                desc: "Cumplimiento estricto del Esquema Nacional de Seguridad. Tus datos y los de tu administración protegidos.",
+                icon: <Shield className="w-10 h-10" />,
+                color: "bg-surface-lowest"
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className={`${item.color} p-12 rounded-[2.5rem] border border-outline-variant hover:shadow-premium transition-all group`}
+              >
+                <div className="w-16 h-16 bg-white rounded-2xl shadow-ambient flex items-center justify-center mb-8 group-hover:scale-110 transition-transform text-secondary">
+                  {item.icon}
+                </div>
+                <h4 className="text-2xl font-black text-secondary mb-4 tracking-tight">{item.title}</h4>
+                <p className="text-on-surface-variant leading-relaxed font-medium opacity-70">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       
-      <section className="py-32 bg-surface-low border-y border-surface-variant/30">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="mb-12 italic text-secondary">"Voz del Secretario"</h2>
-          <p className="text-2xl text-primary/80 max-w-4xl mx-auto font-medium leading-relaxed">
-            "Munilex no es solo una IA, es el respaldo que todo habilitado nacional necesita hoy en día. La precisión en la redacción de informes ha cambiado drásticamente mi jornada."
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <div className="w-12 h-12 bg-primary-container rounded-full" />
-            <div className="text-left font-manrope">
-              <div className="font-bold">E. García</div>
-              <div className="text-xs opacity-50 font-bold tracking-widest uppercase">Secretariado de Ayuntamiento</div>
+      {/* Dual Showcase Section */}
+      <section className="py-32 bg-secondary text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary-container blur-[120px]" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-secondary-cyan blur-[120px]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <h2 className="text-4xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9]">Inteligencia que <span className="text-primary-container">empodera</span> tu carrera</h2>
+              <p className="text-xl text-white/50 mb-12 leading-relaxed">Nuestra interfaz se adapta a tu rol. Si eres funcionario, automatizas procesos; si eres opositor, aceleras el aprendizaje. El mismo rigor, diferentes herramientas.</p>
+              
+              <div className="space-y-6">
+                {[
+                  { t: "Para el Profesional", d: "Generación de pliegos, informes técnicos y decretos en segundos." },
+                  { t: "Para el Aspirante", d: "Resolución de casos prácticos y tests con feedback jurídico real." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-5 p-6 bg-white/5 rounded-2xl border border-white/10">
+                    <CheckCircle className="w-6 h-6 text-secondary-cyan flex-shrink-0" />
+                    <div>
+                    <h5 className="font-black text-lg mb-1">{item.t}</h5>
+                    <p className="text-white/40 text-sm font-medium">{item.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            <div className="relative">
+              <div className="bg-[#1a1a1a] rounded-[3rem] border border-white/10 p-4 shadow-2xl relative z-10">
+                <div className="bg-white rounded-[2.5rem] p-10 text-secondary">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center">
+                      <Brain className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-black uppercase tracking-widest opacity-40">Consultor Munilex</div>
+                      <div className="font-black text-sm">Respuesta jurídica bajo 39/2015</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-surface-lowest rounded-2xl text-xs font-medium border border-outline-variant italic">
+                      "Analiza la caducidad del procedimiento sancionador..."
+                    </div>
+                    <div className="p-5 bg-primary-container text-white rounded-2xl text-xs leading-relaxed font-bold shadow-lg">
+                      De acuerdo con el Art. 21.1 de la Ley 39/2015, el plazo máximo para resolver y notificar...
+                    </div>
+                    <div className="flex gap-2">
+                       <span className="px-3 py-1 bg-secondary text-white text-[9px] font-black rounded-full uppercase tracking-tighter">Art. 21 LPAC</span>
+                       <span className="px-3 py-1 bg-secondary text-white text-[9px] font-black rounded-full uppercase tracking-tighter">Jurisprudencia TS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-cyan/20 blur-[60px] rounded-full" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dual Success Stories */}
+      <section className="py-32 bg-surface-low border-y border-outline-variant">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl md:text-6xl font-black text-secondary tracking-tighter mb-6 uppercase">Vanguardia <span className="text-primary-container">compartida</span></h2>
+            <p className="text-xl text-on-surface-variant font-medium opacity-60">Lo que dicen quienes ya están en el siguiente nivel.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Success Card 1 */}
+            <motion.div
+              whileHover={{ y: -10 }}
+              className="p-12 bg-white rounded-[3rem] shadow-ambient border border-outline-variant flex flex-col justify-between"
+            >
+              <p className="text-2xl text-secondary italic font-medium mb-12 leading-relaxed">
+                "Como Secretaria de Ayuntamiento, Munilex ha sido un antes y un después. La precisión en la redacción de informes técnicos ha reducido mis tiempos de gestión a la mitad."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center text-white">
+                  <UserCheck className="w-7 h-7" />
+                </div>
+                <div className="font-manrope text-left">
+                  <div className="font-black text-secondary">E. García</div>
+                  <div className="text-xs font-black uppercase tracking-widest text-primary-container">Habilitada Nacional</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Success Card 2 */}
+            <motion.div
+              whileHover={{ y: -10 }}
+              className="p-12 bg-[#131313] rounded-[3rem] shadow-premium border border-[#d4af37]/20 flex flex-col justify-between text-white"
+            >
+              <p className="text-2xl text-white italic font-medium mb-12 leading-relaxed">
+                "Conseguí mi plaza en Policía Nacional en tiempo récord. El sistema de simulacros adaptativos de la Academia Munilex es, sencillamente, imbatible."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#f2ca50] to-[#d4af37] rounded-full flex items-center justify-center text-[#241a00]">
+                  <GraduationCap className="w-7 h-7" />
+                </div>
+                <div className="font-manrope text-left">
+                  <div className="font-black text-white">Carlos M.</div>
+                  <div className="text-xs font-black uppercase tracking-widest text-[#d4af37]">Policía Nacional (Plaza 2024)</div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

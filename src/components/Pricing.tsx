@@ -103,7 +103,7 @@ const Pricing = ({ hideHeader = false }: PricingProps) => {
               viewport={{ once: true }}
               className="text-primary-container font-black uppercase tracking-[0.2em] text-[14px] mb-4"
             >
-              Inversión en Excelencia
+              Inversión en tu Carrera
             </motion.div>
             <motion.h2 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -111,10 +111,10 @@ const Pricing = ({ hideHeader = false }: PricingProps) => {
               viewport={{ once: true }}
               className="text-5xl md:text-8xl font-black mb-8 text-on-surface tracking-tighter"
             >
-              Planes adaptados al <span className="text-primary-container">sector jurídico</span>
+              Planes para el <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-cyan">presente y futuro</span> administrativo
             </motion.h2>
             <p className="text-xl text-on-surface-variant font-medium">
-              Todos los planes incluyen 15 consultas gratuitas al mes para que experimente la potencia de Munilex sin compromiso.
+              Elegir Munilex es apostar por una herramienta que crece contigo: desde tu primer tema hasta tu informe de secretaría más complejo.
             </p>
           </div>
         )}
