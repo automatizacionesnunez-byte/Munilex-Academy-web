@@ -116,7 +116,7 @@ function App() {
               <Route path="/academy/iipp" element={<AcademyIIPP />} />
               <Route path="/academy/policia" element={<AcademyPolicia />} />
               <Route path="/academy/guardiacivil" element={<AcademyGuardiaCivil />} />
-              <Route path="/academy/corporate" element={<AcademyCorporate />} />
+              <Route path="/munilex-corporate" element={<AcademyCorporate />} />
               <Route path="/academy/aviso-legal" element={<AvisoLegal />} />
               <Route path="/academy/privacidad" element={<Privacidad />} />
               <Route path="/academy/terminos" element={<Terminos />} />

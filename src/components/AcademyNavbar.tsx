@@ -16,16 +16,15 @@ const AcademyNavbar = () => {
         { name: 'Instituciones Penitenciarias', path: '/academy/iipp' },
       ]
     },
-    { name: 'Para Academias', path: '/academy/corporate' },
+    { name: 'Impulsa tu Academia', path: '/munilex-corporate' },
     { name: 'Precios', path: '/academy/precios' },
     { name: 'Sobre Nosotros', path: '/academy/sobre-nosotros' },
-    { name: 'Contacto', path: '/academy/contacto' },
   ];
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex justify-between items-center text-[#E5E2E1]">
-        <Link to="/academy" className="flex items-center gap-3 group">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex items-center justify-between gap-8 h-20">
+        <Link to="/academy" className="flex items-center gap-3 group shrink-0">
           <motion.div 
             whileHover={{ scale: 1.05, rotate: 2 }}
             className="w-10 h-10 bg-[#d4af37] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all"
@@ -42,23 +41,23 @@ const AcademyNavbar = () => {
           </div>
         </Link>
         
-        <div className="hidden lg:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em]">
+        <div className="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.2em] flex-grow justify-center">
           {navItems.map((item) => (
             <div key={item.name} className="relative group">
               <NavLink 
                 to={item.path} 
                 className={({ isActive }) => 
-                  `flex items-center gap-1.5 relative transition-all duration-300 hover:text-[#d4af37] py-4 ${isActive ? 'text-[#d4af37]' : 'text-[#E5E2E1]/70'}`
+                  `flex items-center gap-1.5 relative transition-all duration-300 hover:text-[#d4af37] py-2 ${isActive ? 'text-[#d4af37]' : 'text-[#E5E2E1]/70'}`
                 }
               >
                 {({ isActive }) => (
                   <>
-                    {item.name}
+                    <span className="whitespace-nowrap">{item.name}</span>
                     {item.subItems && <ChevronDown className="w-3.5 h-3.5 ml-0.5 group-hover:rotate-180 transition-transform duration-300" />}
                     {isActive && (
                       <motion.div 
                         layoutId="academy-nav-underline"
-                        className="absolute bottom-3 left-0 w-full h-[2px] bg-[#d4af37] rounded-full shadow-[0_0_10px_rgba(212,175,55,0.4)]"
+                        className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#d4af37] rounded-full shadow-[0_0_10px_rgba(212,175,55,0.4)]"
                       />
                     )}
                   </>
@@ -85,7 +84,10 @@ const AcademyNavbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 shrink-0">
+          <Link to="/academy/contacto" className="hidden xl:block text-[11px] font-bold uppercase tracking-widest text-[#E5E2E1]/50 hover:text-white transition-colors px-4">
+            Contacto
+          </Link>
           <a 
             href="https://munilex.lovable.app/auth/login" 
             className="hidden sm:block text-[11px] font-bold uppercase tracking-widest text-[#E5E2E1]/50 hover:text-white transition-colors px-4"
@@ -96,12 +98,16 @@ const AcademyNavbar = () => {
             href="https://munilex.lovable.app/auth/register"
             className="bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00] px-7 py-3 rounded-xl font-bold text-[12px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-2xl hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
           >
-            Prueba <span className="hidden sm:inline">Gratis</span>
+            Matrícula
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
       </div>
     </nav>
+  );
+};
+
+export default AcademyNavbar;
   );
 };
 

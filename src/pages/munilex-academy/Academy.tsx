@@ -431,21 +431,69 @@ const Academy = () => {
         </div>
       </section>
 
-      {/* Benefits instead of Testimonials */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Academic Benefits Section */}
+      <section className="py-24 px-6 bg-gradient-to-b from-black to-[#0E0E0E] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-white uppercase">Soporte Estratégico para Centros</h2>
+            <p className="text-white/40 max-w-2xl mx-auto text-lg font-medium">Diseñamos Munilex no solo para el alumno, sino para ser el aliado perfecto de los preparadores.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/30 transition-all group">
+              <Clock className="w-12 h-12 text-[#d4af37] mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold mb-4">Más tiempo libre</h3>
+              <p className="text-white/50 leading-relaxed">Libera a tus profesores de la carga de corregir tests y resolver dudas mecánicas. La IA se encarga de lo repetitivo.</p>
+            </div>
+            <div className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/30 transition-all group">
+              <Zap className="w-12 h-12 text-[#d4af37] mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold mb-4">Menos consultas</h3>
+              <p className="text-white/50 leading-relaxed">Nuestra IA responde al instante dudas sobre el BOE, reduciendo el volumen de emails y consultas de soporte en un 80%.</p>
+            </div>
+            <div className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/30 transition-all group">
+              <Smartphone className="w-12 h-12 text-[#d4af37] mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold mb-4">Uso 24/7</h3>
+              <p className="text-white/50 leading-relaxed">Tu academia nunca cierra. El alumno tiene acceso a simulacros y material de estudio en cualquier momento y lugar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 px-6 bg-[#0E0E0E]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-white uppercase">Historias de Éxito</h2>
+            <p className="text-white/40 max-w-2xl mx-auto text-lg font-medium">Opositores reales que transformaron su estudio con nuestra tecnología.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: "3x", label: "Velocidad de Asimilación", desc: "Acelera la curva de aprendizaje mediante tests adaptativos.", icon: <TrendingUp className="w-5 h-5"/> },
-              { num: "40%", label: "Ahorro de Tiempo", desc: "Se acabó crear esquemas manualmente. Nosotros los generamos.", icon: <Clock className="w-5 h-5"/> },
-              { num: "0", label: "Obsolescencia", desc: "Alertas automáticas sobre normativa derogada en tu syllabus.", icon: <Shield className="w-5 h-5"/> },
-              { num: "100%", label: "Trazabilidad Analítica", desc: "Métricas de tu desempeño por bloques temáticos.", icon: <Target className="w-5 h-5"/> }
-            ].map((stat, i) => (
-              <div key={i} className="p-8 bg-[#1C1B1B]/40 backdrop-blur-md rounded-3xl border border-[#353534]/30 hover:border-[#d4af37]/20 transition-colors">
-                <div className="text-[#d4af37] mb-6 opacity-80">{stat.icon}</div>
-                <div className="text-4xl font-black mb-2 text-white">{stat.num}</div>
-                <div className="text-[#E5E2E1] font-bold tracking-tight text-lg mb-3">{stat.label}</div>
-                <div className="text-[0.85rem] text-[#E5E2E1]/60 leading-relaxed">{stat.desc}</div>
+              { 
+                name: "Carlos M.", 
+                body: "Conseguí mi plaza en Policía Nacional en 6 meses. Los psicotécnicos de la IA son otro nivel, clavan los patrones del examen real.",
+                role: "Agente de Policía Nacional"
+              },
+              { 
+                name: "Elena S.", 
+                body: "El asistente jurídico me ahorró horas de búsqueda en el BOE para las oposiciones de AGE. Es como tener un tutor de élite 24 horas al día.",
+                role: "Administrativa del Estado"
+              },
+              { 
+                name: "Javier R.", 
+                body: "Dudaba de si la IA servía para IIPP, pero después de ver cómo analiza los supuestos prácticos, no cambio Munilex por ningún preparador tradicional.",
+                role: "Ayudante de Inst. Penitenciarias"
+              }
+            ].map((t, i) => (
+              <div key={i} className="p-8 rounded-3xl bg-[#1C1B1B] border border-white/5">
+                <div className="flex items-center gap-1 mb-4 text-[#d4af37]">
+                  {[...Array(5)].map((_, i) => <Sparkles key={i} className="w-4 h-4" />)}
+                </div>
+                <p className="text-white/70 italic mb-6 leading-relaxed">"{t.body}"</p>
+                <div>
+                  <div className="font-bold text-white">{t.name}</div>
+                  <div className="text-xs text-[#d4af37] font-black uppercase tracking-widest">{t.role}</div>
+                </div>
               </div>
             ))}
           </div>

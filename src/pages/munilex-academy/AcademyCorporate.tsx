@@ -68,7 +68,7 @@ const AcademyCorporate = () => {
   const tiers = [
     {
       title: "Solución Estándar",
-      description: "Acceso puro a la plataforma Munilex Academy sin personalización externa.",
+      description: "Acceso puro a la plataforma Munilex Academy sin personalización externa. Ideal para centros que quieren empezar hoy.",
       icon: Cpu,
       features: [
         "Todas las herramientas de IA activas",
@@ -79,7 +79,7 @@ const AcademyCorporate = () => {
     },
     {
       title: "Tu Propio Logo",
-      description: "Integra la identidad de tu centro en el corazón de la plataforma.",
+      description: "Integra la identidad de tu centro en el corazón de la plataforma. Refuerza tu marca frente al alumno.",
       icon: Building2,
       features: [
         "Inclusión de tu logotipo oficial",
@@ -90,7 +90,7 @@ const AcademyCorporate = () => {
     },
     {
       title: "Tu Branding Total",
-      description: "Una experiencia inmersiva alineada con los colores y estilo de tu academia.",
+      description: "Una experiencia inmersiva alineada con los colores y estilo de tu academia. Sensación de pertenencia total.",
       icon: Palette,
       highlight: true,
       features: [
@@ -102,7 +102,7 @@ const AcademyCorporate = () => {
     },
     {
       title: "Solución a Medida",
-      description: "Desarrollo de funcionalidades exclusivas y flujos de trabajo únicos para tu centro.",
+      description: "Desarrollo de funcionalidades exclusivas y flujos de trabajo únicos. Tu visión, nuestra IA.",
       icon: Settings,
       features: [
         "Consultoría estratégica de IA",
@@ -110,6 +110,24 @@ const AcademyCorporate = () => {
         "Funcionalidades de tutoría ad-hoc",
         "Soporte prioritario y personalizado"
       ]
+    }
+  ];
+
+  const businessBenefits = [
+    {
+      title: "Más tiempo libre para profesores",
+      desc: "La IA resuelve las dudas recurrentes y mecánicas, permitiendo que tus docentes se centren en casos complejos y mentoría de alto nivel.",
+      icon: Zap
+    },
+    {
+      title: "Reducción radical de consultas",
+      desc: "El tutor inteligente 24/7 absorbe hasta el 85% de las dudas habituales de los alumnos, liberando tu soporte administrativo.",
+      icon: Target
+    },
+    {
+      title: "Mayor uso y retención del alumno",
+      desc: "Al tener una herramienta disponible en cualquier momento, el alumno estudia más horas y aumenta su sensación de valor recibido.",
+      icon: Sparkles
     }
   ];
 
@@ -129,7 +147,7 @@ const AcademyCorporate = () => {
             className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-secondary-cyan text-[10px] font-black uppercase tracking-[0.3em] mb-8"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            Empower your Education Center
+            Lleva tu academia al siguiente nivel
           </motion.div>
           
           <motion.h1
@@ -138,7 +156,7 @@ const AcademyCorporate = () => {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9] max-w-5xl mx-auto"
           >
-            Transforma tu academia con <span className="text-[#d4af37]">IA de Élite</span>
+            La IA que hace a tu academia <span className="text-[#d4af37]">invencible</span>
           </motion.h1>
           
           <motion.p
@@ -147,7 +165,7 @@ const AcademyCorporate = () => {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-2xl text-white/50 max-w-2xl mx-auto mb-12 font-medium leading-relaxed"
           >
-            No solo somos una plataforma; somos el motor de innovación que tu centro necesita para ofrecer una preparación imbatible.
+            Digitaliza tu centro con tecnología de grado militar. Más eficiencia para tus tutores, mejores resultados para tus alumnos.
           </motion.p>
 
           <motion.div
@@ -170,23 +188,7 @@ const AcademyCorporate = () => {
       <section className="py-24 px-6 border-y border-white/5 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { 
-                title: "Diferenciación Real", 
-                desc: "Ofrece a tus alumnos herramientas de vanguardia que ninguna otra academia posee.",
-                icon: Target 
-              },
-              { 
-                title: "Eficiencia Operativa", 
-                desc: "Automatiza la generación de materiales y guías de estudio, ahorrando horas a tus tutores.",
-                icon: Zap 
-              },
-              { 
-                title: "Control Total", 
-                desc: "Gestiona el progreso de tus alumnos con analíticas detalladas impulsadas por IA.",
-                icon: Settings 
-              }
-            ].map((item, i) => (
+            {businessBenefits.map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center group">
                 <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#d4af37]/20 transition-all duration-500">
                   <item.icon className="w-7 h-7 text-[#d4af37]" />
