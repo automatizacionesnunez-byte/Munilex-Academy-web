@@ -20,37 +20,43 @@ import {
 const Services = () => {
   const funcionarioServices = [
     {
-      title: "Redacción Jurídica Avanzada",
-      desc: "Generación automatizada de borradores de informes de secretaría, decretos, actas y mociones. Rigor técnico absoluto bajo el marco de la LPAC y LRBRL.",
+      title: "Generación por Modelos",
+      desc: "Redacción automatizada de informes, actas y decretos utilizando nuestra extensa biblioteca de modelos legales o integrando los suyos propios para una personalización total.",
       icon: <FileText className="w-8 h-8" />,
-      benefit: "Optimización de redacción",
+      benefit: "Modelos 100% editables",
       color: "from-[#1a237e] to-[#0d47a1]",
       size: "large"
     },
     {
       title: "Asistente y Compañero Legal",
-      desc: "Su compañero de confianza para resolver consultas en tiempo real, validar expedientes y contrastar información normativa con total seguridad.",
+      desc: "Su compañero experto para resolver consultas en tiempo real, validar expedientes complejos y contrastar información normativa con seguridad jurídica total.",
       icon: <UserCheck className="w-8 h-8" />,
       benefit: "Validación y Contraste",
       color: "from-[#0d47a1] to-[#01579b]"
     },
     {
-      title: "Agenda y Gestión de Plazos",
-      desc: "Sistema inteligente de creación y seguimiento de plazos con notificaciones automáticas vía Telegram, email y plataforma.",
+      title: "Agenda y Plazos Inteligentes",
+      desc: "Gestión proactiva de plazos administrativos con un sistema de alertas multicanal: notificaciones por Telegram, Email y directamente en la plataforma.",
       icon: <Bell className="w-6 h-6" />,
       dark: true
     },
     {
       title: "Auditoría Normativa Continua",
-      desc: "Alertas proactivas cuando un cambio en la legislación estatal afecta a sus ordenanzas municipales vigentes.",
+      desc: "Alertas proactivas cuando un cambio en la normativa estatal o autonómica afecta a sus expedientes u ordenanzas municipales vigentes.",
       icon: <Activity className="w-6 h-6" />,
       dark: true
     },
     {
-      title: "Buscador Semántico BOE/DOG",
-      desc: "Conceptos jurídicos cruzados instantáneamente entre normativa estatal, autonómica y local con enlaces directos.",
+      title: "Buscador Semántico BOE Pro",
+      desc: "Encuentre la base legal que necesita instantáneamente. Cruce de legislación estatal, autonómica y local con un solo clic.",
       icon: <Search className="w-6 h-6" />,
       dark: true
+    },
+    {
+      title: "Integración de Sistemas",
+      desc: "Munilex Professional se adapta a su flujo de trabajo actual, permitiendo importar y exportar documentos de forma nativa.",
+      icon: <Workflow className="w-6 h-6" />,
+      dark: false
     }
   ];
 
@@ -66,8 +72,8 @@ const Services = () => {
       icon: <Gavel className="w-10 h-10" />,
     },
     {
-      title: "Máxima Personalización",
-      desc: "IA entrenada específicamente para los flujos de trabajo de Secretarios e Interventores municipales, adaptándose a su metodología.",
+      title: "IA Soberana",
+      desc: "Tecnología entrenada exclusivamente con jurisprudencia española, garantizando respuestas libres de sesgos anglosajones.",
       icon: <Database className="w-10 h-10" />,
     }
   ];
@@ -154,7 +160,7 @@ const Services = () => {
       <section id="soluciones" className="py-32 bg-surface-low border-y border-outline-variant">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="mb-24">
-            <h2 className="text-4xl md:text-6xl font-black text-secondary tracking-tighter mb-6">Herramientas de Grado Profesional</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-secondary tracking-tighter mb-6 uppercase italic">Herramientas de <span className="text-primary-container not-italic">Grado Profesional</span></h2>
             <div className="w-32 h-2 bg-secondary-cyan rounded-full" />
           </div>
           
@@ -166,7 +172,7 @@ const Services = () => {
                 className={`${service.size === 'large' ? 'lg:col-span-2' : 'lg:col-span-1'} p-12 bg-white rounded-[2.5rem] border border-outline-variant shadow-sm hover:shadow-premium transition-all flex flex-col justify-between group ${service.dark ? 'bg-secondary text-white' : ''}`}
               >
                 <div>
-                  <div className={`w-16 h-16 rounded-2xl ${service.dark ? 'bg-white/10' : `bg-gradient-to-br ${service.color}`} flex items-center justify-center text-white mb-10 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <div className={`w-16 h-16 rounded-2xl ${service.dark ? 'bg-white/10' : `bg-gradient-to-br ${service.color || 'from-surface-low to-surface-low'}`} flex items-center justify-center ${service.dark ? 'text-white' : 'text-primary-container'} mb-10 group-hover:scale-110 transition-transform shadow-lg`}>
                     {service.icon}
                   </div>
                   <h3 className={`text-3xl font-black mb-6 tracking-tight ${service.dark ? 'text-white' : 'text-secondary'}`}>{service.title}</h3>
@@ -219,11 +225,11 @@ const Services = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 blur-[100px] -mr-32 -mt-32" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary-cyan/10 blur-[100px] -ml-32 -mb-32" />
           
-          <h2 className="text-4xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9]">Transforme su Secretaría hoy mismo</h2>
-          <p className="text-xl md:text-2xl text-white/50 mb-16 max-w-2xl mx-auto font-medium">Únase a los ayuntamientos que ya están reduciendo su burocracia con inteligencia artificial soberana.</p>
+          <h2 className="text-4xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9] uppercase italic">Transforme su <span className="text-primary-container not-italic">Ayuntamiento</span> hoy mismo</h2>
+          <p className="text-xl md:text-2xl text-white/50 mb-16 max-w-2xl mx-auto font-medium">Únase a las administraciones locales que ya están reduciendo su burocracia con inteligencia artificial soberana.</p>
           
           <a href="https://wa.me/34605392912" className="inline-flex items-center gap-4 bg-white text-secondary px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl">
-            Agendar Demo para mi Centro
+            Agendar Demo Municipal
             <ArrowRight className="w-6 h-6" />
           </a>
         </div>

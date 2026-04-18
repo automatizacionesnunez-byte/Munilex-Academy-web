@@ -98,7 +98,7 @@ function App() {
             <Routes>
               {/* Corporate Routes */}
               <Route path="/" element={<Home />} />
-              <Route path="/servicios" element={<Services />} />
+              <Route path="/funcionarios" element={<Services />} />
               <Route path="/precios" element={<PricingPage />} />
               <Route path="/sobre-nosotros" element={<About />} />
               <Route path="/contacto" element={<Contacto />} />

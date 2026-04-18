@@ -209,7 +209,7 @@ const Home = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap justify-center gap-6"
           >
-            <Link to="/servicios" className="group bg-secondary text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-premium border border-white/10 flex items-center gap-3">
+            <Link to="/funcionarios" className="group bg-secondary text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-premium border border-white/10 flex items-center gap-3">
               Soluciones para Funcionarios
               <ShieldCheck className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity" />
             </Link>
@@ -263,7 +263,7 @@ const Home = () => {
                 </ul>
               </div>
               <Link 
-                to="/servicios" 
+                to="/funcionarios" 
                 className="w-full py-5 bg-secondary text-white font-black text-xs uppercase tracking-widest rounded-2xl text-center hover:scale-[1.02] transition-all shadow-lg active:scale-95"
               >
                 Potenciar mi Carrera Profesional
@@ -610,7 +610,7 @@ const Home = () => {
 
               <div className="flex flex-col md:flex-row justify-center gap-8">
                 <Link 
-                  to="/servicios" 
+                  to="/funcionarios" 
                   className="group bg-white text-secondary px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl flex items-center justify-center gap-3"
                 >
                   Munilex Professional

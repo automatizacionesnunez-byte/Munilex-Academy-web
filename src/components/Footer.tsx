@@ -14,7 +14,7 @@ const Footer = () => {
           <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-primary/40">Navegación</h4>
           <ul className="space-y-4 text-primary font-semibold">
             <li><Link to="/" className="hover:text-primary-container transition-colors">Home</Link></li>
-            <li><Link to="/servicios" className="hover:text-primary-container transition-colors">Servicios</Link></li>
+            <li><Link to="/funcionarios" className="hover:text-primary-container transition-colors">Profesionales</Link></li>
             <li><Link to="/academy" className="hover:text-primary-container transition-colors">Munilex Academy</Link></li>
             <li><Link to="/precios" className="hover:text-primary-container transition-colors">Precios</Link></li>
             <li><Link to="/sobre-nosotros" className="hover:text-primary-container transition-colors">Sobre Nosotros</Link></li>
