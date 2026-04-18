@@ -13,36 +13,31 @@ import {
   Gavel,
   Lock,
   Workflow,
-  LineChart
+  LineChart,
+  UserCheck
 } from 'lucide-react';
 
 const Services = () => {
   const funcionarioServices = [
     {
-      title: "Redacción de Informes con Rigor Jurídico",
-      desc: "Genere borradores de informes de secretaría, decretos y mociones. Nuestra IA aplica la normativa vigente (Ley 39/2015, Ley 40/2015, LCSP) con precisión técnica.",
+      title: "Redacción Jurídica Avanzada",
+      desc: "Generación automatizada de borradores de informes de secretaría, decretos, actas y mociones. Rigor técnico absoluto bajo el marco de la LPAC y LRBRL.",
       icon: <FileText className="w-8 h-8" />,
-      benefit: "-15h/semana de redacción",
+      benefit: "Optimización de redacción",
       color: "from-[#1a237e] to-[#0d47a1]",
       size: "large"
     },
     {
-      title: "Asistente en Contratación Pública",
-      desc: "Validación de pliegos, análisis de solvencia y supervisión de expedientes de licitación bajo la LCSP 9/2017.",
-      icon: <Workflow className="w-8 h-8" />,
-      benefit: "Cumplimiento 100%",
+      title: "Asistente y Compañero Legal",
+      desc: "Su compañero de confianza para resolver consultas en tiempo real, validar expedientes y contrastar información normativa con total seguridad.",
+      icon: <UserCheck className="w-8 h-8" />,
+      benefit: "Validación y Contraste",
       color: "from-[#0d47a1] to-[#01579b]"
     },
     {
-      title: "Buscador Semántico BOE/DOG",
-      desc: "No busque por palabras, busque por conceptos jurídicos. Cruce instantáneo de normativa estatal, autonómica y local.",
-      icon: <Search className="w-6 h-6" />,
-      dark: true
-    },
-    {
-      title: "Gestión de Subvenciones",
-      desc: "Supervisión de bases reguladoras, control de hitos y justificaciones de fondos (incluyendo Next Generation).",
-      icon: <LineChart className="w-6 h-6" />,
+      title: "Agenda y Gestión de Plazos",
+      desc: "Sistema inteligente de creación y seguimiento de plazos con notificaciones automáticas vía Telegram, email y plataforma.",
+      icon: <Bell className="w-6 h-6" />,
       dark: true
     },
     {
@@ -50,24 +45,30 @@ const Services = () => {
       desc: "Alertas proactivas cuando un cambio en la legislación estatal afecta a sus ordenanzas municipales vigentes.",
       icon: <Activity className="w-6 h-6" />,
       dark: true
+    },
+    {
+      title: "Buscador Semántico BOE/DOG",
+      desc: "Conceptos jurídicos cruzados instantáneamente entre normativa estatal, autonómica y local con enlaces directos.",
+      icon: <Search className="w-6 h-6" />,
+      dark: true
     }
   ];
 
   const managementTools = [
     {
-      title: "Soberanía de Datos",
-      desc: "Infraestructura desplegada en servidores seguros bajo legislación española y cumplimiento estricto del RGPD.",
+      title: "Seguridad y ENS",
+      desc: "Infraestructura crítica bajo cumplimiento estricto del Esquema Nacional de Seguridad (ENS) y el RGPD. Soberanía de datos absoluta.",
       icon: <Shield className="w-10 h-10" />,
     },
     {
-      title: "Interoperabilidad",
-      desc: "Diseñado para integrarse con sus flujos de trabajo actuales y sistemas de gestión electrónica local.",
-      icon: <Database className="w-10 h-10" />,
+      title: "Trazabilidad BOE",
+      desc: "Cada respuesta de la IA incluye enlaces directos a la legislación vigente y artículos específicos del Boletín Oficial del Estado.",
+      icon: <Gavel className="w-10 h-10" />,
     },
     {
-      title: "Trazabilidad Total",
-      desc: "Cada respuesta de la IA incluye referencias directas a boletines oficiales y artículos de ley específicos.",
-      icon: <Gavel className="w-10 h-10" />,
+      title: "Máxima Personalización",
+      desc: "IA entrenada específicamente para los flujos de trabajo de Secretarios e Interventores municipales, adaptándose a su metodología.",
+      icon: <Database className="w-10 h-10" />,
     }
   ];
 
@@ -85,13 +86,13 @@ const Services = () => {
           >
             <div className="inline-flex items-center bg-secondary text-white px-4 py-2 rounded-full mb-8 border border-white/10 shadow-lg">
               <span className="w-2 h-2 bg-secondary-cyan rounded-full animate-pulse mr-2" />
-              <span className="text-[12px] font-black uppercase tracking-widest">Solución Profesional para la Administración</span>
+              <span className="text-[12px] font-black uppercase tracking-widest">Munilex Professional</span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-secondary leading-[0.9] tracking-tighter mb-8 italic">
-              Poder Judicial <span className="text-primary-container not-italic">Asistido</span> por IA
+            <h1 className="text-5xl md:text-7xl font-black text-secondary leading-[0.9] tracking-tighter mb-8 italic">
+              La primera <span className="text-primary-container not-italic">IA especializada</span> para Secretarios Interventores
             </h1>
             <p className="text-xl md:text-2xl text-on-surface-variant max-w-xl mb-12 leading-relaxed font-medium">
-              Munilex Professional es la herramienta definitiva para Secretarios, Interventores y Técnicos de Administración General. Eficiencia jurídica con garantía de cumplimiento.
+              Dedicada exclusivamente a la gestión administrativa municipal. Rigor legal total, máxima personalización e integración directa con normativa estatal.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <a href="https://wa.me/34605392912" className="bg-secondary text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 transition-all text-center shadow-premium">
