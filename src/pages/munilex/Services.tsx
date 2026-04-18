@@ -24,7 +24,7 @@ const Services = () => {
       title: "Chat Jurídico Institucional",
       desc: "Acceso instantáneo a toda la legislación nacional y autonómica española. Diseñado para eliminar la fricción de la IA genérica, ofreciendo respuestas con máxima precisión normativa y rigor técnico.",
       icon: <Brain className="w-10 h-10" />,
-      benefit: "Precisión Normativa Total",
+      benefit: "Respuesta Técnica en < 2 Segundos",
       color: "from-[#1a237e] to-[#0d47a1]",
       size: "large"
     },
@@ -32,21 +32,21 @@ const Services = () => {
       title: "Gestión de Expedientes y Decretos",
       desc: "Analice expedientes complejos en segundos y genere borradores jurídicos (decretos, informes, actas) listos para firma, integrando sus propios modelos de trabajo.",
       icon: <FileText className="w-8 h-8" />,
-      benefit: "Análisis y Creación Pro",
+      benefit: "Borrador de Decreto en < 5 Minutos",
       color: "from-[#0d47a1] to-[#01579b]"
     },
     {
       title: "Agenda y Notificación de Plazos",
       desc: "Sistema proactivo de control de plazos administrativo con notificaciones automáticas por Telegram y Email. Nunca pierda un hito procesal o administrativo.",
       icon: <Bell className="w-8 h-8" />,
-      benefit: "Control Multicanal",
+      benefit: "Notificación de Plazos 100% Automática",
       color: "from-[#01579b] to-[#006064]"
     },
     {
       title: "Integración y Soberanía",
       desc: "Importación y exportación nativa de documentos compatible con su flujo actual. Todo bajo infraestructura ENS, garantizando la soberanía absoluta de sus datos.",
       icon: <Workflow className="w-8 h-8" />,
-      benefit: "Flujo 100% Nativo",
+      benefit: "Implementación en < 2 Minutos",
       color: "from-[#263238] to-[#37474f]"
     }
   ];
