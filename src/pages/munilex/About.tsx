@@ -176,20 +176,8 @@ const About = () => {
                   Pronto descubrimos la realidad del "Superman del Ayuntamiento": una única persona manejando más de 120 leyes distintas, abrumada por procesos manuales, búsquedas interminables en el BOE y bases de datos obsoletas. La tecnología no estaba llegando a donde más se necesitaba.
                 </p>
                 <p>
-                  Decidimos que podíamos cambiar eso. Tras meses de experimentación e iteración constante probando diversos sistemas de IA, nació <span className="text-primary-container font-black">Munilex</span>. Un sistema creado desde la empatía y la precisión técnica, diseñado para que los habilitados nacionales puedan recuperar algo invaluable: la tranquilidad y el control sobre su tiempo.
+                  Decidimos que podíamos cambiar eso. Mientras me formaba en el ecosistema de <a href="https://racks.academy" target="_blank" rel="noopener noreferrer" className="text-primary-container font-black hover:underline">Racks Academy</a>, decidí aplicar esos conocimientos avanzados en IA para crear <span className="text-primary-container font-black">Munilex</span>: un sistema nacido de la empatía y la precisión técnica para que los habilitados nacionales recuperen su tranquilidad y el control sobre su tiempo.
                 </p>
-              </div>
-              
-              <div className="mt-16 space-y-8">
-                <div className="flex items-center gap-6 p-8 bg-surface-low rounded-[2rem] border border-primary/5 shadow-sm transition-all hover:bg-white hover:shadow-premium hover:border-primary/10 group">
-                  <div className="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform">
-                    <Users className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h4 className="font-black text-secondary tracking-tight text-xl"><a href="https://racks.academy" target="_blank" rel="noopener noreferrer" className="hover:text-primary-container transition-colors">Racks Academy Ecosystem</a></h4>
-                    <p className="text-sm font-medium opacity-60">Formación de élite en IA aplicada al sector jurídico español.</p>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
@@ -203,8 +191,8 @@ const About = () => {
               
               <div className="relative z-10 aspect-[4/5] bg-surface-dim rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(30,41,59,0.4)] border-8 border-white group-hover:scale-[1.02] transition-transform duration-700">
                 <img 
-                  src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2000" 
-                  alt="Dedicación Jurídica" 
+                  src="/creator_photo.jpg" 
+                  alt="Jurista & Fundador" 
                   className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-105 contrast-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent via-transparent opacity-40 group-hover:opacity-20 transition-opacity" />

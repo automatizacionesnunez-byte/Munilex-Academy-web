@@ -24,7 +24,7 @@ const Services = () => {
       title: "Chat Jurídico Institucional",
       desc: "Acceso instantáneo a toda la legislación nacional y autonómica española. Diseñado para eliminar la fricción de la IA genérica, ofreciendo respuestas con máxima precisión normativa y rigor técnico.",
       icon: <Brain className="w-10 h-10" />,
-      benefit: "Respuesta Técnica en < 2 Segundos",
+      benefit: "Respuesta Técnica en < 1 Minuto",
       color: "from-[#1a237e] to-[#0d47a1]",
       size: "large"
     },
