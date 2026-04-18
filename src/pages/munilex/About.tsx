@@ -186,7 +186,7 @@ const About = () => {
                     <Users className="w-8 h-8" />
                   </div>
                   <div>
-                    <h4 className="font-black text-secondary tracking-tight text-xl">Racks Academy Ecosystem</h4>
+                    <h4 className="font-black text-secondary tracking-tight text-xl"><a href="https://racks.academy" target="_blank" rel="noopener noreferrer" className="hover:text-primary-container transition-colors">Racks Academy Ecosystem</a></h4>
                     <p className="text-sm font-medium opacity-60">Formación de élite en IA aplicada al sector jurídico español.</p>
                   </div>
                 </div>
@@ -215,8 +215,8 @@ const About = () => {
                       <GraduationCap className="w-7 h-7" />
                     </div>
                     <div>
-                      <div className="text-xl font-black text-secondary tracking-tight">Precisión & Esfuerzo</div>
-                      <div className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-container">Desde la práctica hacia la innovación</div>
+                      <div className="text-xl font-black text-secondary tracking-tight">Jurista & Fundador</div>
+                      <div className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-container">Technical LegalTech & IATECH Consultant</div>
                     </div>
                   </div>
                 </div>
