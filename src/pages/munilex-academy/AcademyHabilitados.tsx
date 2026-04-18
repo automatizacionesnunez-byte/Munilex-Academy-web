@@ -21,14 +21,15 @@ const HabilitadosShield = ({ className }: { className?: string }) => (
 
 const AcademyHabilitados = () => {
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-[#050505] text-[#FAFAFA] px-6 md:px-8 relative overflow-hidden font-inter">
+    <div className="pt-32 pb-24 min-h-screen bg-surface text-on-surface px-6 md:px-8 relative overflow-hidden font-inter selection:bg-police-gold/20 selection:text-on-surface">
       <Helmet>
         <title>Preparador habilitados nacionales | Munilex Academy</title>
         <meta name="description" content="Academia online para Habilitados Nacionales (Secretaría, Intervención y Tesorería). Cante de temas online, simulador oral IA y preparación A1." />
       </Helmet>
-      {/* Obsidian atmospheric background */}
-      <div className="absolute top-0 right-0 w-full h-[60vh] bg-gradient-to-b from-[#1A150D] to-transparent pointer-events-none" />
-      <div className="absolute top-[20%] left-[-10%] w-[30rem] h-[30rem] bg-[#D4AF37]/5 rounded-full blur-[150px] pointer-events-none" />
+      
+      {/* Abstract background elements */}
+      <div className="absolute top-0 right-0 w-full h-[60vh] bg-gradient-to-b from-police-gold/5 to-transparent pointer-events-none" />
+      <div className="absolute top-[20%] left-[-10%] w-[30rem] h-[30rem] bg-police-gold/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center text-center mt-8 mb-24">
         
@@ -38,8 +39,8 @@ const AcademyHabilitados = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="mb-8"
         >
-          <HabilitadosShield className="w-24 h-24 mx-auto mb-8 drop-shadow-[0_0_30px_rgba(212,175,55,0.2)]" />
-          <div className="inline-flex items-center gap-2 px-6 py-2 border border-[#D4AF37]/30 bg-[#0A0A0A] text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.3em]">
+          <HabilitadosShield className="w-24 h-24 mx-auto mb-8 drop-shadow-ambient" />
+          <div className="inline-flex items-center gap-2 px-6 py-2 border border-outline-variant bg-white text-police-gold text-[10px] font-black uppercase tracking-[0.3em] shadow-ambient">
             Cuerpo de Élite Funcional
           </div>
         </motion.div>
@@ -50,13 +51,13 @@ const AcademyHabilitados = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="max-w-4xl"
         >
-          <h1 className="text-5xl md:text-7xl font-space-grotesk font-black uppercase tracking-tight leading-[0.9] text-[#FAFAFA] mb-6">
-            Habilitados Nacionales
+          <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-on-surface mb-8">
+            Habilitados <br/> Nacionales
           </h1>
-          <p className="text-xl md:text-2xl text-[#A3A3A3] font-serif leading-relaxed max-w-3xl mx-auto italic">
+          <p className="text-xl md:text-2xl text-on-surface-variant font-medium leading-relaxed max-w-3xl mx-auto italic mb-10">
             "La columna vertebral jurídica y financiera de la Administración Local."
           </p>
-          <p className="text-sm text-[#737373] max-w-2xl mx-auto mt-6">
+          <p className="text-sm text-on-surface-variant/70 max-w-2xl mx-auto font-semibold uppercase tracking-widest leading-loose">
             Especialidades: Secretaría, Intervención-Tesorería y Secretaría-Intervención. Preparación de Nivel A1 con IA conversacional para el cante de temas.
           </p>
         </motion.div>
@@ -69,7 +70,7 @@ const AcademyHabilitados = () => {
         >
           <Link 
             to="/academy/precios"
-            className="inline-flex items-center gap-4 px-10 py-5 bg-[#D4AF37] text-black font-space-grotesk font-black uppercase tracking-widest text-xs hover:bg-[#FCEBAE] transition-colors border-2 border-transparent hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)]"
+            className="inline-flex items-center gap-4 px-10 py-5 bg-on-surface text-white font-black uppercase tracking-widest text-[11px] shadow-premium hover:opacity-90 transition-all rounded-xl"
           >
             Suscripción Premium <ChevronRight className="w-4 h-4" />
           </Link>
@@ -77,18 +78,18 @@ const AcademyHabilitados = () => {
       </div>
 
       {/* Elegant Bento Grid Layout */}
-      <div className="max-w-6xl mx-auto z-10 relative">
+      <div className="max-w-6xl mx-auto z-10 relative mb-32">
         <div className="flex flex-col md:grid md:grid-cols-2 gap-8">
           
           {/* Card 1: Oral Simulation */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="bg-[#0A0A0A] border border-[#262626] rounded-sm p-12 hover:border-[#D4AF37]/50 transition-colors group relative overflow-hidden"
+            className="bg-white border border-outline-variant rounded-[2.5rem] p-12 hover:border-police-gold/50 transition-all group shadow-ambient relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-bl-full group-hover:bg-[#D4AF37]/10 transition-colors" />
-            <Mic className="w-10 h-10 text-[#D4AF37] mb-8" />
-            <h3 className="text-3xl font-space-grotesk font-black mb-4">Dictado y Cante (IA)</h3>
-            <p className="text-[#A3A3A3] leading-relaxed font-serif text-lg">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-police-gold/5 rounded-bl-full group-hover:bg-police-gold/10 transition-colors" />
+            <Mic className="w-10 h-10 text-police-gold mb-8 group-hover:scale-110 transition-transform" />
+            <h3 className="text-3xl font-black mb-6 uppercase tracking-tight text-on-surface">Dictado y Cante (IA)</h3>
+            <p className="text-on-surface-variant leading-relaxed font-medium text-lg">
               Practica tu cante de temas en pijama. El motor transcribe, cronometra y evalúa la literalidad de tu exposición oral frente al temario oficial. Te avisa si has omitido epígrafes críticos.
             </p>
           </motion.div>
@@ -96,15 +97,15 @@ const AcademyHabilitados = () => {
           {/* Card 2: Legal Cases */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="bg-[#0A0A0A] border border-[#262626] rounded-sm p-12 hover:border-[#D4AF37]/50 transition-colors group relative overflow-hidden"
+            className="bg-white border border-outline-variant rounded-[2.5rem] p-12 hover:border-police-gold/50 transition-all group shadow-ambient relative overflow-hidden"
           >
-            <div className="absolute bottom-0 right-0 p-8">
-              <Scale className="w-48 h-48 text-[#171717] group-hover:scale-110 transition-transform duration-700" />
+            <div className="absolute bottom-0 right-0 p-8 opacity-[0.03] group-hover:opacity-10 transition-opacity">
+              <Scale className="w-64 h-64 text-police-gold group-hover:scale-110 transition-transform duration-700" />
             </div>
             <div className="relative z-10">
-              <Landmark className="w-10 h-10 text-[#D4AF37] mb-8" />
-              <h3 className="text-3xl font-space-grotesk font-black mb-4">Supuestos Jurídicos</h3>
-              <p className="text-[#A3A3A3] leading-relaxed font-serif text-lg max-w-sm">
+              <Landmark className="w-10 h-10 text-police-gold mb-8 group-hover:scale-110 transition-transform" />
+              <h3 className="text-3xl font-black mb-6 uppercase tracking-tight text-on-surface">Supuestos Jurídicos</h3>
+              <p className="text-on-surface-variant leading-relaxed font-medium text-lg max-w-sm">
                 Pliegos de contratación, intervención de presupuestos, expropiaciones. Supuestos cortados a cuchillo de la actividad real de las Entidades Locales de España.
               </p>
             </div>
@@ -113,20 +114,20 @@ const AcademyHabilitados = () => {
           {/* Full Width Card */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-            className="md:col-span-2 bg-gradient-to-br from-[#12100A] to-[#0A0A0A] border border-[#262626] rounded-sm p-12 flex flex-col md:flex-row items-center gap-12"
+            className="md:col-span-2 bg-on-surface rounded-[3rem] p-12 flex flex-col md:flex-row items-center gap-12 shadow-premium"
           >
-            <div className="p-8 border border-[#D4AF37]/20 rounded-full">
-              <BookOpen className="w-12 h-12 text-[#D4AF37]" />
+            <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-full flex items-center justify-center shrink-0">
+              <BookOpen className="w-10 h-10 text-police-gold" />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-2xl font-space-grotesk font-bold text-[#FAFAFA] mb-2">Comunión de Leyes Actualizadas</h3>
-              <p className="text-[#A3A3A3] text-sm md:text-base">
-                Nuestro motor sincroniza diariamente con el BOE. Cualquier cambio en la LRJRL, TRHL, LCSP o el TREBEP se propaga instantáneamente a nuestros test. No estudiarás normas derogadas.
+              <h3 className="text-2xl font-black text-white mb-3 uppercase tracking-tight">Comunión de Leyes Actualizadas</h3>
+              <p className="text-white/60 font-medium text-base leading-relaxed">
+                Nuestro motor sincroniza diariamente con el BOE. Cualquier cambio en la LRJRL, TRHL, LCSP o el TREBEP se propaga instantáneamente. No estudiarás normas derogadas.
               </p>
             </div>
-            <div className="font-space-grotesk tracking-widest text-[#D4AF37] text-xs font-black uppercase text-center border-t md:border-t-0 md:border-l border-[#262626] pt-6 md:pt-0 md:pl-12">
-              <div>Sincronización</div>
-              <div className="text-2xl mt-1">24/7</div>
+            <div className="font-black tracking-[.25em] text-police-gold text-xs font-black uppercase text-center border-t md:border-t-0 md:border-l border-white/10 pt-8 md:pt-0 md:pl-12 shrink-0">
+              <div className="opacity-70 mb-2">Sincronización</div>
+              <div className="text-5xl">24/7</div>
             </div>
           </motion.div>
 
@@ -134,17 +135,17 @@ const AcademyHabilitados = () => {
       </div>
 
       {/* SEO & Expanded Content Area */}
-      <div className="max-w-4xl mx-auto z-10 relative mt-24 border-t border-amber-500/20 pt-16">
-        <h2 className="text-3xl font-black mb-6 text-white">Academia Secretaría Intervención & Preparación Élite</h2>
-        <div className="prose prose-invert prose-p:text-slate-400 prose-strong:text-amber-400 prose-a:text-amber-500">
-          <p className="mb-4">
+      <div className="max-w-4xl mx-auto z-10 relative mt-32 border-t border-outline-variant pt-24 text-center">
+        <h2 className="text-4xl font-black mb-12 text-on-surface uppercase tracking-tighter">Academia Secretaría Intervención</h2>
+        <div className="prose prose-lg max-w-none prose-p:text-on-surface-variant prose-p:font-medium prose-strong:text-police-gold prose-strong:font-black prose-p:leading-relaxed">
+          <p className="mb-8">
             Alcanzar el <strong>Cuerpo de Habilitados Nacionales A1</strong> (Subescala de Secretaría, Intervención-Tesorería o Secretaría-Intervención) es el nivel más alto de la burocracia local. Requieres más que esquemas; necesitas un <strong>Preparador Habilitados Nacionales A1</strong> algorítmico, siempre disponible y puramente objetivo.
           </p>
-          <p className="mb-4">
+          <p className="mb-8">
             Nuestra <strong>Suscripción Premium Habilitados Nacionales</strong> no tiene rival en el mercado. Convierte el árido Derecho Administrativo y el Régimen Local en una experiencia formativa inmersiva. Utiliza nuestro <strong>Simulador oral oposiciones</strong> para ejecutar el famoso <strong>cante de temas online</strong>, donde la IA evaluará tu cadencia, exactitud literal y gestión del tiempo en tiempo real.
           </p>
-          <p>
-            Da un salto cualitativo exponencial enfrentándote a miles de <strong>casos prácticos Local</strong> de ayuntamientos reales, analizados y resueltos por nuestro núcleo jurídico. Domina el BOE y asegura tu nombramiento oficial en nuestra <em>academia Secretaría Intervención</em> más avanzada del sector.
+          <p className="font-bold text-on-surface">
+            Da un salto cualitativo exponencial enfrentándote a miles de <strong>casos prácticos Local</strong> de ayuntamientos reales, analizados y resueltos por nuestro núcleo jurídico. Domina el BOE y asegura tu nombramiento oficial.
           </p>
         </div>
       </div>

@@ -13,23 +13,24 @@ const GCBadge = ({ className }: { className?: string }) => (
 
 const AcademyGuardiaCivil = () => {
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-[#022c22] text-white px-6 md:px-8 relative overflow-hidden font-inter">
+    <div className="pt-32 pb-24 min-h-screen bg-surface text-on-surface px-6 md:px-8 relative overflow-hidden font-inter">
       <Helmet>
         <title>Academia oposiciones Guardia Civil | Munilex Academy</title>
         <meta name="description" content="Prepara tu Oposición a la Guardia Civil con IA. Especialización en ortografía, inglés táctico y temario oficial de Cabos y Guardias." />
       </Helmet>
-      {/* Deep Forest background elements */}
-      <div className="absolute top-[20%] left-[-10%] w-[50rem] h-[50rem] bg-[#10b981]/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[40rem] h-[40rem] bg-[#059669]/10 rounded-full blur-[150px] pointer-events-none" />
+      
+      {/* Background elements - Subtle Emerald accents */}
+      <div className="absolute top-[20%] left-[-10%] w-[50rem] h-[50rem] bg-guardia/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[40rem] h-[40rem] bg-emerald-600/5 rounded-full blur-[150px] pointer-events-none" />
 
-      {/* Infinite Scrolling Ticker (Marquee) */}
-      <div className="absolute top-24 left-0 w-full overflow-hidden border-y border-white/5 bg-[#064e3b]/30 py-3 z-0">
+      {/* Infinite Scrolling Ticker (Marquee) - Updated for clarity */}
+      <div className="absolute top-24 left-0 w-full overflow-hidden border-y border-outline-variant bg-white/50 backdrop-blur-md py-3 z-0">
         <motion.div 
           animate={{ x: [0, -1000] }}
           transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
-          className="flex whitespace-nowrap gap-16 item-center text-[10px] font-space-grotesk tracking-[0.3em] text-[#10b981]"
+          className="flex whitespace-nowrap gap-16 item-center text-[10px] font-black tracking-[0.3em] text-guardia/40 uppercase"
         >
-          {Array(8).fill("OPERACIÓN ESTADO DE ALERTA  /  RUTINAS DE ÉXITO 97%  /  GRAMÁTICA Y ORTOGRAFÍA IA  /  ").map((text, i) => (
+          {Array(8).fill("Operación Estado de Alerta  /  Rutinas de Éxito 97%  /  Gramática y Ortografía IA  /  ").map((text, i) => (
             <span key={i}>{text}</span>
           ))}
         </motion.div>
@@ -44,9 +45,9 @@ const AcademyGuardiaCivil = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative flex justify-center lg:justify-start order-2 lg:order-1"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#10b981]/20 to-transparent rounded-[3rem] blur-xl" />
-          <div className="bg-[#064e3b]/40 backdrop-blur-3xl border border-white/5 rounded-[3rem] p-12 shadow-2xl relative">
-            <GCBadge className="w-64 h-64 drop-shadow-[0_0_50px_rgba(16,185,129,0.3)]" />
+          <div className="absolute inset-0 bg-guardia/5 rounded-[3rem] blur-xl" />
+          <div className="bg-white/80 backdrop-blur-2xl border border-outline-variant rounded-[3rem] p-12 shadow-premium relative">
+            <GCBadge className="w-64 h-64 drop-shadow-[0_20px_50px_rgba(6,78,59,0.1)]" />
           </div>
         </motion.div>
 
@@ -57,24 +58,24 @@ const AcademyGuardiaCivil = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-col gap-6 order-1 lg:order-2 lg:text-right items-start lg:items-end"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#10b981]/10 text-[#10b981] text-[11px] font-black uppercase tracking-[0.2em] border border-[#10b981]/20 w-fit">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-guardia/5 text-guardia text-[10px] font-black uppercase tracking-[0.2em] border border-guardia/10 w-fit">
             Benemérita
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-white">
+          <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.95] text-on-surface">
             El Honor <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10b981] to-[#6ee7b7]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-guardia to-emerald-500">
                Es Nuestra Divisa.
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-[#a7f3d0] font-medium leading-relaxed max-w-xl mt-4 lg:text-right">
+          <p className="text-lg md:text-xl text-on-surface-variant font-medium leading-relaxed max-w-xl mt-4 lg:text-right">
             Suma de temario, ortografía extrema e inglés táctico en un solo motor de IA. Destruye el filtro gramatical de la prueba de acceso.
           </p>
 
           <Link 
             to="/academy/precios"
-            className="mt-8 inline-flex items-center justify-between px-8 py-5 bg-gradient-to-br from-[#10b981] to-[#059669] text-white font-black uppercase tracking-wider rounded-xl text-sm w-fit group shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transition-all hover:-translate-y-1"
+            className="mt-8 inline-flex items-center justify-between px-10 py-5 bg-on-surface text-white font-black uppercase tracking-wider rounded-2xl text-xs w-fit group shadow-premium hover:-translate-y-1 transition-all"
           >
             Acceso Rápido
             <Crosshair className="w-5 h-5 ml-4 group-hover:rotate-90 transition-transform" />
@@ -85,11 +86,11 @@ const AcademyGuardiaCivil = () => {
       {/* Bento Grid */}
       <div className="max-w-6xl mx-auto z-10 relative">
         <div className="flex justify-between items-end mb-10">
-          <h2 className="text-3xl font-black text-white tracking-tighter">
-            MATRIZ TÁCTICA
+          <h2 className="text-3xl font-black tracking-tighter uppercase">
+            Matriz Táctica
           </h2>
-          <div className="hidden md:flex gap-2 text-xs font-space-grotesk text-[#10b981] tracking-widest font-bold">
-            <span className="px-2 py-1 bg-[#10b981]/10 rounded">V.4.2 ONLINE</span>
+          <div className="hidden md:flex gap-2 text-[10px] font-black text-guardia tracking-widest uppercase">
+            <span className="px-3 py-1 bg-guardia/5 border border-guardia/10 rounded-md uppercase">v.4.2 Online</span>
           </div>
         </div>
 
@@ -98,14 +99,16 @@ const AcademyGuardiaCivil = () => {
           {/* Card 1: Wide Top */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
-            className="col-span-1 md:col-span-8 bg-[#064e3b]/50 backdrop-blur-xl border-t border-l border-white/5 rounded-3xl p-10 hover:border-[#10b981]/30 transition-all shadow-2xl relative overflow-hidden group"
+            className="col-span-1 md:col-span-8 bg-white border border-outline-variant rounded-[2.5rem] p-10 hover:border-guardia/30 transition-all shadow-ambient relative overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#10b981]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-guardia/5 opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative z-10 flex flex-col justify-between h-full">
               <div>
-                <GCBadge className="w-16 h-16 text-[#10b981] mb-6 drop-shadow-md" />
-                <h3 className="text-2xl font-black mb-3">Ortografía y Gramática (Filtro IA)</h3>
-                <p className="text-[#a7f3d0]/80 leading-relaxed max-w-xl">
+                <div className="w-16 h-16 mb-6">
+                   <GCBadge className="w-full h-full object-contain" />
+                </div>
+                <h3 className="text-2xl font-black mb-3 uppercase tracking-tight">Ortografía y Gramática (Filtro IA)</h3>
+                <p className="text-on-surface-variant font-medium leading-relaxed max-w-xl">
                   El mayor punto de criba en la Guardia Civil no es el temario penal, es la ortografía. Generamos frases trampa dinámicas con el mismo nivel de dificultad del tribunal. Si fallas una regla, el sistema te acribilla con variaciones hasta que tu mente rechace el error.
                 </p>
               </div>
@@ -115,11 +118,11 @@ const AcademyGuardiaCivil = () => {
           {/* Card 2: Square Right */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="col-span-1 md:col-span-4 bg-[#064e3b]/30 backdrop-blur-xl border border-white/5 rounded-3xl p-10 hover:border-[#10b981]/30 transition-all flex flex-col justify-center items-center text-center"
+            className="col-span-1 md:col-span-4 bg-white border border-outline-variant rounded-[2.5rem] p-10 hover:border-guardia/30 transition-all flex flex-col justify-center items-center text-center shadow-ambient"
           >
-            <BrainCircuit className="w-12 h-12 text-white mb-4" />
-            <h3 className="text-xl font-black mb-2 text-[#10b981]">Inglés Técnico</h3>
-            <p className="text-[13px] text-[#a7f3d0]/60">
+            <BrainCircuit className="w-12 h-12 text-guardia mb-4" />
+            <h3 className="text-xl font-black mb-2 text-on-surface uppercase">Inglés Técnico</h3>
+            <p className="text-[13px] text-on-surface-variant font-medium">
               Gramática de habla inglesa basada en vocabulario policial y fronterizo.
             </p>
           </motion.div>
@@ -127,18 +130,18 @@ const AcademyGuardiaCivil = () => {
           {/* Card 3: Wide Bottom */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-            className="col-span-1 md:col-span-12 bg-gradient-to-r from-[#022c22] to-[#064e3b] border border-white/5 rounded-3xl p-10 flex flex-col md:flex-row gap-8 items-center justify-between"
+            className="col-span-1 md:col-span-12 bg-white border border-outline-variant rounded-[2.5rem] p-10 flex flex-col md:flex-row gap-8 items-center justify-between shadow-ambient hover:border-guardia/30 transition-all"
           >
             <div className="flex-1">
-              <h3 className="text-2xl font-black mb-3 text-white">Simulacros Oficiales</h3>
-              <p className="text-[#a7f3d0]/70 leading-relaxed max-w-3xl">
+              <h3 className="text-2xl font-black mb-3 uppercase">Simulacros Oficiales</h3>
+              <p className="text-on-surface-variant font-medium leading-relaxed max-w-3xl">
                 Temario completo (Penal, Constitución, Fuerzas de Seguridad). Entrena con cronómetro en exámenes de 100 preguntas modelados con la misma densidad estadística de los últimos 5 años de convocatoria.
               </p>
             </div>
             <div className="flex-shrink-0">
-              <div className="flex items-center gap-3 px-6 py-4 bg-[#10b981]/10 border border-[#10b981]/20 rounded-2xl">
-                <RotateCcw className="w-6 h-6 text-[#10b981] animate-spin-slow" />
-                <span className="font-space-grotesk font-black text-white text-lg tracking-widest">EN VIVO</span>
+              <div className="flex items-center gap-3 px-6 py-4 bg-guardia/5 border border-guardia/10 rounded-2xl">
+                <RotateCcw className="w-6 h-6 text-guardia animate-spin-slow" />
+                <span className="font-black text-on-surface text-lg tracking-widest">EN VIVO</span>
               </div>
             </div>
           </motion.div>
@@ -147,9 +150,9 @@ const AcademyGuardiaCivil = () => {
       </div>
 
       {/* SEO & Expanded Content Area */}
-      <div className="max-w-4xl mx-auto z-10 relative mt-24 border-t border-[#10b981]/20 pt-16">
-        <h2 className="text-3xl font-black mb-6 text-white">Academia Premium para Ingreso en la Guardia Civil</h2>
-        <div className="prose prose-invert prose-p:text-[#a7f3d0]/80 prose-a:text-[#10b981] prose-strong:text-white">
+      <div className="max-w-4xl mx-auto z-10 relative mt-24 border-t border-outline-variant pt-16">
+        <h2 className="text-3xl font-black mb-6 uppercase tracking-tighter">Academia Premium para Ingreso en la Guardia Civil</h2>
+        <div className="prose prose-slate prose-p:text-on-surface-variant prose-strong:text-on-surface prose-a:text-guardia">
           <p className="mb-4">
             Conseguir el <em>apto</em> y lograr <strong>aprobar las oposiciones de la Guardia Civil</strong> requiere una preparación sin margen de error. En nuestra innovadora <strong>academia Guardia Civil online</strong>, fusionamos el rigor jurídico con las técnicas más punteras de <em>machine learning</em>.
           </p>

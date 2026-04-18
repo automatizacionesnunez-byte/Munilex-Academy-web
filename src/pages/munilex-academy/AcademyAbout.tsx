@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Brain, Scale, ShieldCheck, Mail, Link as LinkIcon, Globe, Code, GraduationCap } from 'lucide-react';
+import { Brain, Scale, ShieldCheck, Mail, Link as LinkIcon, Globe, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const AcademyAbout = () => {
@@ -18,7 +18,7 @@ const AcademyAbout = () => {
     {
       name: "Francisco de Paula Marín",
       role: "Socio / Director Académico",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Francisco&backgroundColor=ffdfbf", // Use a better placeholder or real photo if available
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Francisco&backgroundColor=ffdfbf",
       description: "Referente en el sector pedagógico con una capacidad magistral para explicar el Derecho mediante casos prácticos. Francisco se unió al proyecto tras conectar en LinkedIn, aportando su vasta experiencia docente para asegurar que la IA de Munilex no solo sea potente, sino que hable el lenguaje del opositor y las academias modernas.",
       tags: ["Director Académico", "Docencia Superior", "Casos Prácticos", "Estrategia Educativa"],
       social: {
@@ -29,7 +29,7 @@ const AcademyAbout = () => {
   ];
 
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-[#131313] text-[#E5E2E1] font-inter selection:bg-[#d4af37]/30 selection:text-white">
+    <div className="pt-32 pb-24 min-h-screen bg-surface text-on-surface font-inter selection:bg-police-gold/20 selection:text-on-surface">
       <Helmet>
         <title>Sobre Nosotros | Munilex Academy - Liderazgo Jurídico & IA</title>
         <meta name="description" content="Conoce al equipo detrás de Munilex Academy. Liderada por José María Núñez Mejía y Francisco de Paula Marín, fusionamos el derecho con la inteligencia artificial de vanguardia." />
@@ -42,14 +42,14 @@ const AcademyAbout = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-[#1C1B1B] border border-[#353534] text-[#d4af37] text-xs font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full bg-white border border-outline-variant text-police-gold text-[10px] font-black tracking-widest uppercase shadow-ambient">
             <Brain className="w-4 h-4" />
             Nuestra Misión
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter leading-tight text-white">
-            Forjando el <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">Futuro</span> de la Oposición
+          <h1 className="text-5xl md:text-[6.5rem] font-black mb-10 uppercase tracking-tighter leading-[0.95] text-on-surface">
+            Forjando el <span className="text-transparent bg-clip-text bg-gradient-to-r from-police-gold to-on-surface">Futuro</span> de la Oposición
           </h1>
-          <p className="text-xl text-[#E5E2E1]/70 font-medium leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-on-surface-variant font-semibold leading-relaxed max-w-3xl mx-auto">
             Munilex Academy no es solo una plataforma de estudio; es un laboratorio de innovación donde la precisión del Derecho se encuentra con la potencia de la Inteligencia Artificial.
           </p>
         </motion.div>
@@ -81,11 +81,11 @@ const AcademyAbout = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-[#1C1B1B] border border-[#353534]/50 p-10 rounded-[2.5rem] hover:border-[#d4af37]/30 transition-all group"
+              className="bg-white border border-outline-variant p-12 rounded-[3rem] hover:border-police-gold/30 transition-all group shadow-ambient"
             >
-              <div className="text-[#d4af37] mb-8 bg-[#2A2A2A] w-16 h-16 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">{item.icon}</div>
-              <h3 className="text-2xl font-black mb-4 text-white uppercase tracking-tight">{item.title}</h3>
-              <p className="text-[#E5E2E1]/60 leading-relaxed">{item.desc}</p>
+              <div className="text-police-gold mb-10 bg-surface-low w-16 h-16 flex items-center justify-center rounded-[1.25rem] group-hover:scale-110 transition-transform border border-outline-variant shadow-sm">{item.icon}</div>
+              <h3 className="text-2xl font-black mb-4 text-on-surface uppercase tracking-tight">/ {item.title}</h3>
+              <p className="text-on-surface-variant font-medium leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -93,9 +93,9 @@ const AcademyAbout = () => {
 
       {/* Founders Section */}
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase mb-4">El Equipo <span className="text-[#d4af37]">Fundador</span></h2>
-          <p className="text-[#E5E2E1]/60 font-medium text-lg">La convergencia entre la academia tradicional y la tecnología disruptiva.</p>
+        <div className="mb-20 text-center">
+          <h2 className="text-4xl md:text-6xl font-black text-on-surface tracking-tighter uppercase mb-6 leading-tight">El Equipo <span className="text-police-gold underline decoration-outline-variant underline-offset-8">Fundador</span></h2>
+          <p className="text-on-surface-variant font-semibold text-xl">La convergencia entre la academia tradicional y la tecnología disruptiva.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -105,33 +105,31 @@ const AcademyAbout = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative p-1 bg-[#1C1B1B] rounded-[3rem] border border-[#353534]/50 overflow-hidden group"
+              className="bg-white rounded-[3.5rem] border border-outline-variant overflow-hidden group shadow-ambient hover:shadow-premium transition-all"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#d4af37]/10 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              <div className="p-8 md:p-12 h-full flex flex-col">
-                <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-[2rem] overflow-hidden bg-[#2A2A2A] border border-[#353534] flex-shrink-0">
+              <div className="p-10 md:p-14 h-full flex flex-col">
+                <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
+                  <div className="w-24 h-24 md:w-40 md:h-40 rounded-[2.5rem] overflow-hidden bg-surface-low border border-outline-variant flex-shrink-0 shadow-ambient">
                     <img src={founder.image} alt={founder.name} className="w-full h-full object-cover" />
                   </div>
-                  <div>
-                    <h3 className="text-3xl font-black text-white leading-tight mb-2">{founder.name}</h3>
-                    <p className="text-[#d4af37] font-bold text-sm uppercase tracking-widest">{founder.role}</p>
-                    <div className="flex gap-3 mt-4">
-                      {founder.social.linkedin && <a href={founder.social.linkedin} className="text-[#E5E2E1]/40 hover:text-white transition-colors"><LinkIcon className="w-5 h-5" /></a>}
-                      {founder.social.web && <a href={founder.social.web} className="text-[#E5E2E1]/40 hover:text-white transition-colors"><Globe className="w-5 h-5" /></a>}
-                      {founder.social.mail && <a href={founder.social.mail} className="text-[#E5E2E1]/40 hover:text-white transition-colors"><Mail className="w-5 h-5" /></a>}
+                  <div className="pt-2">
+                    <h3 className="text-3xl font-black text-on-surface leading-tight mb-3 uppercase tracking-tighter">{founder.name}</h3>
+                    <p className="text-police-gold font-black text-[10px] uppercase tracking-[.25em] mb-6">{founder.role}</p>
+                    <div className="flex gap-4">
+                      {founder.social.linkedin && <a href={founder.social.linkedin} className="w-10 h-10 border border-outline-variant rounded-xl flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-all"><LinkIcon className="w-4 h-4" /></a>}
+                      {founder.social.web && <a href={founder.social.web} className="w-10 h-10 border border-outline-variant rounded-xl flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-all"><Globe className="w-4 h-4" /></a>}
+                      {founder.social.mail && <a href={founder.social.mail} className="w-10 h-10 border border-outline-variant rounded-xl flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-all"><Mail className="w-4 h-4" /></a>}
                     </div>
                   </div>
                 </div>
 
-                <p className="text-[#E5E2E1]/70 leading-relaxed font-normal mb-8 flex-grow">
+                <p className="text-on-surface-variant leading-relaxed font-medium mb-10 flex-grow text-lg">
                   {founder.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {founder.tags.map((tag, tIdx) => (
-                    <span key={tIdx} className="px-3 py-1 bg-[#2A2A2A] border border-[#353534] rounded-full text-[10px] uppercase font-bold text-[#E5E2E1]/50 tracking-wider">
+                    <span key={tIdx} className="px-4 py-1.5 bg-surface-low border border-outline-variant rounded-full text-[10px] uppercase font-black text-on-surface/60 tracking-wider">
                       {tag}
                     </span>
                   ))}
@@ -143,14 +141,14 @@ const AcademyAbout = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="max-w-7xl mx-auto mt-40 px-6 md:px-8 text-center">
-        <div className="bg-gradient-to-br from-[#1C1B1B] to-[#131313] border border-[#353534] p-16 md:p-24 rounded-[4rem] relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-32 bg-[#d4af37]/5 blur-[120px]" />
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter">¿Listo para asegurar tu <span className="text-[#d4af37]">plaza</span>?</h2>
-          <p className="text-[#E5E2E1]/60 text-lg mb-12 max-w-2xl mx-auto">Únete a la nueva generación de alumnos que han dejado atrás los métodos de estudio del siglo pasado.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/academy/precios" className="px-10 py-5 bg-[#d4af37] text-[#241a00] font-black rounded-2xl text-lg hover:opacity-90 transition-opacity">Ver Planes</a>
-            <a href="/academy/contacto" className="px-10 py-5 bg-[#2A2A2A] text-white font-black rounded-2xl text-lg border border-[#353534] hover:bg-[#353534] transition-colors">Contactar</a>
+      <div className="max-w-7xl mx-auto mt-40 px-6 md:px-8 text-center pb-24">
+        <div className="bg-white border border-outline-variant p-16 md:p-32 rounded-[5rem] relative overflow-hidden shadow-premium">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-police-gold/[0.02] -z-10" />
+          <h2 className="text-4xl md:text-[5rem] font-black text-on-surface mb-10 uppercase tracking-tighter leading-[0.9]">¿Listo para asegurar tu <span className="text-police-gold">plaza</span>?</h2>
+          <p className="text-on-surface-variant font-semibold text-xl mb-14 max-w-2xl mx-auto">Únete a la nueva generación de alumnos que han dejado atrás los métodos de estudio del siglo pasado.</p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="/academy/precios" className="px-12 py-6 bg-on-surface text-white font-black rounded-2xl text-xs uppercase tracking-[.2em] shadow-premium hover:scale-[1.02] transition-all">Ver Planes</a>
+            <a href="/academy/contacto" className="px-12 py-6 bg-white text-on-surface font-black rounded-2xl text-xs border border-outline-variant hover:bg-surface-variant transition-all uppercase tracking-[.2em] shadow-ambient">Contactar Equipo</a>
           </div>
         </div>
       </div>

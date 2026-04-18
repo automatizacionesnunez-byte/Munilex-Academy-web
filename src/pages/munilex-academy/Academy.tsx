@@ -116,25 +116,25 @@ const Academy = () => {
   const TrackCard = ({ title, description, icon, to, features }: any) => (
     <motion.div 
       whileHover={{ y: -5 }}
-      className="bg-[#1C1B1B] p-10 rounded-3xl border border-[#353534]/50 relative overflow-hidden group h-full flex flex-col"
+      className="bg-white p-10 rounded-[2.5rem] border border-outline-variant shadow-ambient relative overflow-hidden group h-full flex flex-col"
     >
       <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity text-primary">
         {icon}
       </div>
       
-      <div className={`w-14 h-14 bg-gradient-to-br from-[#f2ca50] to-[#d4af37] rounded-xl flex items-center justify-center text-[#241a00] mb-8 shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:scale-105 transition-transform overflow-hidden`}>
+      <div className="w-14 h-14 bg-police-gold/10 rounded-xl flex items-center justify-center text-police-gold mb-8 group-hover:scale-105 transition-transform overflow-hidden border border-police-gold/20">
         {icon}
       </div>
       
-      <h3 className="mb-4 text-white font-black text-2xl tracking-tight leading-tight">{title}</h3>
-      <p className="text-[0.875rem] text-[#E5E2E1]/70 mb-8 leading-relaxed font-normal flex-grow">
+      <h3 className="mb-4 text-on-surface font-black text-2xl tracking-tight leading-tight uppercase">{title}</h3>
+      <p className="text-[0.875rem] text-on-surface-variant mb-8 leading-relaxed font-medium flex-grow">
         {description}
       </p>
       
       <ul className="space-y-4 mb-10">
         {features.map((item: string, i: number) => (
-          <li key={i} className="flex items-center gap-3 font-medium text-[#E5E2E1]/90 text-sm">
-            <CheckCircle className="w-5 h-5 text-[#d4af37]" />
+          <li key={i} className="flex items-center gap-3 font-black text-on-surface text-[10px] uppercase tracking-widest">
+            <CheckCircle className="w-4 h-4 text-police-gold" />
             {item}
           </li>
         ))}
@@ -142,7 +142,7 @@ const Academy = () => {
       
       <Link 
         to={to}
-        className="w-full py-4 bg-[#2A2A2A] text-white font-semibold rounded-xl hover:bg-[#353534] border border-[#4D4635]/30 transition-all flex items-center justify-center gap-3"
+        className="w-full py-4 bg-on-surface text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-neutral-800 transition-all flex items-center justify-center gap-3 shadow-premium"
       >
         Ver Ruta Detallada
         <ArrowRight className="w-4 h-4" />
@@ -151,7 +151,7 @@ const Academy = () => {
   );
 
   return (
-    <div className="pt-24 min-h-screen bg-[#131313] text-[#E5E2E1] font-inter selection:bg-[#d4af37]/30 selection:text-white">
+    <div className="pt-24 min-h-screen bg-surface text-on-surface font-inter selection:bg-police-gold/20 selection:text-on-surface">
       <Helmet>
         <title>Academia oposiciones IA | Temarios Actualizados | Munilex Academy</title>
         <meta name="description" content="Munilex Academy: La academia de oposiciones de nueva generación impulsada por Inteligencia Artificial. Temarios siempre actualizados, simulacros infinitos y preparación de élite." />
@@ -166,35 +166,35 @@ const Academy = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedRoute(null)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-md z-[60]"
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[60]"
             />
             <motion.div 
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-full max-w-xl bg-[#131313] text-[#E5E2E1] border-l border-[#353534] z-[70] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-full max-w-xl bg-surface text-on-surface border-l border-outline-variant z-[70] shadow-premium overflow-y-auto"
             >
-              <div className="sticky top-0 bg-[#131313]/90 backdrop-blur-xl px-8 py-6 border-b border-[#353534] flex justify-between items-center z-10">
+              <div className="sticky top-0 bg-surface/90 backdrop-blur-xl px-8 py-6 border-b border-outline-variant flex justify-between items-center z-10">
                 <div>
-                  <h4 className="text-white font-bold text-xl tracking-tight">Detalle de Ruta</h4>
+                  <h4 className="text-on-surface font-black text-xl tracking-tight uppercase">Detalle de Ruta</h4>
                 </div>
                 <button 
                   onClick={() => setSelectedRoute(null)}
-                  className="p-2 hover:bg-[#2A2A2A] rounded-full transition-colors text-[#E5E2E1]/70 hover:text-white"
+                  className="p-2 hover:bg-surface-variant rounded-full transition-colors text-on-surface-variant hover:text-on-surface"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
               <div className="p-10">
-                <div className="text-xs font-bold uppercase tracking-[0.15em] text-[#d4af37] mb-3">
+                <div className="text-[10px] font-black uppercase tracking-[.2em] text-police-gold mb-3">
                   {routeDetails[selectedRoute].subtitle}
                 </div>
-                <h2 className="text-3xl font-black text-white tracking-tight mb-6 leading-tight">
+                <h2 className="text-3xl font-black text-on-surface tracking-tight mb-6 leading-tight uppercase">
                   {routeDetails[selectedRoute].title}
                 </h2>
-                <p className="text-[0.95rem] text-[#E5E2E1]/80 leading-relaxed mb-10">
+                <p className="text-[0.95rem] text-on-surface-variant leading-relaxed mb-10 font-medium">
                   {routeDetails[selectedRoute].description}
                 </p>
 
@@ -205,14 +205,14 @@ const Academy = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 + idx * 0.05 }}
                       key={idx} 
-                      className="flex gap-5 p-5 rounded-2xl bg-[#1C1B1B] border border-[#353534]/50 hover:border-[#d4af37]/30 transition-colors group"
+                      className="flex gap-5 p-6 rounded-[2rem] bg-white border border-outline-variant hover:border-police-gold/30 transition-colors group shadow-ambient"
                     >
-                      <div className="w-12 h-12 bg-[#2A2A2A] rounded-xl flex items-center justify-center text-[#d4af37]">
+                      <div className="w-12 h-12 bg-surface-low rounded-xl flex items-center justify-center text-police-gold">
                         {feature.icon}
                       </div>
                       <div className="flex-1">
-                        <div className="font-bold text-white tracking-tight mb-1 text-sm">{feature.title}</div>
-                        <p className="text-[0.85rem] text-[#E5E2E1]/70 leading-relaxed">{feature.desc}</p>
+                        <div className="font-black text-on-surface tracking-tighter mb-1 text-sm uppercase">{feature.title}</div>
+                        <p className="text-[0.85rem] text-on-surface-variant leading-relaxed font-medium">{feature.desc}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -221,13 +221,13 @@ const Academy = () => {
                 <div className="mt-12">
                   <a 
                     href="https://munilex.lovable.app/auth/register"
-                    className="w-full py-4 bg-gradient-to-r from-[#f2ca50] to-[#d4af37] text-[#241a00] font-bold rounded-xl text-md hover:opacity-90 transition-opacity flex items-center justify-center gap-3 group"
+                    className="w-full py-5 bg-on-surface text-white font-black rounded-2xl text-xs uppercase tracking-widest hover:opacity-90 transition-opacity flex items-center justify-center gap-3 group shadow-premium"
                   >
                     Empezar Preparación
                     <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
-                  <p className="text-center mt-4 text-xs font-medium text-[#E5E2E1]/50">
-                    Acceso inmediato al entorno de estudio Munilex
+                  <p className="text-center mt-4 text-[10px] font-black text-on-surface-variant/50 uppercase tracking-widest">
+                    Acceso inmediato al entorno Munilex
                   </p>
                 </div>
               </div>
@@ -237,38 +237,36 @@ const Academy = () => {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-24 md:pt-36 md:pb-32 px-6 md:px-8 border-b border-[#353534]/50 overflow-hidden">
-        <div className="absolute inset-0 bg-[#131313] z-0" />
-        
+      <section className="relative pt-24 pb-24 md:pt-36 md:pb-32 px-6 md:px-8 border-b border-outline-variant overflow-hidden">
         {/* Abstract Glows */}
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#d4af37]/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] bg-[#ffffff]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-police-gold/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1C1B1B] border border-[#353534] text-[#d4af37] text-xs font-bold tracking-widest uppercase mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-outline-variant text-police-gold text-[10px] font-black tracking-widest uppercase mb-8 shadow-ambient"
           >
             <Brain className="w-3.5 h-3.5" />
-            POTENCIADO POR IA
+            Potenciado por IA
           </motion.div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold text-white leading-[1.05] tracking-tight mb-8 max-w-4xl">
+          <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] font-black text-on-surface leading-[0.95] tracking-tighter mb-8 max-w-4xl uppercase">
             Preparación de Élite.<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">
-              Sin la fricción tradicional.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-police-gold to-on-surface">
+              Sin fricciones.
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-[#E5E2E1]/70 max-w-2xl leading-relaxed mb-12 font-medium">
-            La academia de oposiciones de nueva generación. Integramos inteligencia artificial nativa para adaptar el temario a tu ritmo, generar simulacros exactos y optimizar tu memoria a largo plazo.
+          <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-12 font-semibold">
+            La academia de oposiciones de nueva generación. Integramos inteligencia artificial nativa para adaptar el temario a tu ritmo, generar simulacros exactos y optimizar tu memoria.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="https://munilex.lovable.app/auth/register"
-              className="px-8 py-4 bg-gradient-to-r from-[#f2ca50] to-[#d4af37] text-[#241a00] font-bold rounded-xl text-[15px] shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_30px_rgba(212,175,55,0.25)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+              className="px-10 py-5 bg-on-surface text-white font-black rounded-2xl text-xs uppercase tracking-widest shadow-premium hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
             >
               Asegurar Plaza
               <ArrowRight className="w-4 h-4" />
@@ -277,7 +275,7 @@ const Academy = () => {
               onClick={() => {
                 document.getElementById('rutas')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-8 py-4 bg-[#1C1B1B] border border-[#353534] hover:bg-[#2A2A2A] text-white font-semibold rounded-xl text-[15px] transition-all flex items-center justify-center"
+              className="px-10 py-5 bg-white border border-outline-variant text-on-surface font-black rounded-2xl text-xs uppercase tracking-widest transition-all flex items-center justify-center shadow-ambient hover:bg-surface-variant"
             >
               Explorar Oposiciones
             </button>
@@ -289,19 +287,19 @@ const Academy = () => {
       <section className="py-24 relative" id="rutas">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="max-w-3xl mb-16">
-            <h2 className="mb-4 text-white font-bold text-3xl md:text-4xl tracking-tight">Especialidades Disponibles</h2>
-            <p className="text-[1.05rem] text-[#E5E2E1]/60 font-medium leading-relaxed">Infraestructura tecnológica dedicada para cada cuerpo y escala.</p>
+            <h2 className="mb-4 text-on-surface font-black text-3xl md:text-4xl tracking-tighter uppercase">Especialidades Disponibles</h2>
+            <p className="text-[1.05rem] text-on-surface-variant font-medium leading-relaxed">Infraestructura tecnológica dedicada para cada cuerpo y escala.</p>
           </div>
 
           <div className="flex flex-wrap gap-3 mb-12">
-            {(Object.keys(families) as Array<keyof typeof families>).map((key) => (
+            {(families && Object.keys(families) as Array<keyof typeof families>).map((key) => (
               <button
                 key={key}
                 onClick={() => setActiveFamily(key)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all duration-300 ${
                   activeFamily === key 
-                    ? 'bg-[#E5E2E1] text-[#131313]' 
-                    : 'bg-[#1C1B1B] text-[#E5E2E1]/70 hover:bg-[#2A2A2A] hover:text-white border border-[#353534]'
+                    ? 'bg-on-surface text-white shadow-premium' 
+                    : 'bg-white text-on-surface-variant hover:text-on-surface border border-outline-variant shadow-ambient'
                 }`}
               >
                 {families[key].icon}
@@ -386,11 +384,14 @@ const Academy = () => {
       </section>
 
       {/* AI Bento Features */}
-      <section className="py-24 bg-[#0E0E0E] relative border-t border-[#353534]/50">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <section className="py-24 bg-surface-variant/30 relative border-y border-outline-variant overflow-hidden">
+        {/* Decor */}
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-police-gold/5 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
           <div className="mb-16">
-             <h2 className="text-white font-bold text-3xl md:text-4xl tracking-tight mb-4">El motor detrás del éxito</h2>
-             <p className="text-[1.05rem] text-[#E5E2E1]/60 font-medium">Herramientas diseñadas para exprimir cada minuto de tu tiempo de estudio.</p>
+             <h2 className="text-on-surface font-black text-3xl md:text-4xl tracking-tighter mb-4 uppercase">El motor detrás del éxito</h2>
+             <p className="text-[1.05rem] text-on-surface-variant font-medium">Herramientas diseñadas para exprimir cada minuto de tu tiempo de estudio.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -408,7 +409,7 @@ const Academy = () => {
               },
               { 
                 title: "Temarios Vivos", 
-                desc: "Si el BOE se actualiza, tu contenido de estudio cambia automáticamente sin que tengas que imprimir resúmenes de nuevo.", 
+                desc: "Si el BOE se actualiza, tu contenido cambia automáticamente sin que tengas que imprimir resúmenes de nuevo.", 
                 icon: <Zap className="w-6 h-6" />,
                 span: "md:col-span-2 lg:col-span-2"
               },
@@ -419,12 +420,12 @@ const Academy = () => {
                 span: "md:col-span-1"
               }
             ].map((tool, i) => (
-              <div key={i} className={`p-8 rounded-3xl bg-[#1C1B1B] border border-[#353534]/50 hover:bg-[#201F1F] hover:border-[#4D4635] transition-all group ${tool.span}`}>
-                <div className="w-12 h-12 rounded-xl bg-[#2A2A2A] text-[#d4af37] flex items-center justify-center mb-6 border border-[#353534]">
+              <div key={i} className={`p-10 rounded-[2.5rem] bg-white border border-outline-variant shadow-ambient hover:border-police-gold transition-all group ${tool.span}`}>
+                <div className="w-12 h-12 rounded-xl bg-surface-low text-police-gold flex items-center justify-center mb-6 border border-outline-variant">
                   {tool.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white tracking-tight">{tool.title}</h3>
-                <p className="text-[#E5E2E1]/70 leading-relaxed font-normal text-[0.95rem]">{tool.desc}</p>
+                <h3 className="text-xl font-black mb-3 text-on-surface tracking-tight uppercase">{tool.title}</h3>
+                <p className="text-on-surface-variant leading-relaxed font-medium text-[0.95rem]">{tool.desc}</p>
               </div>
             ))}
           </div>
@@ -432,39 +433,46 @@ const Academy = () => {
       </section>
 
       {/* Academic Benefits Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-black to-[#0E0E0E] relative overflow-hidden">
+      <section className="py-24 px-6 bg-surface relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-white uppercase">Soporte Estratégico para Centros</h2>
-            <p className="text-white/40 max-w-2xl mx-auto text-lg font-medium">Diseñamos Munilex no solo para el alumno, sino para ser el aliado perfecto de los preparadores.</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-on-surface uppercase">Soporte Estratégico</h2>
+            <p className="text-on-surface-variant max-w-2xl mx-auto text-lg font-medium mb-10">Diseñamos Munilex no solo para el alumno, sino para ser el aliado perfecto de los preparadores.</p>
+            <Link 
+              to="/munilex-corporate" 
+              className="inline-flex items-center gap-2 px-10 py-5 bg-white border border-outline-variant text-on-surface font-black rounded-2xl hover:bg-surface-variant transition-all group uppercase tracking-widest text-xs shadow-ambient"
+            >
+              Explorar Soluciones Corporate
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/30 transition-all group">
-              <Clock className="w-12 h-12 text-[#d4af37] mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold mb-4">Más tiempo libre</h3>
-              <p className="text-white/50 leading-relaxed">Libera a tus profesores de la carga de corregir tests y resolver dudas mecánicas. La IA se encarga de lo repetitivo.</p>
+            <div className="p-10 rounded-[2.5rem] bg-white border border-outline-variant shadow-ambient hover:border-police-gold/30 transition-all group">
+              <Clock className="w-12 h-12 text-police-gold mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-black text-on-surface uppercase mb-4">Más tiempo libre</h3>
+              <p className="text-on-surface-variant font-medium leading-relaxed">Libera a tus profesores de la carga de corregir tests y resolver dudas mecánicas. La IA se encarga de lo repetitivo.</p>
             </div>
-            <div className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/30 transition-all group">
-              <Zap className="w-12 h-12 text-[#d4af37] mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold mb-4">Menos consultas</h3>
-              <p className="text-white/50 leading-relaxed">Nuestra IA responde al instante dudas sobre el BOE, reduciendo el volumen de emails y consultas de soporte en un 80%.</p>
+            <div className="p-10 rounded-[2.5rem] bg-white border border-outline-variant shadow-ambient hover:border-police-gold/30 transition-all group">
+              <Zap className="w-12 h-12 text-police-gold mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-black text-on-surface uppercase mb-4">Menos consultas</h3>
+              <p className="text-on-surface-variant font-medium leading-relaxed">Nuestra IA responde al instante dudas sobre el BOE, reduciendo el volumen de emails y consultas de soporte.</p>
             </div>
-            <div className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/30 transition-all group">
-              <Smartphone className="w-12 h-12 text-[#d4af37] mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold mb-4">Uso 24/7</h3>
-              <p className="text-white/50 leading-relaxed">Tu academia nunca cierra. El alumno tiene acceso a simulacros y material de estudio en cualquier momento y lugar.</p>
+            <div className="p-10 rounded-[2.5rem] bg-white border border-outline-variant shadow-ambient hover:border-police-gold/30 transition-all group">
+              <Smartphone className="w-12 h-12 text-police-gold mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-black text-on-surface uppercase mb-4">Uso 24/7</h3>
+              <p className="text-on-surface-variant font-medium leading-relaxed">Tu academia nunca cierra. El alumno tiene acceso a simulacros y material de estudio en cualquier momento.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 px-6 bg-[#0E0E0E]">
+      <section className="py-24 px-6 bg-surface-variant/30 border-t border-outline-variant">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-white uppercase">Historias de Éxito</h2>
-            <p className="text-white/40 max-w-2xl mx-auto text-lg font-medium">Opositores reales que transformaron su estudio con nuestra tecnología.</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-on-surface uppercase">Historias de Éxito</h2>
+            <p className="text-on-surface-variant max-w-2xl mx-auto text-lg font-medium">Opositores reales que transformaron su estudio con nuestra tecnología.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -485,14 +493,14 @@ const Academy = () => {
                 role: "Ayudante de Inst. Penitenciarias"
               }
             ].map((t, i) => (
-              <div key={i} className="p-8 rounded-3xl bg-[#1C1B1B] border border-white/5">
-                <div className="flex items-center gap-1 mb-4 text-[#d4af37]">
-                  {[...Array(5)].map((_, i) => <Sparkles key={i} className="w-4 h-4" />)}
+              <div key={i} className="p-10 rounded-[2.5rem] bg-white border border-outline-variant shadow-ambient hover:shadow-premium transition-all">
+                <div className="flex items-center gap-1 mb-6 text-police-gold">
+                  {[...Array(5)].map((_, i) => <Sparkles key={i} className="w-4 h-4 fill-current" />)}
                 </div>
-                <p className="text-white/70 italic mb-6 leading-relaxed">"{t.body}"</p>
+                <p className="text-on-surface-variant font-medium italic mb-8 leading-relaxed text-lg">"{t.body}"</p>
                 <div>
-                  <div className="font-bold text-white">{t.name}</div>
-                  <div className="text-xs text-[#d4af37] font-black uppercase tracking-widest">{t.role}</div>
+                  <div className="font-black text-on-surface uppercase tracking-tight">{t.name}</div>
+                  <div className="text-[10px] text-police-gold font-black uppercase tracking-widest">{t.role}</div>
                 </div>
               </div>
             ))}

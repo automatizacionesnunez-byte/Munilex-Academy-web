@@ -324,10 +324,10 @@ const Home = () => {
                  Soluciones White-Label
               </div>
               <h2 className="text-4xl md:text-7xl font-black text-secondary tracking-tighter mb-8 leading-[0.9]">
-                Cree su propia <span className="text-primary-container">Academia de Élite</span> con nuestra tecnología
+                Crea tu propia <span className="text-primary-container">academia elite</span> con nuestra tecnología
               </h2>
               <p className="text-xl text-on-surface-variant font-medium mb-12 leading-relaxed">
-                ¿Gestiona una academia? Le entregamos una plataforma marca blanca completa, con su propia identidad visual y toda la potencia de la IA de Munilex integrada.
+                ¿Gestionas una academia? Te entregamos una plataforma marca blanca completa, con tu propia identidad visual y toda la potencia de la IA de Munilex integrada.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
@@ -349,15 +349,13 @@ const Home = () => {
                 ))}
               </div>
 
-              <a 
-                href="https://wa.me/34605392912?text=Hola,%20me%20gustaría%20solicitar%20una%20plataforma%20Munilex%20para%20mi%20academia."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/munilex-corporate"
                 className="inline-flex items-center gap-3 px-10 py-5 bg-secondary text-white rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-primary transition-all shadow-xl group"
               >
-                Solicitar Demo Corporativa
+                Ver más
                 <Rocket className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </a>
+              </Link>
             </motion.div>
 
             <motion.div
