@@ -31,27 +31,27 @@ const Home = () => {
   
   const testimonials = [
     {
-      content: "\"Como Secretaria de Ayuntamiento, Munilex ha sido un antes y un después. La precisión en la redacción de informes técnicos ha reducido mis tiempos de gestión a la mitad.\"",
+      content: "\"Munilex me ha ahorrado muchísimo tiempo en la elaboración de informes. Al tener la base de datos legislativa integrada con la IA, todo el proceso es ahora mucho más ágil. He podido completar expedientes administrativos enteros en una fracción del tiempo habitual.\"",
       author: "E. García",
-      role: "Habilitada Nacional",
+      role: "Secretaria de Ayuntamiento",
       type: "funcionario",
-      icon: <UserCheck className="w-7 h-7" />,
+      icon: <ShieldCheck className="w-10 h-10" />,
       theme: "light"
     },
     {
-      content: "\"Conseguí mi plaza en Policía Nacional en tiempo récord. El sistema de simulacros adaptativos de la Academia Munilex es, sencillamente, imbatible.\"",
+      content: "\"Puedo estar tranquilamente en casa o de viaje y hacerme un tipo test, estudiando desde cualquier sitio con total flexibilidad. Gracias a su capacidad para generar contenido y simulacros, la organización de mi estudio ha dado un salto de calidad increíble.\"",
       author: "Carlos M.",
-      role: "Policía Nacional (Plaza 2024)",
+      role: "Opositor Policía Nacional",
       type: "opositor",
-      icon: <GraduationCap className="w-7 h-7" />,
+      icon: <GraduationCap className="w-10 h-10" />,
       theme: "dark"
     },
     {
-      content: "\"Integrar la tecnología de Munilex en nuestra academia ha sido la mejor inversión. Nuestros alumnos tienen una herramienta 24/7 que marca la diferencia en su preparación.\"",
+      content: "\"Es la solución tecnológica que nuestra academia necesitaba. Ofrecer a nuestros alumnos una plataforma 24/7 con IA soberana y generador de materiales bajo nuestra propia marca nos ha permitido escalar nuestra formación a otro nivel.\"",
       author: "D. Martínez",
       role: "Director de Academia Jurídica",
       type: "academia",
-      icon: <Rocket className="w-7 h-7" />,
+      icon: <Rocket className="w-10 h-10" />,
       theme: "corporate"
     }
   ];
@@ -59,7 +59,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
+    }, 8000);
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
@@ -462,7 +462,7 @@ const Home = () => {
             <p className="text-xl text-on-surface-variant font-medium opacity-60">Lo que dicen quienes ya están en el siguiente nivel con Munilex.</p>
           </div>
 
-          <div className="relative h-[450px] md:h-[400px]">
+          <div className="relative h-[650px] md:h-[550px]">
             <motion.div 
               className="absolute inset-0 flex items-center justify-center px-4"
               initial={false}
@@ -474,7 +474,7 @@ const Home = () => {
                   animate={{ opacity: 1, x: 0, scale: 1 }}
                   exit={{ opacity: 0, x: -20, scale: 0.95 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className={`w-full max-w-4xl p-10 md:p-16 rounded-[4rem] shadow-premium relative overflow-hidden flex flex-col justify-between h-[350px] md:h-[300px] border ${
+                  className={`w-full max-w-4xl p-10 md:p-16 rounded-[4rem] shadow-premium relative overflow-hidden flex flex-col justify-center h-full border ${
                     testimonials[currentTestimonial].theme === 'dark' 
                     ? 'bg-[#131313] text-white border-[#d4af37]/20 shadow-[0_40px_80px_rgba(212,175,55,0.1)]' 
                     : testimonials[currentTestimonial].theme === 'corporate'
@@ -487,22 +487,15 @@ const Home = () => {
                     {testimonials[currentTestimonial].icon}
                   </div>
 
-                  <p className="text-xl md:text-3xl italic font-medium mb-12 leading-tight">
+                  <p className="text-xl md:text-3xl italic font-medium mb-16 leading-tight md:leading-relaxed">
                     {testimonials[currentTestimonial].content}
                   </p>
                   
-                  <div className="flex items-center gap-5 translate-y-2">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
-                      testimonials[currentTestimonial].theme === 'dark' 
-                      ? 'bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00]' 
-                      : 'bg-primary-container text-white'
-                    }`}>
-                      {testimonials[currentTestimonial].icon}
-                    </div>
+                  <div className="flex items-center gap-6">
                     <div className="text-left">
-                      <div className="font-black text-lg md:text-xl">{testimonials[currentTestimonial].author}</div>
-                      <div className={`text-[10px] md:text-xs font-black uppercase tracking-[0.2em] ${
-                        testimonials[currentTestimonial].theme === 'dark' ? 'text-[#d4af37]' : 'opacity-60'
+                      <div className="font-black text-2xl md:text-3xl mb-1">{testimonials[currentTestimonial].author}</div>
+                      <div className={`text-sm md:text-base font-black uppercase tracking-[0.2em] ${
+                        testimonials[currentTestimonial].theme === 'dark' ? 'text-[#d4af37]' : 'text-primary-container'
                       }`}>
                         {testimonials[currentTestimonial].role}
                       </div>
@@ -514,7 +507,7 @@ const Home = () => {
           </div>
           
           {/* Pagination Dots */}
-          <div className="flex justify-center gap-3 mt-8">
+          <div className="flex justify-center gap-3 mt-12">
             {testimonials.map((_, i) => (
               <button
                 key={i}
