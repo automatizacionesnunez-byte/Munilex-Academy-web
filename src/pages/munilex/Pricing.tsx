@@ -2,6 +2,8 @@ import Pricing from '../../components/Pricing';
 import { motion } from 'framer-motion';
 import { CheckCircle, BarChart, Users, Phone } from 'lucide-react';
 
+const WHATSAPP_LINK = "https://wa.me/34605392912?text=Hola,%20me%20gustaría%20solicitar%20un%20presupuesto%20oficial%20para%20un%20Ayuntamiento.";
+
 const PricingPage = () => {
   return (
     <div className="pt-24 min-h-screen">
@@ -58,27 +60,27 @@ const PricingPage = () => {
             </div>
             <div className="relative rounded-[3rem] overflow-hidden shadow-premium group min-h-[500px]">
               <img 
-                src="/ayuntamiento_premium.png" 
-                alt="Modern Spanish City Hall" 
+                src="/ayuntamiento_clasico.png" 
+                alt="Ayuntamiento Clásico Español" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/40 to-transparent" />
               <div className="absolute bottom-10 left-10 right-10 text-white">
-                <h3 className="text-4xl font-black mb-4">Presupuesto a Medida</h3>
+                <h3 className="text-4xl font-black mb-4 italic uppercase tracking-tighter">Presupuesto <span className="text-primary-container not-italic">Oficial</span></h3>
                 <p className="text-white/80 text-lg leading-relaxed mb-8">
-                  Personalizamos el coste según el censo municipal y la cantidad de habilitados activos.
+                  Emitimos presupuestos formales para secretarías e intervenciones municipales, adaptados a la normativa de contratación.
                 </p>
                 <div className="space-y-3 mb-10">
-                  {["Sin límite de consultas", "Integración API Directa", "SLA 99.9% Garantizado"].map((feat, idx) => (
+                  {["Sin límite de consultas", "Integración con equipos", "Facturación institucional"].map((feat, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-secondary-cyan" />
                       <span className="font-bold text-white/90">{feat}</span>
                     </div>
                   ))}
                 </div>
-                <button className="w-full btn-primary !bg-white !text-primary py-5 text-lg font-black shadow-2xl hover:!bg-white/90">
-                  Solicitar Oferta Personalizada
-                </button>
+                <a href={WHATSAPP_LINK} className="block w-full bg-white text-secondary py-5 text-lg font-black shadow-2xl hover:bg-white/90 text-center rounded-2xl">
+                  Solicitar Presupuesto
+                </a>
               </div>
             </div>
           </div>
