@@ -151,6 +151,7 @@ const About = () => {
                   {pillar.d}
                 </p>
               </motion.div>
+            ))}
           </div>
         </div>
       </section>
