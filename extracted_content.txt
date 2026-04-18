@@ -1,0 +1,12 @@
+
+
+ERROR READING FILE: C:/Users/Usuario/Downloads/Tema 1_ Elementos de la Conducta Humana y su Evaluación en el Medio Penitenciario.pdf
+pdf is not a function
+
+
+ERROR READING FILE: C:/Users/Usuario/Downloads/Informe de Estudio_ La Organización Social en el Medio Penitenciario.pdf
+pdf is not a function
+
+
+ERROR READING FILE: C:/Users/Usuario/Downloads/Tema 3_ El Comportamiento Social en el Ámbito Penitenciario.pdf
+pdf is not a function
