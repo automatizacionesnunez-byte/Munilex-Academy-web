@@ -142,7 +142,7 @@ const AcademyIIPP = () => {
 
       {/* SEO & Expanded Content Area */}
       <div className="max-w-4xl mx-auto z-10 relative mt-24 border-t border-outline-variant pt-16">
-        <h2 className="text-3xl font-black mb-6 uppercase tracking-tighter">Academia Instituciones Penitenciarias Élite</h2>
+        <h2 className="text-3xl font-black mb-6 uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-prisons to-rose-600">Academia Instituciones Penitenciarias Élite</h2>
         <div className="prose prose-slate prose-p:text-on-surface-variant prose-strong:text-on-surface prose-a:text-prisons">
           <p className="mb-4">
             Alcanzar tu meta como Ayudante de Instituciones Penitenciarias demanda un conocimiento férreo del Código Penal y la Ley General Penitenciaria. En nuestra <strong>academia Instituciones Penitenciarias élite</strong>, no estudiamos teoría, forjamos operadores jurídicos de máximo nivel mediante <em>Deep Learning</em>.

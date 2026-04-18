@@ -25,20 +25,12 @@ const AcademyNavbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-outline-variant font-inter transition-all duration-500">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex items-center justify-between gap-8 h-20">
         <Link to="/academy" className="flex items-center gap-3 group shrink-0">
-          <motion.div 
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            className="w-10 h-10 bg-on-surface rounded-xl flex items-center justify-center shadow-premium group-hover:bg-police-gold transition-all duration-500"
-          >
-            <GraduationCap className="w-6 h-6 text-white group-hover:text-on-surface transition-colors" />
-          </motion.div>
-          <div className="flex flex-col">
-            <span className="text-xl font-black tracking-tighter leading-none text-on-surface lg:text-2xl uppercase">
-              MUNILEx
-            </span>
-            <span className="text-[9px] font-black uppercase tracking-[0.35em] text-police-gold ml-0.5 mt-0.5">
-              ACADEMY
-            </span>
-          </div>
+          <motion.img 
+            whileHover={{ scale: 1.05 }}
+            src="/munilex_logo_new.png" 
+            alt="Munilex Academy" 
+            className="h-12 w-auto drop-shadow-sm" 
+          />
         </Link>
         
         <div className="hidden lg:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.25em] flex-grow justify-center">

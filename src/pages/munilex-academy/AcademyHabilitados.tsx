@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Scale, BookOpen, Mic, Landmark, ChevronRight } from 'lucide-react';
+import { Scale, BookOpen, Brain, Landmark, ChevronRight, Video, FileText, LayoutList } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
@@ -24,12 +24,15 @@ const AcademyHabilitados = () => {
     <div className="pt-32 pb-24 min-h-screen bg-surface text-on-surface px-6 md:px-8 relative overflow-hidden font-inter selection:bg-police-gold/20 selection:text-on-surface">
       <Helmet>
         <title>Preparador habilitados nacionales | Munilex Academy</title>
-        <meta name="description" content="Academia online para Habilitados Nacionales (Secretaría, Intervención y Tesorería). Cante de temas online, simulador oral IA y preparación A1." />
+        <meta name="description" content="Academia online para Habilitados Nacionales (Secretaría, Intervención y Tesorería). Generador de test IA, casos prácticos y repositorio de legislación A1." />
       </Helmet>
       
       {/* Abstract background elements */}
-      <div className="absolute top-0 right-0 w-full h-[60vh] bg-gradient-to-b from-police-gold/5 to-transparent pointer-events-none" />
-      <div className="absolute top-[20%] left-[-10%] w-[30rem] h-[30rem] bg-police-gold/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-full h-[80vh] pointer-events-none opacity-[0.07] grayscale mix-blend-multiply">
+        <img src="/ayuntamiento_bg.png" alt="" className="w-full h-full object-cover object-top" />
+      </div>
+      <div className="absolute top-0 right-0 w-full h-[80vh] bg-gradient-to-b from-transparent via-surface to-surface pointer-events-none" />
+      <div className="absolute top-[20%] left-[-10%] w-[40rem] h-[40rem] bg-police-gold/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center text-center mt-8 mb-24">
         
@@ -51,14 +54,14 @@ const AcademyHabilitados = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="max-w-4xl"
         >
-          <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-on-surface mb-8">
+          <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-8 text-transparent bg-clip-text bg-gradient-to-r from-police-gold via-on-surface to-on-surface">
             Habilitados <br/> Nacionales
           </h1>
           <p className="text-xl md:text-2xl text-on-surface-variant font-medium leading-relaxed max-w-3xl mx-auto italic mb-10">
             "La columna vertebral jurídica y financiera de la Administración Local."
           </p>
           <p className="text-sm text-on-surface-variant/70 max-w-2xl mx-auto font-semibold uppercase tracking-widest leading-loose">
-            Especialidades: Secretaría, Intervención-Tesorería y Secretaría-Intervención. Preparación de Nivel A1 con IA conversacional para el cante de temas.
+            Especialidades: Secretaría, Intervención-Tesorería y Secretaría-Intervención. Preparación de Nivel A1 con IA Generativa para Opositores de Élite.
           </p>
         </motion.div>
 
@@ -78,57 +81,71 @@ const AcademyHabilitados = () => {
       </div>
 
       {/* Elegant Bento Grid Layout */}
-      <div className="max-w-6xl mx-auto z-10 relative mb-32">
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto z-10 relative mb-32 px-4">
+        <div className="grid md:grid-cols-6 gap-6">
           
-          {/* Card 1: Oral Simulation */}
+          {/* Card 1: IA Test Generation */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="bg-white border border-outline-variant rounded-[2.5rem] p-12 hover:border-police-gold/50 transition-all group shadow-ambient relative overflow-hidden"
+            className="md:col-span-3 bg-white border border-outline-variant rounded-[2.5rem] p-10 hover:border-police-gold/50 transition-all group shadow-ambient relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-police-gold/5 rounded-bl-full group-hover:bg-police-gold/10 transition-colors" />
-            <Mic className="w-10 h-10 text-police-gold mb-8 group-hover:scale-110 transition-transform" />
-            <h3 className="text-3xl font-black mb-6 uppercase tracking-tight text-on-surface">Dictado y Cante (IA)</h3>
-            <p className="text-on-surface-variant leading-relaxed font-medium text-lg">
-              Practica tu cante de temas en pijama. El motor transcribe, cronometra y evalúa la literalidad de tu exposición oral frente al temario oficial. Te avisa si has omitido epígrafes críticos.
+            <Brain className="w-10 h-10 text-police-gold mb-6 group-hover:scale-110 transition-transform" />
+            <h3 className="text-2xl font-black mb-4 uppercase tracking-tight text-on-surface">Generación Tipo Test IA</h3>
+            <p className="text-on-surface-variant font-medium leading-relaxed">
+              Algoritmos que generan tests aleatorios respetando el modo oficial del examen. Entrena con preguntas inéditas basadas en la última legislación vigente.
             </p>
           </motion.div>
 
-          {/* Card 2: Legal Cases */}
+          {/* Card 2: Legal & Econ Cases */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="bg-white border border-outline-variant rounded-[2.5rem] p-12 hover:border-police-gold/50 transition-all group shadow-ambient relative overflow-hidden"
+            className="md:col-span-3 bg-white border border-outline-variant rounded-[2.5rem] p-10 hover:border-police-gold/50 transition-all group shadow-ambient relative overflow-hidden"
           >
-            <div className="absolute bottom-0 right-0 p-8 opacity-[0.03] group-hover:opacity-10 transition-opacity">
-              <Scale className="w-64 h-64 text-police-gold group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div className="relative z-10">
-              <Landmark className="w-10 h-10 text-police-gold mb-8 group-hover:scale-110 transition-transform" />
-              <h3 className="text-3xl font-black mb-6 uppercase tracking-tight text-on-surface">Supuestos Jurídicos</h3>
-              <p className="text-on-surface-variant leading-relaxed font-medium text-lg max-w-sm">
-                Pliegos de contratación, intervención de presupuestos, expropiaciones. Supuestos cortados a cuchillo de la actividad real de las Entidades Locales de España.
-              </p>
-            </div>
+            <LayoutList className="w-10 h-10 text-police-gold mb-6 group-hover:scale-110 transition-transform" />
+            <h3 className="text-2xl font-black mb-4 uppercase tracking-tight text-on-surface">Casos Prácticos Élite</h3>
+            <p className="text-on-surface-variant font-medium leading-relaxed">
+              Módulos específicos para la parte <span className="text-police-gold">Jurídica</span> y <span className="text-police-gold">Económica</span>. Prepáralos de forma independiente o en bloques combinados según tu subescala.
+            </p>
           </motion.div>
 
-          {/* Full Width Card */}
+          {/* Card 3: Legislation Repository */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-            className="md:col-span-2 bg-on-surface rounded-[3rem] p-12 flex flex-col md:flex-row items-center gap-12 shadow-premium"
+            className="md:col-span-2 bg-on-surface rounded-[2.5rem] p-10 shadow-premium"
           >
-            <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-full flex items-center justify-center shrink-0">
-              <BookOpen className="w-10 h-10 text-police-gold" />
+            <FileText className="w-10 h-10 text-police-gold mb-6" />
+            <h3 className="text-xl font-black text-white mb-4 uppercase tracking-tight">Legislación A1</h3>
+            <p className="text-white/60 font-medium text-sm leading-relaxed">
+              Acceso instantáneo a toda la normativa sintetizada y actualizada. Sin PDFs obsoletos.
+            </p>
+          </motion.div>
+
+          {/* Card 4: Flashcards */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
+            className="md:col-span-2 bg-white border border-outline-variant rounded-[2.5rem] p-10 shadow-ambient"
+          >
+            <Landmark className="w-10 h-10 text-police-gold mb-6" />
+            <h3 className="text-xl font-black text-on-surface mb-4 uppercase tracking-tight">Flashcards</h3>
+            <p className="text-on-surface-variant font-medium text-sm leading-relaxed">
+              Sistemas de repetición espaciada para memorizar plazos complejos y competencias municipales.
+            </p>
+          </motion.div>
+
+          {/* Card 5: YouTube Repository */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
+            className="md:col-span-2 bg-white border border-outline-variant rounded-[2.5rem] p-10 shadow-ambient border-l-4 border-l-police-gold"
+          >
+            <Video className="w-10 h-10 text-police-gold mb-6" />
+            <h3 className="text-xl font-black text-on-surface mb-2 uppercase tracking-tight">Vídeos Curados</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="px-2 py-0.5 bg-police-gold/10 text-police-gold text-[9px] font-black rounded-full uppercase">Adaptación 100%</span>
             </div>
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="text-2xl font-black text-white mb-3 uppercase tracking-tight">Comunión de Leyes Actualizadas</h3>
-              <p className="text-white/60 font-medium text-base leading-relaxed">
-                Nuestro motor sincroniza diariamente con el BOE. Cualquier cambio en la LRJRL, TRHL, LCSP o el TREBEP se propaga instantáneamente. No estudiarás normas derogadas.
-              </p>
-            </div>
-            <div className="font-black tracking-[.25em] text-police-gold text-xs font-black uppercase text-center border-t md:border-t-0 md:border-l border-white/10 pt-8 md:pt-0 md:pl-12 shrink-0">
-              <div className="opacity-70 mb-2">Sincronización</div>
-              <div className="text-5xl">24/7</div>
-            </div>
+            <p className="text-on-surface-variant font-medium text-sm leading-relaxed">
+              Repositorio de lecciones magistrales de los mejores canales, auditadas por IA según el temario.
+            </p>
           </motion.div>
 
         </div>
@@ -137,15 +154,15 @@ const AcademyHabilitados = () => {
       {/* SEO & Expanded Content Area */}
       <div className="max-w-4xl mx-auto z-10 relative mt-32 border-t border-outline-variant pt-24 text-center">
         <h2 className="text-4xl font-black mb-12 text-on-surface uppercase tracking-tighter">Academia Secretaría Intervención</h2>
-        <div className="prose prose-lg max-w-none prose-p:text-on-surface-variant prose-p:font-medium prose-strong:text-police-gold prose-strong:font-black prose-p:leading-relaxed">
-          <p className="mb-8">
-            Alcanzar el <strong>Cuerpo de Habilitados Nacionales A1</strong> (Subescala de Secretaría, Intervención-Tesorería o Secretaría-Intervención) es el nivel más alto de la burocracia local. Requieres más que esquemas; necesitas un <strong>Preparador Habilitados Nacionales A1</strong> algorítmico, siempre disponible y puramente objetivo.
+        <div className="prose prose-lg max-w-none prose-p:text-on-surface-variant prose-p:font-medium prose-strong:text-police-gold prose-strong:font-black prose-p:leading-relaxed px-4">
+          <p className="mb-8 text-left">
+            La preparación para el <strong>Cuerpo de Habilitados Nacionales A1</strong> exige herramientas de precisión quirúrgica. En Munilex Academy, hemos evolucionado el concepto de estudio tradicional para enfocarnos en la eficiencia absoluta.
           </p>
-          <p className="mb-8">
-            Nuestra <strong>Suscripción Premium Habilitados Nacionales</strong> no tiene rival en el mercado. Convierte el árido Derecho Administrativo y el Régimen Local en una experiencia formativa inmersiva. Utiliza nuestro <strong>Simulador oral oposiciones</strong> para ejecutar el famoso <strong>cante de temas online</strong>, donde la IA evaluará tu cadencia, exactitud literal y gestión del tiempo en tiempo real.
+          <p className="mb-8 text-left">
+            Nuestro <strong>Generador de Test con Inteligencia Artificial</strong> permite realizar simulacros en modo oficial, mientras que la sección de <strong>Casos Prácticos</strong> desglosa minuciosamente tanto la parte jurídica como la económica, fundamentales en las subescalas de Secretaría e Intervención. 
           </p>
-          <p className="font-bold text-on-surface">
-            Da un salto cualitativo exponencial enfrentándote a miles de <strong>casos prácticos Local</strong> de ayuntamientos reales, analizados y resueltos por nuestro núcleo jurídico. Domina el BOE y asegura tu nombramiento oficial.
+          <p className="font-bold text-on-surface italic text-left">
+            No pierdas tiempo buscando lecciones; nuestro repositorio de vídeos auditados y la base legislativa permanentemente actualizada te permiten centrarte exclusivamente en dominar el temario y conseguir tu plaza.
           </p>
         </div>
       </div>
