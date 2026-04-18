@@ -22,32 +22,32 @@ const AcademyNavbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
+    <nav className="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-outline-variant font-inter transition-all duration-500">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex items-center justify-between gap-8 h-20">
         <Link to="/academy" className="flex items-center gap-3 group shrink-0">
           <motion.div 
             whileHover={{ scale: 1.05, rotate: 2 }}
-            className="w-10 h-10 bg-[#d4af37] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all"
+            className="w-10 h-10 bg-on-surface rounded-xl flex items-center justify-center shadow-premium group-hover:bg-police-gold transition-all duration-500"
           >
-            <GraduationCap className="w-6 h-6 text-[#241a00]" />
+            <GraduationCap className="w-6 h-6 text-white group-hover:text-on-surface transition-colors" />
           </motion.div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tighter leading-none text-white lg:text-2xl">
+            <span className="text-xl font-black tracking-tighter leading-none text-on-surface lg:text-2xl uppercase">
               MUNILEx
             </span>
-            <span className="text-[9px] font-black uppercase tracking-[0.35em] text-[#d4af37] ml-0.5 mt-0.5">
+            <span className="text-[9px] font-black uppercase tracking-[0.35em] text-police-gold ml-0.5 mt-0.5">
               ACADEMY
             </span>
           </div>
         </Link>
         
-        <div className="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.2em] flex-grow justify-center">
+        <div className="hidden lg:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.25em] flex-grow justify-center">
           {navItems.map((item) => (
             <div key={item.name} className="relative group">
               <NavLink 
                 to={item.path} 
                 className={({ isActive }) => 
-                  `flex items-center gap-1.5 relative transition-all duration-300 hover:text-[#d4af37] py-2 ${isActive ? 'text-[#d4af37]' : 'text-[#E5E2E1]/70'}`
+                  `flex items-center gap-2 relative transition-all duration-300 hover:text-police-gold py-2 ${isActive ? 'text-on-surface' : 'text-on-surface-variant/70'}`
                 }
               >
                 {({ isActive }) => (
@@ -57,7 +57,7 @@ const AcademyNavbar = () => {
                     {isActive && (
                       <motion.div 
                         layoutId="academy-nav-underline"
-                        className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#d4af37] rounded-full shadow-[0_0_10px_rgba(212,175,55,0.4)]"
+                        className="absolute -bottom-1 left-0 w-full h-[2px] bg-police-gold rounded-full shadow-sm"
                       />
                     )}
                   </>
@@ -65,14 +65,14 @@ const AcademyNavbar = () => {
               </NavLink>
 
               {item.subItems && (
-                <div className="absolute top-full left-0 mt-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 w-72 z-50">
-                  <div className="bg-[#1C1B1B] rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-[#353534] py-6 px-3 flex flex-col gap-1 overflow-hidden relative">
-                    <div className="absolute top-0 right-0 w-24 h-24 bg-[#d4af37]/5 blur-2xl pointer-events-none" />
+                <div className="absolute top-full left-0 mt-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 w-[18rem] z-50">
+                  <div className="bg-white rounded-[2.5rem] shadow-premium border border-outline-variant py-8 px-4 flex flex-col gap-1 overflow-hidden relative">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-police-gold/5 blur-2xl pointer-events-none" />
                     {item.subItems.map((subItem) => (
                       <Link 
                         key={subItem.name}
                         to={subItem.path}
-                        className="px-5 py-3 text-[10px] font-bold text-[#E5E2E1]/70 hover:text-white hover:bg-[#2A2A2A] rounded-xl transition-all block uppercase tracking-wider"
+                        className="px-5 py-4 text-[9px] font-black text-on-surface-variant/80 hover:text-on-surface hover:bg-surface-low rounded-xl transition-all block uppercase tracking-widest border border-transparent hover:border-outline-variant"
                       >
                         {subItem.name}
                       </Link>
@@ -85,21 +85,21 @@ const AcademyNavbar = () => {
         </div>
 
         <div className="flex items-center gap-4 shrink-0">
-          <Link to="/academy/contacto" className="hidden xl:block text-[11px] font-bold uppercase tracking-widest text-[#E5E2E1]/50 hover:text-white transition-colors px-4">
-            Contacto
+          <Link to="/academy/contacto" className="hidden xl:block text-[10px] font-black uppercase tracking-[0.2em] text-on-surface-variant/60 hover:text-on-surface transition-colors px-4">
+            Ayuda
           </Link>
           <a 
             href="https://munilex.lovable.app/auth/login" 
-            className="hidden sm:block text-[11px] font-bold uppercase tracking-widest text-[#E5E2E1]/50 hover:text-white transition-colors px-4"
+            className="hidden sm:block text-[10px] font-black uppercase tracking-[0.2em] text-on-surface-variant/60 hover:text-on-surface transition-colors px-4"
           >
             Acceso
           </a>
           <a 
             href="https://munilex.lovable.app/auth/register"
-            className="bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00] px-7 py-3 rounded-xl font-bold text-[12px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-2xl hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
+            className="bg-on-surface text-white px-8 py-3.5 rounded-2xl font-black text-[11px] uppercase tracking-[0.25em] shadow-premium hover:bg-police-gold hover:text-on-surface transition-all text-center flex items-center gap-3 group"
           >
             Matrícula
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-4 h-4 text-police-gold group-hover:text-on-surface transition-colors" />
           </a>
         </div>
       </div>
