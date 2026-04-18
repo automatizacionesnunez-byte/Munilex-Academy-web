@@ -151,52 +151,59 @@ const About = () => {
                   {pillar.d}
                 </p>
               </motion.div>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* Leadership & Expertise Section */}
+      {/* Leadership & Expertise Section (Our Story) */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid lg:grid-cols-2 gap-32 items-center">
-            <div>
-              <div className="text-[13px] font-black uppercase tracking-[0.3em] text-primary-container mb-6">Fundación Munilex</div>
-              <h2 className="mb-10 text-secondary">Derecho y Tecnología con Propósito</h2>
-              <p className="text-lg text-on-surface-variant mb-12 font-medium leading-relaxed">
-                Nuestra plataforma no es solo software; es la realización de una visión personal. Formado en el ecosistema de <span className="text-primary-container font-black">Racks Academy</span>, decidí aplicar la IA para resolver problemas reales del sector público tras ayudar a un colega del Secretariado Local abrumado por la normativa.
-              </p>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-[13px] font-black uppercase tracking-[0.3em] text-primary-container mb-6">Nuestra Historia</div>
+              <h2 className="mb-10 text-secondary italic uppercase tracking-tighter text-4xl md:text-6xl font-black italic">De la <span className="text-primary-container not-italic">necesidad real</span> a la vanguardia jurídica</h2>
               
-              <div className="space-y-8 mb-16">
+              <div className="space-y-8 text-lg text-on-surface-variant font-medium leading-relaxed">
+                <p>
+                  Todo comenzó en un pequeño municipio de <span className="text-primary-container font-black">Cáceres, Extremadura</span>. Un buen amigo acababa de tomar posesión de su primer cargo como <span className="text-secondary font-black">Secretario Interventor interino</span>. 
+                </p>
+                <p>
+                  Pronto descubrimos la realidad del "Superman del Ayuntamiento": una única persona manejando más de 120 leyes distintas, abrumada por procesos manuales, búsquedas interminables en el BOE y bases de datos obsoletas. La tecnología no estaba llegando a donde más se necesitaba.
+                </p>
+                <p>
+                  Decidimos que podíamos cambiar eso. Tras meses de experimentación e iteración constante probando diversos sistemas de IA, nació <span className="text-primary-container font-black">Munilex</span>. Un sistema creado desde la empatía y la precisión técnica, diseñado para que los habilitados nacionales puedan recuperar algo invaluable: la tranquilidad y el control sobre su tiempo.
+                </p>
+              </div>
+              
+              <div className="mt-16 space-y-8">
                 <div className="flex items-center gap-6 p-8 bg-surface-low rounded-[2rem] border border-primary/5 shadow-sm transition-all hover:bg-white hover:shadow-premium hover:border-primary/10 group">
                   <div className="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform">
                     <Users className="w-8 h-8" />
                   </div>
                   <div>
                     <h4 className="font-black text-secondary tracking-tight text-xl">Racks Academy Ecosystem</h4>
-                    <p className="text-sm font-medium opacity-60">Formación de vanguardia en IA aplicada al derecho.</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-6 p-8 bg-surface-low rounded-[2rem] border border-primary/5 shadow-sm transition-all hover:bg-white hover:shadow-premium hover:border-primary/10 group">
-                  <div className="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center text-secondary-cyan group-hover:scale-110 transition-transform">
-                    <ShieldAlert className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h4 className="font-black text-secondary tracking-tight text-xl">Seguridad y Rigor</h4>
-                    <p className="text-sm font-medium opacity-60">IA supervisada para garantizar la protección de datos soberanos.</p>
+                    <p className="text-sm font-medium opacity-60">Formación de élite en IA aplicada al sector jurídico español.</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="relative group">
-              {/* Decorative Glow */}
-              <div className="absolute -top-10 -right-10 w-full h-full bg-primary-container/10 rounded-[4rem] blur-[80px] animate-pulse" />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative group"
+            >
+              <div className="absolute -top-10 -right-10 w-full h-full bg-primary-container/10 rounded-[4rem] blur-[80px]" />
               
               <div className="relative z-10 aspect-[4/5] bg-surface-dim rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(30,41,59,0.4)] border-8 border-white group-hover:scale-[1.02] transition-transform duration-700">
                 <img 
-                  src="/creator_photo.jpg" 
-                  alt="Creador de Munilex" 
+                  src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2000" 
+                  alt="Dedicación Jurídica" 
                   className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-105 contrast-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent via-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
@@ -207,13 +214,13 @@ const About = () => {
                       <GraduationCap className="w-7 h-7" />
                     </div>
                     <div>
-                      <div className="text-xl font-black text-secondary tracking-tight">Jurista & Fundador</div>
-                      <div className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-container">Especialista en IA Generativa</div>
+                      <div className="text-xl font-black text-secondary tracking-tight">Precisión & Esfuerzo</div>
+                      <div className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-container">Desde la práctica hacia la innovación</div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
