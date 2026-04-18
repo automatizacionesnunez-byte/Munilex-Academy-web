@@ -22,14 +22,16 @@ import {
   Layers,
   Globe,
   BarChart3,
-  Rocket
+  Rocket,
+  Gavel,
+  Link2
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   
-  const testimonials = [
+  const testimonialsPool = [
     {
       content: "\"Munilex me ha ahorrado muchísimo tiempo en la elaboración de informes. Al tener la base de datos legislativa integrada con la IA, todo el proceso es ahora mucho más ágil. He podido completar expedientes administrativos enteros en una fracción del tiempo habitual.\"",
       author: "E. García",
@@ -53,8 +55,71 @@ const Home = () => {
       type: "academia",
       icon: <Rocket className="w-10 h-10" />,
       theme: "corporate"
+    },
+    {
+      content: "\"La automatización del control interno ha reducido mis tiempos de revisión en un 40%. Munilex detecta discrepancias normativas que antes nos llevaban horas identificar.\"",
+      author: "J. Rodríguez",
+      role: "Interventor Municipal",
+      type: "funcionario",
+      icon: <Activity className="w-10 h-10" />,
+      theme: "light"
+    },
+    {
+      content: "\"Los resúmenes generados por la IA son clave para entender los temas más densos de contratación pública. Estudiar por la noche con el asistente 24/7 es un lujo.\"",
+      author: "Lucía P.",
+      role: "Opositora GACE",
+      type: "opositor",
+      icon: <Layers className="w-10 h-10" />,
+      theme: "dark"
+    },
+    {
+      content: "\"Munilex es como tener un equipo de soporte legal 24/7. Resuelve incluso las dudas más específicas de la LPAC con una precisión técnica asombrosa.\"",
+      author: "Alberto S.",
+      role: "Técnico de Administración General",
+      type: "funcionario",
+      icon: <Scale className="w-10 h-10" />,
+      theme: "light"
+    },
+    {
+      content: "\"La precisión en la citación de jurisprudencia es inigualable. Es un antes y un después en mi preparación para el tercer ejercicio.\"",
+      author: "Marta T.",
+      role: "Opositora Judicaturas",
+      type: "opositor",
+      icon: <Gavel className="w-10 h-10" />,
+      theme: "dark"
+    },
+    {
+      content: "\"Implementar Munilex en el departamento ha mejorado la calidad de nuestros actos administrativos de forma exponencial. Menos recursos, más seguridad jurídica.\"",
+      author: "Ricardo F.",
+      role: "Concejal de Personal",
+      type: "funcionario",
+      icon: <UserCheck className="w-10 h-10" />,
+      theme: "corporate"
+    },
+    {
+      content: "\"Me encanta que la plataforma use nuestra propia marca corporativa pero ofrezca la potencia de cálculo y generación de Munilex.\"",
+      author: "Sonia V.",
+      role: "Directora de Formación Online",
+      type: "academia",
+      icon: <Globe className="w-10 h-10" />,
+      theme: "light"
+    },
+    {
+      content: "\"La trazabilidad con el BOE me da la seguridad que necesito para firmar informes complejos. Saber que la IA no inventa, sino que cita, es fundamental.\"",
+      author: "David G.",
+      role: "Técnico Habilitado",
+      type: "funcionario",
+      icon: <Link2 className="w-10 h-10" />,
+      theme: "corporate"
     }
   ];
+
+  const [testimonials, setTestimonials] = useState(testimonialsPool);
+
+  useEffect(() => {
+    // Randomize initial order
+    setTestimonials([...testimonialsPool].sort(() => Math.random() - 0.5));
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -517,6 +582,49 @@ const Home = () => {
                 }`}
               />
             ))}
+          </div>
+        </div>
+      </section>
+      {/* Final Dual CTA Section (NEW) */}
+      <section className="py-32 px-6 md:px-8 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/5 rounded-full blur-[160px]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="bg-secondary rounded-[4rem] p-12 md:p-24 text-center text-white overflow-hidden relative border border-white/5 shadow-2xl">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary-container/20 blur-[120px] -mr-48 -mt-48" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-cyan/10 blur-[120px] -ml-48 -mb-48" />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-8xl font-black tracking-tighter mb-10 leading-[0.9] uppercase italic">
+                ¿Preparado para el <span className="text-primary-container not-italic">siguiente nivel</span>?
+              </h2>
+              <p className="text-xl md:text-2xl text-white/50 mb-16 max-w-3xl mx-auto font-medium">
+                Únete a la élite administrativa o asegura tu plaza con la tecnología que está redefiniendo el sector jurídico en España.
+              </p>
+
+              <div className="flex flex-col md:flex-row justify-center gap-8">
+                <Link 
+                  to="/servicios" 
+                  className="group bg-white text-secondary px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl flex items-center justify-center gap-3"
+                >
+                  Munilex Professional
+                  <ArrowUpRight className="w-6 h-6 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                </Link>
+                <Link 
+                  to="/academy" 
+                  className="group bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00] px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl flex items-center justify-center gap-3"
+                >
+                  Munilex Academy
+                  <ArrowUpRight className="w-6 h-6 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
