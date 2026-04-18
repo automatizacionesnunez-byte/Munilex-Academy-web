@@ -6,21 +6,21 @@ const AcademyAbout = () => {
   const founders = [
     {
       name: "José María Núñez Mejía",
-      role: "Fundador / Experto en IA & Derecho",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=JoseMaria&backgroundColor=b6e3f4", // Temporary avatar
-      description: "Jurista certificado por Rags Academy (Universidad Rey Juan Carlos). Especializado en la convergencia del Derecho y la Inteligencia Artificial. Con una sólida trayectoria como docente tecnológico y amplia experiencia en Derecho Virtual, lidera la visión técnica de Munilex Academy.",
-      tags: ["Jurista URJC", "Docente Tech", "IA Legislativa", "Derecho Virtual"],
+      role: "Fundador / Technical LegalTech & IATECH Consultant",
+      image: "/creator_photo.jpg",
+      description: "Jurista especializado en la convergencia del Derecho y la Inteligencia Artificial. Tras formarse en el ecosistema de Racks Academy, fundó Munilex partiendo de una necesidad real en la administración local española. Su visión técnica lidera la creación de herramientas que devuelven la soberanía y la tranquilidad al profesional jurídico.",
+      tags: ["Jurista URJC", "LegalTech Expert", "IATECH Consultant", "Fundador"],
       social: {
-        linkedin: "#",
-        web: "#"
+        linkedin: "https://www.linkedin.com/in/jose-maria-nu%C3%B1ez-mejia-73b06222b/",
+        web: "https://wa.me/34605392912"
       }
     },
     {
       name: "Francisco de Paula Marín",
-      role: "Socio / Director Académico & Comercial",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Francisco&backgroundColor=ffdfbf", // Temporary avatar
-      description: "Jurista de primer nivel volcado en la excelencia académica. Francisco dirige la estructuración pedagógica de los temarios y lidera la expansión comercial de Munilex, asegurando que cada opositor reciba una formación con rigor jurídico y adaptada al mercado actual.",
-      tags: ["Jurista", "Director Académico", "Estrategia Comercial", "Gestión de Temarios"],
+      role: "Socio / Director Académico",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Francisco&backgroundColor=ffdfbf", // Use a better placeholder or real photo if available
+      description: "Referente en el sector pedagógico con una capacidad magistral para explicar el Derecho mediante casos prácticos. Francisco se unió al proyecto tras conectar en LinkedIn, aportando su vasta experiencia docente para asegurar que la IA de Munilex no solo sea potente, sino que hable el lenguaje del opositor y las academias modernas.",
+      tags: ["Director Académico", "Docencia Superior", "Casos Prácticos", "Estrategia Educativa"],
       social: {
         linkedin: "#",
         mail: "mailto:#"
