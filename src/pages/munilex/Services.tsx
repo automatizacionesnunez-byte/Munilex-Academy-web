@@ -14,49 +14,40 @@ import {
   Lock,
   Workflow,
   LineChart,
-  UserCheck
+  UserCheck,
+  Brain
 } from 'lucide-react';
 
 const Services = () => {
   const funcionarioServices = [
     {
-      title: "Generación por Modelos",
-      desc: "Redacción automatizada de informes, actas y decretos utilizando nuestra extensa biblioteca de modelos legales o integrando los suyos propios para una personalización total.",
-      icon: <FileText className="w-8 h-8" />,
-      benefit: "Modelos 100% editables",
+      title: "Chat Jurídico Institucional",
+      desc: "Acceso instantáneo a toda la legislación nacional y autonómica española. Diseñado para eliminar la fricción de la IA genérica, ofreciendo respuestas con máxima precisión normativa y rigor técnico.",
+      icon: <Brain className="w-10 h-10" />,
+      benefit: "Precisión Normativa Total",
       color: "from-[#1a237e] to-[#0d47a1]",
       size: "large"
     },
     {
-      title: "Asistente y Compañero Legal",
-      desc: "Su compañero experto para resolver consultas en tiempo real, validar expedientes complejos y contrastar información normativa con seguridad jurídica total.",
-      icon: <UserCheck className="w-8 h-8" />,
-      benefit: "Validación y Contraste",
+      title: "Gestión de Expedientes y Decretos",
+      desc: "Analice expedientes complejos en segundos y genere borradores jurídicos (decretos, informes, actas) listos para firma, integrando sus propios modelos de trabajo.",
+      icon: <FileText className="w-8 h-8" />,
+      benefit: "Análisis y Creación Pro",
       color: "from-[#0d47a1] to-[#01579b]"
     },
     {
-      title: "Agenda y Plazos Inteligentes",
-      desc: "Gestión proactiva de plazos administrativos con un sistema de alertas multicanal: notificaciones por Telegram, Email y directamente en la plataforma.",
-      icon: <Bell className="w-6 h-6" />,
-      dark: true
+      title: "Agenda y Notificación de Plazos",
+      desc: "Sistema proactivo de control de plazos administrativo con notificaciones automáticas por Telegram y Email. Nunca pierda un hito procesal o administrativo.",
+      icon: <Bell className="w-8 h-8" />,
+      benefit: "Control Multicanal",
+      color: "from-[#01579b] to-[#006064]"
     },
     {
-      title: "Auditoría Normativa Continua",
-      desc: "Alertas proactivas cuando un cambio en la normativa estatal o autonómica afecta a sus expedientes u ordenanzas municipales vigentes.",
-      icon: <Activity className="w-6 h-6" />,
-      dark: true
-    },
-    {
-      title: "Buscador Semántico BOE Pro",
-      desc: "Encuentre la base legal que necesita instantáneamente. Cruce de legislación estatal, autonómica y local con un solo clic.",
-      icon: <Search className="w-6 h-6" />,
-      dark: true
-    },
-    {
-      title: "Integración de Sistemas",
-      desc: "Munilex Professional se adapta a su flujo de trabajo actual, permitiendo importar y exportar documentos de forma nativa.",
-      icon: <Workflow className="w-6 h-6" />,
-      dark: false
+      title: "Integración y Soberanía",
+      desc: "Importación y exportación nativa de documentos compatible con su flujo actual. Todo bajo infraestructura ENS, garantizando la soberanía absoluta de sus datos.",
+      icon: <Workflow className="w-8 h-8" />,
+      benefit: "Flujo 100% Nativo",
+      color: "from-[#263238] to-[#37474f]"
     }
   ];
 
