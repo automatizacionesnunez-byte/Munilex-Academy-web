@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Clock, 
   ShieldCheck, 
@@ -26,6 +27,42 @@ import {
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  
+  const testimonials = [
+    {
+      content: "\"Como Secretaria de Ayuntamiento, Munilex ha sido un antes y un después. La precisión en la redacción de informes técnicos ha reducido mis tiempos de gestión a la mitad.\"",
+      author: "E. García",
+      role: "Habilitada Nacional",
+      type: "funcionario",
+      icon: <UserCheck className="w-7 h-7" />,
+      theme: "light"
+    },
+    {
+      content: "\"Conseguí mi plaza en Policía Nacional en tiempo récord. El sistema de simulacros adaptativos de la Academia Munilex es, sencillamente, imbatible.\"",
+      author: "Carlos M.",
+      role: "Policía Nacional (Plaza 2024)",
+      type: "opositor",
+      icon: <GraduationCap className="w-7 h-7" />,
+      theme: "dark"
+    },
+    {
+      content: "\"Integrar la tecnología de Munilex en nuestra academia ha sido la mejor inversión. Nuestros alumnos tienen una herramienta 24/7 que marca la diferencia en su preparación.\"",
+      author: "D. Martínez",
+      role: "Director de Academia Jurídica",
+      type: "academia",
+      icon: <Rocket className="w-7 h-7" />,
+      theme: "corporate"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
   const academyBodies = [
     { 
       name: "Habilitados Nacionales", 
@@ -427,107 +464,66 @@ const Home = () => {
 
           <div className="relative h-[450px] md:h-[400px]">
             <motion.div 
-              className="absolute inset-0 flex items-center justify-center"
+              className="absolute inset-0 flex items-center justify-center px-4"
               initial={false}
             >
-              {(() => {
-                const [current, setCurrent] = React.useState(0);
-                const testimonials = [
-                  {
-                    content: "\"Como Secretaria de Ayuntamiento, Munilex ha sido un antes y un después. La precisión en la redacción de informes técnicos ha reducido mis tiempos de gestión a la mitad.\"",
-                    author: "E. García",
-                    role: "Habilitada Nacional",
-                    type: "funcionario",
-                    icon: <UserCheck className="w-7 h-7" />,
-                    theme: "light"
-                  },
-                  {
-                    content: "\"Conseguí mi plaza en Policía Nacional en tiempo récord. El sistema de simulacros adaptativos de la Academia Munilex es, sencillamente, imbatible.\"",
-                    author: "Carlos M.",
-                    role: "Policía Nacional (Plaza 2024)",
-                    type: "opositor",
-                    icon: <GraduationCap className="w-7 h-7" />,
-                    theme: "dark"
-                  },
-                  {
-                    content: "\"Integrar la tecnología de Munilex en nuestra academia ha sido la mejor inversión. Nuestros alumnos tienen una herramienta 24/7 que marca la diferencia en su preparación.\"",
-                    author: "D. Martínez",
-                    role: "Director de Academia Jurídica",
-                    type: "academia",
-                    icon: <Rocket className="w-7 h-7" />,
-                    theme: "corporate"
-                  }
-                ];
+              <AnimatePresence mode="wait">
+                <motion.div 
+                  key={currentTestimonial}
+                  initial={{ opacity: 0, x: 20, scale: 0.95 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: -20, scale: 0.95 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className={`w-full max-w-4xl p-10 md:p-16 rounded-[4rem] shadow-premium relative overflow-hidden flex flex-col justify-between h-[350px] md:h-[300px] border ${
+                    testimonials[currentTestimonial].theme === 'dark' 
+                    ? 'bg-[#131313] text-white border-[#d4af37]/20 shadow-[0_40px_80px_rgba(212,175,55,0.1)]' 
+                    : testimonials[currentTestimonial].theme === 'corporate'
+                    ? 'bg-secondary text-white border-white/10'
+                    : 'bg-white text-secondary border-outline-variant shadow-ambient'
+                  }`}
+                >
+                  {/* Decorative Background Icon */}
+                  <div className="absolute -top-10 -right-10 opacity-5 scale-[3] pointer-events-none">
+                    {testimonials[currentTestimonial].icon}
+                  </div>
 
-                React.useEffect(() => {
-                  const timer = setInterval(() => {
-                    setCurrent((prev) => (prev + 1) % testimonials.length);
-                  }, 6000);
-                  return () => clearInterval(timer);
-                }, [testimonials.length]);
-
-                return (
-                  <div className="w-full max-w-4xl px-4">
-                    <motion.div 
-                      key={current}
-                      initial={{ opacity: 0, x: 20, scale: 0.95 }}
-                      animate={{ opacity: 1, x: 0, scale: 1 }}
-                      exit={{ opacity: 0, x: -20, scale: 0.95 }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                      className={`p-10 md:p-16 rounded-[4rem] shadow-premium relative overflow-hidden flex flex-col justify-between h-[350px] md:h-[300px] border ${
-                        testimonials[current].theme === 'dark' 
-                        ? 'bg-[#131313] text-white border-[#d4af37]/20 shadow-[0_40px_80px_rgba(212,175,55,0.1)]' 
-                        : testimonials[current].theme === 'corporate'
-                        ? 'bg-secondary text-white border-white/10'
-                        : 'bg-white text-secondary border-outline-variant shadow-ambient'
-                      }`}
-                    >
-                      {/* Decorative Background Icon */}
-                      <div className="absolute -top-10 -right-10 opacity-5 scale-[3] pointer-events-none">
-                        {testimonials[current].icon}
+                  <p className="text-xl md:text-3xl italic font-medium mb-12 leading-tight">
+                    {testimonials[currentTestimonial].content}
+                  </p>
+                  
+                  <div className="flex items-center gap-5 translate-y-2">
+                    <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
+                      testimonials[currentTestimonial].theme === 'dark' 
+                      ? 'bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00]' 
+                      : 'bg-primary-container text-white'
+                    }`}>
+                      {testimonials[currentTestimonial].icon}
+                    </div>
+                    <div className="text-left">
+                      <div className="font-black text-lg md:text-xl">{testimonials[currentTestimonial].author}</div>
+                      <div className={`text-[10px] md:text-xs font-black uppercase tracking-[0.2em] ${
+                        testimonials[currentTestimonial].theme === 'dark' ? 'text-[#d4af37]' : 'opacity-60'
+                      }`}>
+                        {testimonials[currentTestimonial].role}
                       </div>
-
-                      <p className="text-xl md:text-3xl italic font-medium mb-12 leading-tight">
-                        {testimonials[current].content}
-                      </p>
-                      
-                      <div className="flex items-center gap-5 translate-y-2">
-                        <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
-                          testimonials[current].theme === 'dark' 
-                          ? 'bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00]' 
-                          : testimonials[current].theme === 'corporate'
-                          ? 'bg-primary-container text-white'
-                          : 'bg-primary-container text-white'
-                        }`}>
-                          {testimonials[current].icon}
-                        </div>
-                        <div className="text-left">
-                          <div className="font-black text-lg md:text-xl">{testimonials[current].author}</div>
-                          <div className={`text-[10px] md:text-xs font-black uppercase tracking-[0.2em] ${
-                            testimonials[current].theme === 'dark' ? 'text-[#d4af37]' : 'opacity-60'
-                          }`}>
-                            {testimonials[current].role}
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                    
-                    {/* Pagination Dots */}
-                    <div className="flex justify-center gap-3 mt-12">
-                      {testimonials.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => setCurrent(i)}
-                          className={`h-1.5 rounded-full transition-all duration-500 ${
-                            current === i ? 'w-12 bg-primary-container' : 'w-2 bg-outline-variant hover:bg-outline'
-                          }`}
-                        />
-                      ))}
                     </div>
                   </div>
-                );
-              })()}
+                </motion.div>
+              </AnimatePresence>
             </motion.div>
+          </div>
+          
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-3 mt-8">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentTestimonial(i)}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  currentTestimonial === i ? 'w-12 bg-primary-container' : 'w-2 bg-outline-variant hover:bg-outline'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </section>
