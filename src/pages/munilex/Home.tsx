@@ -246,8 +246,8 @@ const Home = () => {
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-3xl -mr-32 -mt-32" />
               <div>
-                <div className="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform text-primary-container font-black text-xl">
-                  v3
+                <div className="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform text-primary-container font-black">
+                  <Landmark className="w-8 h-8" />
                 </div>
                 <h3 className="text-4xl font-black text-secondary tracking-tight mb-6 italic">Munilex <span className="text-primary-container not-italic">para Funcionarios</span></h3>
                 <p className="text-xl text-on-surface-variant font-medium mb-10 leading-relaxed opacity-70">
@@ -280,7 +280,7 @@ const Home = () => {
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 blur-3xl -mr-32 -mt-32" />
               <div>
                 <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
-                   <Sparkles className="w-8 h-8 text-[#d4af37]" />
+                   <GraduationCap className="w-8 h-8 text-[#d4af37]" />
                 </div>
                 <h3 className="text-4xl font-black text-white tracking-tight mb-6 italic">Munilex <span className="text-[#d4af37] not-italic">Academy</span></h3>
                 <p className="text-xl text-white/50 font-medium mb-10 leading-relaxed">
