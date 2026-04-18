@@ -411,51 +411,122 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Dual Success Stories */}
-      <section className="py-32 bg-surface-low border-y border-outline-variant">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-black text-secondary tracking-tighter mb-6 uppercase">Vanguardia <span className="text-primary-container">compartida</span></h2>
-            <p className="text-xl text-on-surface-variant font-medium opacity-60">Lo que dicen quienes ya están en el siguiente nivel.</p>
+      {/* Dual Success Stories (Carousel) */}
+      <section className="py-32 bg-surface-low border-y border-outline-variant relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="text-4xl md:text-6xl font-black text-secondary tracking-tighter mb-6 uppercase"
+            >
+              Vanguardia <span className="text-primary-container">compartida</span>
+            </motion.h2>
+            <p className="text-xl text-on-surface-variant font-medium opacity-60">Lo que dicen quienes ya están en el siguiente nivel con Munilex.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Success Card 1 */}
-            <motion.div
-              whileHover={{ y: -10 }}
-              className="p-12 bg-white rounded-[3rem] shadow-ambient border border-outline-variant flex flex-col justify-between"
+          <div className="relative h-[450px] md:h-[400px]">
+            <motion.div 
+              className="absolute inset-0 flex items-center justify-center"
+              initial={false}
             >
-              <p className="text-2xl text-secondary italic font-medium mb-12 leading-relaxed">
-                "Como Secretaria de Ayuntamiento, Munilex ha sido un antes y un después. La precisión en la redacción de informes técnicos ha reducido mis tiempos de gestión a la mitad."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center text-white">
-                  <UserCheck className="w-7 h-7" />
-                </div>
-                <div className="font-manrope text-left">
-                  <div className="font-black text-secondary">E. García</div>
-                  <div className="text-xs font-black uppercase tracking-widest text-primary-container">Habilitada Nacional</div>
-                </div>
-              </div>
-            </motion.div>
+              {(() => {
+                const [current, setCurrent] = React.useState(0);
+                const testimonials = [
+                  {
+                    content: "\"Como Secretaria de Ayuntamiento, Munilex ha sido un antes y un después. La precisión en la redacción de informes técnicos ha reducido mis tiempos de gestión a la mitad.\"",
+                    author: "E. García",
+                    role: "Habilitada Nacional",
+                    type: "funcionario",
+                    icon: <UserCheck className="w-7 h-7" />,
+                    theme: "light"
+                  },
+                  {
+                    content: "\"Conseguí mi plaza en Policía Nacional en tiempo récord. El sistema de simulacros adaptativos de la Academia Munilex es, sencillamente, imbatible.\"",
+                    author: "Carlos M.",
+                    role: "Policía Nacional (Plaza 2024)",
+                    type: "opositor",
+                    icon: <GraduationCap className="w-7 h-7" />,
+                    theme: "dark"
+                  },
+                  {
+                    content: "\"Integrar la tecnología de Munilex en nuestra academia ha sido la mejor inversión. Nuestros alumnos tienen una herramienta 24/7 que marca la diferencia en su preparación.\"",
+                    author: "D. Martínez",
+                    role: "Director de Academia Jurídica",
+                    type: "academia",
+                    icon: <Rocket className="w-7 h-7" />,
+                    theme: "corporate"
+                  }
+                ];
 
-            {/* Success Card 2 */}
-            <motion.div
-              whileHover={{ y: -10 }}
-              className="p-12 bg-[#131313] rounded-[3rem] shadow-premium border border-[#d4af37]/20 flex flex-col justify-between text-white"
-            >
-              <p className="text-2xl text-white italic font-medium mb-12 leading-relaxed">
-                "Conseguí mi plaza en Policía Nacional en tiempo récord. El sistema de simulacros adaptativos de la Academia Munilex es, sencillamente, imbatible."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-[#f2ca50] to-[#d4af37] rounded-full flex items-center justify-center text-[#241a00]">
-                  <GraduationCap className="w-7 h-7" />
-                </div>
-                <div className="font-manrope text-left">
-                  <div className="font-black text-white">Carlos M.</div>
-                  <div className="text-xs font-black uppercase tracking-widest text-[#d4af37]">Policía Nacional (Plaza 2024)</div>
-                </div>
-              </div>
+                React.useEffect(() => {
+                  const timer = setInterval(() => {
+                    setCurrent((prev) => (prev + 1) % testimonials.length);
+                  }, 6000);
+                  return () => clearInterval(timer);
+                }, [testimonials.length]);
+
+                return (
+                  <div className="w-full max-w-4xl px-4">
+                    <motion.div 
+                      key={current}
+                      initial={{ opacity: 0, x: 20, scale: 0.95 }}
+                      animate={{ opacity: 1, x: 0, scale: 1 }}
+                      exit={{ opacity: 0, x: -20, scale: 0.95 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                      className={`p-10 md:p-16 rounded-[4rem] shadow-premium relative overflow-hidden flex flex-col justify-between h-[350px] md:h-[300px] border ${
+                        testimonials[current].theme === 'dark' 
+                        ? 'bg-[#131313] text-white border-[#d4af37]/20 shadow-[0_40px_80px_rgba(212,175,55,0.1)]' 
+                        : testimonials[current].theme === 'corporate'
+                        ? 'bg-secondary text-white border-white/10'
+                        : 'bg-white text-secondary border-outline-variant shadow-ambient'
+                      }`}
+                    >
+                      {/* Decorative Background Icon */}
+                      <div className="absolute -top-10 -right-10 opacity-5 scale-[3] pointer-events-none">
+                        {testimonials[current].icon}
+                      </div>
+
+                      <p className="text-xl md:text-3xl italic font-medium mb-12 leading-tight">
+                        {testimonials[current].content}
+                      </p>
+                      
+                      <div className="flex items-center gap-5 translate-y-2">
+                        <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
+                          testimonials[current].theme === 'dark' 
+                          ? 'bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00]' 
+                          : testimonials[current].theme === 'corporate'
+                          ? 'bg-primary-container text-white'
+                          : 'bg-primary-container text-white'
+                        }`}>
+                          {testimonials[current].icon}
+                        </div>
+                        <div className="text-left">
+                          <div className="font-black text-lg md:text-xl">{testimonials[current].author}</div>
+                          <div className={`text-[10px] md:text-xs font-black uppercase tracking-[0.2em] ${
+                            testimonials[current].theme === 'dark' ? 'text-[#d4af37]' : 'opacity-60'
+                          }`}>
+                            {testimonials[current].role}
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                    
+                    {/* Pagination Dots */}
+                    <div className="flex justify-center gap-3 mt-12">
+                      {testimonials.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setCurrent(i)}
+                          className={`h-1.5 rounded-full transition-all duration-500 ${
+                            current === i ? 'w-12 bg-primary-container' : 'w-2 bg-outline-variant hover:bg-outline'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
             </motion.div>
           </div>
         </div>
