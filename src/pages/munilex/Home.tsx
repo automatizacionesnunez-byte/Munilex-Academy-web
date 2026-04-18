@@ -89,7 +89,7 @@ const Home = () => {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-8xl font-black tracking-tighter mb-12 leading-[0.9] max-w-5xl mx-auto text-secondary italic"
           >
-            La Inteligencia que <span className="text-primary-container not-italic">revoluciona</span> tu presente y potencia tu futuro profesional
+            La inteligencia que <span className="text-primary-container not-italic">revoluciona</span> el sector jurídico académico
           </motion.h1>
           
           <motion.p
