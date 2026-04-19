@@ -17,10 +17,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-black text-on-surface leading-[1.1] tracking-tighter mb-2"
+            className="text-3xl md:text-5xl lg:text-7xl font-black text-on-surface leading-[1.1] tracking-tighter mb-2"
           >
-            La Potestad Pública.<br/>
-            <span className="text-primary-container italic">La Inteligencia del Derecho.</span>
+            La Revolución<br/>
+            <span className="text-primary-container italic">Jurídico-Académica.</span>
           </motion.h1>
         </div>
 
