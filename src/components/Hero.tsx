@@ -41,10 +41,16 @@ const Hero = () => {
             className="group relative"
           >
             <div className="h-full p-10 md:p-14 rounded-[3.5rem] bg-white border border-surface-variant/50 shadow-ambient hover:shadow-premium transition-all duration-500 flex flex-col items-start text-left">
-              <div className="w-16 h-16 bg-primary-fixed/50 rounded-2xl flex items-center justify-center text-primary-container mb-10 group-hover:scale-110 transition-transform duration-500">
-                <Landmark className="w-8 h-8" />
+              <div className="flex items-center gap-6 mb-10 group-hover:translate-x-2 transition-transform duration-500">
+                <div className="w-16 h-16 bg-primary-fixed/50 rounded-2xl flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform duration-500">
+                  <Landmark className="w-8 h-8" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight uppercase">
+                  <span className="text-on-surface">Munilex</span>{" "}
+                  <span className="text-primary-container">Función Pública</span>
+                </h2>
               </div>
-              <h2 className="text-3xl md:text-4xl font-black text-primary-container mb-6 tracking-tight uppercase">Munilex Función Pública</h2>
+              
               <p className="text-lg text-on-surface-variant font-medium leading-relaxed mb-8">
                 Especialización para secretarios e interventores en Ayuntamientos.
               </p>
@@ -82,10 +88,16 @@ const Hero = () => {
             <div className="h-full p-10 md:p-14 rounded-[3.5rem] bg-secondary text-white border border-secondary/10 shadow-premium hover:translate-y-[-4px] transition-all duration-500 flex flex-col items-start text-left overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full blur-3xl -translate-y-12 translate-x-12" />
               
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-[#d4af37] mb-10 group-hover:scale-110 transition-transform duration-500">
-                <GraduationCap className="w-8 h-8" />
+              <div className="flex items-center gap-6 mb-10 group-hover:translate-x-2 transition-transform duration-500">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-[#d4af37] group-hover:scale-110 transition-transform duration-500">
+                  <GraduationCap className="w-8 h-8" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight uppercase">
+                  <span className="text-white">Munilex</span>{" "}
+                  <span className="text-[#d4af37]">Academy</span>
+                </h2>
               </div>
-              <h2 className="text-3xl md:text-4xl font-black text-[#d4af37] mb-6 tracking-tight uppercase">Munilex Academy</h2>
+              
               <p className="text-lg text-white/70 font-medium leading-relaxed mb-8">
                 Tu zona para opositores y academias.
               </p>
