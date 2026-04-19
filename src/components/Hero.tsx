@@ -49,9 +49,9 @@ const Hero = () => {
               
               <ul className="space-y-3 mb-8 flex-grow">
                 {[
-                  "Análisis normativo ultrapreciso",
-                  "Informes técnicos en segundos",
-                  "Sincronización diaria con BOE"
+                  "Análisis normativo ultrapreciso con IA",
+                  "Redacción de informes técnicos en segundos",
+                  "Notificación de plazos: control absoluto"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-on-surface-variant font-bold text-xs">
                     <CheckCircle2 className="w-4 h-4 text-secondary-cyan" />
@@ -91,14 +91,14 @@ const Hero = () => {
               </div>
               
               <p className="text-base text-white/70 font-medium leading-relaxed mb-6 opacity-80">
-                Tu zona para opositores y academias.
+                Tu zona para opositores, academias y centros de FP.
               </p>
 
               <ul className="space-y-3 mb-8 flex-grow">
                 {[
                   "Preparación de élite asistida por IA",
-                  "Plataforma inteligente para academias",
-                  "Análisis avanzado de convocatorias"
+                  "Desarrollo a medida para centros educativos",
+                  "Tecnología de vanguardia aplicada al estudio"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white/80 font-bold text-xs">
                     <CheckCircle2 className="w-4 h-4 text-[#d4af37]" />
