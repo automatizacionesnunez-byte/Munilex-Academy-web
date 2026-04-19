@@ -109,8 +109,7 @@ const AcademyCorporate = () => {
                   "+1 Funcionalidad extra a elegir",
                   "Soporte Prioritario"
                 ],
-                price: "Consultar",
-                highlight: true
+                price: "Consultar"
               },
               {
                 name: "Ecosistema",
@@ -155,7 +154,7 @@ const AcademyCorporate = () => {
                         : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
                     }`}
                   >
-                    Elegir Plan
+                    Consultar Presupuesto
                   </Link>
                 </div>
               </div>
