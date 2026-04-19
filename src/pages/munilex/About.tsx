@@ -185,14 +185,14 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-3xl font-black text-secondary leading-tight mb-2 tracking-tighter uppercase">José María Núñez Mejías</h3>
-                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container mb-6">Fundador / Jurista & Experto en IA</div>
+                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container mb-6">Fundador / Consultor Técnico LegalTech & IA</div>
                   <p className="text-on-surface-variant leading-relaxed font-medium">
-                    Tras formarse en el ecosistema de Racks Academy, fundó Munilex tras detectar una necesidad crítica de rigor técnico en la administración local española. Su visión lidera el desarrollo de algoritmos que garantizan la seguridad jurídica absoluta.
+                    Jurista certificado por Racks Academy. Su visión lidera el desarrollo de algoritmos que garantizan la seguridad jurídica absoluta, aplicando la inteligencia artificial en entornos académicos como Derecho Virtual y TEC University.
                   </p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
-                {["Jurista URJC", "IATECH Consultant", "LegalTech Expert", "Racks Academy"].map((tag) => (
+                {["Jurista", "LegalTech Expert", "IA Aplicada", "Racks Academy"].map((tag) => (
                   <span key={tag} className="px-4 py-1.5 bg-white border border-surface-variant/50 rounded-full text-[10px] font-black uppercase tracking-wider text-secondary/60">{tag}</span>
                 ))}
               </div>

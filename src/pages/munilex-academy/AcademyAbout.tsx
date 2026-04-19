@@ -8,10 +8,10 @@ const AcademyAbout = () => {
   const founders = [
     {
       name: "José María Núñez Mejías",
-      role: "Fundador / Experto en IA & Derecho",
+      role: "Fundador / Consultor Técnico LegalTech & IA",
       image: joseMariaImg,
-      description: "Jurista certificado por Rags Academy (Universidad Rey Juan Carlos). Especializado en la convergencia del Derecho y la Inteligencia Artificial. Con una sólida trayectoria como docente tecnológico y amplia experiencia en Derecho Virtual, lidera la visión técnica de Munilex Academy.",
-      tags: ["Jurista URJC", "Docente Tech", "IA Legislativa", "Derecho Virtual"],
+      description: "Jurista certificado por Racks Academy. Especializado en la convergencia del Derecho y la Inteligencia Artificial. Con una sólida trayectoria aplicando la IA al mundo académico en centros como Derecho Virtual y TEC University, lidera la visión técnica de Munilex Academy.",
+      tags: ["Jurista", "LegalTech", "IA Aplicada", "Racks Academy"],
       social: {
         linkedin: "https://www.linkedin.com/in/jose-maria-nu%C3%B1ez-mejia-73b06222b/",
         web: "https://wa.me/34605392912"
