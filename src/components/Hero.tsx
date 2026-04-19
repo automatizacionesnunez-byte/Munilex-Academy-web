@@ -11,21 +11,13 @@ const Hero = () => {
         <div className="absolute bottom-[5%] -left-[5%] w-[30%] h-[50%] bg-secondary-cyan/10 blur-[100px] rounded-full" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 w-full relative z-10 py-20">
-        <div className="text-center mb-16 md:mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full glass border border-primary-container/10 text-primary-container text-[12px] font-black tracking-[0.2em] uppercase mb-8"
-          >
-            MUNILEX v4.0 • EL ESTÁNDAR DE LA ADMINISTRACIÓN
-          </motion.div>
-          
+      <div className="max-w-7xl mx-auto px-6 md:px-8 w-full relative z-10 py-10 md:py-16">
+        <div className="text-center mb-12 md:mb-16">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="text-5xl md:text-7xl lg:text-9xl font-black text-on-surface leading-[0.9] tracking-tighter mb-8"
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-7xl font-black text-on-surface leading-[1.1] tracking-tighter mb-4"
           >
             La Potestad Pública.<br/>
             <span className="text-primary-container italic">La Inteligencia del Derecho.</span>
