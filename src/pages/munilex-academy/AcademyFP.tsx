@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { GraduationCap, Zap, FileSearch, CheckSquare, Layers, Cpu, ArrowRight, CheckCircle, Smartphone } from 'lucide-react';
+import { FileSearch, CheckSquare, Layers, ArrowRight, CheckCircle, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AcademyFP = () => {

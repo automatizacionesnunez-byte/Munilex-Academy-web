@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Lock, FileText, Activity, ShieldAlert, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Lock, ShieldAlert, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 

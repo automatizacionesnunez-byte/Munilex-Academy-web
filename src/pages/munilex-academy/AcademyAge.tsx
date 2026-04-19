@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MousePointer2, Server, Keyboard, Command, FileBadge, ArrowRight, Laptop, UserCheck, Briefcase } from 'lucide-react';
+import { Keyboard, FileBadge, ArrowRight, Laptop, UserCheck, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 

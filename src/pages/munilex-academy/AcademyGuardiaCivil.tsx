@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Crosshair, BrainCircuit, RotateCcw, CheckCircle, ArrowRight } from 'lucide-react';
+import { Crosshair, BrainCircuit, RotateCcw, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Scale, BookOpen, Mic, Landmark, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Scale, Mic, Landmark, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 

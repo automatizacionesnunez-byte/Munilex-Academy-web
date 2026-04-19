@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, CheckCircle, MoveRight, Shield, ArrowRight } from 'lucide-react';
+import { Target, CheckCircle, Shield, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 

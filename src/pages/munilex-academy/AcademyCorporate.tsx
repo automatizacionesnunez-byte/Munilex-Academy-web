@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ShieldCheck, Zap, Building2, Layers, Cpu, Globe, ArrowRight, CheckCircle, BarChart3, Settings } from 'lucide-react';
+import { Zap, Building2, Layers, Cpu, ArrowRight, CheckCircle, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AcademyCorporate = () => {
