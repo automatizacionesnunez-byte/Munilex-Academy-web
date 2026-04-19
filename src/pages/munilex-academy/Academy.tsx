@@ -484,6 +484,93 @@ const Academy = () => {
         </div>
       </section>
 
+      {/* Corporate & FP Dedicated Section */}
+      <section className="py-32 bg-[#131313] relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#d4af37]/5 rounded-full blur-[150px] pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter uppercase mb-6">
+              SOLUCIONES PARA <br/>
+              <span className="italic text-[#d4af37]">ORGANIZACIONES</span>
+            </h2>
+            <p className="text-white/40 font-bold text-sm uppercase tracking-widest">Tecnología de vanguardia para centros de formación y empresas</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Corporate Card */}
+            <motion.div 
+              whileHover={{ y: -10 }}
+              className="bg-[#1C1B1B] border border-[#d4af37]/30 p-12 rounded-[3.5rem] relative overflow-hidden group shadow-2xl shadow-[#d4af37]/5"
+            >
+              <div className="absolute top-0 right-0 p-12 opacity-5 text-[#d4af37]">
+                <Building2 className="w-32 h-32" />
+              </div>
+              
+              <div className="w-20 h-20 bg-[#d4af37]/10 rounded-[1.5rem] flex items-center justify-center text-[#d4af37] mb-10 border border-[#d4af37]/20 group-hover:scale-110 transition-transform">
+                <Building2 className="w-10 h-10" />
+              </div>
+              
+              <h3 className="text-3xl font-black text-white mb-6 uppercase tracking-tighter">Corporate</h3>
+              <p className="text-[#E5E2E1]/60 text-lg leading-relaxed mb-10 font-medium">
+                Transformamos tu academia tradicional en un centro de alto rendimiento tecnológico con marca propia e IA integrada.
+              </p>
+              
+              <ul className="space-y-4 mb-12">
+                {['Personalización Marca Blanca', 'API de Integración Total', 'Análisis de Datos Masivo'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-white/80 font-bold text-sm uppercase tracking-tight">
+                    <CheckCircle className="w-5 h-5 text-[#d4af37]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              
+              <Link 
+                to="/academy/corporate"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all"
+              >
+                Explorar Corporate <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+
+            {/* FP Card */}
+            <motion.div 
+              whileHover={{ y: -10 }}
+              className="bg-[#1C1B1B] border border-white/5 p-12 rounded-[3.5rem] relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 p-12 opacity-5 text-white">
+                <GraduationCap className="w-32 h-32" />
+              </div>
+              
+              <div className="w-20 h-20 bg-white/5 rounded-[1.5rem] flex items-center justify-center text-white mb-10 border border-white/10 group-hover:scale-110 transition-transform">
+                <GraduationCap className="w-10 h-10" />
+              </div>
+              
+              <h3 className="text-3xl font-black text-white mb-6 uppercase tracking-tighter">Formación Prof.</h3>
+              <p className="text-[#E5E2E1]/60 text-lg leading-relaxed mb-10 font-medium">
+                Digitalización avanzada para ciclos formativos. IA entrenada en currículos oficiales y casos prácticos técnicos.
+              </p>
+              
+              <ul className="space-y-4 mb-12">
+                {['Rigor Técnico IA', 'Generación de Casos Prácticos', 'Seguimiento de Competencias'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-white/80 font-bold text-sm uppercase tracking-tight">
+                    <CheckCircle className="w-5 h-5 text-[#d4af37]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              
+              <Link 
+                to="/academy/fp"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-200 transition-all"
+              >
+                Explorar FP <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits instead of Testimonials */}
       <section className="py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
