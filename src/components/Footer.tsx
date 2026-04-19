@@ -13,7 +13,7 @@ const Footer = () => {
             />
           </Link>
           <p className="text-primary/60 text-lg leading-relaxed max-w-sm font-inter">
-            El asistente jurídico definitivo para la Administración Local en España. IA con rigor institucional.
+            El ecosistema líder de IA Jurídica para la Administración Local. De la preparación de élite a la gestión pública blindada con rigor institucional.
           </p>
         </div>
         <div>

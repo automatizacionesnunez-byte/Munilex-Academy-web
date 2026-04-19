@@ -13,7 +13,7 @@ const AcademyFooter = () => {
             MUNILEX<span className="text-[#d4af37]">ACADEMY</span>
           </Link>
           <p className="text-white/50 text-xl leading-relaxed max-w-sm font-manrope">
-            Estudia menos, aprueba antes. La plataforma de preparación de oposiciones definitiva con IA de última generación.
+            La vanguardia en preparación de oposiciones. Metodología táctica impulsada por IA para la nueva generación de funcionarios públicos.
           </p>
           
           <div className="flex gap-4 mt-12">
