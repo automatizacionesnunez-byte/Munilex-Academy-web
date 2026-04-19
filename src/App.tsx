@@ -16,6 +16,7 @@ import AcademyHabilitados from './pages/munilex-academy/AcademyHabilitados';
 import AcademyIIPP from './pages/munilex-academy/AcademyIIPP';
 import AcademyPolicia from './pages/munilex-academy/AcademyPolicia';
 import AcademyGuardiaCivil from './pages/munilex-academy/AcademyGuardiaCivil';
+import AcademyCorporate from './pages/munilex-academy/AcademyCorporate';
 import AcademyFP from './pages/munilex-academy/AcademyFP';
 import Academy from './pages/munilex-academy/Academy';
 import AvisoLegal from './pages/munilex/AvisoLegal';
