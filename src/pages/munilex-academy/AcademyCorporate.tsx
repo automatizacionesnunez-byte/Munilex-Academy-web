@@ -85,31 +85,43 @@ const AcademyCorporate = () => {
             <p className="text-white/40 font-bold text-sm uppercase tracking-widest">Escalabilidad total para tu centro</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
             {[
               {
                 name: "Iniciación",
-                desc: "Integración del ecosistema Munilex básico sin personalización de marca.",
-                features: ["IA Generativa", "Tutoría 24/7", "Syllabus Dinámico"],
+                desc: "Integración del ecosistema Munilex Básico sin personalización de marca.",
+                features: [
+                  "Dashboard de seguimiento (rachas, media)",
+                  "Tests ilimitados por bloques y dificultad",
+                  "Tests de exámenes de convocatorias oficiales",
+                  "Casos prácticos con correcciones al instante",
+                  "Flashcards de repaso y analítica de progreso"
+                ],
                 price: "Consultar"
               },
               {
                 name: "Marca",
-                desc: "Integración de logo corporativo y personalización básica del entorno.",
-                features: ["Branding (Logo)", "Dashboard Personalizado", "Soporte Prioritario"],
+                desc: "Integración del ecosistema Munilex Básico con personalización para su centro.",
+                features: [
+                  "Todo lo incluido en el Plan Iniciación",
+                  "Colores, tipografía y logo corporativo",
+                  "Personalización básica del entorno de estudio",
+                  "+1 Funcionalidad extra a elegir",
+                  "Soporte Prioritario"
+                ],
                 price: "Consultar",
                 highlight: true
               },
               {
-                name: "Identidad",
-                desc: "Branding corporativo completo (colores, tipografía y logo) para una experiencia inmersiva.",
-                features: ["Colores Corporativos", "Dominio Propio", "Analítica Avanzada"],
-                price: "Consultar"
-              },
-              {
                 name: "Ecosistema",
-                desc: "Desarrollo de aplicación web personalizada e integración total bajo demanda.",
-                features: ["App Web Propia", "Integración API Total", "Soporte 1:1 Dedicado"],
+                desc: "Munilex a su medida. Proyecto ambicioso con funcionalidades totalmente personalizadas.",
+                features: [
+                  "Desarrollo 100% personalizado bajo demanda",
+                  "Funcionalidades ilimitadas",
+                  "Integración total de sus metodologías",
+                  "Acompañamiento técnico continuo",
+                  "Infraestructura escalable dedicada"
+                ],
                 price: "Consultar"
               }
             ].map((plan, i) => (
