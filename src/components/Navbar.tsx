@@ -26,15 +26,11 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-surface-variant/30 font-manrope">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3">
-          <motion.div 
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            className="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center shadow-lg"
-          >
-            <div className="w-5 h-5 bg-secondary-fixed rounded-sm transform rotate-45" />
-          </motion.div>
-          <span className="text-2xl font-black tracking-tighter text-secondary">
-            MUNILEx
-          </span>
+          <img 
+            src="/munilex_logo_new.png" 
+            alt="Munilex" 
+            className="h-10 w-auto" 
+          />
         </Link>
         
         <div className="hidden md:flex items-center gap-10 text-[13px] font-bold uppercase tracking-wider text-on-surface-variant">

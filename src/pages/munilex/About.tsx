@@ -176,13 +176,13 @@ const About = () => {
               <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-[2.5rem] overflow-hidden bg-white border border-surface-variant shadow-ambient flex-shrink-0">
                   <img 
-                    src="/creator_photo.jpg" 
+                    src="/jose_maria.jpg" 
                     alt="José María Núñez Mejía" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-black text-secondary leading-tight mb-2 tracking-tighter uppercase">José María Núñez Mejía</h3>
+                  <h3 className="text-3xl font-black text-secondary leading-tight mb-2 tracking-tighter uppercase">José María Núñez Mejías</h3>
                   <div className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container mb-6">Fundador / Jurista & Experto en IA</div>
                   <p className="text-on-surface-variant leading-relaxed font-medium">
                     Tras formarse en el ecosistema de Racks Academy, fundó Munilex tras detectar una necesidad crítica de rigor técnico en la administración local española. Su visión lidera el desarrollo de algoritmos que garantizan la seguridad jurídica absoluta.
@@ -196,7 +196,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            {/* Francisco - Socio */}
+            {/* Francisco - Fundador */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -207,16 +207,16 @@ const About = () => {
               <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-[2.5rem] overflow-hidden bg-primary-container/5 border border-primary-container/10 shadow-sm flex-shrink-0">
                   <img 
-                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Francisco&backgroundColor=ffdfbf" 
+                    src="/francisco_marin.jpg" 
                     alt="Francisco de Paula Marín" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
                 <div>
                   <h3 className="text-3xl font-black text-secondary leading-tight mb-2 tracking-tighter uppercase">Francisco de Paula Marín</h3>
-                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary-cyan mb-6">Socio / Director Académico</div>
+                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary-cyan mb-6">Fundador / Director Académico & Comercial</div>
                   <p className="text-on-surface-variant leading-relaxed font-medium">
-                    Referente pedagógico especializado en la síntesis de normativa compleja. Francisco lidera la estructuración de contenidos y la expansión estratégica de Munilex, asegurando que la tecnología hable el lenguaje del profesional y del opositor.
+                    Referente pedagógico especializado en la síntesis de normativa compleja. Francisco es co-fundador y dirige la estructuración estratégica de contenidos y la expansión comercial de Munilex, asegurando la excelencia educativa.
                   </p>
                 </div>
               </div>

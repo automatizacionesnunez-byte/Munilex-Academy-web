@@ -5,7 +5,13 @@ const Footer = () => {
     <footer className="bg-white border-t border-surface-dim/30 py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-16">
         <div className="md:col-span-2">
-          <div className="text-2xl font-black tracking-tighter mb-8 text-primary">MUNILEX</div>
+          <Link to="/">
+            <img 
+              src="/munilex_logo_new.png" 
+              alt="Munilex" 
+              className="h-10 w-auto mb-8" 
+            />
+          </Link>
           <p className="text-primary/60 text-lg leading-relaxed max-w-sm font-inter">
             El asistente jurídico definitivo para la Administración Local en España. IA con rigor institucional.
           </p>

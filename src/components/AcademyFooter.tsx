@@ -9,12 +9,8 @@ const AcademyFooter = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 grid grid-cols-1 md:grid-cols-4 gap-16">
         <div className="md:col-span-2">
-          <Link to="/academy" className="mb-8 inline-block group">
-            <img 
-              src="/munilex_logo_new.png" 
-              alt="Munilex Academy" 
-              className="h-12 w-auto invert brightness-200 group-hover:scale-105 transition-transform" 
-            />
+          <Link to="/academy" className="text-3xl font-black tracking-tighter mb-8 inline-block text-white">
+            MUNILEX<span className="text-[#d4af37]">ACADEMY</span>
           </Link>
           <p className="text-white/50 text-xl leading-relaxed max-w-sm font-manrope">
             Estudia menos, aprueba antes. La plataforma de preparación de oposiciones definitiva con IA de última generación.

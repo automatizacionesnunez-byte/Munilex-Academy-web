@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
-import { ChevronDown, ArrowUpRight } from 'lucide-react';
+import { ChevronDown, GraduationCap, ArrowUpRight } from 'lucide-react';
 
 const AcademyNavbar = () => {
   const navItems = [
@@ -25,11 +25,20 @@ const AcademyNavbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex justify-between items-center text-[#E5E2E1]">
         <Link to="/academy" className="flex items-center gap-3 group">
-          <img 
-            src="/munilex_logo_new.png" 
-            alt="Munilex Academy" 
-            className="h-10 w-auto brightness-200" 
-          />
+          <motion.div 
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            className="w-10 h-10 bg-[#d4af37] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all"
+          >
+            <GraduationCap className="w-6 h-6 text-[#241a00]" />
+          </motion.div>
+          <div className="flex flex-col">
+            <span className="text-xl font-bold tracking-tighter leading-none text-white lg:text-2xl">
+              MUNILEx
+            </span>
+            <span className="text-[9px] font-black uppercase tracking-[0.35em] text-[#d4af37] ml-0.5 mt-0.5">
+              ACADEMY
+            </span>
+          </div>
         </Link>
         
         <div className="hidden lg:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em]">

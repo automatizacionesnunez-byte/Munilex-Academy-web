@@ -5,21 +5,21 @@ import { Helmet } from 'react-helmet-async';
 const AcademyAbout = () => {
   const founders = [
     {
-      name: "José María Núñez Mejía",
+      name: "José María Núñez Mejías",
       role: "Fundador / Experto en IA & Derecho",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=JoseMaria&backgroundColor=b6e3f4", // Temporary avatar
+      image: "/jose_maria.jpg",
       description: "Jurista certificado por Rags Academy (Universidad Rey Juan Carlos). Especializado en la convergencia del Derecho y la Inteligencia Artificial. Con una sólida trayectoria como docente tecnológico y amplia experiencia en Derecho Virtual, lidera la visión técnica de Munilex Academy.",
       tags: ["Jurista URJC", "Docente Tech", "IA Legislativa", "Derecho Virtual"],
       social: {
-        linkedin: "#",
-        web: "#"
+        linkedin: "https://www.linkedin.com/in/jose-maria-nu%C3%B1ez-mejia-73b06222b/",
+        web: "https://wa.me/34605392912"
       }
     },
     {
       name: "Francisco de Paula Marín",
-      role: "Socio / Director Académico & Comercial",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Francisco&backgroundColor=ffdfbf", // Temporary avatar
-      description: "Jurista de primer nivel volcado en la excelencia académica. Francisco dirige la estructuración pedagógica de los temarios y lidera la expansión comercial de Munilex, asegurando que cada opositor reciba una formación con rigor jurídico y adaptada al mercado actual.",
+      role: "Fundador / Director Académico & Comercial",
+      image: "/francisco_marin.jpg",
+      description: "Jurista de primer nivel volcado en la excelencia académica. Francisco es co-fundador y dirige la estructuración pedagógica de los temarios y lidera la expansión comercial de Munilex, asegurando que cada opositor reciba una formación con rigor jurídico y adaptada al mercado actual.",
       tags: ["Jurista", "Director Académico", "Estrategia Comercial", "Gestión de Temarios"],
       social: {
         linkedin: "#",
@@ -117,10 +117,35 @@ const AcademyAbout = () => {
                   <div>
                     <h3 className="text-3xl font-black text-white leading-tight mb-2">{founder.name}</h3>
                     <p className="text-[#d4af37] font-bold text-sm uppercase tracking-widest">{founder.role}</p>
-                    <div className="flex gap-3 mt-4">
-                      {founder.social.linkedin && <a href={founder.social.linkedin} className="text-[#E5E2E1]/40 hover:text-white transition-colors"><LinkIcon className="w-5 h-5" /></a>}
-                      {founder.social.web && <a href={founder.social.web} className="text-[#E5E2E1]/40 hover:text-white transition-colors"><Globe className="w-5 h-5" /></a>}
-                      {founder.social.mail && <a href={founder.social.mail} className="text-[#E5E2E1]/40 hover:text-white transition-colors"><Mail className="w-5 h-5" /></a>}
+                    <div className="flex gap-4 mt-6">
+                      {founder.social.linkedin && (
+                        <a 
+                          href={founder.social.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="w-10 h-10 rounded-xl bg-[#2A2A2A] border border-[#353534] flex items-center justify-center text-[#E5E2E1]/40 hover:text-[#d4af37] hover:border-[#d4af37]/30 transition-all group/social"
+                        >
+                          <LinkIcon className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
+                        </a>
+                      )}
+                      {founder.social.web && (
+                        <a 
+                          href={founder.social.web} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="w-10 h-10 rounded-xl bg-[#2A2A2A] border border-[#353534] flex items-center justify-center text-[#E5E2E1]/40 hover:text-[#d4af37] hover:border-[#d4af37]/30 transition-all group/social"
+                        >
+                          <Globe className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
+                        </a>
+                      )}
+                      {founder.social.mail && (
+                        <a 
+                          href={founder.social.mail} 
+                          className="w-10 h-10 rounded-xl bg-[#2A2A2A] border border-[#353534] flex items-center justify-center text-[#E5E2E1]/40 hover:text-[#d4af37] hover:border-[#d4af37]/30 transition-all group/social"
+                        >
+                          <Mail className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
