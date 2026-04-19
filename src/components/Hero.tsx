@@ -18,15 +18,15 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-cyan opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary-cyan"></span>
             </span>
-            El Jurista Digital
+            Munilex • Inteligencia del Derecho
           </div>
           
           <h1 className="font-manrope font-extrabold text-5xl md:text-6xl lg:text-7xl text-on-surface leading-[1.05] tracking-tighter mb-10">
-            El primer asistente jurídico con <span className="text-primary-container">IA</span> para Ayuntamientos
+            La Nueva Era del <span className="text-primary-container">Rigor Jurídico</span> impulsada por IA
           </h1>
           
           <p className="text-xl md:text-2xl text-on-surface-variant mb-12 max-w-2xl leading-relaxed font-inter font-medium opacity-90">
-            Potencie la eficiencia de su administración con inteligencia artificial diseñada específicamente para el marco legal de los ayuntamientos españoles.
+            Seguridad, soberanía y precisión para la administración pública, despachos de élite y juristas de alto rendimiento.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
@@ -83,8 +83,8 @@ const Hero = () => {
                   <Gavel className="w-8 h-8" />
                 </div>
                 <div>
-                  <div className="text-xl font-black text-secondary tracking-tight">Análisis Jurídico IA</div>
-                  <div className="text-[13px] font-black uppercase tracking-[0.2em] text-primary-container">Secretaría-Intervención v4.0</div>
+                  <div className="text-xl font-black text-secondary tracking-tight">Análisis Normativo IA</div>
+                  <div className="text-[13px] font-black uppercase tracking-[0.2em] text-primary-container">Rigor y Tecnología v4.0</div>
                 </div>
               </div>
               <div className="space-y-3">
@@ -96,7 +96,7 @@ const Hero = () => {
                     className="h-full bg-secondary-cyan shadow-[0_0_15px_rgba(6,211,170,0.5)]" 
                   />
                 </div>
-                <div className="text-xs font-bold text-on-surface-variant opacity-60">Procesando Ley 9/2017 de Contratos del Sector Público... 95%</div>
+                <div className="text-xs font-bold text-on-surface-variant opacity-60">Generando informes jurídicos de alta precisión... 95%</div>
               </div>
             </motion.div>
           </div>

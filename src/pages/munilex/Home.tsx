@@ -147,15 +147,15 @@ const Home = () => {
       
       <section className="py-32 bg-surface-low border-y border-surface-variant/30">
         <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="mb-12 italic text-secondary">"Voz del Secretario"</h2>
+          <h2 className="mb-12 italic text-secondary">"Excelencia Operativa"</h2>
           <p className="text-2xl text-primary/80 max-w-4xl mx-auto font-medium leading-relaxed">
-            "Munilex no es solo una IA, es el respaldo que todo habilitado nacional necesita hoy en día. La precisión en la redacción de informes ha cambiado drásticamente mi jornada."
+            "Munilex no es solo una IA, es el respaldo técnico que todo profesional jurídico necesita hoy en día. La precisión en la redacción y análisis ha cambiado drásticamente mi jornada."
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
             <div className="w-12 h-12 bg-primary-container rounded-full" />
             <div className="text-left font-manrope">
               <div className="font-bold">E. García</div>
-              <div className="text-xs opacity-50 font-bold tracking-widest uppercase">Secretariado de Ayuntamiento</div>
+              <div className="text-xs opacity-50 font-bold tracking-widest uppercase">Especialista en Derecho Público</div>
             </div>
           </div>
         </div>

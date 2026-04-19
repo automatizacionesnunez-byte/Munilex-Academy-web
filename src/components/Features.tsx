@@ -44,10 +44,10 @@ const Features = () => {
             viewport={{ once: true }}
             className="mb-6 text-on-surface"
           >
-            Herramientas inteligentes para la <span className="text-primary-container">Administración Local</span>
+            Herramientas inteligentes para el <span className="text-primary-container">Sector Público y Juristas</span>
           </motion.h2>
           <p className="text-xl text-on-surface-variant max-w-2xl font-medium">
-            Transformamos el flujo de trabajo jurídico municipal con tecnología de vanguardia y rigor institucional.
+            Transformamos el flujo de trabajo jurídico con tecnología de vanguardia y rigor institucional.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ const Features = () => {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="mb-10 text-white">
-                Innovación y eficiencia legal para tu Ayuntamiento
+                Innovación y eficiencia legal para su organización
               </h2>
               <div className="space-y-10">
                 {[
