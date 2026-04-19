@@ -187,7 +187,7 @@ const About = () => {
                   <h3 className="text-3xl font-black text-secondary leading-tight mb-2 tracking-tighter uppercase">José María Núñez Mejías</h3>
                   <div className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-container mb-6">Fundador / Consultor Técnico LegalTech & IA</div>
                   <p className="text-on-surface-variant leading-relaxed font-medium">
-                    Jurista certificado por Racks Academy. Su visión lidera el desarrollo de algoritmos que garantizan la seguridad jurídica absoluta, aplicando la inteligencia artificial en entornos académicos como Derecho Virtual y TEC University.
+                    Jurista certificado por Racks Academy. Su visión lidera el desarrollo de algoritmos que garantizan la seguridad jurídica absoluta, aplicando la inteligencia artificial en entornos académicos como Derecho Virtual y TECH UNIVERSITY.
                   </p>
                 </div>
               </div>
