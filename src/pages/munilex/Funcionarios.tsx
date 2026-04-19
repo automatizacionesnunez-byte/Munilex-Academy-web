@@ -1,17 +1,8 @@
 import { motion } from 'framer-motion';
 import { 
-  Shield, 
-  Search, 
-  FileText, 
   CheckCircle, 
-  Bell, 
-  Database, 
   ArrowRight,
   FileCheck,
-  Lock,
-  Cpu,
-  Download,
-  Terminal,
   ExternalLink,
   Layers,
   FileSearch,

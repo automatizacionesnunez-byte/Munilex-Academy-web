@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, Target, Zap, Quote, Award, GraduationCap, ArrowRight, Globe } from 'lucide-react';
+import { ShieldCheck, Target, Quote, GraduationCap, ArrowRight } from 'lucide-react';
 import joseMariaImg from '../../assets/jose_maria.jpg';
 import franciscoMarinImg from '../../assets/francisco_marin.jpg';
 
