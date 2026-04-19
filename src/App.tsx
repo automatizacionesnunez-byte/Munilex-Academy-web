@@ -16,6 +16,8 @@ import AcademyHabilitados from './pages/munilex-academy/AcademyHabilitados';
 import AcademyIIPP from './pages/munilex-academy/AcademyIIPP';
 import AcademyPolicia from './pages/munilex-academy/AcademyPolicia';
 import AcademyGuardiaCivil from './pages/munilex-academy/AcademyGuardiaCivil';
+import AcademyCorporate from './pages/munilex-academy/AcademyCorporate';
+import AcademyFP from './pages/munilex-academy/AcademyFP';
 import About from './pages/munilex/About';
 import Academy from './pages/munilex-academy/Academy';
 import AvisoLegal from './pages/munilex/AvisoLegal';
@@ -58,7 +60,7 @@ const SiteLayout = ({ children, scaleX }: { children: React.ReactNode, scaleX: a
   return (
     <div className="min-h-screen bg-surface">
       <motion.div
-        className={`fixed top-0 left-0 right-0 h-1 z-[60] origin-left ${isAcademy ? 'bg-secondary-cyan' : 'bg-primary-container'}`}
+        className={`fixed top-0 left-0 right-0 h-1 z-[60] origin-left ${isAcademy ? 'bg-[#d4af37]' : 'bg-primary-container'}`}
         style={{ scaleX }}
       />
       
@@ -100,8 +102,9 @@ function App() {
               <Route path="/academy/iipp" element={<AcademyIIPP />} />
               <Route path="/academy/policia" element={<AcademyPolicia />} />
               <Route path="/academy/guardiacivil" element={<AcademyGuardiaCivil />} />
-              <Route path="/sobre-nosotros" element={<About />} />
               <Route path="/academy" element={<Academy />} />
+              <Route path="/academy/corporate" element={<AcademyCorporate />} />
+              <Route path="/academy/fp" element={<AcademyFP />} />
               <Route path="/aviso-legal" element={<AvisoLegal />} />
               <Route path="/privacidad" element={<Privacidad />} />
               <Route path="/terminos" element={<Terminos />} />

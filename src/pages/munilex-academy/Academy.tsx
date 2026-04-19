@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Zap, CheckCircle, ArrowRight, Brain, FileText, Smartphone, X, ChevronRight, Scale, Landmark, FileCheck, Lock, Shield, Dumbbell, Languages, Building2, Clock, Target, TrendingUp } from 'lucide-react';
+import { Zap, CheckCircle, ArrowRight, Brain, FileText, Smartphone, X, ChevronRight, Scale, Landmark, FileCheck, Lock, Shield, Dumbbell, Languages, Building2, Clock, Target, TrendingUp, GraduationCap } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Academy = () => {
@@ -236,51 +236,104 @@ const Academy = () => {
         )}
       </AnimatePresence>
 
-      {/* Hero Section */}
-      <section className="relative pt-48 pb-24 md:pt-60 md:pb-32 px-6 md:px-8 border-b border-[#353534]/50 overflow-hidden">
-        <div className="absolute inset-0 bg-[#131313] z-0" />
+      {/* Hero Section - Simplified 3 Columns */}
+      <section className="relative pt-48 pb-32 md:pt-60 md:pb-40 px-6 md:px-8 overflow-hidden bg-[#131313]">
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#d4af37 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }} />
         
-        {/* Abstract Glows */}
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#d4af37]/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] bg-[#ffffff]/5 rounded-full blur-[100px] pointer-events-none" />
-        
+        {/* Glows */}
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#d4af37]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 -left-32 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
+
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1C1B1B] border border-[#353534] text-[#d4af37] text-xs font-bold tracking-widest uppercase mb-8"
-          >
-            <Brain className="w-3.5 h-3.5" />
-            POTENCIADO POR IA
-          </motion.div>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold text-white leading-[1.05] tracking-tight mb-8 max-w-4xl">
-            Preparación de Élite.<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">
-              Sin la fricción tradicional.
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-[#E5E2E1]/70 max-w-2xl leading-relaxed mb-12 font-medium">
-            La academia de oposiciones de nueva generación. Integramos inteligencia artificial nativa para adaptar el temario a tu ritmo, generar simulacros exactos y optimizar tu memoria a largo plazo.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="https://munilex.lovable.app/auth/register"
-              className="px-8 py-4 bg-gradient-to-r from-[#f2ca50] to-[#d4af37] text-[#241a00] font-bold rounded-xl text-[15px] shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_30px_rgba(212,175,55,0.25)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+          <div className="text-center mb-24">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-10 uppercase"
             >
-              Asegurar Plaza
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <button 
-              onClick={() => {
-                document.getElementById('rutas')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-8 py-4 bg-[#1C1B1B] border border-[#353534] hover:bg-[#2A2A2A] text-white font-semibold rounded-xl text-[15px] transition-all flex items-center justify-center"
+              LA REVOLUCIÓN DEL <br/>
+              <span className="italic text-[#d4af37]">APRENDIZAJE</span>
+            </motion.h1>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Oposiciones Column */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="bg-[#1C1B1B] border border-white/5 p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-white/20 transition-all group"
             >
-              Explorar Oposiciones
-            </button>
+              <div>
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:bg-white/10 transition-all">
+                   <Target className="w-6 h-6" />
+                </div>
+                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tighter">Oposiciones</h3>
+                <p className="text-white/50 font-bold text-sm leading-relaxed mb-10">
+                  La ruta definitiva hacia tu plaza en la administración pública.
+                </p>
+              </div>
+              <button 
+                onClick={() => document.getElementById('rutas')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full py-5 bg-white text-black font-black uppercase tracking-widest text-[10px] rounded-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-2"
+              >
+                Explorar Rutas
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </motion.div>
+
+            {/* Corporate Column - PREMIUM */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="bg-[#1C1B1B] border-2 border-[#d4af37]/30 p-10 rounded-[2.5rem] flex flex-col justify-between relative overflow-hidden group shadow-[0_0_50px_rgba(212,175,55,0.1)]"
+            >
+              <div className="absolute top-0 right-0 py-2 px-6 bg-[#d4af37] text-black font-black text-[9px] uppercase tracking-widest rounded-bl-2xl">
+                PREMIUM
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center text-[#d4af37] mb-8 border border-[#d4af37]/20 group-hover:bg-[#d4af37]/20 transition-all">
+                   <Building2 className="w-6 h-6" />
+                </div>
+                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tighter">Corporate</h3>
+                <p className="text-white/50 font-bold text-sm leading-relaxed mb-10">
+                  Adaptación estratégica de centros educativos y academias al ecosistema IA.
+                </p>
+              </div>
+              <Link 
+                to="/academy/corporate"
+                className="w-full py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[10px] rounded-xl hover:scale-105 transition-all flex items-center justify-center gap-2 shadow-xl shadow-[#d4af37]/10"
+              >
+                Saber más
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+
+            {/* FP Column */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="bg-[#1C1B1B] border border-white/5 p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-white/20 transition-all group"
+            >
+              <div>
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:bg-white/10 transition-all">
+                   <GraduationCap className="w-6 h-6" />
+                </div>
+                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tighter">FP</h3>
+                <p className="text-white/50 font-bold text-sm leading-relaxed mb-10">
+                  Excelencia técnica y digitalización avanzada para centros de Formación Profesional.
+                </p>
+              </div>
+              <Link 
+                to="/academy/fp"
+                className="w-full py-5 bg-white text-black font-black uppercase tracking-widest text-[10px] rounded-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-2"
+              >
+                Saber más
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>

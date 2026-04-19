@@ -16,7 +16,14 @@ const AcademyNavbar = () => {
         { name: 'Instituciones Penitenciarias', path: '/academy/iipp' },
       ]
     },
-    { name: 'Precios', path: '/academy/precios' },
+    { 
+      name: 'Institucional', 
+      path: '/academy/corporate',
+      subItems: [
+        { name: 'Corporate (Academias)', path: '/academy/corporate' },
+        { name: 'Centros FP', path: '/academy/fp' },
+      ]
+    },
     { name: 'Sobre Nosotros', path: '/academy/sobre-nosotros' },
     { name: 'Contacto', path: '/academy/contacto' },
   ];
@@ -41,13 +48,13 @@ const AcademyNavbar = () => {
           </div>
         </Link>
         
-        <div className="hidden lg:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em]">
+        <div className="hidden lg:flex items-center gap-10 text-[11px] font-black uppercase tracking-[0.2em]">
           {navItems.map((item) => (
             <div key={item.name} className="relative group">
               <NavLink 
                 to={item.path} 
                 className={({ isActive }) => 
-                  `flex items-center gap-1.5 relative transition-all duration-300 hover:text-[#d4af37] py-4 ${isActive ? 'text-[#d4af37]' : 'text-[#E5E2E1]/70'}`
+                  `flex items-center gap-1.5 relative transition-all duration-300 hover:text-[#d4af37] py-4 ${isActive ? 'text-[#d4af37]' : 'text-[#d4af37]'}`
                 }
               >
                 {({ isActive }) => (
@@ -87,13 +94,13 @@ const AcademyNavbar = () => {
         <div className="flex items-center gap-4">
           <a 
             href="https://munilex.lovable.app/auth/login" 
-            className="hidden sm:block text-[11px] font-bold uppercase tracking-widest text-[#E5E2E1]/50 hover:text-white transition-colors px-4"
+            className="hidden sm:block text-[11px] font-black uppercase tracking-widest text-[#d4af37] hover:brightness-110 transition-all px-4"
           >
-            Acceso
+            CAMPUS
           </a>
           <a 
             href="https://munilex.lovable.app/auth/register"
-            className="bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-[#241a00] px-7 py-3 rounded-xl font-bold text-[12px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-2xl hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
+            className="bg-[#d4af37] text-[#241a00] px-7 py-3 rounded-xl font-bold text-[12px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-2xl hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
           >
             Prueba <span className="hidden sm:inline">Gratis</span>
             <ArrowUpRight className="w-4 h-4" />

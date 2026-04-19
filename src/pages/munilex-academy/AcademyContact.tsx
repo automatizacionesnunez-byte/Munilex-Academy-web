@@ -1,51 +1,83 @@
-import { Send } from 'lucide-react';
+import { Send, MapPin, Phone, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 const AcademyContact = () => {
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-[#001529] text-white px-6 md:px-8">
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
-            Hablemos de <span className="text-secondary-cyan">tu Plaza</span>
-          </h1>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            ¿Tienes dudas sobre el temario, la IA o qué oposición se adapta mejor a tu perfil? Escríbenos y un preparador contactará contigo.
-          </p>
-        </motion.div>
-      </div>
+    <div className="pt-48 pb-24 min-h-screen bg-[#131313] text-[#E5E2E1] px-6 md:px-8 font-inter selection:bg-[#d4af37]/30 selection:text-white">
+      <Helmet>
+        <title>Contacto | Munilex Academy</title>
+        <meta name="description" content="Contacta con Munilex Academy para resolver tus dudas sobre oposiciones, formación profesional o planes corporativos." />
+      </Helmet>
 
-      <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-xl">
-        <form className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label className="text-sm font-bold text-secondary-cyan uppercase tracking-wider">Nombre Completo</label>
-              <input type="text" className="w-full bg-black/50 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary-cyan transition-colors" placeholder="Ej: Laura Gómez" />
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-20">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
+            <h1 className="text-6xl md:text-8xl font-black mb-10 uppercase tracking-tighter leading-[0.85] text-white">
+              Hablemos de <br/>
+              <span className="italic text-[#d4af37]">tu futuro</span>
+            </h1>
+            <p className="text-xl text-white/50 max-w-xl mb-12 font-semibold">
+              ¿Dudas sobre el temario, la IA o qué plan se adapta mejor a tu centro? Nuestro equipo técnico y docente está listo para ayudarte.
+            </p>
+
+            <div className="space-y-8">
+              {[
+                { icon: <Mail className="w-6 h-6" />, label: "Email", value: "info@munilex.com" },
+                { icon: <Phone className="w-6 h-6" />, label: "Teléfono", value: "+34 600 000 000" },
+                { icon: <MapPin className="w-6 h-6" />, label: "Ubicación", value: "Madrid, España" }
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-6 group">
+                  <div className="w-12 h-12 bg-[#1C1B1B] border border-white/5 rounded-2xl flex items-center justify-center text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-black transition-all">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#d4af37] mb-1">{item.label}</div>
+                    <div className="text-lg font-bold text-white">{item.value}</div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="space-y-2">
-              <label className="text-sm font-bold text-secondary-cyan uppercase tracking-wider">Email</label>
-              <input type="email" className="w-full bg-black/50 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary-cyan transition-colors" placeholder="laura@ejemplo.com" />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <label className="text-sm font-bold text-secondary-cyan uppercase tracking-wider">Oposición de Interés</label>
-            <select className="w-full bg-black/50 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary-cyan transition-colors">
-              <option value="">Selecciona tu ruta...</option>
-              <option value="habilitados">Habilitados Nacionales</option>
-              <option value="age">Administración General del Estado</option>
-              <option value="fuerzas">Policía Nacional / Guardia Civil</option>
-              <option value="iipp">Instituciones Penitenciarias</option>
-            </select>
-          </div>
-          <div className="space-y-2">
-            <label className="text-sm font-bold text-secondary-cyan uppercase tracking-wider">Mensaje</label>
-            <textarea rows={4} className="w-full bg-black/50 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-secondary-cyan transition-colors" placeholder="¿En qué podemos ayudarte?"></textarea>
-          </div>
-          <button type="button" className="w-full py-4 bg-gradient-to-r from-secondary-cyan to-primary-container text-white font-black rounded-xl text-lg hover:scale-[1.02] active:scale-95 transition-transform flex items-center justify-center gap-2 uppercase tracking-tight shadow-[0_0_20px_rgba(6,211,170,0.3)]">
-            <Send className="w-5 h-5" />
-            Enviar Mensaje a Preparadores
-          </button>
-        </form>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }} 
+            animate={{ opacity: 1, x: 0 }}
+            className="bg-[#1C1B1B] border border-white/5 rounded-[3rem] p-10 md:p-14 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-[100px] pointer-events-none" />
+            
+            <form className="space-y-8 relative z-10">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label className="text-[10px] font-black text-[#d4af37] uppercase tracking-[0.25em]">Nombre Completo</label>
+                  <input type="text" className="w-full bg-[#131313] border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-[#d4af37] transition-all placeholder:text-white/10 font-bold" placeholder="Tu nombre" />
+                </div>
+                <div className="space-y-3">
+                  <label className="text-[10px] font-black text-[#d4af37] uppercase tracking-[0.25em]">Email de Contacto</label>
+                  <input type="email" className="w-full bg-[#131313] border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-[#d4af37] transition-all placeholder:text-white/10 font-bold" placeholder="tu@email.com" />
+                </div>
+              </div>
+              <div className="space-y-3">
+                <label className="text-[10px] font-black text-[#d4af37] uppercase tracking-[0.25em]">Interés</label>
+                <select className="w-full bg-[#131313] border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-[#d4af37] transition-all font-bold appearance-none">
+                  <option value="oposiciones">Oposiciones</option>
+                  <option value="corporate">Plan Corporate (Academias)</option>
+                  <option value="fp">Centros FP</option>
+                  <option value="otro">Otros asuntos</option>
+                </select>
+              </div>
+              <div className="space-y-3">
+                <label className="text-[10px] font-black text-[#d4af37] uppercase tracking-[0.25em]">Mensaje</label>
+                <textarea rows={4} className="w-full bg-[#131313] border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-[#d4af37] transition-all placeholder:text-white/10 font-bold resize-none" placeholder="¿Cómo podemos ayudarte?"></textarea>
+              </div>
+              <button type="button" className="w-full py-5 bg-[#d4af37] text-black font-black rounded-2xl text-xs hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 uppercase tracking-[0.2em] shadow-xl shadow-[#d4af37]/10">
+                <Send className="w-4 h-4" />
+                Enviar Mensaje
+              </button>
+            </form>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
