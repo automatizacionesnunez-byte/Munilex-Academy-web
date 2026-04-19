@@ -126,11 +126,7 @@ const AcademyCorporate = () => {
             ].map((plan, i) => (
               <div 
                 key={i} 
-                className={`p-10 rounded-[2.5rem] flex flex-col justify-between transition-all border ${
-                  plan.highlight 
-                    ? 'bg-[#1C1B1B] border-[#d4af37]/40 shadow-2xl shadow-[#d4af37]/5 scale-105 relative z-10' 
-                    : 'bg-[#0E0E0E] border-white/5 hover:border-white/10'
-                }`}
+                className="p-10 rounded-[2.5rem] flex flex-col justify-between transition-all border bg-[#0E0E0E] border-white/5 hover:border-white/10"
               >
                 <div>
                   <h4 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter">{plan.name}</h4>
@@ -148,11 +144,7 @@ const AcademyCorporate = () => {
                   <div className="text-lg font-black text-white mb-6">{plan.price}</div>
                   <Link 
                     to="/academy/contacto" 
-                    className={`w-full py-4 rounded-xl font-black uppercase tracking-widest text-[9px] flex items-center justify-center gap-2 transition-all ${
-                      plan.highlight 
-                        ? 'bg-[#d4af37] text-black shadow-xl' 
-                        : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
-                    }`}
+                    className="w-full py-4 rounded-xl font-black uppercase tracking-widest text-[9px] flex items-center justify-center gap-2 transition-all bg-white/5 text-white hover:bg-white/10 border border-white/10"
                   >
                     Consultar Presupuesto
                   </Link>
