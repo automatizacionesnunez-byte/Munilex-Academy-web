@@ -1,8 +1,20 @@
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Servicios', path: '/servicios' },
@@ -23,8 +35,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-surface-variant/30 font-manrope">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 flex justify-between items-center">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 font-manrope ${
+      isScrolled 
+        ? 'bg-white/80 backdrop-blur-xl border-b border-surface-variant/30 py-4 shadow-ambient' 
+        : 'bg-transparent border-transparent py-6'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3">
           <img 
             src="/munilex_logo_new.png" 
@@ -33,13 +49,13 @@ const Navbar = () => {
           />
         </Link>
         
-        <div className="hidden md:flex items-center gap-10 text-[13px] font-bold uppercase tracking-wider text-on-surface-variant">
+        <div className="hidden md:flex items-center gap-10 text-[13px] font-extrabold uppercase tracking-widest text-on-surface-variant">
           {navItems.map((item) => (
             <div key={item.name} className="relative group">
               <NavLink 
                 to={item.path} 
                 className={({ isActive }) => 
-                  `flex items-center gap-1 relative transition-all duration-300 hover:text-primary-container py-4 ${isActive ? 'text-primary-container' : ''}`
+                  `flex items-center gap-1 relative transition-all duration-300 hover:text-primary-container ${isActive ? 'text-primary-container' : ''}`
                 }
               >
                 {({ isActive }) => (
@@ -49,7 +65,7 @@ const Navbar = () => {
                     {isActive && (
                       <motion.div 
                         layoutId="nav-underline"
-                        className="absolute bottom-3 left-0 w-full h-[3px] bg-primary-container rounded-full"
+                        className="absolute -bottom-2 left-0 w-full h-[3px] bg-primary-container rounded-full"
                       />
                     )}
                   </>
@@ -88,8 +104,55 @@ const Navbar = () => {
           >
             Prueba gratis
           </a>
+          
+          <button 
+            className="md:hidden text-on-surface"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white border-b border-surface-variant/30 overflow-hidden"
+          >
+            <div className="px-6 py-8 flex flex-col gap-6">
+              {navItems.map((item) => (
+                <div key={item.name}>
+                  <Link 
+                    to={item.path}
+                    className="text-lg font-bold text-on-surface"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.subItems && (
+                    <div className="mt-4 ml-4 flex flex-col gap-3 border-l-2 border-surface-variant/30 pl-4">
+                      {item.subItems.map((sub) => (
+                        <Link 
+                          key={sub.name}
+                          to={sub.path}
+                          className="text-on-surface-variant font-medium text-sm"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
