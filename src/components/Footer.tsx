@@ -13,7 +13,7 @@ const Footer = () => {
             />
           </Link>
           <p className="text-primary/60 text-lg leading-relaxed max-w-sm font-inter">
-            El ecosistema líder de IA Jurídica para la Administración Local. De la preparación de élite a la gestión pública blindada con rigor institucional.
+            El ecosistema definitivo de IA Jurídica para la Administración Local. Rigor y vanguardia tecnológica a través de nuestras verticales Academy, Corporate y FP.
           </p>
         </div>
         <div>
