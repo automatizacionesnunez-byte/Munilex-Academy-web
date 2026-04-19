@@ -191,12 +191,12 @@ const LinkedInLogo = ({ className }: { className?: string }) => (
                   </div>
                 </div>
                 <p className="text-white/70 font-medium text-base leading-relaxed mb-10">
-                  Abogado, estratega de negocio y profesor. Como <strong>CMO de Munilex</strong>, lidera la expansión educativa y corporativa, aportando su visión estratégica y experiencia docente para democratizar el acceso al derecho local.
+                  Abogado y Docente con +10 años de experiencia en la preparación de opositores y alumnos de Derecho de toda España. Director de TFM en el Master de Abogacía en la UNIR y docente colaborador en las mejores academias privadas a nivel nacional. Experiencia en banca y emprendimiento.
                 </p>
               </div>
 
               <div className="flex gap-4">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/10 rounded-2xl text-white hover:bg-white hover:text-[#002B5B] transition-all border border-white/5">
+                <a href="https://www.linkedin.com/in/franciscodepaulamarin" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/10 rounded-2xl text-white hover:bg-white hover:text-[#002B5B] transition-all border border-white/5">
                   <LinkedInLogo className="w-6 h-6" />
                 </a>
               </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Brain, Scale, ShieldCheck, Mail, Link as LinkIcon, Globe, Code } from 'lucide-react';
+import { Brain, Scale, ShieldCheck, Mail, Linkedin, Globe, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import joseMariaImg from '../../assets/jose_maria.jpg';
 import franciscoMarinImg from '../../assets/francisco_marin.jpg';
@@ -21,10 +21,10 @@ const AcademyAbout = () => {
       name: "Francisco de Paula Marín",
       role: "Fundador / Director Académico & Comercial",
       image: franciscoMarinImg,
-      description: "Jurista de primer nivel volcado en la excelencia académica. Francisco es co-fundador y dirige la estructuración pedagógica de los temarios y lidera la expansión comercial de Munilex, asegurando que cada opositor reciba una formación con rigor jurídico y adaptada al mercado actual.",
+      description: "Abogado y Docente con +10 años de experiencia en la preparación de opositores y alumnos de Derecho de toda España. Director de TFM en el Master de Abogacía en la UNIR y docente colaborador en las mejores academias privadas a nivel nacional. Experiencia en banca y emprendimiento.",
       tags: ["Jurista", "Director Académico", "Estrategia Comercial", "Gestión de Temarios"],
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/franciscodepaulamarin",
         mail: "mailto:administracion@munilex.es"
       }
     }
@@ -127,7 +127,7 @@ const AcademyAbout = () => {
                           rel="noopener noreferrer" 
                           className="w-10 h-10 rounded-xl bg-[#2A2A2A] border border-[#353534] flex items-center justify-center text-[#E5E2E1]/40 hover:text-[#d4af37] hover:border-[#d4af37]/30 transition-all group/social"
                         >
-                          <LinkIcon className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
+                          <Linkedin className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
                         </a>
                       )}
                       {founder.social.web && (
