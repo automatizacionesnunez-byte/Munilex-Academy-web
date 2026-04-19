@@ -4,8 +4,8 @@ import { CheckCircle, BarChart, Users, Phone } from 'lucide-react';
 
 const PricingPage = () => {
   return (
-    <div className="pt-24 min-h-screen">
-      <section className="py-24 px-6 md:px-8 bg-white text-center">
+    <div className="min-h-screen">
+      <section className="pt-48 pb-24 px-6 md:px-8 bg-white text-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,8 +58,8 @@ const PricingPage = () => {
             </div>
             <div className="relative rounded-[3rem] overflow-hidden shadow-premium group min-h-[500px]">
               <img 
-                src="/ayuntamiento_premium.png" 
-                alt="Modern Spanish City Hall" 
+                src="/ayuntamiento_extremadura.png" 
+                alt="Traditional Spanish Town Hall" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent" />

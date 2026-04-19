@@ -4,14 +4,14 @@ import { Helmet } from 'react-helmet-async';
 
 const AcademyPricing = () => {
   return (
-    <div className="pt-24 min-h-screen bg-[#131313] text-[#E5E2E1] font-inter">
+    <div className="min-h-screen bg-[#131313] text-[#E5E2E1] font-inter">
       <Helmet>
         <title>Precios y Planes | Munilex Academy - Invierte en tu Plaza</title>
         <meta name="description" content="Planes de estudio flexibles para opositores de élite. Accede a nuestra IA jurídica, simuladores infinitos y temarios actualizados desde 29€ al mes." />
       </Helmet>
 
       {/* Hero Header */}
-      <section className="py-24 px-6 md:px-8 text-center relative overflow-hidden">
+      <section className="pt-48 pb-24 px-6 md:px-8 text-center relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-[#d4af37]/5 to-transparent blur-[120px] pointer-events-none" />
         
         <motion.div 

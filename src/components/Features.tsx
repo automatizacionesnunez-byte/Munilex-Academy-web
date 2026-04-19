@@ -89,7 +89,7 @@ const Features = () => {
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6 group">
                     <div className="mt-1">
-                      <CheckCircle className="w-8 h-8 text-secondary-fixed transition-transform group-hover:scale-110" />
+                      <CheckCircle className="w-8 h-8 text-primary-fixed transition-transform group-hover:scale-110" />
                     </div>
                     <div>
                       <h4 className="text-2xl font-black mb-2 tracking-tight">{item.t}</h4>
@@ -103,13 +103,13 @@ const Features = () => {
             <div className="hidden lg:block relative">
               <div className="bg-white/10 backdrop-blur-3xl p-10 rounded-[2.5rem] border border-white/20 shadow-2xl relative overflow-hidden">
                 <div className="flex items-center gap-4 mb-10">
-                  <div className="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center text-primary shadow-lg">
+                  <div className="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-white shadow-lg">
                     <Cpu className="w-6 h-6" />
                   </div>
-                  <div className="font-black text-lg tracking-tight uppercase">Munilex AI <span className="ml-3 text-[12px] bg-secondary-fixed text-primary px-3 py-1 rounded-full">Pro</span></div>
+                  <div className="font-black text-lg tracking-tight uppercase">Munilex AI <span className="ml-3 text-[12px] bg-primary-fixed text-primary px-3 py-1 rounded-full">Pro</span></div>
                   <div className="ml-auto flex gap-1">
-                    <div className="w-1.5 h-1.5 bg-secondary-cyan rounded-full animate-pulse" />
-                    <div className="w-1.5 h-1.5 bg-secondary-cyan/40 rounded-full" />
+                    <div className="w-1.5 h-1.5 bg-primary-container rounded-full animate-pulse" />
+                    <div className="w-1.5 h-1.5 bg-primary-container/40 rounded-full" />
                   </div>
                 </div>
                 
@@ -131,7 +131,7 @@ const Features = () => {
                         initial={{ width: 0 }}
                         whileInView={{ width: '85%' }}
                         transition={{ duration: 2.5, ease: "easeInOut" }}
-                        className="h-full bg-secondary-fixed shadow-[0_0_20px_#57fcd1]" 
+                        className="h-full bg-primary-container shadow-[0_0_20px_rgba(4,107,210,0.5)]" 
                       />
                     </div>
                   </div>
@@ -142,7 +142,7 @@ const Features = () => {
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -bottom-6 -right-6 bg-secondary-fixed text-primary p-4 rounded-2xl shadow-xl border border-white/50 z-20"
+                className="absolute -bottom-6 -right-6 bg-primary-container text-white p-4 rounded-2xl shadow-xl border border-white/50 z-20"
               >
                 <Smartphone className="w-6 h-6" />
               </motion.div>

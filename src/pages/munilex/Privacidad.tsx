@@ -41,7 +41,7 @@ const Privacidad = () => {
                1. Responsable del Tratamiento
             </h3>
             <p>
-               El responsable del tratamiento de sus datos es Jose Maria Nuñez Mejías (en adelante "El Titular"), con NIF 07273618Y y domicilio en C/ Doctor Fleming 12, 2º F, 10001 Cáceres, España. Email: automatizacionesnunez@gmail.com.
+               El responsable del tratamiento de sus datos es Jose Maria Nuñez Mejías (en adelante "El Titular"), con NIF 07273618Y y domicilio en C/ Doctor Fleming 12, 10001, Cáceres. Email: administracion@munilex.es.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ const Privacidad = () => {
                 5. Derechos del Usuario
              </h3>
              <p>
-                Usted tiene derecho a obtener confirmación sobre si el Responsable está tratando sus datos personales, así como a solicitar el acceso, rectificación, supresión, limitación del tratamiento u oposición al mismo enviando un email a automatizacionesnunez@gmail.com adjuntando copia de su DNI.
+                Usted tiene derecho a obtener confirmación sobre si el Responsable está tratando sus datos personales, así como a solicitar el acceso, rectificación, supresión, limitación del tratamiento u oposición al mismo enviando un email a administracion@munilex.es adjuntando copia de su DNI.
              </p>
           </div>
         </section>

@@ -25,7 +25,7 @@ const AcademyAbout = () => {
       tags: ["Jurista", "Director Académico", "Estrategia Comercial", "Gestión de Temarios"],
       social: {
         linkedin: "#",
-        mail: "mailto:#"
+        mail: "mailto:administracion@munilex.es"
       }
     }
   ];

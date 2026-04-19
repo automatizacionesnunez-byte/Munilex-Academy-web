@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="md:col-span-2">
           <Link to="/">
             <img 
-              src="/munilex_logo_new.png" 
+              src="/munilex_logo_transparent.png" 
               alt="Munilex" 
               className="h-10 w-auto mb-8" 
             />
@@ -20,7 +20,7 @@ const Footer = () => {
           <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-primary/40">Navegación</h4>
           <ul className="space-y-4 text-primary font-semibold">
             <li><Link to="/" className="hover:text-primary-container transition-colors">Home</Link></li>
-            <li><Link to="/servicios" className="hover:text-primary-container transition-colors">Servicios</Link></li>
+            <li><Link to="/funcionarios" className="hover:text-primary-container transition-colors">Función Pública</Link></li>
             <li><Link to="/academy" className="hover:text-primary-container transition-colors">Munilex Academy</Link></li>
             <li><Link to="/precios" className="hover:text-primary-container transition-colors">Precios</Link></li>
             <li><Link to="/sobre-nosotros" className="hover:text-primary-container transition-colors">Sobre Nosotros</Link></li>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div>
           <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-primary/40">Contacto</h4>
-          <p className="text-primary font-bold mb-2">automatizacionesnunez@gmail.com</p>
+          <p className="text-primary font-bold mb-2">administracion@munilex.es</p>
           <p className="text-primary/60 text-sm">C/ Doctor Fleming 12, 10001, Cáceres.</p>
           <p className="text-primary/60 text-sm">Disponible en toda España.</p>
         </div>

@@ -44,7 +44,7 @@ const AvisoLegal = () => {
                 <div className="text-xs font-black uppercase tracking-widest opacity-40 mb-2">Contacto Directo</div>
                 <div className="text-lg font-black text-secondary flex items-center gap-2">
                   <Mail className="w-5 h-5 opacity-40" />
-                  automatizacionesnunez@gmail.com
+                  administracion@munilex.es
                 </div>
               </div>
             </div>

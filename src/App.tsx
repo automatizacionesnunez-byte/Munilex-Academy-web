@@ -6,7 +6,7 @@ import AcademyNavbar from './components/AcademyNavbar';
 import Footer from './components/Footer';
 import AcademyFooter from './components/AcademyFooter';
 import Home from './pages/munilex/Home';
-import Services from './pages/munilex/Services';
+import Funcionarios from './pages/munilex/Funcionarios';
 import PricingPage from './pages/munilex/Pricing';
 import AcademyPricing from './pages/munilex-academy/AcademyPricing';
 import AcademyAbout from './pages/munilex-academy/AcademyAbout';
@@ -90,7 +90,7 @@ function App() {
           <SiteLayout scaleX={scaleX}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/servicios" element={<Services />} />
+              <Route path="/funcionarios" element={<Funcionarios />} />
               <Route path="/precios" element={<PricingPage />} />
               <Route path="/academy/precios" element={<AcademyPricing />} />
               <Route path="/academy/sobre-nosotros" element={<AcademyAbout />} />

@@ -13,8 +13,8 @@
   --color-secondary-fixed: var(--secondary-fixed, #57FCD1);
   --color-on-secondary: var(--on-secondary, #FFFFFF);
   
-  /* Surface Tokens - Ivory / Off-white Base */
-  --color-surface: #FDFCF0;
+  /* Surface Tokens - Pure White Base */
+  --color-surface: #FFFFFF;
   --color-surface-low: #F7F7F7;
   --color-surface-lowest: #FFFFFF;
   --color-surface-dim: #E5E5E5;

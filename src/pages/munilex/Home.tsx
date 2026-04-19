@@ -1,8 +1,10 @@
 import Hero from '../../components/Hero';
-import Features from '../../components/Features';
-import Pricing from '../../components/Pricing';
-import { Clock, ShieldCheck, Zap, Activity, Landmark, Shield, Lock, Cpu, ArrowUpRight } from 'lucide-react';
+import BentoPillars from '../../components/BentoPillars';
+import CorporateSection from '../../components/CorporateSection';
+import TestimonialsCarousel from '../../components/TestimonialsCarousel';
+import { Landmark, Shield, Lock, Cpu, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const academyBodies = [
@@ -47,121 +49,98 @@ const Home = () => {
     <>
       <Hero />
       
-      <section className="py-24 bg-white border-y border-surface-variant/30 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/4 h-full bg-primary-fixed/20 -skew-x-12 transform translate-x-1/2 opacity-20" />
-        
-        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-          <p className="text-center text-[14px] font-black tracking-[0.3em] text-primary-container uppercase mb-20">
-            Impacto Real Munilex v3
-          </p>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20 mb-32">
+      {/* 1. Trust/Stats Bar */}
+      <div className="bg-white border-y border-outline-variant/30 py-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="flex flex-wrap justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
             {[
-              { 
-                label: "Ahorro de Tiempo", 
-                value: "-85%", 
-                desc: "En redacción de informes", 
-                icon: <Clock className="w-10 h-10 text-primary-container" />,
-                accent: "bg-primary-container/10"
-              },
-              { 
-                label: "Seguridad Proactiva", 
-                value: "100%", 
-                desc: "Cumplimiento ENS/RGPD", 
-                icon: <ShieldCheck className="w-10 h-10 text-secondary-cyan" />,
-                accent: "bg-secondary-cyan/10"
-              },
-              { 
-                label: "Eficiencia Jurídica", 
-                value: "+70%", 
-                desc: "Precisión normativa", 
-                icon: <Zap className="w-10 h-10 text-secondary" />,
-                accent: "bg-secondary/10"
-              },
-              { 
-                label: "Sincronización BOE", 
-                value: "< 24h", 
-                desc: "Actualización diaria", 
-                icon: <Activity className="w-10 h-10 text-primary" />,
-                accent: "bg-primary/10"
-              }
-            ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center text-center group cursor-default">
-                <div className={`w-20 h-20 ${stat.accent} rounded-3xl flex items-center justify-center mb-10 transition-all duration-500 group-hover:scale-110 shadow-sm shadow-black/5`}>
-                  {stat.icon}
-                </div>
-                <div className="text-5xl font-black text-secondary tracking-tighter mb-4 group-hover:text-primary-container transition-colors">
-                  {stat.value}
-                </div>
-                <div className="text-xs font-black uppercase tracking-widest text-secondary opacity-60 mb-2">
-                  {stat.label}
-                </div>
-                <div className="text-sm font-medium text-on-surface-variant opacity-70">
-                  {stat.desc}
-                </div>
+              { label: "Años de Experiencia", val: "+5 Años" },
+              { label: "Plazas Conseguidas", val: "+500" },
+              { label: "Horas Ahorradas", val: "1.000+" },
+              { label: "Satisfacción", val: "100%" }
+            ].map((s, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <div className="text-xl font-black text-secondary tracking-tighter">{s.val}</div>
+                <div className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant font-manrope">{s.label}</div>
               </div>
             ))}
           </div>
+        </div>
+      </div>
 
-          {/* Differentiated Academy Section */}
-          <div className="pt-20 border-t border-surface-variant/30">
-            <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
-              <div className="max-w-xl">
-                <h3 className="text-3xl font-black text-secondary tracking-tight mb-4 uppercase italic">Ecosistema de Formación</h3>
-                <p className="text-on-surface-variant font-medium">
-                  Preparación de élite asistida por IA para los cuerpos más exigentes de la Administración.
-                </p>
-              </div>
-              <Link to="/academy" className="text-primary-container font-black uppercase tracking-widest text-xs flex items-center gap-2 group border-b-2 border-transparent hover:border-primary-container pb-1 transition-all">
-                Ir a la Academia <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </Link>
+      <BentoPillars />
+
+      <CorporateSection />
+
+      {/* 4. Training Ecosystem */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-20 text-balance">
+            <div className="max-w-2xl">
+              <h2 className="text-secondary text-5xl leading-none mb-6 tracking-tight">
+                La mayor cobertura <span className="text-primary-container italic">jurídica</span> de España
+              </h2>
+              <p className="text-base text-on-surface-variant font-medium max-w-lg">
+                Sincronización en tiempo real con temarios oficiales y jurisprudencia local. El apoyo definitivo para cada cuerpo.
+              </p>
             </div>
+            <Link 
+              to="/academy" 
+              className="px-8 py-4 border-2 border-primary-container text-primary-container font-black uppercase tracking-widest text-[10px] rounded-xl hover:bg-primary-container hover:text-white transition-all flex items-center gap-2 group"
+            >
+              Ir a Munilex Academy <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </Link>
+          </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-              {academyBodies.map((body, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {academyBodies.map((body, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
                 <Link 
-                  key={i} 
                   to={body.path}
-                  className="p-6 bg-surface-lowest border border-surface-variant/30 rounded-2xl hover:border-primary-container hover:shadow-premium transition-all group flex flex-col justify-between"
+                  className="p-8 bg-surface-lowest border border-outline-variant/30 rounded-[2rem] hover:border-primary-container hover:shadow-premium transition-all group h-full flex flex-col justify-between shadow-ambient"
                 >
                   <div>
-                    <div className={`w-12 h-12 ${body.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <div className={`w-14 h-14 ${body.color} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-sm`}>
                       {body.icon}
                     </div>
-                    <div className="font-black text-secondary text-sm mb-1">{body.name}</div>
-                    <div className="text-[11px] text-on-surface-variant opacity-60 font-medium uppercase tracking-wider">{body.desc}</div>
+                    <div className="font-black text-secondary text-lg mb-2 tracking-tight leading-tight">{body.name}</div>
+                    <div className="text-[9px] text-on-surface-variant opacity-60 font-black uppercase tracking-widest mb-4">{body.desc}</div>
                   </div>
-                  <div className="mt-8 flex justify-end">
-                    <div className="text-[10px] font-black uppercase tracking-widest text-primary-container opacity-0 group-hover:opacity-100 transition-opacity">
-                      Explorar Academia
-                    </div>
+                  <div className="pt-6 border-t border-outline-variant/20 flex items-center justify-between">
+                    <span className="text-[9px] font-black uppercase tracking-widest text-primary-container opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Ver Academia</span>
+                    <ArrowUpRight className="w-4 h-4 text-primary-container opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                   </div>
                 </Link>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      <Features />
+      <TestimonialsCarousel />
       
-      <section className="py-32 bg-surface-low border-y border-surface-variant/30">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="mb-12 italic text-secondary">"Excelencia Operativa"</h2>
-          <p className="text-2xl text-primary/80 max-w-4xl mx-auto font-medium leading-relaxed">
-            "Munilex no es solo una IA, es el respaldo técnico que todo profesional jurídico necesita hoy en día. La precisión en la redacción y análisis ha cambiado drásticamente mi jornada."
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <div className="w-12 h-12 bg-primary-container rounded-full" />
-            <div className="text-left font-manrope">
-              <div className="font-bold">E. García</div>
-              <div className="text-xs opacity-50 font-bold tracking-widest uppercase">Especialista en Derecho Público</div>
-            </div>
+      {/* 6. Final Conversion CTA - Aligned with Munilex Corporate Branding */}
+      <section className="py-24 bg-white border-t border-slate-50 relative overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-[#0066FF]/5 -skew-x-12 transform translate-x-1/2" />
+        
+        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+          <h2 className="mb-12 text-[#002B5B] text-5xl md:text-6xl leading-tight tracking-tight">¿Está listo para formar parte de la <span className="text-[#0066FF] italic">Revolución</span>?</h2>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link to="/academy" className="px-10 py-5 bg-[#002B5B] text-white font-black uppercase tracking-widest text-[11px] rounded-xl hover:scale-105 transition-all shadow-premium">
+              ¿Eres opositor o academia? Accede a Munilex Academy
+            </Link>
+            <Link to="/funcionarios" className="px-10 py-5 border-2 border-[#002B5B]/10 text-[#002B5B] font-black uppercase tracking-widest text-[11px] rounded-xl hover:bg-[#002B5B]/5 transition-all">
+              ¿Eres funcionario? Entra aquí, pruébalo
+            </Link>
           </div>
         </div>
       </section>
-
-      <Pricing />
     </>
   );
 };

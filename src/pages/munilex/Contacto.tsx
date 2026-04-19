@@ -6,7 +6,7 @@ const Contacto = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'Solicitar Demostración IA',
+    subject: 'Solicitar Demostración (Ayuntamientos)',
     message: ''
   });
 
@@ -36,7 +36,7 @@ const Contacto = () => {
 
   if (status === 'success') {
     return (
-      <div className="pt-32 pb-24 bg-surface min-h-screen flex items-center justify-center px-6">
+      <div className="pt-32 pb-24 bg-white min-h-screen flex items-center justify-center px-6">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -62,7 +62,7 @@ const Contacto = () => {
   }
 
   return (
-    <div className="pt-32 pb-24 bg-surface min-h-screen font-inter">
+    <div className="pt-32 pb-24 bg-white min-h-screen font-inter">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <motion.div 
@@ -72,10 +72,10 @@ const Contacto = () => {
           >
             <div className="text-[13px] font-black uppercase tracking-[0.3em] text-primary-container mb-6">Estamos a su servicio</div>
             <h1 className="text-4xl md:text-7xl font-black text-secondary tracking-tighter mb-10 italic leading-[1]">
-               Conectamos Rigor <span className="text-primary-container font-black">Humano</span> con <span className="text-secondary-cyan font-black">IA.</span>
+               Conectamos Rigor <span className="text-primary-container font-black">Humano</span> con <span className="text-primary-container font-black">IA.</span>
             </h1>
             <p className="text-xl text-on-surface-variant font-medium leading-relaxed mb-16 max-w-xl">
-               ¿Tiene alguna duda sobre nuestras licencias institucionales o el entrenamiento de nuestra IA? Nuestro equipo le responderá en tiempo récord.
+               ¿Tiene alguna duda sobre nuestra plataforma, cómo podemos adaptarla para su <span className="text-secondary font-bold">ayuntamiento</span>, <span className="text-secondary font-bold">academia</span> u <span className="text-secondary font-bold">oposiciones</span>? Nuestro equipo te atenderá en tiempo récord.
             </p>
 
             <div className="space-y-12">
@@ -85,7 +85,7 @@ const Contacto = () => {
                   </div>
                   <div>
                      <h4 className="font-black text-secondary text-xl tracking-tight mb-1">Email Directo</h4>
-                     <p className="text-lg font-bold text-primary-container">automatizacionesnunez@gmail.com</p>
+                     <p className="text-lg font-bold text-primary-container">administracion@munilex.es</p>
                      <p className="text-sm font-medium opacity-50 uppercase tracking-widest mt-1">Notificación Instantánea</p>
                   </div>
                </div>
@@ -152,7 +152,9 @@ const Contacto = () => {
                     onChange={(e) => setFormData({...formData, subject: e.target.value})}
                     className="w-full bg-surface-low border border-surface-variant/50 rounded-2xl p-5 text-secondary font-bold focus:outline-none focus:ring-4 focus:ring-primary-container/10 focus:border-primary-container transition-all appearance-none cursor-pointer"
                    >
-                      <option>Solicitar Demostración IA</option>
+                      <option>Solicitar Demostración (Ayuntamientos)</option>
+                      <option>Munilex Academy (Colegios / Academias)</option>
+                      <option>Oposiciones (Soporte al alumno)</option>
                       <option>Soporte Técnico Especializado</option>
                       <option>Consultoría de Implantación</option>
                       <option>Prensa e Información</option>

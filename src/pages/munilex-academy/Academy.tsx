@@ -151,7 +151,7 @@ const Academy = () => {
   );
 
   return (
-    <div className="pt-24 min-h-screen bg-[#131313] text-[#E5E2E1] font-inter selection:bg-[#d4af37]/30 selection:text-white">
+    <div className="min-h-screen bg-[#131313] text-[#E5E2E1] font-inter selection:bg-[#d4af37]/30 selection:text-white">
       <Helmet>
         <title>Academia oposiciones IA | Temarios Actualizados | Munilex Academy</title>
         <meta name="description" content="Munilex Academy: La academia de oposiciones de nueva generación impulsada por Inteligencia Artificial. Temarios siempre actualizados, simulacros infinitos y preparación de élite." />
@@ -237,7 +237,7 @@ const Academy = () => {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-24 md:pt-36 md:pb-32 px-6 md:px-8 border-b border-[#353534]/50 overflow-hidden">
+      <section className="relative pt-48 pb-24 md:pt-60 md:pb-32 px-6 md:px-8 border-b border-[#353534]/50 overflow-hidden">
         <div className="absolute inset-0 bg-[#131313] z-0" />
         
         {/* Abstract Glows */}
