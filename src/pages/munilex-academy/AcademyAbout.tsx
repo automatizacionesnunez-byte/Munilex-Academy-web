@@ -10,11 +10,11 @@ const AcademyAbout = () => {
       name: "José María Núñez Mejías",
       role: "Fundador / Consultor Técnico LegalTech & IA",
       image: joseMariaImg,
-      description: "Jurista certificado por Racks Academy. Especializado en la convergencia del Derecho y la Inteligencia Artificial. Con una sólida trayectoria aplicando la IA al mundo académico en centros como Derecho Virtual y TECH UNIVERSITY, lidera la visión técnica de Munilex Academy.",
+      description: "Jurista certificado por Racks Academy. Especializado en la convergencia del Derecho y la Inteligencia Artificial. Con una sólida trayectoria aplicando la IA al mundo académico en instituciones como TECH UNIVERSITY, lidera la visión técnica de Munilex Academy.",
       tags: ["Jurista", "LegalTech", "IA Aplicada", "Racks Academy"],
       social: {
         linkedin: "https://www.linkedin.com/in/jose-maria-nu%C3%B1ez-mejia-73b06222b/",
-        web: "https://wa.me/34605392912"
+        web: "https://www.techtitute.com/es-es/docentes/nunez-mejias-jose-maria"
       }
     },
     {
