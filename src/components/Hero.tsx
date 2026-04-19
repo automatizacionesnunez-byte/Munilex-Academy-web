@@ -12,15 +12,14 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 w-full relative z-10 py-6 md:py-10">
-        <div className="text-center mb-8 md:mb-10">
+        <div className="text-center mb-10 md:mb-12">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-7xl font-black text-on-surface leading-[1.1] tracking-tighter mb-2"
+            className="text-3xl md:text-5xl lg:text-6xl font-black text-on-surface leading-tight tracking-tighter mb-4"
           >
-            La Revolución<br/>
-            <span className="text-primary-container italic">Jurídico-Académica.</span>
+            La Revolución Jurídico-Académica.
           </motion.h1>
         </div>
 
@@ -96,9 +95,9 @@ const Hero = () => {
 
               <ul className="space-y-3 mb-8 flex-grow">
                 {[
+                  "Munilex Corporate: desarrollo a medida para centros",
                   "Preparación de élite asistida por IA",
-                  "Desarrollo a medida para centros educativos",
-                  "Tecnología de vanguardia aplicada al estudio"
+                  "Tecnología de vanguardia aplicada al mundo académico e institucional"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white/80 font-bold text-xs">
                     <CheckCircle2 className="w-4 h-4 text-[#d4af37]" />
