@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, Target, Zap, Quote, Award, GraduationCap, ArrowRight } from 'lucide-react';
+import joseMariaImg from '../../assets/jose_maria.jpg';
+import franciscoMarinImg from '../../assets/francisco_marin.jpg';
 
 const About = () => {
   const [activePillar, setActivePillar] = useState(0);
@@ -176,8 +178,8 @@ const About = () => {
               <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-[2.5rem] overflow-hidden bg-white border border-surface-variant shadow-ambient flex-shrink-0">
                   <img 
-                    src="/jose_maria.jpg" 
-                    alt="José María Núñez Mejía" 
+                    src={joseMariaImg} 
+                    alt="José María Núñez Mejías" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
@@ -207,7 +209,7 @@ const About = () => {
               <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-[2.5rem] overflow-hidden bg-primary-container/5 border border-primary-container/10 shadow-sm flex-shrink-0">
                   <img 
-                    src="/francisco_marin.jpg" 
+                    src={franciscoMarinImg} 
                     alt="Francisco de Paula Marín" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                   />

@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
 import { Brain, Scale, ShieldCheck, Mail, Link as LinkIcon, Globe, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import joseMariaImg from '../../assets/jose_maria.jpg';
+import franciscoMarinImg from '../../assets/francisco_marin.jpg';
 
 const AcademyAbout = () => {
   const founders = [
     {
       name: "José María Núñez Mejías",
       role: "Fundador / Experto en IA & Derecho",
-      image: "/jose_maria.jpg",
+      image: joseMariaImg,
       description: "Jurista certificado por Rags Academy (Universidad Rey Juan Carlos). Especializado en la convergencia del Derecho y la Inteligencia Artificial. Con una sólida trayectoria como docente tecnológico y amplia experiencia en Derecho Virtual, lidera la visión técnica de Munilex Academy.",
       tags: ["Jurista URJC", "Docente Tech", "IA Legislativa", "Derecho Virtual"],
       social: {
@@ -18,7 +20,7 @@ const AcademyAbout = () => {
     {
       name: "Francisco de Paula Marín",
       role: "Fundador / Director Académico & Comercial",
-      image: "/francisco_marin.jpg",
+      image: franciscoMarinImg,
       description: "Jurista de primer nivel volcado en la excelencia académica. Francisco es co-fundador y dirige la estructuración pedagógica de los temarios y lidera la expansión comercial de Munilex, asegurando que cada opositor reciba una formación con rigor jurídico y adaptada al mercado actual.",
       tags: ["Jurista", "Director Académico", "Estrategia Comercial", "Gestión de Temarios"],
       social: {
