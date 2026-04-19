@@ -28,7 +28,7 @@ const AcademyFooter = () => {
         </div>
 
         <div>
-          <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-secondary-cyan">Campus</h4>
+          <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-[#d4af37]">Campus</h4>
           <ul className="space-y-4 font-bold text-lg">
             <li><Link to="/academy" className="text-white/60 hover:text-white transition-colors">Inicio</Link></li>
             <li><Link to="/academy/precios" className="text-white/60 hover:text-white transition-colors">Planes y Precios</Link></li>
@@ -38,7 +38,7 @@ const AcademyFooter = () => {
         </div>
 
         <div>
-          <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-secondary-cyan">Oposiciones</h4>
+          <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-[#d4af37]">Oposiciones</h4>
           <ul className="space-y-4 font-bold">
             <li><Link to="/academy/habilitados" className="text-white/60 hover:text-white transition-colors text-sm">Habilitados Nacionales</Link></li>
             <li><Link to="/academy/age" className="text-white/60 hover:text-white transition-colors text-sm">Administración AGE</Link></li>
