@@ -48,7 +48,7 @@ const AcademyPolicia = () => {
 
             <div className="flex flex-wrap gap-4">
                <Link 
-                to="/contacto"
+                to="/academy/contacto"
                 className="inline-flex items-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:scale-105 transition-all shadow-xl shadow-[#d4af37]/10"
               >
                 Inicia el Entrenamiento <ArrowRight className="w-4 h-4" />

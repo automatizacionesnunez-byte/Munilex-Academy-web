@@ -100,7 +100,7 @@ const AcademyFP = () => {
                       ))}
                    </div>
                    <div className="flex flex-col justify-end">
-                      <Link to="/contacto" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-200 transition-all shadow-premium transition-transform hover:scale-105">
+                      <Link to="/academy/contacto" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-200 transition-all shadow-premium transition-transform hover:scale-105">
                          Solicitar Presupuesto Especializado <ArrowRight className="w-4 h-4" />
                       </Link>
                    </div>

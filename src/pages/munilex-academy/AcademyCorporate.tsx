@@ -136,7 +136,7 @@ const AcademyCorporate = () => {
                 <div>
                   <div className="text-lg font-black text-white mb-6">{plan.price}</div>
                   <Link 
-                    to="/contacto" 
+                    to="/academy/contacto" 
                     className={`w-full py-4 rounded-xl font-black uppercase tracking-widest text-[9px] flex items-center justify-center gap-2 transition-all ${
                       plan.highlight 
                         ? 'bg-[#d4af37] text-black shadow-xl' 
@@ -174,7 +174,7 @@ const AcademyCorporate = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/contacto" className="inline-flex items-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl mt-12 hover:scale-105 transition-all shadow-xl shadow-[#d4af37]/10">
+              <Link to="/academy/contacto" className="inline-flex items-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl mt-12 hover:scale-105 transition-all shadow-xl shadow-[#d4af37]/10">
                 Solicitar Auditoría <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

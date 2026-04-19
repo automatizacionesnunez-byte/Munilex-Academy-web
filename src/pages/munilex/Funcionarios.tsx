@@ -11,6 +11,7 @@ import {
   Landmark
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const Funcionarios = () => {
   const comparisonData = {
@@ -102,9 +103,9 @@ const Funcionarios = () => {
             <a href="https://munilex.lovable.app/auth/register" className="bg-[#002B5B] text-white py-6 px-16 rounded-2xl font-black uppercase tracking-widest text-xs shadow-2xl hover:bg-[#001D3D] transition-all">
               Probar herramienta
             </a>
-            <button className="bg-white border-2 border-[#002B5B] text-[#002B5B] py-6 px-16 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-[#001D3D] hover:text-white hover:border-[#001D3D] transition-all">
+            <Link to="/contacto" className="bg-white border-2 border-[#002B5B] text-[#002B5B] py-6 px-16 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-[#001D3D] hover:text-white hover:border-[#001D3D] transition-all flex items-center justify-center">
               Solicitar Presupuesto y Demo
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -434,10 +435,10 @@ const Funcionarios = () => {
               <p className="text-white/50 font-bold text-base leading-relaxed mb-10 relative z-10">
                 Lleva la eficiencia y el blindaje normativo a toda tu administración local. Solicita información corporativa.
               </p>
-              <button className="w-full bg-white text-[#002B5B] py-6 px-8 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-2xl hover:bg-slate-50 transition-all flex items-center justify-center gap-4 relative z-10">
+              <Link to="/contacto" className="w-full bg-white text-[#002B5B] py-6 px-8 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-2xl hover:bg-slate-50 transition-all flex items-center justify-center gap-4 relative z-10">
                 Solicitar presupuesto y demo
                 <ExternalLink className="w-4 h-4" />
-              </button>
+              </Link>
             </motion.div>
           </div>
         </div>

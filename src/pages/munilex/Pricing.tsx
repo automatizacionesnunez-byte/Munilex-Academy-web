@@ -1,6 +1,7 @@
 import Pricing from '../../components/Pricing';
 import { motion } from 'framer-motion';
 import { CheckCircle, BarChart, Users, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PricingPage = () => {
   return (
@@ -76,9 +77,9 @@ const PricingPage = () => {
                     </div>
                   ))}
                 </div>
-                <button className="w-full btn-primary !bg-white !text-primary py-5 text-lg font-black shadow-2xl hover:!bg-white/90">
+                <Link to="/contacto" className="w-full btn-primary !bg-white !text-primary py-5 text-lg font-black shadow-2xl hover:!bg-white/90 flex items-center justify-center">
                   Solicitar Oferta Personalizada
-                </button>
+                </Link>
               </div>
             </div>
           </div>
