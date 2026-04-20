@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Zap, ShieldCheck, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
+import { CheckCircle, ShieldCheck, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const AcademyPricing = () => {

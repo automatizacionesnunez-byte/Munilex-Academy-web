@@ -31,7 +31,7 @@ const AcademyNavbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
-      <div className="max-w-[100rem] mx-auto px-4 md:px-8 py-5 flex justify-between items-center text-[#E5E2E1]">
+      <div className="max-w-full mx-auto px-6 md:px-12 py-5 flex justify-between items-center text-[#E5E2E1]">
         <Link to="/academy" className="flex items-center gap-3 group mr-4 xl:mr-10">
           {/* Versión Móvil: Logo con icono */}
           <div className="flex items-center gap-3 md:hidden">
