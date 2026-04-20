@@ -2,7 +2,11 @@ import { motion } from 'framer-motion';
 import { CheckCircle, ShieldCheck, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
+import { useState } from 'react';
+
 const AcademyPricing = () => {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+
   return (
     <div className="min-h-screen bg-[#131313] text-[#E5E2E1] font-inter">
       <Helmet>
@@ -27,9 +31,28 @@ const AcademyPricing = () => {
             Invierte en <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">Tu Futura Plaza</span>
           </h1>
-          <p className="text-xl text-[#E5E2E1]/60 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl text-[#E5E2E1]/60 max-w-2xl mx-auto leading-relaxed font-medium mb-12">
             Acceso ilimitado a la plataforma de preparación más avanzada de España. Sin permanencia, sin letra pequeña. Justo lo que necesitas para aprobar.
           </p>
+
+          <div className="flex items-center justify-center gap-6 mb-12">
+            <span className={`text-sm font-bold uppercase tracking-widest ${billingCycle === 'monthly' ? 'text-white' : 'text-white/40'}`}>Mensual</span>
+            <button 
+              onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
+              className="w-16 h-8 bg-[#1C1B1B] border border-[#353534] rounded-full relative p-1 transition-colors hover:border-[#d4af37]/50"
+            >
+              <motion.div 
+                animate={{ x: billingCycle === 'monthly' ? 0 : 32 }}
+                className="w-6 h-6 bg-[#d4af37] rounded-full shadow-lg"
+              />
+            </button>
+            <div className="flex items-center gap-3">
+              <span className={`text-sm font-bold uppercase tracking-widest ${billingCycle === 'annual' ? 'text-white' : 'text-white/40'}`}>Anual</span>
+              <span className="bg-[#d4af37]/10 text-[#d4af37] px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider border border-[#d4af37]/20">
+                -20% AHORRO
+              </span>
+            </div>
+          </div>
         </motion.div>
       </section>
 
@@ -50,10 +73,16 @@ const AcademyPricing = () => {
                   <ShieldCheck className="w-7 h-7" />
                 </div>
                 <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-tight">Acceso 1 Oposición</h3>
-                <p className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-[10px] mb-6">Paga 10 meses y llévate 12 con el plan anual</p>
+                <p className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-[10px] mb-6">
+                  {billingCycle === 'monthly' ? 'Pago mensual sin compromiso' : 'Paga 10 meses y llévate 12'}
+                </p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-black tracking-tighter text-white">29€</span>
-                  <span className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-xs">/ Mes</span>
+                  <span className="text-5xl font-black tracking-tighter text-white">
+                    {billingCycle === 'monthly' ? '29€' : '290€'}
+                  </span>
+                  <span className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-xs">
+                    {billingCycle === 'monthly' ? '/ Mes' : '/ Año'}
+                  </span>
                 </div>
               </div>
 
@@ -93,10 +122,16 @@ const AcademyPricing = () => {
                   <Sparkles className="w-7 h-7" />
                 </div>
                 <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-tight">Multi-Oposición</h3>
-                <p className="text-[#d4af37] font-bold uppercase tracking-widest text-[10px] mb-6">Ahorra 2 meses con suscripción anual</p>
+                <p className="text-[#d4af37] font-bold uppercase tracking-widest text-[10px] mb-6">
+                  {billingCycle === 'monthly' ? 'Dominando todos los cuerpos' : 'Ahorro de 100€ anuales'}
+                </p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-black tracking-tighter text-white">49€</span>
-                  <span className="text-[#d4af37] font-black uppercase tracking-widest text-xs">/ Mes</span>
+                  <span className="text-5xl font-black tracking-tighter text-white">
+                    {billingCycle === 'monthly' ? '49€' : '490€'}
+                  </span>
+                  <span className="text-[#d4af37] font-black uppercase tracking-widest text-xs">
+                    {billingCycle === 'monthly' ? '/ Mes' : '/ Año'}
+                  </span>
                 </div>
               </div>
 
