@@ -1,10 +1,8 @@
 import Hero from '../../components/Hero';
 import BentoPillars from '../../components/BentoPillars';
-import CorporateSection from '../../components/CorporateSection';
 import TestimonialsCarousel from '../../components/TestimonialsCarousel';
-import { Shield, Lock, Cpu, ArrowUpRight, ShieldCheck, GraduationCap } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 const Home = () => {
 
