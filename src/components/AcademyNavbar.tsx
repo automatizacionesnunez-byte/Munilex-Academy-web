@@ -32,17 +32,30 @@ const AcademyNavbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex justify-between items-center text-[#E5E2E1]">
         <Link to="/academy" className="flex items-center gap-3 group">
-          <motion.div 
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            className="w-10 h-10 bg-[#d4af37] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all"
-          >
-            <GraduationCap className="w-6 h-6 text-[#241a00]" />
-          </motion.div>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tighter leading-none text-white lg:text-2xl">
-              MUNILEx
+          {/* Versión Móvil: Logo con icono */}
+          <div className="flex items-center gap-3 md:hidden">
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: 2 }}
+              className="w-10 h-10 bg-[#d4af37] rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all"
+            >
+              <GraduationCap className="w-6 h-6 text-[#241a00]" />
+            </motion.div>
+            <div className="flex flex-col text-left">
+              <span className="text-xl font-bold tracking-tighter leading-none text-white lg:text-2xl">
+                MUNILEx
+              </span>
+              <span className="text-[9px] font-black uppercase tracking-[0.35em] text-[#d4af37] ml-0.5 mt-0.5">
+                ACADEMY
+              </span>
+            </div>
+          </div>
+          
+          {/* Versión Ordenador: Solo texto basado en su diseño */}
+          <div className="hidden md:flex items-center tracking-tighter leading-none relative group transition-transform hover:-translate-y-0.5">
+            <span className="text-2xl lg:text-[28px] font-black text-white uppercase italic pr-0.5">
+              MUNILEX
             </span>
-            <span className="text-[9px] font-black uppercase tracking-[0.35em] text-[#d4af37] ml-0.5 mt-0.5">
+            <span className="text-2xl lg:text-[28px] font-black text-[#d4af37] uppercase italic">
               ACADEMY
             </span>
           </div>

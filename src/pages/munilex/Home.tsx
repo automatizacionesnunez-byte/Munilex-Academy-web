@@ -49,24 +49,7 @@ const Home = () => {
     <>
       <Hero />
       
-      {/* 1. Trust/Stats Bar */}
-      <div className="bg-white border-y border-outline-variant/30 py-8">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="flex flex-wrap justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
-            {[
-              { label: "Años de Experiencia", val: "+5 Años" },
-              { label: "Plazas Conseguidas", val: "+500" },
-              { label: "Horas Ahorradas", val: "1.000+" },
-              { label: "Satisfacción", val: "100%" }
-            ].map((s, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <div className="text-xl font-black text-secondary tracking-tighter">{s.val}</div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant font-manrope">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
       <BentoPillars />
 
