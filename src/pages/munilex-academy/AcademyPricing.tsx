@@ -25,7 +25,7 @@ const AcademyPricing = () => {
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-10 uppercase">
             Invierte en <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">Tu Futuro Administrativo</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">Tu Futura Plaza</span>
           </h1>
           <p className="text-xl text-[#E5E2E1]/60 max-w-2xl mx-auto leading-relaxed font-medium">
             Acceso ilimitado a la plataforma de preparación más avanzada de España. Sin permanencia, sin letra pequeña. Justo lo que necesitas para aprobar.
@@ -36,111 +36,140 @@ const AcademyPricing = () => {
       {/* Pricing Cards */}
       <section className="pb-32 px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
             
-            {/* Plan Opositor Pro */}
+            {/* Acceso 1 Oposición */}
             <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-[#1C1B1B] border border-[#353534] rounded-[3.5rem] p-10 lg:p-14 flex flex-col hover:border-[#d4af37]/30 transition-all group"
+              className="bg-[#1C1B1B] border border-[#353534] rounded-[3.5rem] p-10 flex flex-col hover:border-[#d4af37]/30 transition-all group"
             >
               <div className="mb-10">
                 <div className="w-14 h-14 bg-[#2A2A2A] rounded-2xl flex items-center justify-center text-[#d4af37] mb-8 group-hover:scale-110 transition-transform">
-                  <Zap className="w-7 h-7" />
+                  <ShieldCheck className="w-7 h-7" />
                 </div>
-                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">Opositor PRO</h3>
+                <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-tight">Acceso 1 Oposición</h3>
+                <p className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-[10px] mb-6">Paga 10 meses y llévate 12 con el plan anual</p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-6xl font-black tracking-tighter text-white">29€</span>
+                  <span className="text-5xl font-black tracking-tighter text-white">29€</span>
                   <span className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-xs">/ Mes</span>
                 </div>
               </div>
 
-              <p className="text-[#E5E2E1]/60 mb-10 font-medium leading-relaxed">
-                Ideal para opositores que buscan flexibilidad total y acceso a todas las herramientas de IA.
-              </p>
-              
-              <ul className="space-y-6 mb-12 flex-grow">
+              <ul className="space-y-4 mb-12 flex-grow">
                 {[
+                  "Acceso total a 1 cuerpo seleccionado",
                   "Consultas ilimitadas a la IA",
                   "Generador de simulacros tácticos",
                   "Análisis predictivo de fallos",
-                  "Temario actualizado al segundo",
-                  "Acceso multiplataforma (Web/App)"
+                  "Temario actualizado al segundo"
                 ].map((feat, i) => (
                   <li key={i} className="flex gap-4 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#d4af37] mt-0.5 flex-shrink-0" />
-                    <span className="font-medium text-white/80 text-[15px]">{feat}</span>
+                    <CheckCircle className="w-4 h-4 text-[#d4af37] mt-0.5 flex-shrink-0" />
+                    <span className="font-medium text-white/80 text-sm">{feat}</span>
                   </li>
                 ))}
               </ul>
               
               <a 
                 href="https://munilex.lovable.app/auth/register"
-                className="w-full py-5 bg-[#2A2A2A] text-white font-black rounded-2xl text-lg border border-[#353534] hover:bg-[#353534] transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest text-sm"
+                className="w-full py-5 bg-[#2A2A2A] text-white font-black rounded-2xl border border-[#353534] hover:bg-[#353534] transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest text-xs"
               >
-                Empezar Ahora
-                <ArrowRight className="w-4 h-4" />
+                Empezar Ahora <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>
 
-            {/* Plan Elite */}
+            {/* Acceso Multi-Oposición */}
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 1.05 }}
+              whileInView={{ opacity: 1, scale: 1.05 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-[#1C1B1B] to-[#131313] border-2 border-[#d4af37] rounded-[3.5rem] p-10 lg:p-14 relative overflow-hidden group shadow-[0_30px_100px_rgba(212,175,55,0.15)]"
+              className="bg-gradient-to-br from-[#1C1B1B] to-[#131313] border-2 border-[#d4af37] rounded-[3.5rem] p-10 relative overflow-hidden group shadow-[0_30px_100px_rgba(212,175,55,0.15)] z-10"
             >
-              <div className="absolute top-0 right-0 py-2 px-8 bg-[#d4af37] text-[#241a00] font-black text-[10px] uppercase tracking-[0.25em] -rotate-45 translate-x-10 translate-y-6">
-                Most Popular
-              </div>
-              
+              <div className="absolute top-0 right-0 py-2 px-8 bg-[#d4af37] text-[#241a00] font-black text-[9px] uppercase tracking-[0.2em] -rotate-45 translate-x-10 translate-y-6">Recomendado</div>
               <div className="mb-10">
                 <div className="w-14 h-14 bg-[#d4af37] rounded-2xl flex items-center justify-center text-[#241a00] mb-8 group-hover:rotate-6 transition-transform">
-                  <ShieldCheck className="w-7 h-7" />
+                  <Sparkles className="w-7 h-7" />
                 </div>
-                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">Academy ELITE</h3>
+                <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-tight">Multi-Oposición</h3>
+                <p className="text-[#d4af37] font-bold uppercase tracking-widest text-[10px] mb-6">Ahorra 2 meses con suscripción anual</p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-6xl font-black tracking-tighter text-white">249€</span>
-                  <span className="text-[#d4af37] font-black uppercase tracking-widest text-xs">/ Año</span>
+                  <span className="text-5xl font-black tracking-tighter text-white">49€</span>
+                  <span className="text-[#d4af37] font-black uppercase tracking-widest text-xs">/ Mes</span>
                 </div>
               </div>
 
-              <p className="text-white/80 mb-10 font-bold leading-relaxed flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-[#d4af37]" />
-                Ahorra 99€ y asegura tu plaza.
-              </p>
-              
-              <ul className="space-y-6 mb-12 flex-grow text-white/90">
+              <ul className="space-y-4 mb-12 flex-grow text-white/90">
                 {[
-                  "Todo lo del Plan PRO",
+                  "Acceso a TODO el catálogo",
+                  "Multiperfil de preparación",
                   "Soporte prioritario 24/7",
                   "Revisiones con preparadores A1",
-                  "Dashboard de rendimiento avanzado",
                   "Descarga de temarios en PDF Pro"
                 ].map((feat, i) => (
                   <li key={i} className="flex gap-4 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#d4af37] mt-0.5 flex-shrink-0" />
-                    <span className="font-bold text-[15px]">{feat}</span>
+                    <CheckCircle className="w-4 h-4 text-[#d4af37] mt-0.5 flex-shrink-0" />
+                    <span className="font-bold text-sm">{feat}</span>
                   </li>
                 ))}
               </ul>
               
               <a 
                 href="https://munilex.lovable.app/auth/register"
-                className="w-full py-5 bg-[#d4af37] text-[#241a00] font-black rounded-2xl text-lg hover:opacity-90 transition-all text-center shadow-[0_10px_30px_rgba(212,175,55,0.3)] flex items-center justify-center gap-3 uppercase tracking-widest text-sm"
+                className="w-full py-5 bg-[#d4af37] text-[#241a00] font-black rounded-2xl hover:opacity-90 transition-all text-center shadow-[0_10px_30px_rgba(212,175,55,0.3)] flex items-center justify-center gap-3 uppercase tracking-widest text-xs"
               >
-                Matricularse
-                <ArrowRight className="w-4 h-4" />
+                Matricularse <ArrowRight className="w-4 h-4" />
+              </a>
+            </motion.div>
+
+            {/* Corporate & FP */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="bg-[#1C1B1B] border border-[#353534] rounded-[3.5rem] p-10 flex flex-col hover:border-blue-500/30 transition-all group"
+            >
+              <div className="mb-10">
+                <div className="w-14 h-14 bg-[#2A2A2A] rounded-2xl flex items-center justify-center text-blue-500 mb-8 group-hover:scale-110 transition-transform">
+                  <TrendingUp className="w-7 h-7" />
+                </div>
+                <h3 className="text-2xl font-black text-white mb-2 uppercase tracking-tight">Corporate & FP</h3>
+                <p className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-[10px] mb-6">Para Academias y Centros de FP</p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-4xl font-black tracking-tighter text-white uppercase">Consultar</span>
+                </div>
+              </div>
+
+              <ul className="space-y-4 mb-12 flex-grow">
+                {[
+                  "Marca Blanca personalizada",
+                  "Gestión de alumnos masiva",
+                  "Analítica de centro completa",
+                  "Planes adaptados a FP",
+                  "Consultoría técnica dedicada"
+                ].map((feat, i) => (
+                  <li key={i} className="flex gap-4 items-start">
+                    <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                    <span className="font-medium text-white/80 text-sm">{feat}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <a 
+                href="/academy/contacto"
+                className="w-full py-5 bg-transparent border-2 border-blue-500/20 text-white font-black rounded-2xl hover:bg-blue-500/10 transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest text-xs"
+              >
+                Solicitar Propuesta <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>
 
           </div>
           
           <div className="mt-24 p-10 border border-[#353534] rounded-[3rem] bg-[#1C1B1B]/40 backdrop-blur-sm text-center">
-            <h4 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">¿Tienes dudas sobre los planes?</h4>
-            <p className="text-[#E5E2E1]/50 mb-8 max-w-xl mx-auto">Nuestro equipo de soporte está disponible para asesorarte sobre qué modalidad se adapta mejor a tu proceso selectivo.</p>
-            <a href="/academy/contacto" className="text-[#d4af37] font-bold uppercase tracking-widest text-xs hover:underline">Contactar con Asesoría Academy</a>
+            <h4 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">¿Estudias varias oposiciones a la vez?</h4>
+            <p className="text-[#E5E2E1]/50 mb-8 max-w-xl mx-auto">Selecciona el plan Multi-Oposición para no tener límites en tu preparación. Recuerda que al elegir el pago anual ahorras el equivalente a dos cuotas mensuales.</p>
+            <a href="/academy/contacto" className="text-[#d4af37] font-bold uppercase tracking-widest text-xs hover:underline">Hablar con un asesor ahora</a>
           </div>
         </div>
       </section>
