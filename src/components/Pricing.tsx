@@ -5,23 +5,7 @@ const WHATSAPP_LINK = "https://wa.me/34605392912?text=Hola,%20me%20gustaría%20s
 
 const plans = [
   {
-    name: "Opositor",
-    price: "49,90€",
-    period: "/mes",
-    desc: "Para aspirantes a Secretaría-Intervención",
-    features: [
-      "Tests ilimitados (145 temas)",
-      "Flashcards SM-2",
-      "Casos prácticos con IA",
-      "Chat jurídico ilimitado",
-      "Sincronización BOE 24h"
-    ],
-    button: "Suscribirse",
-    popular: false,
-    priceId: "price_1SbNkACP1LDO0gSbWmjFsjou"
-  },
-  {
-    name: "Plan Profesional",
+    name: "Plan Mensual",
     price: "120€",
     period: "/mes + IVA",
     desc: "Para Secretarios e Interventores en activo",
@@ -29,18 +13,34 @@ const plans = [
       "Chat jurídico profesional",
       "Redactor de documentos IA",
       "+90 modelos municipales",
-      "Gestor de plazos inteligentes",
-      "Exportación Word institucional"
+      "Gestor de plazos inteligente",
+      "Soporte técnico"
     ],
     button: "Suscribirse",
-    popular: true,
+    popular: false,
     priceId: "price_1SbNkHCP1LDO0gSbF2c2c8yB"
   },
   {
-    name: "Ayuntamiento",
-    price: "Personalizado",
+    name: "Plan Anual",
+    price: "1.200€",
+    period: "/año + IVA",
+    desc: "Ahorra 2 meses con la suscripción anual",
+    features: [
+      "Todo lo del Plan Mensual",
+      "Ahorro directo de 2 cuotas",
+      "Exportación Word institucional",
+      "Preferente en nuevas funciones",
+      "Acceso prioritario"
+    ],
+    button: "Suscribirse",
+    popular: true,
+    priceId: "price_1SbNkHCP1LDO0gSbF2c2c8yB_ANUAL"
+  },
+  {
+    name: "Ayuntamientos",
+    price: "Consultar",
     period: "",
-    desc: "Planes corporativos para el consistorio",
+    desc: "Plan personalizado para el consistorio",
     features: [
       "Acceso para todo el personal",
       "Roles administrativos y auditoría",

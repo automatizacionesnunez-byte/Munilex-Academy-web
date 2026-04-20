@@ -24,14 +24,15 @@ const AcademyNavbar = () => {
         { name: 'Centros FP', path: '/academy/fp' },
       ]
     },
+    { name: 'Precios', path: '/academy/precios' },
     { name: 'Sobre Nosotros', path: '/academy/sobre-nosotros' },
     { name: 'Contacto', path: '/academy/contacto' },
   ];
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex justify-between items-center text-[#E5E2E1]">
-        <Link to="/academy" className="flex items-center gap-3 group">
+      <div className="max-w-[100rem] mx-auto px-4 md:px-8 py-5 flex justify-between items-center text-[#E5E2E1]">
+        <Link to="/academy" className="flex items-center gap-3 group mr-4 xl:mr-10">
           {/* Versión Móvil: Logo con icono */}
           <div className="flex items-center gap-3 md:hidden">
             <motion.div 
@@ -52,16 +53,16 @@ const AcademyNavbar = () => {
           
           {/* Versión Ordenador: Solo texto basado en su diseño */}
           <div className="hidden md:flex items-center tracking-tighter leading-none relative group transition-transform hover:-translate-y-0.5">
-            <span className="text-2xl lg:text-[28px] font-black text-white uppercase italic pr-0.5">
+            <span className="text-xl lg:text-[24px] font-black text-white uppercase italic pr-0.5">
               MUNILEX
             </span>
-            <span className="text-2xl lg:text-[28px] font-black text-[#d4af37] uppercase italic">
+            <span className="text-xl lg:text-[24px] font-black text-[#d4af37] uppercase italic">
               ACADEMY
             </span>
           </div>
         </Link>
         
-        <div className="hidden lg:flex items-center gap-10 text-[11px] font-black uppercase tracking-[0.2em]">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-[11px] font-black uppercase tracking-[0.2em]">
           {navItems.map((item) => (
             <div key={item.name} className="relative group">
               <NavLink 
