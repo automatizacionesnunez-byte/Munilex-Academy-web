@@ -53,10 +53,10 @@ const AcademyNavbar = () => {
           
           {/* Versión Ordenador: Solo texto basado en su diseño */}
           <div className="hidden md:flex items-center tracking-tighter leading-none relative group transition-transform hover:-translate-y-0.5">
-            <span className="text-xl lg:text-[24px] font-black text-white uppercase italic pr-0.5">
+            <span className="text-xl lg:text-[24px] font-black text-white uppercase pr-0.5">
               MUNILEX
             </span>
-            <span className="text-xl lg:text-[24px] font-black text-[#d4af37] uppercase italic">
+            <span className="text-xl lg:text-[24px] font-black text-[#d4af37] uppercase">
               ACADEMY
             </span>
           </div>
