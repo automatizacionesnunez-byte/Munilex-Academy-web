@@ -82,7 +82,7 @@ const AcademyCorporate = () => {
                   <div className="p-6 bg-[#d4af37]/5 rounded-3xl border border-[#d4af37]/10">
                     <div className="text-[10px] font-black uppercase text-[#d4af37] tracking-[0.2em] mb-3">Licencia Alumno / Mes</div>
                     <div className="space-y-2 text-xs font-black uppercase">
-                      <div className="flex justify-between"><span className="text-white/30">Hacia 150</span> <span className="text-white">4€/u</span></div>
+                      <div className="flex justify-between"><span className="text-white/30">0 a 150</span> <span className="text-white">4€/u</span></div>
                       <div className="flex justify-between"><span className="text-white/30">150 a 500</span> <span className="text-white">3.5€/u</span></div>
                       <div className="flex justify-between"><span className="text-white/30">+500</span> <span className="text-white">2€/u</span></div>
                     </div>
@@ -137,7 +137,7 @@ const AcademyCorporate = () => {
                   <div className="p-6 bg-[#d4af37] rounded-3xl border border-[#d4af37]">
                     <div className="text-[10px] font-black uppercase text-black/40 tracking-[0.2em] mb-3">Licencia Alumno / Mes</div>
                     <div className="space-y-2 text-xs font-black uppercase text-black">
-                      <div className="flex justify-between"><span className="opacity-40">Hasta 150</span> <span className="opacity-90">5€/u</span></div>
+                      <div className="flex justify-between"><span className="opacity-40">0 a 150</span> <span className="opacity-90">5€/u</span></div>
                       <div className="flex justify-between"><span className="opacity-40">150 a 500</span> <span className="opacity-90">4€/u</span></div>
                       <div className="flex justify-between"><span className="opacity-40">+500</span> <span className="opacity-90">3€/u</span></div>
                     </div>
@@ -191,7 +191,7 @@ const AcademyCorporate = () => {
                   <div className="p-6 bg-[#d4af37]/5 rounded-3xl border border-[#d4af37]/10">
                     <div className="text-[10px] font-black uppercase text-[#d4af37] tracking-[0.2em] mb-3">Licencia Alumno / Mes</div>
                     <div className="space-y-2 text-xs font-black uppercase">
-                      <div className="flex justify-between"><span className="text-white/30">Hacia 150</span> <span className="text-white">5€/u</span></div>
+                      <div className="flex justify-between"><span className="text-white/30">0 a 150</span> <span className="text-white">5€/u</span></div>
                       <div className="flex justify-between"><span className="text-white/30">150 a 500</span> <span className="text-white">4€/u</span></div>
                       <div className="flex justify-between"><span className="text-white/30">+500</span> <span className="text-white">3€/u</span></div>
                     </div>
