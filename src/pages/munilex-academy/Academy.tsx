@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 import policiaImg from '../../assets/spec/policia.png';
 import iippImg from '../../assets/spec/iipp_new.png';
 import guardiaImg from '../../assets/spec/guardia.png';
+import ayuntamientoReal from '../../assets/ayuntamiento_real.jpg';
 
 const Academy = () => {
   return (
@@ -232,12 +233,11 @@ const Academy = () => {
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex gap-6">
                 {[
-                  { name: "Habilitados Nacionales", tag: "SECRETARÍA / INTERVENCIÓN", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee70?auto=format&fit=crop&q=80&w=800", to: "/academy/habilitados" },
+                  { name: "Habilitados Nacionales", tag: "SECRETARÍA / INTERVENCIÓN", img: ayuntamientoReal, to: "/academy/habilitados" },
                   { name: "Policía Nacional", tag: "ESCALA BÁSICA", img: policiaImg, to: "/academy/policia" },
                   { name: "Administrativo AGE", tag: "ESTADO (C1/C2)", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400", to: "/academy/age" },
                   { name: "Ayudantes IIPP", tag: "PRISIONES / PENITENCIARIA", img: iippImg, to: "/academy/iipp" },
-                  { name: "Guardia Civil", tag: "CABOS Y GUARDIAS", img: guardiaImg, to: "/academy/guardiacivil" },
-                  { name: "Habilitados Nacionales", tag: "TESORERÍA", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee70?auto=format&fit=crop&q=80&w=800", to: "/academy/habilitados" }
+                  { name: "Guardia Civil", tag: "CABOS Y GUARDIAS", img: guardiaImg, to: "/academy/guardiacivil" }
                 ].map((item, idx) => (
                   <Link key={`${i}-${idx}`} to={item.to} className="inline-block w-[300px] bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow p-6 group">
                     <div className="aspect-video bg-slate-100 rounded-xl mb-4 overflow-hidden">
