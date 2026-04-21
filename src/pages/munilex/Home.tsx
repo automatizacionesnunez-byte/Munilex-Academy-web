@@ -96,7 +96,7 @@ const Home = () => {
                     </div>
                     <div>
                       <strong className="text-black uppercase text-sm tracking-widest block mb-1">Centros de Formación (FP)</strong>
-                      <span className="text-base">Provisión de plataforma centralizada en Institutos de Formación Profesional para dar soporte a sus áreas de Derecho y Administración Pública.</span>
+                      <span className="text-base">Provisión de plataforma centralizada en Institutos de Formación Profesional para dar soporte a módulos de diferentes currículums.</span>
                     </div>
                   </div>
                 </div>
