@@ -72,4 +72,13 @@
   .card-premium {
     @apply bg-white rounded-[2.5rem] p-10 shadow-ambient border border-outline-variant transition-all hover:-translate-y-1 hover:shadow-premium;
   }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 2)); }
+  }
 }

@@ -256,338 +256,147 @@ const Academy = () => {
             </motion.h1>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Oposiciones Column */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="bg-[#1C1B1B] border border-white/5 p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-white/20 transition-all group"
-            >
-              <div>
-                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:bg-white/10 transition-all">
-                   <Target className="w-6 h-6" />
+      {/* Vertientes Academy - Narrative Approach */}
+      <section className="py-40 bg-[#131313]">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid lg:grid-cols-12 gap-20 items-center">
+            <div className="lg:col-span-12">
+               <div className="text-[#d4af37] font-black uppercase tracking-[0.4em] text-[10px] mb-8 block">Innovación Educativa</div>
+               <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
+                Nuestras <span className="text-[#d4af37] italic">Líneas de Valor</span>
+              </h2>
+            </div>
+            
+            <div className="lg:col-span-7 space-y-12">
+              <div className="group cursor-default">
+                <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Oposiciones</h3>
+                    <p className="text-white/50 font-medium text-lg leading-relaxed max-w-xl">
+                      Plataformas verticales enfocadas al opositor independiente. Ecosistemas de alto rendimiento para cuerpos como Habilitados Nacionales, Policía Nacional o IIPP.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tighter">Oposiciones</h3>
-                <p className="text-white/50 font-bold text-sm leading-relaxed mb-10">
-                  La ruta definitiva hacia tu plaza en la administración pública.
-                </p>
               </div>
-              <button 
-                onClick={() => document.getElementById('rutas')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full py-5 bg-white text-black font-black uppercase tracking-widest text-[10px] rounded-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-2"
-              >
-                Explorar Rutas
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </motion.div>
 
-            {/* Corporate Column - PREMIUM */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="bg-[#1C1B1B] border-2 border-[#d4af37]/30 p-10 rounded-[2.5rem] flex flex-col justify-between relative overflow-hidden group shadow-[0_0_50px_rgba(212,175,55,0.1)]"
-            >
-              <div className="absolute top-0 right-0 py-2 px-6 bg-[#d4af37] text-black font-black text-[9px] uppercase tracking-widest rounded-bl-2xl">
-                PREMIUM
-              </div>
-              <div>
-                <div className="w-12 h-12 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center text-[#d4af37] mb-8 border border-[#d4af37]/20 group-hover:bg-[#d4af37]/20 transition-all">
-                   <Building2 className="w-6 h-6" />
+              <div className="group cursor-default">
+                <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Corporate (Academias)</h3>
+                    <p className="text-white/50 font-medium text-lg leading-relaxed max-w-xl">
+                      Soluciones de marca blanca para centros de formación. Integramos nuestro motor algorítmico en su infraestructura para potenciar el éxito de sus alumnos.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tighter">Corporate</h3>
-                <p className="text-white/50 font-bold text-sm leading-relaxed mb-10">
-                  Adaptación estratégica de centros educativos y academias al ecosistema IA.
-                </p>
               </div>
-              <Link 
-                to="/academy/corporate"
-                className="w-full py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[10px] rounded-xl hover:scale-105 transition-all flex items-center justify-center gap-2 shadow-xl shadow-[#d4af37]/10"
-              >
-                Saber más
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
 
-            {/* FP Column */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="bg-[#1C1B1B] border border-white/5 p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-white/20 transition-all group"
-            >
-              <div>
-                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white mb-8 border border-white/10 group-hover:bg-white/10 transition-all">
-                   <GraduationCap className="w-6 h-6" />
+              <div className="group cursor-default">
+                <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Centros FP</h3>
+                    <p className="text-white/50 font-medium text-lg leading-relaxed max-w-xl">
+                      Digitalización avanzada para módulos de diferentes currículums en Institutos de Formación Profesional, optimizando la asimilación de contenidos teóricos.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tighter">FP</h3>
-                <p className="text-white/50 font-bold text-sm leading-relaxed mb-10">
-                  Excelencia técnica y digitalización avanzada para centros de Formación Profesional.
-                </p>
               </div>
-              <Link 
-                to="/academy/fp"
-                className="w-full py-5 bg-white text-black font-black uppercase tracking-widest text-[10px] rounded-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-2"
-              >
-                Saber más
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
+            </div>
+
+            <div className="lg:col-span-5 h-full min-h-[400px]">
+              <div className="bg-[#1C1B1B] border border-white/10 rounded-[3rem] p-12 h-full flex flex-col justify-center relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#d4af37]/5 rounded-full blur-[60px]" />
+                <div className="relative z-10 space-y-8">
+                  <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center text-[#d4af37]">
+                    <Zap className="w-8 h-8" />
+                  </div>
+                  <h4 className="text-3xl font-black text-white tracking-tighter uppercase leading-[1]">Tecnología <br/> de Élite</h4>
+                  <p className="text-white/40 font-medium leading-relaxed">
+                    Unificamos la IA más avanzada con metodologías docentes probadas para maximizar cada segundo de estudio.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Routes Map Section */}
-      <section className="py-24 relative" id="rutas">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="max-w-3xl mb-16">
-            <h2 className="mb-4 text-white font-bold text-3xl md:text-4xl tracking-tight">Especialidades Disponibles</h2>
-            <p className="text-[1.05rem] text-[#E5E2E1]/60 font-medium leading-relaxed">Infraestructura tecnológica dedicada para cada cuerpo y escala.</p>
+      {/* Specialties Sliding Carousel */}
+      <section className="py-24 bg-white border-y border-slate-100 overflow-hidden" id="rutas">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 mb-16">
+          <div className="text-center">
+             <h2 className="text-3xl md:text-5xl font-black text-[#131313] uppercase tracking-tighter mb-4">Especialidades Activas</h2>
+             <p className="text-slate-500 font-medium max-w-xl mx-auto">Motor algorítmico especializado para cada cuerpo y escala.</p>
           </div>
-
-          <div className="flex flex-wrap gap-3 mb-12">
-            {(Object.keys(families) as Array<keyof typeof families>).map((key) => (
-              <button
-                key={key}
-                onClick={() => setActiveFamily(key)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                  activeFamily === key 
-                    ? 'bg-[#E5E2E1] text-[#131313]' 
-                    : 'bg-[#1C1B1B] text-[#E5E2E1]/70 hover:bg-[#2A2A2A] hover:text-white border border-[#353534]'
-                }`}
-              >
-                {families[key].icon}
-                {families[key].label}
-              </button>
-            ))}
-          </div>
-
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeFamily}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            >
-              {activeFamily === 'habilitados' && (
-                <div className="md:col-span-2">
-                  <TrackCard 
-                    title={routeDetails.habilitados.title}
-                    description={families.habilitados.description}
-                    icon={<Landmark className="w-7 h-7" />}
-                    to="/academy/habilitados"
-                    features={['Secretaría e Intervención', 'Tesorería', 'Control Jurídico Local', 'Urbanismo y PCAP']}
-                  />
-                </div>
-              )}
-
-              {activeFamily === 'age' && (
-                <>
-                  <TrackCard 
-                    title="Auxiliar Administrativo AGE"
-                    description="Apoyo operativo, registro y tramitación. Incluye simulador de ofimática y tests rápidos."
-                    icon={<FileText className="w-7 h-7" />}
-                    to="/academy/age"
-                    features={['Psicotécnicos Ilimitados', 'Ofimática Office/Windows', 'Registro y Archivo']}
-                  />
-                  <TrackCard 
-                    title="Administrativo del Estado"
-                    description="Gestión técnica y financiera. Análisis de supuestos prácticos y esquemas de normativa."
-                    icon={<Building2 className="w-7 h-7" />}
-                    to="/academy/age"
-                    features={['Derecho Administrativo', 'Gestión Financiera', 'Gestión de Personal']}
-                  />
-                </>
-              )}
-
-              {activeFamily === 'fuerzas' && (
-                <>
-                  <TrackCard 
-                    title="Policía Nacional"
-                    description="Oposición multifactorial de la Escala Básica. Conocimientos, psicotécnicos y seguimiento físico con métricas de progresión."
-                    icon={<img src="/policia_nacional.png" className="w-10 h-10 object-contain" alt="CNP" />}
-                    to="/academy/policia"
-                    features={['Temario Jurídico Especializado', 'Psicotécnicos Avanzados', 'Control de Exclusiones']}
-                  />
-                  <TrackCard 
-                    title="Guardia Civil"
-                    description="Escala de Cabos y Guardias. Fuerte enfoque en lengua, inglés y preparación física integral con plan de entrenamiento específico."
-                    icon={<img src="/guardia_civil.png" className="w-10 h-10 object-contain" alt="GC" />}
-                    to="/academy/guardiacivil"
-                    features={['Ortografía y Gramática', 'Idiomas (Inglés)', 'Plan de Entrenamiento Físico']}
-                  />
-                </>
-              )}
-
-              {activeFamily === 'penitenciaria' && (
-                <div className="md:col-span-2">
-                   <TrackCard 
-                    title="Ayudantes de IIPP"
-                    description="Instituciones Penitenciarias: verticalidad jurídica, régimen penitenciario y conducta humana. Análisis de supuestos prácticos reales."
-                    icon={<div className="relative"><Lock className="w-10 h-10" /><div className="absolute inset-0 flex items-center justify-center opacity-30"><div className="w-full h-[2px] bg-red-500 rotate-45" /></div></div>}
-                    to="/academy/iipp"
-                    features={['Derecho Penitenciario', 'Casos Prácticos Reales', 'Mapas Conceptuales']}
-                  />
-                </div>
-              )}
-            </motion.div>
-          </AnimatePresence>
         </div>
-      </section>
 
-      {/* AI Bento Features */}
-      <section className="py-24 bg-[#0E0E0E] relative border-t border-[#353534]/50">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="mb-16">
-             <h2 className="text-white font-bold text-3xl md:text-4xl tracking-tight mb-4">El motor detrás del éxito</h2>
-             <p className="text-[1.05rem] text-[#E5E2E1]/60 font-medium">Herramientas diseñadas para exprimir cada minuto de tu tiempo de estudio.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { 
-                title: "Simulacros Infinitos", 
-                desc: "100% adaptados a tu convocatoria. Generación infinita de tests y casos prácticos.", 
-                icon: <FileText className="w-6 h-6" />,
-                span: "md:col-span-1"
-              },
-              { 
-                title: "Asistente IA 24/7", 
-                desc: "Resuelve dudas legales complejas cruzando datos con jurisprudencia del TS.", 
-                icon: <Brain className="w-6 h-6" />,
-                span: "md:col-span-2 lg:col-span-2"
-              },
-              { 
-                title: "Temarios Vivos", 
-                desc: "Si el BOE se actualiza, tu contenido de estudio cambia automáticamente sin que tengas que imprimir resúmenes de nuevo.", 
-                icon: <Zap className="w-6 h-6" />,
-                span: "md:col-span-2 lg:col-span-2"
-              },
-              { 
-                title: "Retención Activa", 
-                desc: "Sistema de flashcards espaciado para consolidar datos puros como plazos y sanciones.", 
-                icon: <Target className="w-6 h-6" />,
-                span: "md:col-span-1"
-              }
-            ].map((tool, i) => (
-              <div key={i} className={`p-8 rounded-3xl bg-[#1C1B1B] border border-[#353534]/50 hover:bg-[#201F1F] hover:border-[#4D4635] transition-all group ${tool.span}`}>
-                <div className="w-12 h-12 rounded-xl bg-[#2A2A2A] text-[#d4af37] flex items-center justify-center mb-6 border border-[#353534]">
-                  {tool.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-white tracking-tight">{tool.title}</h3>
-                <p className="text-[#E5E2E1]/70 leading-relaxed font-normal text-[0.95rem]">{tool.desc}</p>
+        <div className="relative">
+          <div className="flex gap-6 animate-scroll whitespace-nowrap">
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex gap-6">
+                {[
+                  { name: "Habilitados Nacionales", tag: "SECRETARÍA / INTERVENCIÓN", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee70?auto=format&fit=crop&q=80&w=400", to: "/academy/habilitados" },
+                  { name: "Policía Nacional", tag: "ESCALA BÁSICA", img: "https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&q=80&w=400", to: "/academy/policia" },
+                  { name: "Administrativo AGE", tag: "ESTADO (C1/C2)", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400", to: "/academy/age" },
+                  { name: "Ayudantes IIPP", tag: "PRISIONES / PENITENCIARIA", img: "https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&q=80&w=400", to: "/academy/iipp" },
+                  { name: "Guardia Civil", tag: "CABOS Y GUARDIAS", img: "https://images.unsplash.com/photo-1585822797371-2a62886a86c6?auto=format&fit=crop&q=80&w=400", to: "/academy/guardiacivil" },
+                  { name: "Habilitados Nacionales", tag: "TESORERÍA", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=400", to: "/academy/habilitados" }
+                ].map((item, idx) => (
+                  <Link key={`${i}-${idx}`} to={item.to} className="inline-block w-[300px] bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow p-6 group">
+                    <div className="aspect-video bg-slate-100 rounded-xl mb-4 overflow-hidden">
+                       <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div className="text-[9px] font-black text-[#d4af37] uppercase tracking-widest mb-1">{item.tag}</div>
+                    <div className="text-sm font-black text-[#131313] uppercase tracking-tight truncate">{item.name}</div>
+                  </Link>
+                ))}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Corporate & FP Dedicated Section */}
-      <section className="py-32 bg-[#131313] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#d4af37]/5 rounded-full blur-[150px] pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter uppercase mb-6">
-              SOLUCIONES PARA <br/>
-              <span className="italic text-[#d4af37]">ORGANIZACIONES</span>
+      {/* Why Choose Us - Results Focused */}
+      <section className="py-40 bg-[#0E0E0E] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-32">
+            <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
+              ¿Por qué <span className="text-[#d4af37] italic">Munilex Academy?</span>
             </h2>
-            <p className="text-white/40 font-bold text-sm uppercase tracking-widest">Tecnología de vanguardia para centros de formación y empresas</p>
+            <div className="w-24 h-2 bg-[#d4af37] rounded-full mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Corporate Card */}
-            <motion.div 
-              whileHover={{ y: -10 }}
-              className="bg-[#1C1B1B] border border-[#d4af37]/30 p-12 rounded-[3.5rem] relative overflow-hidden group shadow-2xl shadow-[#d4af37]/5"
-            >
-              <div className="absolute top-0 right-0 p-12 opacity-5 text-[#d4af37]">
-                <Building2 className="w-32 h-32" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { t: "Velocidad de Asimilación", d: "Optimizamos la curva de aprendizaje mediante algoritmos que priorizan lo que más olvidas.", icon: <Brain /> },
+              { t: "Ahorro de Tiempo", d: "Filtramos la información irrelevante para que te enfoques solo en lo que cae en el examen.", icon: <Clock /> },
+              { t: "Solvencia Técnica", d: "Trazabilidad completa de cada respuesta con cita directa a la normativa legal vigente.", icon: <Scale /> },
+              { t: "Trazabilidad Total", d: "Historial detallado de cada sesión para que veas tu progreso real día a día.", icon: <Target /> },
+              { t: "Analítica Predictiva", d: "Nuestro sistema predice tu nota basada en miles de datos de otros opositores y exámenes pasados.", icon: <TrendingUp /> },
+              { t: "Org. Estratégica", d: "Soluciones a medida para organizaciones que buscan optimizar sus procesos formativos.", icon: <Building2 /> }
+            ].map((feature, i) => (
+              <div key={i} className="bg-[#1C1B1B] border border-white/5 p-12 rounded-[3.5rem] hover:border-[#d4af37]/30 transition-all group">
+                <div className="w-16 h-16 bg-[#2A2A2A] rounded-2xl flex items-center justify-center text-[#d4af37] mb-10 group-hover:scale-110 transition-transform">
+                   {feature.icon}
+                </div>
+                <h3 className="text-2xl font-black text-white mb-6 uppercase tracking-tight">{feature.t}</h3>
+                <p className="text-white/40 font-medium leading-relaxed">
+                  {feature.d}
+                </p>
               </div>
-              
-              <div className="w-20 h-20 bg-[#d4af37]/10 rounded-[1.5rem] flex items-center justify-center text-[#d4af37] mb-10 border border-[#d4af37]/20 group-hover:scale-110 transition-transform">
-                <Building2 className="w-10 h-10" />
-              </div>
-              
-              <h3 className="text-3xl font-black text-white mb-6 uppercase tracking-tighter">Corporate</h3>
-              <p className="text-[#E5E2E1]/60 text-lg leading-relaxed mb-10 font-medium">
-                Transformamos tu academia tradicional en un centro de alto rendimiento tecnológico con marca propia e IA integrada.
-              </p>
-              
-              <ul className="space-y-4 mb-12">
-                {['Personalización Marca Blanca', 'API de Integración Total', 'Análisis de Datos Masivo'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/80 font-bold text-sm uppercase tracking-tight">
-                    <CheckCircle className="w-5 h-5 text-[#d4af37]" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              
-              <Link 
-                to="/academy/corporate"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all"
-              >
-                Explorar Corporate <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
-
-            {/* FP Card */}
-            <motion.div 
-              whileHover={{ y: -10 }}
-              className="bg-[#1C1B1B] border border-white/5 p-12 rounded-[3.5rem] relative overflow-hidden group"
-            >
-              <div className="absolute top-0 right-0 p-12 opacity-5 text-white">
-                <GraduationCap className="w-32 h-32" />
-              </div>
-              
-              <div className="w-20 h-20 bg-white/5 rounded-[1.5rem] flex items-center justify-center text-white mb-10 border border-white/10 group-hover:scale-110 transition-transform">
-                <GraduationCap className="w-10 h-10" />
-              </div>
-              
-              <h3 className="text-3xl font-black text-white mb-6 uppercase tracking-tighter">Formación Prof.</h3>
-              <p className="text-[#E5E2E1]/60 text-lg leading-relaxed mb-10 font-medium">
-                Digitalización avanzada para ciclos formativos. IA entrenada en currículos oficiales y casos prácticos técnicos.
-              </p>
-              
-              <ul className="space-y-4 mb-12">
-                {['Rigor Técnico IA', 'Generación de Casos Prácticos', 'Seguimiento de Competencias'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/80 font-bold text-sm uppercase tracking-tight">
-                    <CheckCircle className="w-5 h-5 text-[#d4af37]" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              
-              <Link 
-                to="/academy/fp"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-200 transition-all"
-              >
-                Explorar FP <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits instead of Testimonials */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { num: "3x", label: "Velocidad de Asimilación", desc: "Acelera la curva de aprendizaje mediante tests adaptativos.", icon: <TrendingUp className="w-5 h-5"/> },
-              { num: "40%", label: "Ahorro de Tiempo", desc: "Se acabó crear esquemas manualmente. Nosotros los generamos.", icon: <Clock className="w-5 h-5"/> },
-              { num: "0", label: "Obsolescencia", desc: "Alertas automáticas sobre normativa derogada en tu syllabus.", icon: <Shield className="w-5 h-5"/> },
-              { num: "100%", label: "Trazabilidad Analítica", desc: "Métricas de tu desempeño por bloques temáticos.", icon: <Target className="w-5 h-5"/> }
-            ].map((stat, i) => (
-              <div key={i} className="p-8 bg-[#1C1B1B]/40 backdrop-blur-md rounded-3xl border border-[#353534]/30 hover:border-[#d4af37]/20 transition-colors">
-                <div className="text-[#d4af37] mb-6 opacity-80">{stat.icon}</div>
-                <div className="text-4xl font-black mb-2 text-white">{stat.num}</div>
-                <div className="text-[#E5E2E1] font-bold tracking-tight text-lg mb-3">{stat.label}</div>
-                <div className="text-[0.85rem] text-[#E5E2E1]/60 leading-relaxed">{stat.desc}</div>
-              </div>
-            ))}
+      {/* CTA Final */}
+      <section className="py-24 bg-[#131313]">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 text-center">
+          <div className="bg-[#1C1B1B] border border-white/5 p-20 rounded-[4rem] relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-[100px]" />
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-10 relative z-10">¿Listo para <span className="text-[#d4af37] italic">tu plaza?</span></h2>
+            <Link to="/academy/contacto" className="inline-flex items-center gap-4 px-12 py-6 bg-[#d4af37] text-black font-black rounded-2xl text-xl hover:scale-105 transition-transform relative z-10 shadow-2xl shadow-[#d4af37]/20 uppercase tracking-widest">
+              Empezar ahora
+              <ArrowRight className="w-7 h-7" />
+            </Link>
           </div>
         </div>
       </section>
