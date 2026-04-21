@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
-import { ChevronDown, GraduationCap, ArrowUpRight } from 'lucide-react';
+import { ChevronDown, ArrowUpRight } from 'lucide-react';
 
 const AcademyNavbar = () => {
   const navItems = [
