@@ -12,6 +12,11 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import policiaImg from '../../assets/spec/policia.png';
+import secretarioImg from '../../assets/spec/secretario_new.png';
+import iippImg from '../../assets/spec/iipp_new.png';
+import guardiaImg from '../../assets/spec/guardia.png';
+
 const Academy = () => {
   return (
     <div className="min-h-screen bg-[#131313] text-[#E5E2E1] font-inter selection:bg-[#d4af37]/30 selection:text-white">
@@ -218,7 +223,7 @@ const Academy = () => {
       <section className="py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8 mb-16">
           <div className="text-center">
-             <h2 className="text-3xl md:text-5xl font-black text-[#131313] uppercase tracking-tighter mb-4">Especialidades Activas</h2>
+             <h2 className="text-3xl md:text-5xl font-black text-[#131313] uppercase tracking-tighter mb-4">LAS OPOSICIONES QUE OFRECEMOS</h2>
              <p className="text-slate-500 font-medium max-w-xl mx-auto">Motor algorítmico especializado para cada cuerpo y escala.</p>
           </div>
         </div>
@@ -228,12 +233,12 @@ const Academy = () => {
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex gap-6">
                 {[
-                  { name: "Habilitados Nacionales", tag: "SECRETARÍA / INTERVENCIÓN", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee70?auto=format&fit=crop&q=80&w=400", to: "/academy/habilitados" },
-                  { name: "Policía Nacional", tag: "ESCALA BÁSICA", img: "https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&q=80&w=400", to: "/academy/policia" },
+                  { name: "Habilitados Nacionales", tag: "SECRETARÍA / INTERVENCIÓN", img: secretarioImg, to: "/academy/habilitados" },
+                  { name: "Policía Nacional", tag: "ESCALA BÁSICA", img: policiaImg, to: "/academy/policia" },
                   { name: "Administrativo AGE", tag: "ESTADO (C1/C2)", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400", to: "/academy/age" },
-                  { name: "Ayudantes IIPP", tag: "PRISIONES / PENITENCIARIA", img: "https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&q=80&w=400", to: "/academy/iipp" },
-                  { name: "Guardia Civil", tag: "CABOS Y GUARDIAS", img: "https://images.unsplash.com/photo-1585822797371-2a62886a86c6?auto=format&fit=crop&q=80&w=400", to: "/academy/guardiacivil" },
-                  { name: "Habilitados Nacionales", tag: "TESORERÍA", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=400", to: "/academy/habilitados" }
+                  { name: "Ayudantes IIPP", tag: "PRISIONES / PENITENCIARIA", img: iippImg, to: "/academy/iipp" },
+                  { name: "Guardia Civil", tag: "CABOS Y GUARDIAS", img: guardiaImg, to: "/academy/guardiacivil" },
+                  { name: "Habilitados Nacionales", tag: "TESORERÍA", img: secretarioImg, to: "/academy/habilitados" }
                 ].map((item, idx) => (
                   <Link key={`${i}-${idx}`} to={item.to} className="inline-block w-[300px] bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow p-6 group">
                     <div className="aspect-video bg-slate-100 rounded-xl mb-4 overflow-hidden">
