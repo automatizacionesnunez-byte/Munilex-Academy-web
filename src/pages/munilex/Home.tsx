@@ -3,6 +3,7 @@ import Hero from '../../components/Hero';
 import TestimonialsCarousel from '../../components/TestimonialsCarousel';
 import { ArrowUpRight, ShieldCheck, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ayuntamientoReal from '../../assets/ayuntamiento_real.jpg';
 
 const Home = () => {
 
@@ -33,7 +34,7 @@ const Home = () => {
               <div className="md:col-span-5 order-2 md:order-1">
                 <div className="aspect-[4/5] bg-slate-100 rounded-[3rem] overflow-hidden shadow-2xl relative group">
                   <div className="absolute inset-0 bg-[#002B5B]/5 group-hover:bg-transparent transition-colors z-10" />
-                  <img src="https://images.unsplash.com/photo-1549405629-6c38eb0eff54?auto=format&fit=crop&q=80&w=1200" alt="Ayuntamiento Real de España" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={ayuntamientoReal} alt="Ayuntamiento Real de España" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
               </div>
               <div className="md:col-span-7 order-1 md:order-2">
