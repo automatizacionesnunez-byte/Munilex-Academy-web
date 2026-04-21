@@ -129,7 +129,7 @@ const Academy = () => {
               </div>
               <div className="relative group">
                  <div className="absolute -inset-4 bg-[#d4af37]/10 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/20 transition-colors" />
-                 <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800" alt="Oposiciones" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800" alt="Oposiciones" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl md:grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
               </div>
             </div>
 
@@ -137,7 +137,7 @@ const Academy = () => {
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               <div className="order-2 lg:order-1 relative group text-right">
                  <div className="absolute -inset-4 bg-white/5 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/10 transition-colors" />
-                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Corporate" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Corporate" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl md:grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
               </div>
               <div className="order-1 lg:order-2">
                  <motion.div 
@@ -211,7 +211,7 @@ const Academy = () => {
               </div>
               <div className="relative group">
                  <div className="absolute -inset-4 bg-white/5 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/10 transition-colors" />
-                 <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800" alt="Centros FP" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800" alt="Centros FP" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl md:grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
               </div>
             </div>
 

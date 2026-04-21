@@ -157,7 +157,7 @@ const Oposiciones = () => {
                 <img 
                   src={spec.img} 
                   alt={spec.name} 
-                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-40 group-hover:opacity-80" 
+                  className="absolute inset-0 w-full h-full object-cover md:grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-80 md:opacity-40 group-hover:opacity-80" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent flex flex-col justify-end p-8">
                   <div className="text-[10px] font-black text-[#d4af37] uppercase tracking-[0.2em] mb-2">{spec.tag}</div>
