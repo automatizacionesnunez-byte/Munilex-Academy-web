@@ -1,48 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Zap, CheckCircle, ArrowRight, Brain, FileText, Smartphone, X, ChevronRight, Scale, Landmark, FileCheck, Lock, Shield, Dumbbell, Languages, Building2, Clock, Target, TrendingUp, GraduationCap } from 'lucide-react';
+import { Zap, CheckCircle, ArrowRight, Brain, FileText, Smartphone, X, ChevronRight, Scale, Landmark, FileCheck, Lock, Shield, Dumbbell, Languages, Building2, Clock, Target, TrendingUp } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Academy = () => {
   const location = useLocation();
   const [selectedRoute, setSelectedRoute] = useState<null | string>(null);
-  const [activeFamily, setActiveFamily] = useState<'habilitados' | 'age' | 'fuerzas' | 'penitenciaria'>('habilitados');
 
-  useEffect(() => {
-    const path = location.pathname.toLowerCase();
-    if (path.includes('/age')) setActiveFamily('age');
-    if (path.includes('/policia') || path.includes('/guardiacivil')) setActiveFamily('fuerzas');
-    if (path.includes('/iipp')) setActiveFamily('penitenciaria');
-    if (path.includes('/habilitados')) setActiveFamily('habilitados');
-  }, [location.pathname]);
 
-  const families = {
-    habilitados: {
-      label: "Habilitados Nacionales",
-      icon: <Landmark className="w-5 h-5" />,
-      tagline: "Secretaría, Intervención y Tesorería",
-      description: "La ruta de máxima exigencia para el liderazgo jurídico en la Administración Local."
-    },
-    age: {
-      label: "Familia AGE",
-      icon: <FileText className="w-5 h-5" />,
-      tagline: "Cuerpo Administrativo y Auxiliar del Estado",
-      description: "Preparación táctica para el soporte operativo y de gestión pública."
-    },
-    fuerzas: {
-      label: "Fuerzas de Seguridad",
-      icon: <div className="flex -space-x-1.5"><img src="/policia_nacional.png" className="w-5 h-5 object-contain" alt="" /><img src="/guardia_civil.png" className="w-5 h-5 object-contain" alt="" /></div>,
-      tagline: "Policía Nacional y Guardia Civil",
-      description: "Oposiciones multifactoriales: teoría, aptitud física y psicotécnicos."
-    },
-    penitenciaria: {
-      label: "Inst. Penitenciarias",
-      icon: <div className="relative"><Lock className="w-5 h-5" /><div className="absolute inset-0 flex items-center justify-center opacity-20"><div className="w-full h-[1px] bg-red-500 rotate-45" /></div></div>,
-      tagline: "Ayudante de Instituciones Penitenciarias",
-      description: "Especialización vertical en normativa penitenciaria y conducta humana."
-    }
-  };
+
 
   const routeDetails: Record<string, any> = {
     habilitados: {
@@ -113,42 +80,7 @@ const Academy = () => {
     }
   };
 
-  const TrackCard = ({ title, description, icon, to, features }: any) => (
-    <motion.div 
-      whileHover={{ y: -5 }}
-      className="bg-[#1C1B1B] p-10 rounded-3xl border border-[#353534]/50 relative overflow-hidden group h-full flex flex-col"
-    >
-      <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity text-primary">
-        {icon}
-      </div>
-      
-      <div className={`w-14 h-14 bg-gradient-to-br from-[#f2ca50] to-[#d4af37] rounded-xl flex items-center justify-center text-[#241a00] mb-8 shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:scale-105 transition-transform overflow-hidden`}>
-        {icon}
-      </div>
-      
-      <h3 className="mb-4 text-white font-black text-2xl tracking-tight leading-tight">{title}</h3>
-      <p className="text-[0.875rem] text-[#E5E2E1]/70 mb-8 leading-relaxed font-normal flex-grow">
-        {description}
-      </p>
-      
-      <ul className="space-y-4 mb-10">
-        {features.map((item: string, i: number) => (
-          <li key={i} className="flex items-center gap-3 font-medium text-[#E5E2E1]/90 text-sm">
-            <CheckCircle className="w-5 h-5 text-[#d4af37]" />
-            {item}
-          </li>
-        ))}
-      </ul>
-      
-      <Link 
-        to={to}
-        className="w-full py-4 bg-[#2A2A2A] text-white font-semibold rounded-xl hover:bg-[#353534] border border-[#4D4635]/30 transition-all flex items-center justify-center gap-3"
-      >
-        Ver Ruta Detallada
-        <ArrowRight className="w-4 h-4" />
-      </Link>
-    </motion.div>
-  );
+
 
   return (
     <div className="min-h-screen bg-[#131313] text-[#E5E2E1] font-inter selection:bg-[#d4af37]/30 selection:text-white">
