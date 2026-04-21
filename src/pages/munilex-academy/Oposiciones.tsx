@@ -148,7 +148,7 @@ const Oposiciones = () => {
               { name: "Administrativo AGE", tag: "Estado (C1/C2)", to: "/academy/age", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" },
               { name: "Ayudantes IIPP", tag: "Instituciones Penitenciarias", to: "/academy/iipp", img: iippImg },
               { name: "Guardia Civil", tag: "Cabos y Guardias", to: "/academy/guardiacivil", img: guardiaImg }
-            ].map((spec, i) => (           ].map((spec, i) => (
+            ].map((spec, i) => (
               <Link 
                 key={i} 
                 to={spec.to}
