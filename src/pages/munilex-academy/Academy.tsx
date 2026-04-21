@@ -211,16 +211,16 @@ const Academy = () => {
                 </div>
               </Link>
 
-              <div className="group cursor-default">
+              <Link to="/academy/corporate" className="group block">
                 <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
                   <div className="space-y-4">
                     <h3 className="text-2xl font-black text-white uppercase tracking-tight">Corporate (Academias)</h3>
                     <p className="text-white/50 font-medium text-lg leading-relaxed max-w-xl">
-                      Soluciones de marca blanca para centros de formación. Integramos nuestro motor algorítmico en su infraestructura para potenciar el éxito de sus alumnos.
+                      Soluciones de marca blanca escalables en tres niveles: Iniciación, Marca propia o Ecosistema educativo a medida. Digitalice su academia con tecnología de élite en tiempo récord.
                     </p>
                   </div>
                 </div>
-              </div>
+              </Link>
 
               <div className="group cursor-default">
                 <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
