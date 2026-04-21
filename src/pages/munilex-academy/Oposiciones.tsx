@@ -3,10 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { 
   Zap, 
   ArrowRight, 
-  Brain, 
   Clock, 
-  Target, 
-  Shield, 
   Scale, 
   MessageSquare, 
   Trophy, 
