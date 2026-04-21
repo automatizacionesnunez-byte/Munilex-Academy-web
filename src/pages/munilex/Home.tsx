@@ -31,9 +31,9 @@ const Home = () => {
             {/* Función Pública */}
             <div className="grid md:grid-cols-12 gap-12 lg:gap-20 items-center">
               <div className="md:col-span-5 order-2 md:order-1">
-                <div className="aspect-[4/5] bg-slate-100 rounded-[3rem] overflow-hidden shadow-2xl relative">
-                  <div className="absolute inset-0 bg-[#002B5B]/10 mix-blend-multiply" />
-                  <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dee70?auto=format&fit=crop&q=80&w=800" alt="Ayuntamiento Real de España" className="w-full h-full object-cover" />
+                <div className="aspect-[4/5] bg-slate-100 rounded-[3rem] overflow-hidden shadow-2xl relative group">
+                  <div className="absolute inset-0 bg-[#002B5B]/5 group-hover:bg-transparent transition-colors z-10" />
+                  <img src="https://images.unsplash.com/photo-1549405629-6c38eb0eff54?auto=format&fit=crop&q=80&w=1200" alt="Ayuntamiento Real de España" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
               </div>
               <div className="md:col-span-7 order-1 md:order-2">
