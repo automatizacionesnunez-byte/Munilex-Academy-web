@@ -99,7 +99,7 @@ const Navbar = () => {
           </a>
           <Link 
             to="/academy"
-            className="bg-[#002B5B] text-white px-6 py-2.5 rounded-xl font-black uppercase tracking-widest text-[9px] hover:bg-[#002B5B]/90 transition-all text-center whitespace-nowrap"
+            className="border-2 border-[#d4af37] text-[#d4af37] bg-white px-6 py-2.5 rounded-xl font-black uppercase tracking-widest text-[9px] hover:bg-[#d4af37] hover:text-white transition-all text-center whitespace-nowrap"
           >
             Academy
           </Link>
@@ -158,7 +158,7 @@ const Navbar = () => {
                 </a>
                 <Link 
                   to="/academy"
-                  className="bg-[#002B5B] text-white py-5 rounded-2xl font-black uppercase tracking-widest text-xs text-center"
+                  className="border-2 border-[#d4af37] text-[#d4af37] py-5 rounded-2xl font-black uppercase tracking-widest text-xs text-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Ir a la Academia
