@@ -152,10 +152,10 @@ const LinkedInLogo = ({ className }: { className?: string }) => (
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* José María */}
-            <div className="bg-slate-50 rounded-[3.5rem] p-12 border border-slate-100 flex flex-col justify-between">
+            <div className="bg-slate-50 rounded-[3.5rem] p-12 border-4 border-[#0066FF]/20 flex flex-col justify-between hover:border-[#0066FF] transition-colors duration-500">
               <div>
                 <div className="flex gap-8 items-start mb-10">
-                  <div className="w-32 h-32 rounded-[2rem] overflow-hidden shadow-lg border-4 border-white">
+                  <div className="w-32 h-32 rounded-[2rem] overflow-hidden shadow-lg border-4 border-[#0066FF]">
                     <img src={joseMariaImg} alt="José María Núñez Mejías" className="w-full h-full object-cover" />
                   </div>
                   <div>
