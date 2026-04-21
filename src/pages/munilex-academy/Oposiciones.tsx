@@ -13,8 +13,8 @@ import {
 import { Link } from 'react-router-dom';
 
 import policiaImg from '../../assets/spec/policia.png';
-import secretarioImg from '../../assets/spec/secretario.png';
-import iippImg from '../../assets/spec/iipp.png';
+import secretarioImg from '../../assets/spec/secretario_new.png';
+import iippImg from '../../assets/spec/iipp_new.png';
 import guardiaImg from '../../assets/spec/guardia.png';
 
 const Oposiciones = () => {
