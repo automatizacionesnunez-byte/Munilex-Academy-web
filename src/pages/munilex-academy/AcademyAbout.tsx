@@ -55,7 +55,7 @@ const AcademyAbout = () => {
             Nuestra Misión
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter leading-tight text-white">
-            Forjando el <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">Futuro</span> de la Oposición
+            Forjando el <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">Futuro</span> de la Educación
           </h1>
           <p className="text-xl text-[#E5E2E1]/70 font-medium leading-relaxed max-w-3xl mx-auto">
             Munilex Academy no es solo una plataforma de estudio; es un laboratorio de innovación donde la precisión del Derecho se encuentra con la potencia de la Inteligencia Artificial.

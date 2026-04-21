@@ -18,7 +18,7 @@ const AcademyContact = () => {
               <span className="italic text-[#d4af37]">tu futuro</span>
             </h1>
             <p className="text-xl text-white/50 max-w-xl mb-12 font-semibold">
-              ¿Dudas sobre el temario, la IA o qué plan se adapta mejor a tu centro? Nuestro equipo técnico y docente te atenderá en menos de 24h.
+              ¿Dudas del temario, la IA o qué plan se adapta mejor a tu centro académico? ¿Cómo adaptamos esto a tu FP? Nuestro equipo técnico y docente te atenderá en menos de 24h.
             </p>
 
             <div className="space-y-8">
