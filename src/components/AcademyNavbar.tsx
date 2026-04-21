@@ -86,13 +86,19 @@ const AcademyNavbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 xl:gap-4">
           <a 
             href="https://munilex.lovable.app/auth/login"
-            className="bg-[#d4af37] text-black px-8 py-3.5 rounded-xl font-black text-[11px] uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
+            className="text-[10px] font-black uppercase tracking-widest text-[#d4af37] px-4 py-2 hover:bg-white/5 rounded-lg transition-all"
           >
-            ACCEDER AL CAMPUS
-            <ArrowUpRight className="w-4 h-4" />
+            ACCEDER
+          </a>
+          <a 
+            href="https://munilex.lovable.app/auth/register"
+            className="bg-[#d4af37] text-black px-5 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
+          >
+            PRUEBA GRATIS
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>
