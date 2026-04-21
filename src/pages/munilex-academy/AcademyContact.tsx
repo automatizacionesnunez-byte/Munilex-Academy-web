@@ -18,13 +18,13 @@ const AcademyContact = () => {
               <span className="italic text-[#d4af37]">tu futuro</span>
             </h1>
             <p className="text-xl text-white/50 max-w-xl mb-12 font-semibold">
-              ¿Dudas sobre el temario, la IA o qué plan se adapta mejor a tu centro? Nuestro equipo técnico y docente está listo para ayudarte.
+              ¿Dudas sobre el temario, la IA o qué plan se adapta mejor a tu centro? Nuestro equipo técnico y docente te atenderá en menos de 24h.
             </p>
 
             <div className="space-y-8">
               {[
-                { icon: <Mail className="w-6 h-6" />, label: "Email", value: "info@munilex.com" },
-                { icon: <Phone className="w-6 h-6" />, label: "Teléfono", value: "+34 600 000 000" },
+                { icon: <Mail className="w-6 h-6" />, label: "Email", value: "administracion@munilex.es" },
+                { icon: <Phone className="w-6 h-6" />, label: "WhatsApp", value: "+34 605 39 29 12" },
                 { icon: <MapPin className="w-6 h-6" />, label: "Ubicación", value: "Madrid, España" }
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-6 group">

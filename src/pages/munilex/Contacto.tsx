@@ -23,8 +23,9 @@ const Contacto = () => {
       // Simulación de envío (Reemplazar con fetch real a EmailJS / CallMeBot API)
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // LOGICA PARA WHATSAPP (CallMeBot):
-      // const whatsappMsg = `🔔 NUEVO CONTACTO MUNILEX:\n👤: ${formData.name}\n📧: ${formData.email}\n💬: ${formData.message}`;
+      // LOGICA PARA WHATSAPP (CallMeBot) y EMAIL:
+      // Envío a: administracion@munilex.es
+      // const whatsappMsg = `🔔 NUEVO CONTACTO MUNILEX:\n👤: ${formData.name}\n📧: ${formData.email}\n📂: ${formData.subject}\n💬: ${formData.message}`;
       // await fetch(`https://api.callmebot.com/whatsapp.php?phone=34605392912&text=${encodeURIComponent(whatsappMsg)}&apikey=SU_CLAVE_AQUI`);
 
       setStatus('success');
@@ -75,7 +76,7 @@ const Contacto = () => {
                Conectamos Rigor <span className="text-primary-container font-black">Humano</span> con <span className="text-primary-container font-black">IA.</span>
             </h1>
             <p className="text-xl text-on-surface-variant font-medium leading-relaxed mb-16 max-w-xl">
-               ¿Tiene alguna duda sobre nuestra plataforma, cómo podemos adaptarla para su <span className="text-secondary font-bold">ayuntamiento</span>, <span className="text-secondary font-bold">academia</span> u <span className="text-secondary font-bold">oposiciones</span>? Nuestro equipo te atenderá en tiempo récord.
+               ¿Tiene alguna duda sobre nuestra plataforma, cómo podemos adaptarla para su <span className="text-secondary font-bold">ayuntamiento</span>, <span className="text-secondary font-bold">academia</span>, <span className="text-secondary font-bold">oposiciones</span> o <span className="text-secondary font-bold">FP</span>? Nuestro equipo te atenderá en menos de 24h.
             </p>
 
             <div className="space-y-12">
@@ -152,12 +153,11 @@ const Contacto = () => {
                     onChange={(e) => setFormData({...formData, subject: e.target.value})}
                     className="w-full bg-surface-low border border-surface-variant/50 rounded-2xl p-5 text-secondary font-bold focus:outline-none focus:ring-4 focus:ring-primary-container/10 focus:border-primary-container transition-all appearance-none cursor-pointer"
                    >
-                      <option>Solicitar Demostración (Ayuntamientos)</option>
-                      <option>Munilex Academy (Colegios / Academias)</option>
-                      <option>Oposiciones (Soporte al alumno)</option>
-                      <option>Soporte Técnico Especializado</option>
-                      <option>Consultoría de Implantación</option>
-                      <option>Prensa e Información</option>
+                      <option>Ayuntamientos (Plataforma Institucional)</option>
+                      <option>Academias (Planes Corporate)</option>
+                      <option>Oposiciones (Soporte al Opositor)</option>
+                      <option>Centros FP (Formación Profesional)</option>
+                      <option>Otros Asuntos</option>
                    </select>
                 </div>
 
