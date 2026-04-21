@@ -1,5 +1,5 @@
 import Hero from '../../components/Hero';
-import BentoPillars from '../../components/BentoPillars';
+
 import TestimonialsCarousel from '../../components/TestimonialsCarousel';
 import { ArrowUpRight, ShieldCheck, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -13,7 +13,7 @@ const Home = () => {
       
 
 
-      <BentoPillars />
+
 
       {/* División Explicativa de las Variantes */}
       <section className="py-32 bg-white relative overflow-hidden">
