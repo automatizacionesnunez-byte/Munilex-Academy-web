@@ -6,7 +6,7 @@ const Contacto = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'Solicitar Demostración (Ayuntamientos)',
+    subject: 'Ayuntamientos (Plataforma Institucional)',
     message: ''
   });
 
@@ -16,19 +16,27 @@ const Contacto = () => {
     e.preventDefault();
     setStatus('sending');
 
-    // Nota para el usuario: Para activar el envío REAL, debe configurar EmailJS y CallMeBot.
-    // He preparado la lógica institucional para que solo tenga que añadir sus claves.
-    
     try {
-      // Simulación de envío (Reemplazar con fetch real a EmailJS / CallMeBot API)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // LOGICA PARA WHATSAPP (CallMeBot) y EMAIL:
-      // Envío a: administracion@munilex.es
-      // const whatsappMsg = `🔔 NUEVO CONTACTO MUNILEX:\n👤: ${formData.name}\n📧: ${formData.email}\n📂: ${formData.subject}\n💬: ${formData.message}`;
-      // await fetch(`https://api.callmebot.com/whatsapp.php?phone=34605392912&text=${encodeURIComponent(whatsappMsg)}&apikey=SU_CLAVE_AQUI`);
+      // Configuración de Formspree - Enviando a administracion@munilex.es
+      const response = await fetch('https://formspree.io/f/mqakvjge', { // Reutilizando el mismo para pruebas, el usuario puede cambiarlo
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `Nuevo contacto MUNILEX: ${formData.subject}`,
+          nombre: formData.name,
+          email: formData.email,
+          asunto: formData.subject,
+          mensaje: formData.message
+        })
+      });
 
-      setStatus('success');
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
     } catch (error) {
       console.error(error);
       setStatus('error');
@@ -48,7 +56,7 @@ const Contacto = () => {
           <h2 className="text-4xl md:text-5xl font-black text-secondary tracking-tighter mb-6 italic">¡Solicitud Enviada!</h2>
           <p className="text-xl text-on-surface-variant font-medium leading-relaxed mb-10">
             Gracias, <span className="text-primary-container font-black">{formData.name}</span>. Hemos recibido su mensaje. 
-            El sistema ha notificado a nuestro equipo jurídico mediante <span className="font-bold text-secondary">WhatsApp</span> y <span className="font-bold text-secondary">Email</span> en tiempo real.
+            Nuestro equipo le contactará en menos de 24h a <span className="font-bold text-secondary">{formData.email}</span>.
           </p>
           <button 
             onClick={() => setStatus('idle')}
@@ -181,6 +189,7 @@ const Contacto = () => {
                 )}
 
                 <button 
+                  type="submit"
                   disabled={status === 'sending'}
                   className={`w-full py-6 text-white font-black rounded-[2rem] text-xl shadow-premium transition-all flex items-center justify-center gap-4 group ${status === 'sending' ? 'bg-surface-variant animate-pulse' : 'bg-primary hover:shadow-2xl hover:bg-primary-container'}`}
                 >
