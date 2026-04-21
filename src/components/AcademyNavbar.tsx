@@ -89,7 +89,7 @@ const AcademyNavbar = () => {
         <div className="flex items-center gap-2 xl:gap-4">
           <a 
             href="https://munilex.lovable.app/auth/login"
-            className="text-[10px] font-black uppercase tracking-widest text-[#d4af37] px-4 py-2 hover:bg-white/5 rounded-lg transition-all"
+            className="text-[10px] font-black uppercase tracking-widest text-[#d4af37] border border-[#d4af37]/40 px-6 py-2.5 rounded-xl hover:bg-[#d4af37] hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.05)]"
           >
             ACCEDER
           </a>
