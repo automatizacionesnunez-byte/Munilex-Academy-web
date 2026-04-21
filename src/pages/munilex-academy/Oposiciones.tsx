@@ -56,8 +56,23 @@ const Oposiciones = () => {
         </div>
       </section>
 
+      {/* Method Title Section */}
+      <section className="bg-[#131313] py-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+           <motion.div 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="text-center"
+           >
+              <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-4 leading-none">Nuestro método de trabajo:</h2>
+              <div className="text-[#d4af37] italic font-black text-3xl md:text-5xl uppercase tracking-tighter">¿Por qué funcionamos?</div>
+           </motion.div>
+        </div>
+      </section>
+
       {/* Features Grid */}
-      <section className="py-32 bg-[#0E0E0E] relative overflow-hidden">
+      <section className="py-24 bg-[#0E0E0E] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -123,11 +138,11 @@ const Oposiciones = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "Habilitados Nacionales", tag: "Administración Local", to: "/academy/habilitados", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee70?auto=format&fit=crop&q=80&w=400" },
-              { name: "Policía Nacional", tag: "Escala Básica", to: "/academy/policia", img: "https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&q=80&w=400" },
-              { name: "Administrativo AGE", tag: "Estado (C1/C2)", to: "/academy/age", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400" },
-              { name: "Ayudantes IIPP", tag: "Instituciones Penitenciarias", to: "/academy/iipp", img: "https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&q=80&w=400" },
-              { name: "Guardia Civil", tag: "Cabos y Guardias", to: "/academy/guardiacivil", img: "https://images.unsplash.com/photo-1585822797371-2a62886a86c6?auto=format&fit=crop&q=80&w=400" }
+              { name: "Habilitados Nacionales", tag: "Administración Local", to: "/academy/habilitados", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee70?auto=format&fit=crop&q=80&w=600" },
+              { name: "Policía Nacional", tag: "Escala Básica", to: "/academy/policia", img: "https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&q=80&w=600" },
+              { name: "Administrativo AGE", tag: "Estado (C1/C2)", to: "/academy/age", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" },
+              { name: "Ayudantes IIPP", tag: "Instituciones Penitenciarias", to: "/academy/iipp", img: "https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&q=80&w=600" },
+              { name: "Guardia Civil", tag: "Cabos y Guardias", to: "/academy/guardiacivil", img: "https://images.unsplash.com/photo-1585822797371-2a62886a86c6?auto=format&fit=crop&q=80&w=600" }
             ].map((spec, i) => (
               <Link 
                 key={i} 
