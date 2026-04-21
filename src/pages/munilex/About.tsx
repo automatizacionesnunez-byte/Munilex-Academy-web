@@ -210,7 +210,7 @@ const LinkedInLogo = ({ className }: { className?: string }) => (
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <div className="bg-[#002B5B] rounded-[3.5rem] p-24 text-white text-center relative overflow-hidden">
              <h2 className="text-5xl md:text-7xl font-black mb-10 tracking-tighter uppercase">
-               Evolucionemos <br /> <span className="text-[#0066FF]">la gestión</span>
+               <span className="text-white">Evolucionemos</span> <br /> <span className="text-[#0066FF]">la gestión</span>
              </h2>
              <a href={WHATSAPP_LINK} className="inline-flex items-center gap-4 px-12 py-6 bg-white text-[#002B5B] font-black rounded-2xl text-xl shadow-2xl hover:scale-105 transition-transform">
                Hablar con un consultor
