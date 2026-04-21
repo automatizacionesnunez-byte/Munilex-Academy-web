@@ -7,7 +7,7 @@ const AcademyNavbar = () => {
     { name: 'Inicio', path: '/academy' },
     { 
       name: 'Oposiciones', 
-      path: '/academy#rutas',
+      path: '/academy/oposiciones',
       subItems: [
         { name: 'Habilitados Nacionales', path: '/academy/habilitados' },
         { name: 'Administración General (AGE)', path: '/academy/age' },

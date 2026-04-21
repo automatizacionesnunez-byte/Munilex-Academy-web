@@ -20,6 +20,7 @@ import AcademyGuardiaCivil from './pages/munilex-academy/AcademyGuardiaCivil';
 import AcademyCorporate from './pages/munilex-academy/AcademyCorporate';
 import AcademyFP from './pages/munilex-academy/AcademyFP';
 import Academy from './pages/munilex-academy/Academy';
+import Oposiciones from './pages/munilex-academy/Oposiciones';
 import AvisoLegal from './pages/munilex/AvisoLegal';
 import Privacidad from './pages/munilex/Privacidad';
 import Terminos from './pages/munilex/Terminos';
@@ -106,6 +107,7 @@ function App() {
               <Route path="/academy" element={<Academy />} />
               <Route path="/academy/corporate" element={<AcademyCorporate />} />
               <Route path="/academy/fp" element={<AcademyFP />} />
+              <Route path="/academy/oposiciones" element={<Oposiciones />} />
               <Route path="/aviso-legal" element={<AvisoLegal />} />
               <Route path="/privacidad" element={<Privacidad />} />
               <Route path="/terminos" element={<Terminos />} />

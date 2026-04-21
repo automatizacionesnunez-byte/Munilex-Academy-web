@@ -200,7 +200,7 @@ const Academy = () => {
             </div>
             
             <div className="lg:col-span-7 space-y-12">
-              <div className="group cursor-default">
+              <Link to="/academy/oposiciones" className="group block">
                 <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
                   <div className="space-y-4">
                     <h3 className="text-2xl font-black text-white uppercase tracking-tight">Oposiciones</h3>
@@ -209,7 +209,7 @@ const Academy = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Link>
 
               <div className="group cursor-default">
                 <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
@@ -227,7 +227,7 @@ const Academy = () => {
                   <div className="space-y-4">
                     <h3 className="text-2xl font-black text-white uppercase tracking-tight">Centros FP</h3>
                     <p className="text-white/50 font-medium text-lg leading-relaxed max-w-xl">
-                      Digitalización avanzada para módulos de diferentes currículums en Institutos de Formación Profesional, optimizando la asimilación de contenidos teóricos.
+                      Digitalización avanzada para módulos de FP Básica, Grado Medio y Superior. IA entrenada en el currículo oficial para soporte en la creación de textos, tutorización activa y roleplay profesional interactivo.
                     </p>
                   </div>
                 </div>
