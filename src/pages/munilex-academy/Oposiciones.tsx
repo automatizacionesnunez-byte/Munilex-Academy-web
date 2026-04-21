@@ -12,6 +12,11 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import policiaImg from '../../assets/spec/policia.png';
+import secretarioImg from '../../assets/spec/secretario.png';
+import iippImg from '../../assets/spec/iipp.png';
+import guardiaImg from '../../assets/spec/guardia.png';
+
 const Oposiciones = () => {
   return (
     <div className="min-h-screen bg-[#131313] text-[#E5E2E1] font-inter selection:bg-[#d4af37]/30 selection:text-white">
@@ -138,12 +143,12 @@ const Oposiciones = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "Habilitados Nacionales", tag: "Administración Local", to: "/academy/habilitados", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee70?auto=format&fit=crop&q=80&w=600" },
-              { name: "Policía Nacional", tag: "Escala Básica", to: "/academy/policia", img: "https://images.unsplash.com/photo-1517511620798-cec17d428bc0?auto=format&fit=crop&q=80&w=600" },
+              { name: "Habilitados Nacionales", tag: "Administración Local", to: "/academy/habilitados", img: secretarioImg },
+              { name: "Policía Nacional", tag: "Escala Básica", to: "/academy/policia", img: policiaImg },
               { name: "Administrativo AGE", tag: "Estado (C1/C2)", to: "/academy/age", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" },
-              { name: "Ayudantes IIPP", tag: "Instituciones Penitenciarias", to: "/academy/iipp", img: "https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&q=80&w=600" },
-              { name: "Guardia Civil", tag: "Cabos y Guardias", to: "/academy/guardiacivil", img: "https://images.unsplash.com/photo-1585822797371-2a62886a86c6?auto=format&fit=crop&q=80&w=600" }
-            ].map((spec, i) => (
+              { name: "Ayudantes IIPP", tag: "Instituciones Penitenciarias", to: "/academy/iipp", img: iippImg },
+              { name: "Guardia Civil", tag: "Cabos y Guardias", to: "/academy/guardiacivil", img: guardiaImg }
+            ].map((spec, i) => (           ].map((spec, i) => (
               <Link 
                 key={i} 
                 to={spec.to}
