@@ -33,7 +33,7 @@ const Home = () => {
               <div className="md:col-span-5 order-2 md:order-1">
                 <div className="aspect-[4/5] bg-slate-100 rounded-[3rem] overflow-hidden shadow-2xl relative">
                   <div className="absolute inset-0 bg-[#002B5B]/10 mix-blend-multiply" />
-                  <img src="https://images.unsplash.com/photo-1564507004663-b6dfb3c824d5?auto=format&fit=crop&q=80&w=2000" alt="Ayuntamiento Típico" className="w-full h-full object-cover" />
+                  <img src="/ayuntamiento_con_bandera.png" alt="Ayuntamiento con Bandera" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="md:col-span-7 order-1 md:order-2">
