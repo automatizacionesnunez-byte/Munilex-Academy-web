@@ -33,19 +33,13 @@ const AcademyNavbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
       <div className="max-w-full mx-auto px-6 md:px-12 py-5 flex justify-between items-center text-[#E5E2E1]">
         <Link to="/academy" className="flex items-center gap-3 group mr-4 xl:mr-10">
-          <div className="flex items-center gap-3 group transition-transform hover:-translate-y-0.5">
-            {/* Logo Icon (Optional/Subtle) */}
-            <div className="hidden sm:flex w-8 h-8 bg-[#d4af37] rounded-lg items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-              <GraduationCap className="w-5 h-5 text-[#241a00]" />
-            </div>
-            <div className="flex flex-col text-left">
-              <span className="text-xl lg:text-2xl font-black tracking-tighter leading-none text-white uppercase">
-                MUNILEx
-              </span>
-              <span className="text-[10px] lg:text-[11px] font-black uppercase tracking-[0.45em] text-[#d4af37] ml-0.5 mt-1 leading-none">
-                ACADEMY
-              </span>
-            </div>
+          <div className="flex flex-col text-left transition-transform hover:-translate-y-0.5 group">
+            <span className="text-2xl lg:text-[28px] font-black tracking-tighter leading-none text-white uppercase italic">
+              MUNILEx
+            </span>
+            <span className="text-2xl lg:text-[28px] font-black uppercase tracking-tighter text-[#d4af37] leading-none">
+              ACADEMY
+            </span>
           </div>
         </Link>
         
