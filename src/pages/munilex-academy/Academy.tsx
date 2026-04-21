@@ -249,7 +249,7 @@ const Academy = () => {
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-10 uppercase"
+              className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1] tracking-tighter mb-10 uppercase"
             >
               LA REVOLUCIÓN DEL <br/>
               <span className="italic text-[#d4af37]">APRENDIZAJE</span>

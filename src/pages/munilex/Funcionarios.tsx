@@ -67,22 +67,13 @@ const Funcionarios = () => {
         <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#002B5B 0.5px, transparent 0.5px)', backgroundSize: '20px 20px' }} />
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
-           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-[#002B5B] font-black uppercase tracking-[0.4em] text-[9px] mb-8 block opacity-40"
-          >
-            MuniLex Función Pública
-          </motion.div>
-
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-7xl md:text-8xl lg:text-9xl font-black text-[#002B5B] leading-[0.85] tracking-tighter mb-14 uppercase"
+            className="text-4xl md:text-6xl lg:text-7xl font-black text-[#002B5B] leading-[1] tracking-tighter mb-14 uppercase max-w-5xl mx-auto"
           >
-            Soluciones <br/>
-            <span className="italic text-[#0066FF]">a Medida</span>
+            Soluciones a medida para la <span className="italic text-[#0066FF]">transformación del funcionariado</span> del municipio blindado a un solo clic
           </motion.h1>
 
           <motion.p 
@@ -117,7 +108,7 @@ const Funcionarios = () => {
              <h3 className="text-[#002B5B] font-black uppercase tracking-[0.4em] text-[10px] mb-6 block opacity-40">
               Generalismo vs Excelencia
             </h3>
-            <h2 className="text-4xl md:text-7xl font-black text-[#002B5B] uppercase tracking-tighter leading-[0.9]">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#002B5B] uppercase tracking-tighter leading-[1]">
               El Flujo <span className="text-[#0066FF] italic">Institucional</span>
             </h2>
           </div>
@@ -196,7 +187,7 @@ const Funcionarios = () => {
       <section className="py-60 px-6 md:px-8 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto">
           <div className="mb-32">
-             <h2 className="text-6xl md:text-8xl font-black text-[#002B5B] uppercase tracking-tighter leading-[0.85]">
+             <h2 className="text-4xl md:text-6xl font-black text-[#002B5B] uppercase tracking-tighter leading-[1]">
               Descubre los pilares <br/>
               <span className="italic text-[#0066FF]">de nuestro funcionamiento</span>
             </h2>
@@ -296,7 +287,7 @@ const Funcionarios = () => {
       <section className="py-40 px-6 md:px-8 bg-white border-t border-slate-50 overflow-hidden relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-32">
-            <h2 className="text-5xl md:text-8xl font-black uppercase leading-[0.85] tracking-tighter text-[#002B5B]">
+            <h2 className="text-4xl md:text-6xl font-black uppercase leading-[1] tracking-tighter text-[#002B5B]">
               La Transformación <br/>
               <span className="text-[#0066FF] italic">del Funcionario</span>
             </h2>
@@ -385,7 +376,7 @@ const Funcionarios = () => {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             whileInView={{ opacity: [0, 1], y: [20, 0] }}
-            className="text-6xl md:text-9xl font-black text-[#002B5B] uppercase tracking-tighter mb-24 text-center leading-[0.9]"
+            className="text-4xl md:text-7xl font-black text-[#002B5B] uppercase tracking-tighter mb-24 text-center leading-[1]"
           >
             Tu municipio, blindado <br/>
             <span className="italic text-[#0066FF]">a un solo clic.</span>
