@@ -1,87 +1,19 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Zap, CheckCircle, ArrowRight, Brain, FileText, Smartphone, X, ChevronRight, Scale, Landmark, FileCheck, Lock, Shield, Dumbbell, Languages, Building2, Clock, Target, TrendingUp } from 'lucide-react';
+import { 
+  Zap, 
+  ArrowRight, 
+  Brain, 
+  Clock, 
+  Target, 
+  Scale, 
+  Building2, 
+  TrendingUp,
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Academy = () => {
-
-  const [selectedRoute, setSelectedRoute] = useState<null | string>(null);
-
-
-
-
-  const routeDetails: Record<string, any> = {
-    habilitados: {
-      title: "Habilitados Nacionales",
-      subtitle: "Secretaría e Intervención",
-      description: "Dominio absoluto del marco legal municipal con asistencia de IA para informes y fiscalización.",
-      features: [
-        { icon: <Scale />, title: "Informes de Secretaría", desc: "Generación de informes de legalidad basados en jurisprudencia TS y TC." },
-        { icon: <Landmark />, title: "Acuerdos y Decretos", desc: "Redacción asistida de borradores para Plenos y Juntas de Gobierno." },
-        { icon: <FileCheck />, title: "PCAP y PPT", desc: "Soporte completo en la fiscalización de pliegos de contratación pública." },
-        { icon: <Zap />, title: "Urbanismo", desc: "Tramitación de expedientes de licencias y planeamiento urbanístico." }
-      ]
-    },
-    auxiliar_age: {
-      title: "Auxiliar Administrativo AGE",
-      subtitle: "Cuerpo General Auxiliar (C2)",
-      description: "Enfoque operativo: apoyo de oficina, registro y tramitación básica.",
-      features: [
-        { icon: <Smartphone />, title: "Ofimática Elite", desc: "Preparación intensiva para Windows y Office con simulaciones reales." },
-        { icon: <Brain />, title: "Psicotécnicos", desc: "Batería infinita de tests de lógica, cálculo y aptitud verbal." },
-        { icon: <Zap />, title: "Admin. Electrónica", desc: "Dominio de herramientas de tramitación digital y atención al ciudadano." },
-        { icon: <CheckCircle />, title: "Cuestionarios Rápidos", desc: "Tests de 30 preguntas para repasos dinámicos diarios." }
-      ]
-    },
-    administrativo_age: {
-      title: "Administrativo del Estado",
-      subtitle: "Cuerpo General Administrativo (C1)",
-      description: "Gestión administrativa, personal y presupuestaria avanzada.",
-      features: [
-        { icon: <FileText />, title: "Casos Prácticos", desc: "Resolución de supuestos ligados al programa con mapas normativos." },
-        { icon: <Scale />, title: "Derecho Administrativo", desc: "Esquemas detallados de procedimiento administrativo y financiero." },
-        { icon: <Brain />, title: "Gestión de Personal", desc: "Todo sobre el régimen del personal al servicio de las AAPP." },
-        { icon: <Landmark />, title: "Organización de Oficinas", desc: "Pautas de gestión táctica en dependencias públicas." }
-      ]
-    },
-    policia: {
-      title: "Policía Nacional",
-      subtitle: "Escala Básica",
-      description: "Preparación multifactorial: jurídica, social, física y psicológica.",
-      features: [
-        { icon: <Shield />, title: "Ciencias Jurídicas", desc: "Temario legal actualizado con foco en Derecho Penal y Procesal." },
-        { icon: <Brain />, title: "Psicotécnicos Avanzados", desc: "Baterías infinitas de inteligencia lógica, espacial, verbal y numérica." },
-        { icon: <Dumbbell />, title: "Planificación Física", desc: "Seguimiento de marcas y preparación específica para las pruebas." },
-        { icon: <CheckCircle />, title: "Exclusiones Médicas", desc: "Control y asesoramiento preventivo sobre el cuadro de exclusiones." }
-      ]
-    },
-    guardia_civil: {
-      title: "Guardia Civil",
-      subtitle: "Escala de Cabos y Guardias",
-      description: "Mezcla fuerte de teoría jurídica, idiomas y aptitudes físicas.",
-      features: [
-        { icon: <Languages />, title: "Gramática e Inglés", desc: "Módulos específicos de lengua española, ortografía e idioma extranjero." },
-        { icon: <Landmark />, title: "Derechos Humanos", desc: "Estudio profundo de la Constitución y tratados internacionales." },
-        { icon: <Zap />, title: "Teórico-Práctico", desc: "Simulacros de 140 minutos integrando todas las subpruebas." },
-        { icon: <Dumbbell />, title: "Agilidad y Natación", desc: "Planificación para los 2.000m, agilidad y soltura acuática." }
-      ]
-    },
-    iipp: {
-      title: "Instituciones Penitenciarias",
-      subtitle: "Cuerpo de Ayudantes",
-      description: "Especialización en derecho penitenciario y conducta humana.",
-      features: [
-        { icon: <Lock />, title: "Derecho Penitenciario", desc: "El núcleo duro: LOGP, Reglamentos y ejecución penal detallada." },
-        { icon: <Brain />, title: "Conducta Humana", desc: "Psicología aplicada y dinámica social en el medio penitenciario." },
-        { icon: <FileText />, title: "Supuestos Prácticos", desc: "8 supuestos por simulacro para dominar la aplicación normativa." },
-        { icon: <CheckCircle />, title: "Mapas de Régimen", desc: "Esquemas de organización y tratamiento penitenciario." }
-      ]
-    }
-  };
-
-
-
   return (
     <div className="min-h-screen bg-[#131313] text-[#E5E2E1] font-inter selection:bg-[#d4af37]/30 selection:text-white">
       <Helmet>
@@ -89,171 +21,202 @@ const Academy = () => {
         <meta name="description" content="Munilex Academy: La academia de oposiciones de nueva generación impulsada por Inteligencia Artificial. Temarios siempre actualizados, simulacros infinitos y preparación de élite." />
       </Helmet>
 
-      {/* Sidebar Detail View */}
-      <AnimatePresence>
-        {selectedRoute && (
-          <>
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedRoute(null)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-md z-[60]"
-            />
-            <motion.div 
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-full max-w-xl bg-[#131313] text-[#E5E2E1] border-l border-[#353534] z-[70] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-y-auto"
-            >
-              <div className="sticky top-0 bg-[#131313]/90 backdrop-blur-xl px-8 py-6 border-b border-[#353534] flex justify-between items-center z-10">
-                <div>
-                  <h4 className="text-white font-bold text-xl tracking-tight">Detalle de Ruta</h4>
-                </div>
-                <button 
-                  onClick={() => setSelectedRoute(null)}
-                  className="p-2 hover:bg-[#2A2A2A] rounded-full transition-colors text-[#E5E2E1]/70 hover:text-white"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              <div className="p-10">
-                <div className="text-xs font-bold uppercase tracking-[0.15em] text-[#d4af37] mb-3">
-                  {routeDetails[selectedRoute].subtitle}
-                </div>
-                <h2 className="text-3xl font-black text-white tracking-tight mb-6 leading-tight">
-                  {routeDetails[selectedRoute].title}
-                </h2>
-                <p className="text-[0.95rem] text-[#E5E2E1]/80 leading-relaxed mb-10">
-                  {routeDetails[selectedRoute].description}
-                </p>
-
-                <div className="space-y-4">
-                  {routeDetails[selectedRoute].features.map((feature: any, idx: number) => (
-                    <motion.div 
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.1 + idx * 0.05 }}
-                      key={idx} 
-                      className="flex gap-5 p-5 rounded-2xl bg-[#1C1B1B] border border-[#353534]/50 hover:border-[#d4af37]/30 transition-colors group"
-                    >
-                      <div className="w-12 h-12 bg-[#2A2A2A] rounded-xl flex items-center justify-center text-[#d4af37]">
-                        {feature.icon}
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-bold text-white tracking-tight mb-1 text-sm">{feature.title}</div>
-                        <p className="text-[0.85rem] text-[#E5E2E1]/70 leading-relaxed">{feature.desc}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                <div className="mt-12">
-                  <a 
-                    href="https://munilex.lovable.app/auth/register"
-                    className="w-full py-4 bg-gradient-to-r from-[#f2ca50] to-[#d4af37] text-[#241a00] font-bold rounded-xl text-md hover:opacity-90 transition-opacity flex items-center justify-center gap-3 group"
-                  >
-                    Empezar Preparación
-                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                  <p className="text-center mt-4 text-xs font-medium text-[#E5E2E1]/50">
-                    Acceso inmediato al entorno de estudio Munilex
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-
-      {/* Hero Section - Simplified 3 Columns */}
+      {/* Hero Section */}
       <section className="relative pt-48 pb-32 md:pt-60 md:pb-40 px-6 md:px-8 overflow-hidden bg-[#131313]">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#d4af37 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }} />
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#d4af37]/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/2 -left-32 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-20 uppercase"
+          >
+            LA REVOLUCIÓN DEL <br/>
+            <span className="italic text-[#d4af37]">APRENDIZAJE</span>
+          </motion.h1>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1] tracking-tighter mb-10 uppercase"
-            >
-              LA REVOLUCIÓN DEL <br/>
-              <span className="italic text-[#d4af37]">APRENDIZAJE</span>
-            </motion.h1>
+          {/* 3 Cards in Hero */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
+            {[
+              { 
+                title: "Oposiciones", 
+                subtitle: "Preparación de Élite", 
+                to: "/academy/oposiciones",
+                desc: "Tests adaptativos, analítica avanzada y tutoría 24/7 para tu plaza.",
+                icon: <Zap className="w-5 h-5" />
+              },
+              { 
+                title: "Corporate", 
+                subtitle: "Planes Escalables", 
+                to: "/academy/corporate",
+                desc: "Planes Iniciación, Marca o Ecosistema a medida para academias.",
+                icon: <Building2 className="w-5 h-5" />
+              },
+              { 
+                title: "Centros FP", 
+                subtitle: "Educación Dual", 
+                to: "/academy/fp",
+                desc: "Soporte en creación de textos, roleplay IA y tutorización de módulos oficiales.",
+                icon: <Brain className="w-5 h-5" />
+              }
+            ].map((card, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 + i * 0.1 }}
+                className="group"
+              >
+                <Link to={card.to} className="block p-8 bg-[#1C1B1B] border border-white/5 rounded-[2.5rem] hover:border-[#d4af37]/30 transition-all h-full relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#d4af37]/5 blur-3xl rounded-full" />
+                  <div className="w-12 h-12 bg-[#2A2A2A] rounded-2xl flex items-center justify-center text-[#d4af37] mb-6 group-hover:bg-[#d4af37] group-hover:text-black transition-all">
+                    {card.icon}
+                  </div>
+                  <div className="text-[10px] font-black text-[#d4af37] uppercase tracking-[0.2em] mb-2">{card.subtitle}</div>
+                  <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-4 group-hover:text-[#d4af37] transition-colors">{card.title}</h3>
+                  <p className="text-white/40 text-sm font-medium leading-relaxed">{card.desc}</p>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Vertientes Academy - Narrative Approach */}
-      <section className="py-40 bg-[#131313]">
+      {/* Vertientes Section */}
+      <section className="py-40 bg-[#0E0E0E]">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="grid lg:grid-cols-12 gap-20 items-center">
-            <div className="lg:col-span-12">
-               <div className="text-[#d4af37] font-black uppercase tracking-[0.4em] text-[10px] mb-8 block">Innovación Educativa</div>
-               <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
-                Nuestras <span className="text-[#d4af37] italic">Líneas de Valor</span>
-              </h2>
-            </div>
+          <div className="flex flex-col gap-32">
             
-            <div className="lg:col-span-7 space-y-12">
-              <Link to="/academy/oposiciones" className="group block">
-                <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Oposiciones</h3>
-                    <p className="text-white/50 font-medium text-lg leading-relaxed max-w-xl">
-                      Plataformas verticales enfocadas al opositor independiente. Ecosistemas de alto rendimiento para cuerpos como Habilitados Nacionales, Policía Nacional o IIPP.
-                    </p>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to="/academy/corporate" className="group block">
-                <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Corporate (Academias)</h3>
-                    <p className="text-white/50 font-medium text-lg leading-relaxed max-w-xl">
-                      Soluciones de marca blanca escalables en tres niveles: Iniciación, Marca propia o Ecosistema educativo a medida. Digitalice su academia con tecnología de élite en tiempo récord.
-                    </p>
-                  </div>
-                </div>
-              </Link>
-
-              <div className="group cursor-default">
-                <div className="flex border-l-4 border-white/5 pl-8 group-hover:border-[#d4af37] transition-all py-2">
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Centros FP</h3>
-                    <p className="text-white/50 font-medium text-lg leading-relaxed max-w-xl">
-                      Digitalización avanzada para módulos de FP Básica, Grado Medio y Superior. IA entrenada en el currículo oficial para soporte en la creación de textos, tutorización activa y roleplay profesional interactivo.
-                    </p>
-                  </div>
-                </div>
+            {/* Oposiciones Vertical */}
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div>
+                <motion.div 
+                   initial={{ opacity: 0, x: -20 }}
+                   whileInView={{ opacity: 1, x: 0 }}
+                   className="inline-block px-4 py-2 bg-[#d4af37]/10 border border-[#d4af37]/20 rounded-full text-[#d4af37] text-[10px] font-black uppercase tracking-widest mb-8"
+                >
+                  PREPARACIÓN DIRECTA
+                </motion.div>
+                <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+                   MUNILEx <br/>
+                   <span className="italic text-[#d4af37]">OPOSICIONES</span>
+                </h2>
+                <p className="text-white/50 text-xl font-medium leading-relaxed mb-10 max-w-xl">
+                  Nuestra plataforma para opositores independientes. Tecnología de precisión diseñada para maximizar el rendimiento académico mediante el análisis de progreso y un motor inagotable de pruebas, simulacros y material didáctico avanzado.
+                </p>
+                <ul className="space-y-4 mb-12 text-sm font-bold uppercase tracking-tight text-white/70">
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Entrenamiento basado en estricta jurisprudencia.
+                   </li>
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Tests adaptativos con IA en tiempo real.
+                   </li>
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Seguimiento de racha y gamificación de élite.
+                   </li>
+                </ul>
+                <Link to="/academy/oposiciones" className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
+                   Explorar Oposiciones <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                </Link>
+              </div>
+              <div className="relative group">
+                 <div className="absolute -inset-4 bg-[#d4af37]/10 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/20 transition-colors" />
+                 <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800" alt="Oposiciones" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
               </div>
             </div>
 
-            <div className="lg:col-span-5 h-full min-h-[400px]">
-              <div className="bg-[#1C1B1B] border border-white/10 rounded-[3rem] p-12 h-full flex flex-col justify-center relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#d4af37]/5 rounded-full blur-[60px]" />
-                <div className="relative z-10 space-y-8">
-                  <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center text-[#d4af37]">
-                    <Zap className="w-8 h-8" />
-                  </div>
-                  <h4 className="text-3xl font-black text-white tracking-tighter uppercase leading-[1]">Tecnología <br/> de Élite</h4>
-                  <p className="text-white/40 font-medium leading-relaxed">
-                    Unificamos la IA más avanzada con metodologías docentes probadas para maximizar cada segundo de estudio.
-                  </p>
-                </div>
+            {/* Corporate Vertical */}
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div className="order-2 lg:order-1 relative group text-right">
+                 <div className="absolute -inset-4 bg-white/5 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/10 transition-colors" />
+                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Corporate" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
+              </div>
+              <div className="order-1 lg:order-2">
+                 <motion.div 
+                   initial={{ opacity: 0, x: 20 }}
+                   whileInView={{ opacity: 1, x: 0 }}
+                   className="inline-block px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white text-[10px] font-black uppercase tracking-widest mb-8"
+                >
+                  SOLUCIONES B2B
+                </motion.div>
+                <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+                   MUNILEx <br/>
+                   <span className="italic text-[#d4af37]">CORPORATE</span>
+                </h2>
+                <p className="text-white/50 text-xl font-medium leading-relaxed mb-10 max-w-xl">
+                  Soluciones de marca blanca escalables en tres niveles: Iniciación, Marca propia o Ecosistema educativo a medida. Integramos nuestro motor de IA como herramienta pedagógica de alto prestigio en academias privadas.
+                </p>
+                <ul className="space-y-4 mb-12 text-sm font-bold uppercase tracking-tight text-white/70">
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Acuerdos B2B de licenciamiento personalizado.
+                   </li>
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Implementación en tiempo récord (desde 1 semana).
+                   </li>
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Soporte técnico especializado 1:1.
+                   </li>
+                </ul>
+                <Link to="/academy/corporate" className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
+                   Ver Planes Corporate <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                </Link>
               </div>
             </div>
+
+            {/* FP Vertical */}
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div>
+                <motion.div 
+                   initial={{ opacity: 0, x: -20 }}
+                   whileInView={{ opacity: 1, x: 0 }}
+                   className="inline-block px-4 py-2 bg-[#d4af37]/10 border border-[#d4af37]/20 rounded-full text-[#d4af37] text-[10px] font-black uppercase tracking-widest mb-8"
+                >
+                  INSTITUTOS Y CENTROS
+                </motion.div>
+                <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+                   MUNILEx <br/>
+                   <span className="italic text-[#d4af37]">FORMACIÓN PROF.</span>
+                </h2>
+                <p className="text-white/50 text-xl font-medium leading-relaxed mb-10 max-w-xl">
+                  Digitalización avanzada para módulos de FP Básica, Grado Medio y Superior. Provisión de plataforma centralizada para dar soporte a los diferentes currículos de Formación Profesional.
+                </p>
+                <ul className="space-y-4 mb-12 text-sm font-bold uppercase tracking-tight text-white/70">
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Soporte en la creación dinámica de textos didácticos.
+                   </li>
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Tutorización activa mediante IA experta.
+                   </li>
+                   <li className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      Roleplay profesional interactivo con escenarios reales.
+                   </li>
+                </ul>
+                <Link to="/academy/fp" className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
+                   Explorar Proyectos FP <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                </Link>
+              </div>
+              <div className="relative group">
+                 <div className="absolute -inset-4 bg-white/5 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/10 transition-colors" />
+                 <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800" alt="Centros FP" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Specialties Sliding Carousel */}
-      <section className="py-24 bg-white border-y border-slate-100 overflow-hidden" id="rutas">
+      {/* Carousel Specialties */}
+      <section className="py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8 mb-16">
           <div className="text-center">
              <h2 className="text-3xl md:text-5xl font-black text-[#131313] uppercase tracking-tighter mb-4">Especialidades Activas</h2>
@@ -287,7 +250,7 @@ const Academy = () => {
         </div>
       </section>
 
-      {/* Why Choose Us - Results Focused */}
+      {/* Why Choose Us */}
       <section className="py-40 bg-[#0E0E0E] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-32">
