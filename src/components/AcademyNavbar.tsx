@@ -86,16 +86,17 @@ const AcademyNavbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 xl:gap-4">
+        <div className="flex items-center gap-3">
           <a 
             href="https://munilex.lovable.app/auth/login"
-            className="text-[10px] font-black uppercase tracking-widest text-[#d4af37] border border-[#d4af37]/40 px-6 py-2.5 rounded-xl hover:bg-[#d4af37] hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.05)]"
+            className="bg-[#d4af37] text-black px-6 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
           >
             ACCEDER
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
           <a 
             href="https://munilex.lovable.app/auth/register"
-            className="bg-[#d4af37] text-black px-5 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
+            className="bg-[#d4af37] text-black px-6 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
           >
             PRUEBA GRATIS
             <ArrowUpRight className="w-3.5 h-3.5" />
