@@ -239,13 +239,11 @@ const Academy = () => {
       {/* Hero Section - Simplified 3 Columns */}
       <section className="relative pt-48 pb-32 md:pt-60 md:pb-40 px-6 md:px-8 overflow-hidden bg-[#131313]">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#d4af37 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }} />
-        
-        {/* Glows */}
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#d4af37]/5 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-1/2 -left-32 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-24">
+          <div className="text-center">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -255,6 +253,8 @@ const Academy = () => {
               <span className="italic text-[#d4af37]">APRENDIZAJE</span>
             </motion.h1>
           </div>
+        </div>
+      </section>
 
       {/* Vertientes Academy - Narrative Approach */}
       <section className="py-40 bg-[#131313]">
@@ -319,6 +319,7 @@ const Academy = () => {
           </div>
         </div>
       </section>
+
       {/* Specialties Sliding Carousel */}
       <section className="py-24 bg-white border-y border-slate-100 overflow-hidden" id="rutas">
         <div className="max-w-7xl mx-auto px-6 md:px-8 mb-16">
