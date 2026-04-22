@@ -23,7 +23,6 @@ const Navbar = () => {
       subItems: [
         { name: 'Munilex Función Pública', path: '/funcionarios' },
         { name: 'Munilex Academy', path: '/academy' },
-        { name: 'Munilex Corporate', path: '/corporate' },
       ]
     },
     { name: 'Precios', path: '/precios' },
