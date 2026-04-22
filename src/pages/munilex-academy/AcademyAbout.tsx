@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Brain, Scale, ShieldCheck, Mail, Globe, Code } from 'lucide-react';
+import { Brain, Scale, ShieldCheck, Mail, Globe, Code, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import joseMariaImg from '../../assets/jose_maria.jpg';
 import franciscoMarinImg from '../../assets/francisco_marin.jpg';
@@ -66,7 +66,13 @@ const AcademyAbout = () => {
       </div>
 
       {/* Methodology Section */}
-      <div className="max-w-7xl mx-auto mb-32 px-6 md:px-8">
+      <div className="max-w-7xl mx-auto mb-40 px-6 md:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-xl md:text-2xl font-black text-[#d4af37] uppercase tracking-widest leading-tight">
+            Nuestros valores a la hora de formar <br className="hidden md:block" />
+            a los nuevos funcionarios
+          </h2>
+        </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             { 
@@ -83,6 +89,46 @@ const AcademyAbout = () => {
               icon: <ShieldCheck className="w-8 h-8" />, 
               title: "Compromiso A1", 
               desc: "Preparamos a los líderes del mañana en la administración pública con herramientas de hoy." 
+            }
+          ].map((item, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="bg-[#1C1B1B] border border-[#353534]/50 p-10 rounded-[2.5rem] hover:border-[#d4af37]/30 transition-all group"
+            >
+              <div className="text-[#d4af37] mb-8 bg-[#2A2A2A] w-16 h-16 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">{item.icon}</div>
+              <h3 className="text-2xl font-black mb-4 text-white uppercase tracking-tight">{item.title}</h3>
+              <p className="text-[#E5E2E1]/60 leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Academy Mission Section */}
+      <div className="max-w-7xl mx-auto mb-40 px-6 md:px-8">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4">Nuestra Misión <span className="text-[#d4af37]">para Academias</span></h2>
+          <p className="text-[#E5E2E1]/60 font-medium text-lg italic">Redefiniendo el estándar de preparación institucional.</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            { 
+              icon: <Brain className="w-8 h-8" />, 
+              title: "IA Siglo XXI", 
+              desc: "Utilizamos la IA para adaptar las metodologías de estudio a los desafíos y la velocidad de aprendizaje del siglo XXI." 
+            },
+            { 
+              icon: <Globe className="w-8 h-8" />, 
+              title: "Transparencia", 
+              desc: "Potenciamos la confianza mediante procesos claros y trazabilidad total en cada respuesta del temario." 
+            },
+            { 
+              icon: <Users className="w-8 h-8" />, 
+              title: "Enfoque Humano", 
+              desc: "Entendemos que la tecnología es un medio; el fin es una personalización que respete la psicología del opositor." 
             }
           ].map((item, idx) => (
             <motion.div 
