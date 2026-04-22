@@ -11,6 +11,7 @@ import {
   TrendingUp,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getAcademyPath } from '../../config/domainConfig';
 
 import policiaImg from '../../assets/spec/policia.png';
 import iippImg from '../../assets/spec/iipp_new.png';
@@ -46,21 +47,21 @@ const Academy = () => {
               { 
                 title: "Oposiciones", 
                 subtitle: "Preparación de Élite", 
-                to: "/academy/oposiciones",
+                to: getAcademyPath('/oposiciones'),
                 desc: "Tests adaptativos, analítica avanzada y tutoría 24/7 para tu plaza.",
                 icon: <Zap className="w-5 h-5" />
               },
               { 
                 title: "Corporate", 
                 subtitle: "Planes Escalables", 
-                to: "/academy/corporate",
+                to: getAcademyPath('/corporate'),
                 desc: "Planes Iniciación, Marca o Ecosistema a medida para academias.",
                 icon: <Building2 className="w-5 h-5" />
               },
               { 
                 title: "Centros FP", 
                 subtitle: "Educación Dual", 
-                to: "/academy/fp",
+                to: getAcademyPath('/fp'),
                 desc: "Soporte en creación de textos, roleplay IA y tutorización de módulos oficiales.",
                 icon: <Brain className="w-5 h-5" />
               }
@@ -123,13 +124,13 @@ const Academy = () => {
                       Seguimiento de racha y gamificación de élite.
                    </li>
                 </ul>
-                <Link to="/academy/oposiciones" className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
+                <Link to={getAcademyPath('/oposiciones')} className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
                    Explorar Oposiciones <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Link>
               </div>
               <div className="relative group">
                  <div className="absolute -inset-4 bg-[#d4af37]/10 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/20 transition-colors" />
-                 <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800" alt="Oposiciones" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl md:grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800" alt="Oposiciones" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl group-hover:scale-105 transition-all duration-700 h-[500px] w-full object-cover" />
               </div>
             </div>
 
@@ -137,7 +138,7 @@ const Academy = () => {
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               <div className="order-2 lg:order-1 relative group text-right">
                  <div className="absolute -inset-4 bg-white/5 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/10 transition-colors" />
-                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Corporate" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl md:grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Corporate" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl group-hover:scale-105 transition-all duration-700 h-[500px] w-full object-cover" />
               </div>
               <div className="order-1 lg:order-2">
                  <motion.div 
@@ -168,7 +169,7 @@ const Academy = () => {
                       Soporte técnico especializado 1:1.
                    </li>
                 </ul>
-                <Link to="/academy/corporate" className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
+                <Link to={getAcademyPath('/corporate')} className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
                    Ver Planes Corporate <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Link>
               </div>
@@ -205,13 +206,13 @@ const Academy = () => {
                       Roleplay profesional interactivo con escenarios reales.
                    </li>
                 </ul>
-                <Link to="/academy/fp" className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
+                <Link to={getAcademyPath('/fp')} className="inline-flex items-center gap-4 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
                    Explorar Proyectos FP <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Link>
               </div>
               <div className="relative group">
                  <div className="absolute -inset-4 bg-white/5 blur-3xl rounded-[4rem] group-hover:bg-[#d4af37]/10 transition-colors" />
-                 <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800" alt="Centros FP" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl md:grayscale group-hover:grayscale-0 transition-all duration-700 h-[500px] w-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800" alt="Centros FP" className="relative rounded-[3.5rem] border border-white/10 shadow-2xl group-hover:scale-105 transition-all duration-700 h-[500px] w-full object-cover" />
               </div>
             </div>
 
@@ -233,11 +234,11 @@ const Academy = () => {
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex gap-6">
                 {[
-                  { name: "Habilitados Nacionales", tag: "SECRETARÍA / INTERVENCIÓN", img: ayuntamientoReal, to: "/academy/habilitados" },
-                  { name: "Policía Nacional", tag: "ESCALA BÁSICA", img: policiaImg, to: "/academy/policia" },
-                  { name: "Administrativo AGE", tag: "ESTADO (C1/C2)", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400", to: "/academy/age" },
-                  { name: "Ayudantes IIPP", tag: "PRISIONES / PENITENCIARIA", img: iippImg, to: "/academy/iipp" },
-                  { name: "Guardia Civil", tag: "CABOS Y GUARDIAS", img: guardiaImg, to: "/academy/guardiacivil" }
+                  { name: "Habilitados Nacionales", tag: "SECRETARÍA / INTERVENCIÓN", img: ayuntamientoReal, to: getAcademyPath('/habilitados') },
+                  { name: "Policía Nacional", tag: "ESCALA BÁSICA", img: policiaImg, to: getAcademyPath('/policia') },
+                  { name: "Administrativo AGE", tag: "ESTADO (C1/C2)", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=400", to: getAcademyPath('/age') },
+                  { name: "Ayudantes IIPP", tag: "PRISIONES / PENITENCIARIA", img: iippImg, to: getAcademyPath('/iipp') },
+                  { name: "Guardia Civil", tag: "CABOS Y GUARDIAS", img: guardiaImg, to: getAcademyPath('/guardiacivil') }
                 ].map((item, idx) => (
                   <Link key={`${i}-${idx}`} to={item.to} className="inline-block w-[300px] bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow p-6 group">
                     <div className="aspect-video bg-slate-100 rounded-xl mb-4 overflow-hidden">
@@ -292,7 +293,7 @@ const Academy = () => {
           <div className="bg-[#1C1B1B] border border-white/5 p-20 rounded-[4rem] relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-[100px]" />
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-10 relative z-10">¿Listo para <span className="text-[#d4af37] italic">tu plaza?</span></h2>
-            <Link to="/academy/contacto" className="inline-flex items-center gap-4 px-12 py-6 bg-[#d4af37] text-black font-black rounded-2xl text-xl hover:scale-105 transition-transform relative z-10 shadow-2xl shadow-[#d4af37]/20 uppercase tracking-widest">
+            <Link to={getAcademyPath('/contacto')} className="inline-flex items-center gap-4 px-12 py-6 bg-[#d4af37] text-black font-black rounded-2xl text-xl hover:scale-105 transition-transform relative z-10 shadow-2xl shadow-[#d4af37]/20 uppercase tracking-widest">
               Empezar ahora
               <ArrowRight className="w-7 h-7" />
             </Link>

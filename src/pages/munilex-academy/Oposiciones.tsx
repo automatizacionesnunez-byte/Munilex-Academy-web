@@ -11,6 +11,7 @@ import {
   Users
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getAcademyPath } from '../../config/domainConfig';
 
 import policiaImg from '../../assets/spec/policia.png';
 import secretarioImg from '../../assets/spec/secretario_new.png';
@@ -44,7 +45,7 @@ const Oposiciones = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-12"
+            className="text-3xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-12"
           >
             ASEGURA TU <br/>
             <span className="italic text-[#d4af37]">FUTURO PÚBLICO</span>
@@ -70,8 +71,8 @@ const Oposiciones = () => {
              viewport={{ once: true }}
              className="text-center"
            >
-              <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4 leading-none">Nuestro método de trabajo:</h2>
-              <div className="text-[#d4af37] italic font-black text-2xl md:text-4xl uppercase tracking-tighter">¿Por qué funcionamos?</div>
+              <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter mb-4 leading-none">Nuestro método de trabajo:</h2>
+              <div className="text-[#d4af37] italic font-black text-xl md:text-3xl uppercase tracking-tighter">¿Por qué funcionamos?</div>
            </motion.div>
         </div>
       </section>
@@ -143,11 +144,11 @@ const Oposiciones = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "Habilitados Nacionales", tag: "Administración Local", to: "/academy/habilitados", img: secretarioImg },
-              { name: "Policía Nacional", tag: "Escala Básica", to: "/academy/policia", img: policiaImg },
-              { name: "Administrativo AGE", tag: "Estado (C1/C2)", to: "/academy/age", img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" },
-              { name: "Ayudantes IIPP", tag: "Instituciones Penitenciarias", to: "/academy/iipp", img: iippImg },
-              { name: "Guardia Civil", tag: "Cabos y Guardias", to: "/academy/guardiacivil", img: guardiaImg }
+              { name: "Habilitados Nacionales", tag: "Administración Local", to: getAcademyPath('/habilitados'), img: secretarioImg },
+              { name: "Policía Nacional", tag: "Escala Básica", to: getAcademyPath('/policia'), img: policiaImg },
+              { name: "Administrativo AGE", tag: "Estado (C1/C2)", to: getAcademyPath('/age'), img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" },
+              { name: "Ayudantes IIPP", tag: "Instituciones Penitenciarias", to: getAcademyPath('/iipp'), img: iippImg },
+              { name: "Guardia Civil", tag: "Cabos y Guardias", to: getAcademyPath('/guardiacivil'), img: guardiaImg }
             ].map((spec, i) => (
               <Link 
                 key={i} 
@@ -157,7 +158,7 @@ const Oposiciones = () => {
                 <img 
                   src={spec.img} 
                   alt={spec.name} 
-                  className="absolute inset-0 w-full h-full object-cover md:grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-80 md:opacity-40 group-hover:opacity-80" 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700 opacity-80" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent flex flex-col justify-end p-8">
                   <div className="text-[10px] font-black text-[#d4af37] uppercase tracking-[0.2em] mb-2">{spec.tag}</div>
@@ -176,11 +177,11 @@ const Oposiciones = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-[100px]" />
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-10 relative z-10">¿EMPEZAMOS LA <span className="text-[#d4af37] italic">RACHA?</span></h2>
             <div className="flex flex-col md:flex-row gap-6 justify-center relative z-10">
-              <a href="https://munilex.lovable.app/auth/register" className="inline-flex items-center gap-4 px-12 py-6 bg-[#d4af37] text-black font-black rounded-2xl text-xl hover:scale-105 transition-transform shadow-2xl shadow-[#d4af37]/20 uppercase tracking-widest">
+              <a href="https://munilex.lovable.app/auth/opositores/register" className="inline-flex items-center gap-4 px-12 py-6 bg-[#d4af37] text-black font-black rounded-2xl text-xl hover:scale-105 transition-transform shadow-2xl shadow-[#d4af37]/20 uppercase tracking-widest">
                 Crear cuenta gratis
                 <ArrowRight className="w-7 h-7" />
               </a>
-              <Link to="/academy/contacto" className="inline-flex items-center gap-4 px-12 py-6 bg-white/5 text-white font-black rounded-2xl text-xl hover:bg-white/10 border border-white/10 transition-all uppercase tracking-widest">
+              <Link to={getAcademyPath('/contacto')} className="inline-flex items-center gap-4 px-12 py-6 bg-white/5 text-white font-black rounded-2xl text-xl hover:bg-white/10 border border-white/10 transition-all uppercase tracking-widest">
                 Hablar con un tutor
               </Link>
             </div>

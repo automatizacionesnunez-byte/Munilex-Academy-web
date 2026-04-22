@@ -37,7 +37,7 @@ const AcademyGuardiaCivil = () => {
                Escala de Cabos y Guardias
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
+            <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               EL HONOR <br />
               <span className="italic text-[#d4af37]">NUESTRA DIVISA</span>
             </h1>
@@ -91,7 +91,7 @@ const AcademyGuardiaCivil = () => {
                accent: "#10b981"
             },
             {
-               title: "Simulacros IIPP",
+               title: "Simulacros Oficiales",
                desc: "Exámenes de 100 preguntas con la densidad estadística real de los últimos 5 años.",
                icon: <RotateCcw className="w-6 h-6" />,
                accent: "#10b981"

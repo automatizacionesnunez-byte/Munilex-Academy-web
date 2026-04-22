@@ -67,7 +67,7 @@ const Pricing = ({ hideHeader = false }: PricingProps) => {
     }
 
     if (!priceId) {
-      window.location.href = "https://munilex.lovable.app/auth/register";
+      window.location.href = "https://munilex.lovable.app/auth/opositores/register";
       return;
     }
 
@@ -84,7 +84,7 @@ const Pricing = ({ hideHeader = false }: PricingProps) => {
     } catch (error) {
       console.error("Error creating checkout:", error);
       // Fallback to register if checkout fails
-      window.location.href = "https://munilex.lovable.app/auth/register";
+      window.location.href = "https://munilex.lovable.app/auth/opositores/register";
     }
   };
 

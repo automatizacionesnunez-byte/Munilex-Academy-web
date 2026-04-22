@@ -27,7 +27,7 @@ const AcademyPricing = () => {
             <Sparkles className="w-4 h-4 text-[#d4af37] mr-3" />
             <span className="text-[#d4af37] text-[11px] font-black uppercase tracking-[0.2em]">Planes de Alto Rendimiento</span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-10 uppercase">
+          <h1 className="text-3xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter mb-10 uppercase">
             Invierte en <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">Tu Futura Plaza</span>
           </h1>
@@ -102,7 +102,7 @@ const AcademyPricing = () => {
               </ul>
               
               <a 
-                href="https://munilex.lovable.app/auth/register"
+                href="https://munilex.lovable.app/auth/opositores/register"
                 className="w-full py-5 bg-[#2A2A2A] text-white font-black rounded-2xl border border-[#353534] hover:bg-[#353534] transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest text-xs"
               >
                 Empezar Ahora <ArrowRight className="w-4 h-4" />

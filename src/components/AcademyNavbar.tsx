@@ -2,37 +2,39 @@ import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 import { ChevronDown, ArrowUpRight } from 'lucide-react';
 
+import { getAcademyPath } from '../config/domainConfig';
+
 const AcademyNavbar = () => {
   const navItems = [
-    { name: 'Inicio', path: '/academy' },
+    { name: 'Inicio', path: getAcademyPath('/') },
     { 
       name: 'Oposiciones', 
-      path: '/academy/oposiciones',
+      path: getAcademyPath('/oposiciones'),
       subItems: [
-        { name: 'Habilitados Nacionales', path: '/academy/habilitados' },
-        { name: 'Administración General (AGE)', path: '/academy/age' },
-        { name: 'Policía Nacional', path: '/academy/policia' },
-        { name: 'Guardia Civil', path: '/academy/guardiacivil' },
-        { name: 'Instituciones Penitenciarias', path: '/academy/iipp' },
+        { name: 'Habilitados Nacionales', path: getAcademyPath('/habilitados') },
+        { name: 'Administración General (AGE)', path: getAcademyPath('/age') },
+        { name: 'Policía Nacional', path: getAcademyPath('/policia') },
+        { name: 'Guardia Civil', path: getAcademyPath('/guardiacivil') },
+        { name: 'Instituciones Penitenciarias', path: getAcademyPath('/iipp') },
       ]
     },
     { 
       name: 'Institucional', 
-      path: '/academy/corporate',
+      path: getAcademyPath('/corporate'),
       subItems: [
-        { name: 'Corporate (Academias)', path: '/academy/corporate' },
-        { name: 'Centros FP', path: '/academy/fp' },
+        { name: 'Corporate (Academias)', path: getAcademyPath('/corporate') },
+        { name: 'Centros FP', path: getAcademyPath('/fp') },
       ]
     },
-    { name: 'Precios', path: '/academy/precios' },
-    { name: 'Sobre Nosotros', path: '/academy/sobre-nosotros' },
-    { name: 'Contacto', path: '/academy/contacto' },
+    { name: 'Precios', path: getAcademyPath('/precios') },
+    { name: 'Sobre Nosotros', path: getAcademyPath('/sobre-nosotros') },
+    { name: 'Contacto', path: getAcademyPath('/contacto') },
   ];
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353534] font-inter">
       <div className="max-w-full mx-auto px-6 md:px-12 py-5 flex justify-between items-center text-[#E5E2E1]">
-        <Link to="/academy" className="flex items-center gap-3 group mr-4 xl:mr-10">
+        <Link to={getAcademyPath('/')} className="flex items-center gap-3 group mr-4 xl:mr-10">
           <div className="flex flex-col text-left transition-transform hover:-translate-y-0.5 group">
             <span className="text-2xl lg:text-[28px] font-black tracking-tighter leading-none text-white uppercase italic">
               MUNILEx
@@ -88,14 +90,14 @@ const AcademyNavbar = () => {
 
         <div className="flex items-center gap-3">
           <a 
-            href="https://munilex.lovable.app/auth/login"
+            href="https://munilex.lovable.app/auth/opositores/login"
             className="bg-[#d4af37] text-black px-6 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
           >
-            ACCEDER
+            CAMPUS
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
           <a 
-            href="https://munilex.lovable.app/auth/register"
+            href="https://munilex.lovable.app/auth/opositores/register"
             className="bg-[#d4af37] text-black px-6 py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:scale-105 active:scale-95 transition-all text-center flex items-center gap-2"
           >
             PRUEBA GRATIS

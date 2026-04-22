@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Send, MapPin, Phone, Mail, CheckCircle, AlertCircle, RefreshCcw } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import { submitContactForm } from '../../services/contactService';
 
 const AcademyContact = () => {
   const [formData, setFormData] = useState({
@@ -17,29 +18,17 @@ const AcademyContact = () => {
     e.preventDefault();
     setStatus('sending');
 
-    try {
-      // Configuración de Formspree - Enviando a administracion@munilex.es
-      const response = await fetch('https://formspree.io/f/mqakvjge', { // Nota: El usuario debe crear un form en formspree y poner su ID aquí
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          _subject: `Nuevo contacto Academy: ${formData.interest}`,
-          nombre: formData.name,
-          email: formData.email,
-          interes: formData.interest,
-          mensaje: formData.message
-        })
-      });
+    const success = await submitContactForm({
+      nombre: formData.name,
+      email: formData.email,
+      asunto: `Interés en ${formData.interest}`,
+      mensaje: formData.message,
+      vertical: 'Academy'
+    });
 
-      if (response.ok) {
-        setStatus('success');
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error(error);
+    if (success) {
+      setStatus('success');
+    } else {
       setStatus('error');
     }
   };
@@ -54,7 +43,7 @@ const AcademyContact = () => {
         >
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#d4af37]/10 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/2" />
           <CheckCircle className="w-24 h-24 text-[#d4af37] mx-auto mb-10" />
-          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-6 uppercase italic">¡ENVIADO!</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-white tracking-tighter mb-6 uppercase italic">¡ENVIADO!</h2>
           <p className="text-xl text-white/50 font-medium leading-relaxed mb-10">
             Gracias, <span className="text-[#d4af37] font-black">{formData.name}</span>. Hemos recibido tu mensaje. 
             Te contactaremos en menos de 24h a <span className="font-bold text-white">{formData.email}</span>.
@@ -81,7 +70,7 @@ const AcademyContact = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-20">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <h1 className="text-6xl md:text-8xl font-black mb-10 uppercase tracking-tighter leading-[0.85] text-white">
+            <h1 className="text-4xl md:text-6xl font-black mb-10 uppercase tracking-tighter leading-[0.85] text-white">
               Hablemos de <br/>
               <span className="italic text-[#d4af37]">tu futuro</span>
             </h1>
@@ -91,8 +80,9 @@ const AcademyContact = () => {
 
             <div className="space-y-8">
               {[
-                { icon: <Mail className="w-6 h-6" />, label: "Email", value: "administracion@munilex.es" },
-                { icon: <Phone className="w-6 h-6" />, label: "WhatsApp", value: "+34 605 39 29 12" },
+                { icon: <Mail className="w-6 h-6" />, label: "Email General", value: "administracion@munilex.es" },
+                { icon: <Phone className="w-6 h-6" />, label: "Francisco de Paula Marín (CMO)", value: "+34 649 49 05 80" },
+                { icon: <Phone className="w-6 h-6" />, label: "José María Núñez Mejía (CTO)", value: "+34 605 39 29 12" },
                 { icon: <MapPin className="w-6 h-6" />, label: "Ubicación", value: "Madrid, España" }
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-6 group">

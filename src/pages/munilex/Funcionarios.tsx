@@ -91,7 +91,7 @@ const Funcionarios = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <a href="https://munilex.lovable.app/auth/register" className="bg-[#002B5B] text-white py-6 px-16 rounded-2xl font-black uppercase tracking-widest text-xs shadow-2xl hover:bg-[#001D3D] transition-all">
+            <a href="https://munilex.lovable.app/auth/opositores/register" className="bg-[#002B5B] text-white py-6 px-16 rounded-2xl font-black uppercase tracking-widest text-xs shadow-2xl hover:bg-[#001D3D] transition-all">
               Probar herramienta
             </a>
             <Link to="/contacto" className="bg-white border-2 border-[#002B5B] text-[#002B5B] py-6 px-16 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-[#001D3D] hover:text-white hover:border-[#001D3D] transition-all flex items-center justify-center">
@@ -400,7 +400,7 @@ const Funcionarios = () => {
                 Prueba la herramienta que está revolucionando la gestión administrativa local. Acceso instantáneo.
               </p>
               <a 
-                href="https://munilex.lovable.app/auth/register" 
+                href="https://munilex.lovable.app/auth/opositores/register" 
                 className="w-full bg-[#002B5B] text-white py-6 px-8 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-2xl hover:bg-[#001D3D] transition-all flex items-center justify-center gap-4"
               >
                 Probar herramienta

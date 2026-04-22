@@ -32,8 +32,20 @@ const Footer = () => {
         </div>
         <div>
           <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-primary/40">Contacto</h4>
-          <p className="text-primary font-bold mb-2">administracion@munilex.es</p>
-          <p className="text-primary/60 text-sm">C/ Doctor Fleming 12, 10001, Cáceres.</p>
+          <p className="text-primary font-bold mb-2 text-xs opacity-60">ADMINISTRACIÓN</p>
+          <p className="text-primary font-bold mb-4">administracion@munilex.es</p>
+          
+          <div className="space-y-4">
+            <div>
+              <p className="text-primary/40 text-[10px] font-black uppercase tracking-wider">CMO / Jefe de Dirección</p>
+              <p className="text-primary font-bold">Fco. de Paula Marín: +34 649 49 05 80</p>
+            </div>
+            <div>
+              <p className="text-primary/40 text-[10px] font-black uppercase tracking-wider">CTO / Director Técnico</p>
+              <p className="text-primary font-bold">José María Núñez: +34 605 39 29 12</p>
+            </div>
+          </div>
+          <p className="text-primary/60 text-sm mt-8">C/ Doctor Fleming 12, 10001, Cáceres.</p>
           <p className="text-primary/60 text-sm">Disponible en toda España.</p>
         </div>
       </div>

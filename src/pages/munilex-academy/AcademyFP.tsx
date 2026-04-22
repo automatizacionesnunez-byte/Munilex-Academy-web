@@ -12,6 +12,7 @@ import {
   GraduationCap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getAcademyPath } from '../../config/domainConfig';
 
 const AcademyFP = () => {
   const steps = [
@@ -56,7 +57,7 @@ const AcademyFP = () => {
             className="text-center mb-20"
           >
             <div className="text-[#d4af37] font-black uppercase tracking-[0.4em] text-[10px] mb-8 block">Innovación en FP</div>
-            <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-10 uppercase">
+            <h1 className="text-4xl md:text-6xl font-black text-white leading-[0.85] tracking-tighter mb-10 uppercase">
                LA FP DEL <br/>
                <span className="italic text-[#d4af37]">FUTURO CON IA</span>
             </h1>
@@ -96,14 +97,14 @@ const AcademyFP = () => {
                 <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center text-[#d4af37] mb-8">
                   <Zap className="w-8 h-8" />
                 </div>
-                <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter leading-tight mb-8">
                    Tutorización <br/>
                    <span className="italic text-[#d4af37]">Activa 24/7</span>
                 </h2>
                 <p className="text-white/50 text-xl font-medium leading-relaxed mb-10">
                   Nuestra IA no solo responde dudas; guía proactivamente al alumno a través de los módulos de Grado Medio y Superior, identificando áreas de mejora y personalizando el material didáctico en tiempo real.
                 </p>
-                <Link to="/academy/contacto" className="inline-flex items-center gap-3 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
+                <Link to={getAcademyPath('/contacto')} className="inline-flex items-center gap-3 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
                   Saber más <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Link>
               </div>
@@ -135,14 +136,14 @@ const AcademyFP = () => {
                 <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center text-[#d4af37] mb-8">
                   <Users className="w-8 h-8" />
                 </div>
-                <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter leading-tight mb-8">
                    Roleplay <br/>
                    <span className="italic text-[#d4af37]">Interactiva</span>
                 </h2>
                 <p className="text-white/50 text-xl font-medium leading-relaxed mb-10">
                   Simula entornos laborales reales. La IA actúa como cliente, jefe o colega, permitiendo a los alumnos de FP Básica y Grados practicar habilidades blandas y técnicas en un entorno seguro y evaluable.
                 </p>
-                <Link to="/academy/contacto" className="inline-flex items-center gap-3 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
+                <Link to={getAcademyPath('/contacto')} className="inline-flex items-center gap-3 text-[#d4af37] font-black uppercase tracking-widest text-[11px] group">
                   Solicitar demo <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Link>
               </div>
@@ -159,7 +160,7 @@ const AcademyFP = () => {
              <div className="absolute top-0 right-0 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-[100px] -translate-y-20 translate-x-20" />
              
              <div className="relative z-10">
-                <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter mb-10 uppercase text-center">
+                <h2 className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tighter mb-10 uppercase text-center">
                    TU CENTRO, <br/>
                    <span className="italic text-[#d4af37]">EVALUADO AL DETALLE</span>
                 </h2>
@@ -179,7 +180,7 @@ const AcademyFP = () => {
                    ))}
                 </div>
                 <div className="text-center mt-20">
-                   <Link to="/academy/contacto" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:scale-105 transition-all shadow-xl shadow-[#d4af37]/20">
+                   <Link to={getAcademyPath('/contacto')} className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:scale-105 transition-all shadow-xl shadow-[#d4af37]/20">
                       Digitalizar mi Centro FP <ArrowRight className="w-4 h-4" />
                    </Link>
                 </div>

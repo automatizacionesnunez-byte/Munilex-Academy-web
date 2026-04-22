@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Send, ArrowRight, MessageSquare, CheckCircle, RefreshCcw, AlertCircle } from 'lucide-react';
+import { submitContactForm } from '../../services/contactService';
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -16,29 +17,17 @@ const Contacto = () => {
     e.preventDefault();
     setStatus('sending');
 
-    try {
-      // Configuración de Formspree - Enviando a administracion@munilex.es
-      const response = await fetch('https://formspree.io/f/mqakvjge', { // Reutilizando el mismo para pruebas, el usuario puede cambiarlo
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          _subject: `Nuevo contacto MUNILEX: ${formData.subject}`,
-          nombre: formData.name,
-          email: formData.email,
-          asunto: formData.subject,
-          mensaje: formData.message
-        })
-      });
+    const success = await submitContactForm({
+      nombre: formData.name,
+      email: formData.email,
+      asunto: formData.subject,
+      mensaje: formData.message,
+      vertical: 'Corporate'
+    });
 
-      if (response.ok) {
-        setStatus('success');
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error(error);
+    if (success) {
+      setStatus('success');
+    } else {
       setStatus('error');
     }
   };
@@ -100,11 +89,30 @@ const Contacto = () => {
                </div>
 
                <div className="flex items-start gap-6 group">
+                  <div className="w-16 h-16 bg-white rounded-2xl shadow-lg border border-primary/5 flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform">
+                     <MessageSquare className="w-8 h-8" />
+                  </div>
+                  <div>
+                     <h4 className="font-black text-secondary text-xl tracking-tight mb-1">Francisco de Paula Marín</h4>
+                     <a 
+                        href="https://wa.me/34649490580" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-lg font-bold text-primary-container hover:underline flex items-center gap-2"
+                     >
+                        +34 649 49 05 80
+                        <ArrowRight className="w-4 h-4" />
+                     </a>
+                     <p className="text-sm font-medium opacity-50 uppercase tracking-widest mt-1">CMO / Jefe de Dirección</p>
+                  </div>
+               </div>
+
+               <div className="flex items-start gap-6 group">
                   <div className="w-16 h-16 bg-white rounded-2xl shadow-lg border border-primary/5 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                      <MessageSquare className="w-8 h-8" />
                   </div>
                   <div>
-                     <h4 className="font-black text-secondary text-xl tracking-tight mb-1">WhatsApp Directo</h4>
+                     <h4 className="font-black text-secondary text-xl tracking-tight mb-1">José María Núñez Mejía</h4>
                      <a 
                         href="https://wa.me/34605392912" 
                         target="_blank" 
@@ -114,7 +122,7 @@ const Contacto = () => {
                         +34 605 39 29 12
                         <ArrowRight className="w-4 h-4" />
                      </a>
-                     <p className="text-sm font-medium opacity-50 uppercase tracking-widest mt-1">Conexión encriptada</p>
+                     <p className="text-sm font-medium opacity-50 uppercase tracking-widest mt-1">CTO / Director Técnico</p>
                   </div>
                </div>
             </div>

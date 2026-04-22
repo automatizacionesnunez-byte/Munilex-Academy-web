@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Building2, Rocket, ArrowRight, CheckCircle, Globe, Heart, Cog, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getAcademyPath } from '../../config/domainConfig';
 
 const AcademyCorporate = () => {
   return (
@@ -27,7 +28,7 @@ const AcademyCorporate = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter mb-10 uppercase"
+            className="text-4xl md:text-6xl font-black text-white leading-[0.85] tracking-tighter mb-10 uppercase"
           >
             TU MARCA, NUESTRA <br/>
             <span className="italic text-[#d4af37]">TECNOLOGÍA</span>
@@ -90,7 +91,7 @@ const AcademyCorporate = () => {
                 </div>
               </div>
 
-              <Link to="/academy/contacto" className="w-full py-6 bg-white/5 hover:bg-white/10 text-white font-black rounded-2xl text-center uppercase tracking-widest transition-all border border-white/10 mt-auto">
+              <Link to={getAcademyPath('/contacto')} className="w-full py-6 bg-white/5 hover:bg-white/10 text-white font-black rounded-2xl text-center uppercase tracking-widest transition-all border border-white/10 mt-auto">
                 Consultar Inicio
               </Link>
             </motion.div>
@@ -145,7 +146,7 @@ const AcademyCorporate = () => {
                 </div>
               </div>
 
-              <Link to="/academy/contacto" className="w-full py-6 bg-[#d4af37] text-black font-black rounded-2xl text-center uppercase tracking-widest transition-all shadow-xl shadow-[#d4af37]/20 mt-auto">
+              <Link to={getAcademyPath('/contacto')} className="w-full py-6 bg-[#d4af37] text-black font-black rounded-2xl text-center uppercase tracking-widest transition-all shadow-xl shadow-[#d4af37]/20 mt-auto">
                 Configurar Marca
               </Link>
             </motion.div>
@@ -199,7 +200,7 @@ const AcademyCorporate = () => {
                 </div>
               </div>
 
-              <Link to="/academy/contacto" className="w-full py-6 bg-white text-black hover:bg-slate-200 font-black rounded-2xl text-center uppercase tracking-widest transition-all mt-auto">
+              <Link to={getAcademyPath('/contacto')} className="w-full py-6 bg-white text-black hover:bg-slate-200 font-black rounded-2xl text-center uppercase tracking-widest transition-all mt-auto">
                 Consultar Proyecto
               </Link>
             </motion.div>
@@ -213,7 +214,7 @@ const AcademyCorporate = () => {
           <div className="grid lg:grid-cols-2 gap-24 items-center">
             <div>
               <div className="text-[#d4af37] font-black uppercase tracking-[0.4em] text-[10px] mb-8 block">Excelencia Tecnológica</div>
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter mb-12 uppercase">
+              <h2 className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tighter mb-12 uppercase">
                 INFRAESTRUCTURA <br/>
                 <span className="italic text-[#d4af37]">SIN LIMITES</span>
               </h2>
@@ -221,7 +222,7 @@ const AcademyCorporate = () => {
               <div className="space-y-10">
                 {[
                   { t: "Escalabilidad Automática", d: "Soportamos desde 10 hasta 10.000 alumnos sin degradación de rendimiento.", icon: <Cog /> },
-                  { t: "Seguridad Bancaria", d: "Encriptación de grado militar para proteger tus contenidos y datos de alumnos.", icon: <Shield /> },
+                  { t: "Seguridad y Cumplimiento", d: "Plataforma alineada con el EU AI Act, Esquema Nacional de Seguridad (ENS) y normativa de Protección de Datos.", icon: <Shield /> },
                   { t: "Soporte 1:1", d: "Un gestor técnico dedicado para asegurar que tu transición digital sea perfecta.", icon: <CheckCircle /> }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6">
@@ -236,7 +237,7 @@ const AcademyCorporate = () => {
                 ))}
               </div>
 
-              <Link to="/academy/contacto" className="inline-flex items-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl mt-16 hover:scale-105 transition-all">
+              <Link to={getAcademyPath('/contacto')} className="inline-flex items-center gap-3 px-10 py-5 bg-[#d4af37] text-black font-black uppercase tracking-widest text-[11px] rounded-xl mt-16 hover:scale-105 transition-all">
                 Solicitar auditoría gratuita
                 <ArrowRight className="w-4 h-4" />
               </Link>

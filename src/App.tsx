@@ -27,6 +27,7 @@ import Terminos from './pages/munilex/Terminos';
 import Contacto from './pages/munilex/Contacto';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect } from 'react';
+import { isAcademyDomain } from './config/domainConfig';
 
 // Theme controller to switch themes based on route
 const ThemeController = () => {
@@ -34,7 +35,8 @@ const ThemeController = () => {
   const { setMode } = useTheme();
 
   useEffect(() => {
-    if (pathname.startsWith('/academy')) {
+    const isAcademy = isAcademyDomain();
+    if (isAcademy || pathname.startsWith('/academy')) {
       setMode('academy');
     } else {
       setMode('corporate');
@@ -56,7 +58,7 @@ const ScrollToTop = () => {
 // Site Layout Manager
 const SiteLayout = ({ children, scaleX }: { children: React.ReactNode, scaleX: any }) => {
   const { pathname } = useLocation();
-  const isAcademy = pathname.startsWith('/academy');
+  const isAcademy = isAcademyDomain() || pathname.startsWith('/academy');
 
   return (
     <div className="min-h-screen bg-surface">
@@ -70,10 +72,19 @@ const SiteLayout = ({ children, scaleX }: { children: React.ReactNode, scaleX: a
       <main>
         {children}
       </main>
-
+  
       {isAcademy ? <AcademyFooter /> : <Footer />}
     </div>
   );
+};
+
+// Domain-aware routing component
+const AcademyRedirect = () => {
+  const isAcademy = isAcademyDomain();
+  if (isAcademy) {
+    return <Academy />;
+  }
+  return <Home />;
 };
 
 function App() {
@@ -84,6 +95,9 @@ function App() {
     restDelta: 0.001
   });
 
+  const isAcademy = isAcademyDomain();
+  const forcedMode = import.meta.env.VITE_SITE_MODE;
+
   return (
     <HelmetProvider>
       <Router>
@@ -92,10 +106,21 @@ function App() {
           <ScrollToTop />
           <SiteLayout scaleX={scaleX}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/funcionarios" element={<Funcionarios />} />
-              <Route path="/precios" element={<PricingPage />} />
-              <Route path="/sobre-nosotros" element={<About />} />
+              {/* Common / Conditional Home */}
+              <Route path="/" element={<AcademyRedirect />} />
+              
+              {/* Corporate Routes - Only if not forced to academy */}
+              {forcedMode !== 'academy' && !isAcademy && (
+                <>
+                  <Route path="/funcionarios" element={<Funcionarios />} />
+                  <Route path="/precios" element={<PricingPage />} />
+                  <Route path="/sobre-nosotros" element={<About />} />
+                  <Route path="/contacto" element={<Contacto />} />
+                </>
+              )}
+              
+              {/* Academy Routes (as /academy/ prefix or at root if forced/detected) */}
+              <Route path="/academy" element={<Academy />} />
               <Route path="/academy/precios" element={<AcademyPricing />} />
               <Route path="/academy/sobre-nosotros" element={<AcademyAbout />} />
               <Route path="/academy/contacto" element={<AcademyContact />} />
@@ -104,14 +129,33 @@ function App() {
               <Route path="/academy/iipp" element={<AcademyIIPP />} />
               <Route path="/academy/policia" element={<AcademyPolicia />} />
               <Route path="/academy/guardiacivil" element={<AcademyGuardiaCivil />} />
-              <Route path="/academy" element={<Academy />} />
               <Route path="/academy/corporate" element={<AcademyCorporate />} />
               <Route path="/academy/fp" element={<AcademyFP />} />
               <Route path="/academy/oposiciones" element={<Oposiciones />} />
+
+              {/* Flattened Academy Routes for Academy build/domain */}
+              {(forcedMode === 'academy' || isAcademy) && (
+                <>
+                  <Route path="/precios" element={<AcademyPricing />} />
+                  <Route path="/sobre-nosotros" element={<AcademyAbout />} />
+                  <Route path="/contacto" element={<AcademyContact />} />
+                  <Route path="/age" element={<AcademyAge />} />
+                  <Route path="/habilitados" element={<AcademyHabilitados />} />
+                  <Route path="/iipp" element={<AcademyIIPP />} />
+                  <Route path="/policia" element={<AcademyPolicia />} />
+                  <Route path="/guardiacivil" element={<AcademyGuardiaCivil />} />
+                  <Route path="/corporate" element={<AcademyCorporate />} />
+                  <Route path="/fp" element={<AcademyFP />} />
+                  <Route path="/oposiciones" element={<Oposiciones />} />
+                </>
+              )}
+              
               <Route path="/aviso-legal" element={<AvisoLegal />} />
               <Route path="/privacidad" element={<Privacidad />} />
               <Route path="/terminos" element={<Terminos />} />
-              <Route path="/contacto" element={<Contacto />} />
+              
+              {/* Catch-all redirect to root */}
+              <Route path="*" element={<AcademyRedirect />} />
             </Routes>
           </SiteLayout>
         </ThemeProvider>
@@ -120,4 +164,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

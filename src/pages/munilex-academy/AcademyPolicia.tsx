@@ -37,7 +37,7 @@ const AcademyPolicia = () => {
                Escala Básica y Ejecutiva
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
+            <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               TU PLACA <br />
               <span className="italic text-[#d4af37]">CUESTIÓN DE HONOR</span>
             </h1>

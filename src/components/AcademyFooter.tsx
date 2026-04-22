@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getAcademyPath } from '../config/domainConfig';
 
 const AcademyFooter = () => {
   return (
@@ -9,8 +10,8 @@ const AcademyFooter = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 grid grid-cols-1 md:grid-cols-4 gap-16">
         <div className="md:col-span-2">
-          <Link to="/academy" className="text-3xl font-black tracking-tighter mb-8 inline-block text-white">
-            MUNILEX<span className="text-[#d4af37]">ACADEMY</span>
+          <Link to={getAcademyPath('/')} className="text-3xl font-black tracking-tighter mb-8 inline-block text-white whitespace-nowrap">
+            MUNILEX <span className="text-[#d4af37]">ACADEMY</span>
           </Link>
           <p className="text-white/50 text-xl leading-relaxed max-w-sm font-manrope">
             Parte del ecosistema integral Munilex. Metodología táctica e IA para opositores de élite en nuestras verticales de Academy, Corporate y FP.
@@ -30,31 +31,52 @@ const AcademyFooter = () => {
         <div>
           <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-[#d4af37]">Campus</h4>
           <ul className="space-y-4 font-bold text-lg">
-            <li><Link to="/academy" className="text-white/60 hover:text-white transition-colors">Inicio</Link></li>
-            <li><Link to="/academy/precios" className="text-white/60 hover:text-white transition-colors">Planes y Precios</Link></li>
-            <li><Link to="/academy/sobre-nosotros" className="text-white/60 hover:text-white transition-colors">Sobre la Academia</Link></li>
-            <li><Link to="/academy/contacto" className="text-white/60 hover:text-white transition-colors">Contacto Alumnos</Link></li>
+            <li><Link to={getAcademyPath('/')} className="text-white/60 hover:text-white transition-colors">Inicio</Link></li>
+            <li><Link to={getAcademyPath('/precios')} className="text-white/60 hover:text-white transition-colors">Planes y Precios</Link></li>
+            <li><Link to={getAcademyPath('/sobre-nosotros')} className="text-white/60 hover:text-white transition-colors">Sobre la Academia</Link></li>
+            <li><Link to={getAcademyPath('/contacto')} className="text-white/60 hover:text-white transition-colors">Contacto Alumnos</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-[#d4af37]">Oposiciones</h4>
           <ul className="space-y-4 font-bold">
-            <li><Link to="/academy/habilitados" className="text-white/60 hover:text-white transition-colors text-sm">Habilitados Nacionales</Link></li>
-            <li><Link to="/academy/age" className="text-white/60 hover:text-white transition-colors text-sm">Administración AGE</Link></li>
-            <li><Link to="/academy/policia" className="text-white/60 hover:text-white transition-colors text-sm">Policía Nacional</Link></li>
-            <li><Link to="/academy/guardiacivil" className="text-white/60 hover:text-white transition-colors text-sm">Guardia Civil</Link></li>
-            <li><Link to="/academy/iipp" className="text-white/60 hover:text-white transition-colors text-sm">Prisiones (IIPP)</Link></li>
+            <li><Link to={getAcademyPath('/habilitados')} className="text-white/60 hover:text-white transition-colors text-sm">Habilitados Nacionales</Link></li>
+            <li><Link to={getAcademyPath('/age')} className="text-white/60 hover:text-white transition-colors text-sm">Administración AGE</Link></li>
+            <li><Link to={getAcademyPath('/policia')} className="text-white/60 hover:text-white transition-colors text-sm">Policía Nacional</Link></li>
+            <li><Link to={getAcademyPath('/guardiacivil')} className="text-white/60 hover:text-white transition-colors text-sm">Guardia Civil</Link></li>
+            <li><Link to={getAcademyPath('/iipp')} className="text-white/60 hover:text-white transition-colors text-sm">Prisiones (IIPP)</Link></li>
           </ul>
+        </div>
+
+        <div>
+          <h4 className="font-black mb-8 text-xs uppercase tracking-[0.2em] text-[#d4af37]">Contacto</h4>
+          <div className="space-y-6">
+            <div>
+              <p className="text-[#d4af37] text-[10px] font-black uppercase tracking-wider mb-1">CMO / Dirección</p>
+              <p className="text-white font-bold text-sm">Fco. de Paula Marín</p>
+              <p className="text-white/40 text-sm italic">+34 649 49 05 80</p>
+            </div>
+            <div>
+              <p className="text-[#d4af37] text-[10px] font-black uppercase tracking-wider mb-1">CTO / Director Técnico</p>
+              <p className="text-white font-bold text-sm">José María Núñez</p>
+              <p className="text-white/40 text-sm italic">+34 605 39 29 12</p>
+            </div>
+            <div>
+              <a href="mailto:administracion@munilex.es" className="text-white/60 hover:text-[#d4af37] transition-colors text-sm font-bold border-b border-white/10 pb-1">
+                administracion@munilex.es
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 mt-24 pt-12 border-t border-white/10 text-center flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-[13px] text-white/40 font-medium">© 2026 Munilex Academy. El éxito es táctico. Todos los derechos reservados.</p>
         <div className="flex gap-8 text-[13px] font-bold text-white/30">
-          <Link to="/aviso-legal" className="hover:text-white transition-colors">Aviso Legal</Link>
-          <Link to="/privacidad" className="hover:text-white transition-colors">Privacidad</Link>
-          <Link to="/terminos" className="hover:text-white transition-colors">Términos</Link>
+          <Link to={getAcademyPath('/aviso-legal')} className="hover:text-white transition-colors">Aviso Legal</Link>
+          <Link to={getAcademyPath('/privacidad')} className="hover:text-white transition-colors">Privacidad</Link>
+          <Link to={getAcademyPath('/terminos')} className="hover:text-white transition-colors">Términos</Link>
         </div>
       </div>
     </footer>

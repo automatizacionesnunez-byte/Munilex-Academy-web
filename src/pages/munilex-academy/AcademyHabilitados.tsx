@@ -38,7 +38,7 @@ const AcademyHabilitados = () => {
                Subescala de Secretaría e Intervención
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
+            <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               CÓDIGO <br />
               <span className="italic text-[#d4af37]">DE ÉLITE A1</span>
             </h1>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Principal -->
+  <url>
+    <loc>https://munilexacademy.es/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Oposiciones -->
+  <url>
+    <loc>https://munilexacademy.es/oposiciones</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/habilitados</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/age</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/policia</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/guardiacivil</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/iipp</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Institucional -->
+  <url>
+    <loc>https://munilexacademy.es/corporate</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/fp</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- General -->
+  <url>
+    <loc>https://munilexacademy.es/precios</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/sobre-nosotros</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/contacto</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://munilexacademy.es/aviso-legal</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/privacidad</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://munilexacademy.es/terminos</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>

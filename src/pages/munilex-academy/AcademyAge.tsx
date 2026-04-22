@@ -45,7 +45,7 @@ const AcademyAge = () => {
                Administración General del Estado
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
+            <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               EL CEREBRO <br />
               <span className="italic text-[#d4af37]">DEL ESTADO</span>
             </h1>
