@@ -44,6 +44,9 @@
 }
 
 @layer base {
+  html, body {
+    @apply overflow-x-hidden w-full m-0 p-0;
+  }
   body {
     @apply bg-surface text-on-surface font-inter antialiased selection:bg-primary-container selection:text-white;
   }
