@@ -110,7 +110,7 @@ const AcademyAbout = () => {
       {/* Academy Mission Section */}
       <div className="max-w-7xl mx-auto mb-40 px-6 md:px-8">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4">Nuestra Misión <span className="text-[#d4af37]">para Academias</span></h2>
+          <h2 className="text-3xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4">Nuestra Misión para las <span className="text-[#d4af37]">Academias e Instituciones Académicas</span></h2>
           <p className="text-[#E5E2E1]/60 font-medium text-lg italic">Redefiniendo el estándar de preparación institucional.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
