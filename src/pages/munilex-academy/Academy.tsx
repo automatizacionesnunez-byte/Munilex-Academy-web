@@ -35,7 +35,7 @@ const Academy = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-7xl font-black text-white leading-[0.85] tracking-tighter mb-20 uppercase"
+            className="text-4xl md:text-6xl font-black text-white leading-[0.85] tracking-tighter mb-20 uppercase"
           >
             LA REVOLUCIÓN DEL <br/>
             <span className="italic text-[#d4af37]">APRENDIZAJE</span>
@@ -103,7 +103,7 @@ const Academy = () => {
                 >
                   PREPARACIÓN DIRECTA
                 </motion.div>
-                <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+                <h2 className="text-4xl md:text-5xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
                    MUNILEx <br/>
                    <span className="italic text-[#d4af37]">OPOSICIONES</span>
                 </h2>
@@ -148,7 +148,7 @@ const Academy = () => {
                 >
                   SOLUCIONES B2B
                 </motion.div>
-                <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+                <h2 className="text-4xl md:text-5xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
                    MUNILEx <br/>
                    <span className="italic text-[#d4af37]">CORPORATE</span>
                 </h2>
@@ -185,7 +185,7 @@ const Academy = () => {
                 >
                   INSTITUTOS Y CENTROS
                 </motion.div>
-                <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
+                <h2 className="text-4xl md:text-5xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
                    MUNILEx <br/>
                    <span className="italic text-[#d4af37]">FORMACIÓN PROF.</span>
                 </h2>
@@ -258,7 +258,7 @@ const Academy = () => {
       <section className="py-40 bg-[#0E0E0E] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-32">
-            <h2 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
+            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
               ¿Por qué <span className="text-[#d4af37] italic">Munilex Academy?</span>
             </h2>
             <div className="w-24 h-2 bg-[#d4af37] rounded-full mx-auto" />
@@ -292,7 +292,7 @@ const Academy = () => {
         <div className="max-w-5xl mx-auto px-6 md:px-8 text-center">
           <div className="bg-[#1C1B1B] border border-white/5 p-20 rounded-[4rem] relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-[100px]" />
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-10 relative z-10">¿Listo para <span className="text-[#d4af37] italic">tu plaza?</span></h2>
+            <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-10 relative z-10">¿Listo para <span className="text-[#d4af37] italic">tu plaza?</span></h2>
             <Link to={getAcademyPath('/contacto')} className="inline-flex items-center gap-4 px-12 py-6 bg-[#d4af37] text-black font-black rounded-2xl text-xl hover:scale-105 transition-transform relative z-10 shadow-2xl shadow-[#d4af37]/20 uppercase tracking-widest">
               Empezar ahora
               <ArrowRight className="w-7 h-7" />

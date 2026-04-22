@@ -27,7 +27,7 @@ const AcademyPricing = () => {
             <Sparkles className="w-4 h-4 text-[#d4af37] mr-3" />
             <span className="text-[#d4af37] text-[11px] font-black uppercase tracking-[0.2em]">Planes de Alto Rendimiento</span>
           </div>
-          <h1 className="text-3xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter mb-10 uppercase">
+          <h1 className="text-3xl md:text-5xl font-black text-white leading-[0.95] tracking-tighter mb-10 uppercase">
             Invierte en <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f2ca50] to-[#d4af37]">Tu Futura Plaza</span>
           </h1>
