@@ -6,36 +6,19 @@ import { useState } from 'react';
 const AcademyPricing = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
 
-  const handleCheckout = async (priceId: string) => {
-    try {
-      const response = await fetch("https://qclsoabgxbmtaolyzmfz.supabase.co/functions/v1/create-checkout", {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          priceId,
-          registration_type: 'opositor',
-          success_url: `${window.location.origin}/auth/opositores/register?session_id={CHECKOUT_SESSION_ID}`
-        })
-      });
-      const data = await response.json();
-      if (data.url) {
-        window.location.href = data.url;
-      }
-    } catch (error) {
-      console.error("Error creating checkout:", error);
-      window.location.href = "https://munilex.lovable.app/auth/register";
+  const PLANS = {
+    single: {
+      monthly: "https://buy.stripe.com/6oU9ATbvw0GJ32NezSgYU00",
+      annual: "https://buy.stripe.com/3cI9AT7fgexz6eZezSgYU01"
+    },
+    multi: {
+      monthly: "https://buy.stripe.com/14A4gz2Z0ahjavf63mgYU02",
+      annual: "https://buy.stripe.com/14A4cv2Z0757cDn63mgYU03"
     }
   };
 
-  const PLANS = {
-    single: {
-      monthly: "price_1TRZ15HoDmcbhZdZaGNnQvcg",
-      annual: "price_1TRZ16HoDmcbhZdZQKSkqhiS"
-    },
-    multi: {
-      monthly: "price_1TRZ16HoDmcbhZdZ1VEe92kt",
-      annual: "price_1TRZ17HoDmcbhZdZZEsR5I3o"
-    }
+  const handleCheckout = (url: string) => {
+    window.location.href = url;
   };
 
   return (
