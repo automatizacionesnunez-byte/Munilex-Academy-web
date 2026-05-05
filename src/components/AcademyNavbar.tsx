@@ -80,19 +80,19 @@ const AcademyNavbar = () => {
           <Link to="/academy/contacto" className="hidden xl:block text-[10px] font-black uppercase tracking-[0.2em] text-on-surface-variant/60 hover:text-on-surface transition-colors px-4">
             Ayuda
           </Link>
-          <a 
-            href="https://munilex.lovable.app/auth/login" 
+          <Link 
+            to="/auth/login" 
             className="hidden sm:block text-[10px] font-black uppercase tracking-[0.2em] text-on-surface-variant/60 hover:text-on-surface transition-colors px-4"
           >
             Acceso
-          </a>
-          <a 
-            href="https://munilex.lovable.app/auth/register"
+          </Link>
+          <Link 
+            to="/academy/precios"
             className="bg-on-surface text-white px-8 py-3.5 rounded-2xl font-black text-[11px] uppercase tracking-[0.25em] shadow-premium hover:bg-police-gold hover:text-on-surface transition-all text-center flex items-center gap-3 group"
           >
             Matrícula
             <ArrowUpRight className="w-4 h-4 text-police-gold group-hover:text-on-surface transition-colors" />
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

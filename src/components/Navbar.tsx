@@ -80,18 +80,18 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <a 
-            href="https://munilex.lovable.app/auth/login" 
+          <Link 
+            to="/auth/login" 
             className="hidden sm:block text-sm font-bold text-on-surface-variant hover:text-primary transition-colors px-4 py-2"
           >
             Acceso
-          </a>
-          <a 
-            href="https://munilex.lovable.app/auth/register"
+          </Link>
+          <Link 
+            to="/academy/precios"
             className="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm shadow-premium hover:shadow-2xl hover:scale-105 active:scale-95 transition-all text-center"
           >
             Prueba gratis
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
