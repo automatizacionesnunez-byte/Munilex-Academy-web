@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, ShieldCheck, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
+import { CheckCircle, ShieldCheck, TrendingUp, Sparkles, ArrowRight, Gift } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AcademyPricing = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
@@ -72,8 +73,50 @@ const AcademyPricing = () => {
 
       {/* Pricing Cards */}
       <section className="pb-32 px-6 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
+            
+            {/* Plan Gratis */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-[#1C1B1B] border border-[#353534] rounded-[3rem] p-8 flex flex-col hover:border-[#d4af37]/20 transition-all group"
+            >
+              <div className="mb-8">
+                <div className="w-12 h-12 bg-[#2A2A2A] rounded-xl flex items-center justify-center text-[#d4af37] mb-6 group-hover:scale-110 transition-transform">
+                  <Gift className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-black text-white mb-1 uppercase tracking-tight">Plan Gratis</h3>
+                <p className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-[9px] mb-4">Prueba la plataforma</p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-4xl font-black tracking-tighter text-white">0€</span>
+                  <span className="text-[#E5E2E1]/40 font-bold uppercase tracking-widest text-[10px]">/ SIEMPRE</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 mb-10 flex-grow">
+                {[
+                  { text: "5 Consultas IA / día", highlight: true },
+                  { text: "1 Caso Práctico / día", highlight: true },
+                  { text: "2 Test rápidos / día", highlight: true },
+                  { text: "1 Material Generado / día", highlight: false },
+                  { text: "10 Flashcards / día", highlight: false }
+                ].map((feat, i) => (
+                  <li key={i} className="flex gap-3 items-start">
+                    <CheckCircle className={`w-3.5 h-3.5 mt-0.5 flex-shrink-0 ${feat.highlight ? 'text-[#d4af37]' : 'text-white/20'}`} />
+                    <span className={`text-xs font-medium ${feat.highlight ? 'text-white/90' : 'text-white/50'}`}>{feat.text}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <Link 
+                to="/auth/register"
+                className="w-full py-4 bg-transparent border border-[#353534] text-white font-black rounded-xl hover:bg-[#d4af37] hover:text-[#241a00] transition-all text-center flex items-center justify-center gap-2 uppercase tracking-widest text-[10px]"
+              >
+                Registrar Gratis <ArrowRight className="w-3 h-3" />
+              </Link>
+            </motion.div>
             
             {/* Acceso 1 Oposición */}
             <motion.div 
