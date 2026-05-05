@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Brain, Scale, ShieldCheck, Mail, Link as LinkIcon, Globe, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AcademyAbout = () => {
   const founders = [
@@ -29,7 +30,7 @@ const AcademyAbout = () => {
   ];
 
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-[#0E0E0E] text-white font-inter selection:bg-police-gold/20 selection:text-white">
+    <div className="pt-32 pb-24 min-h-screen bg-[#131313] text-white font-inter selection:bg-police-gold/20 selection:text-white">
       <Helmet>
         <title>Sobre Nosotros | Munilex Academy - Liderazgo Jurídico & IA</title>
         <meta name="description" content="Conoce al equipo detrás de Munilex Academy. Liderada por José María Núñez Mejía y Francisco de Paula Marín, fusionamos el derecho con la inteligencia artificial de vanguardia." />
@@ -48,7 +49,7 @@ const AcademyAbout = () => {
           </div>
           <h1 className="text-5xl md:text-8xl lg:text-9xl font-black mb-12 uppercase tracking-tighter leading-[0.85] text-white font-manrope">
             Forjando el <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-police-gold via-yellow-200 to-white italic">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] via-[#f3d06a] to-white italic">
               Futuro
             </span> de la Oposición
           </h1>
@@ -86,7 +87,7 @@ const AcademyAbout = () => {
               transition={{ delay: idx * 0.1 }}
               className="bg-[#1C1B1B] border border-white/5 p-12 rounded-[3.5rem] hover:border-police-gold/40 transition-all group shadow-2xl relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-police-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#d4af37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="text-police-gold mb-10 bg-black/40 w-16 h-16 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform border border-white/5 shadow-inner relative z-10">{item.icon}</div>
               <h3 className="text-2xl font-black mb-4 text-white uppercase tracking-tight font-manrope relative z-10">{item.title}</h3>
               <p className="text-white/40 font-medium leading-relaxed font-inter relative z-10">{item.desc}</p>
@@ -120,14 +121,14 @@ const AcademyAbout = () => {
                     <h3 className="text-3xl md:text-4xl font-black text-white leading-tight mb-4 uppercase tracking-tighter font-manrope">{founder.name}</h3>
                     <p className="text-police-gold font-black text-[11px] uppercase tracking-[.3em] mb-8 font-manrope opacity-80">{founder.role}</p>
                     <div className="flex gap-4">
-                      {founder.social.linkedin && <a href={founder.social.linkedin} className="w-12 h-12 border border-white/10 rounded-2xl flex items-center justify-center text-white/40 hover:text-white hover:bg-white/5 transition-all shadow-lg"><LinkIcon className="w-5 h-5" /></a>}
-                      {founder.social.web && <a href={founder.social.web} className="w-12 h-12 border border-white/10 rounded-2xl flex items-center justify-center text-white/40 hover:text-white hover:bg-white/5 transition-all shadow-lg"><Globe className="w-5 h-5" /></a>}
+                      {founder.social.linkedin && <a href={founder.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 border border-white/10 rounded-2xl flex items-center justify-center text-white/40 hover:text-white hover:bg-white/5 transition-all shadow-lg"><LinkIcon className="w-5 h-5" /></a>}
+                      {founder.social.web && <a href={founder.social.web} target="_blank" rel="noopener noreferrer" className="w-12 h-12 border border-white/10 rounded-2xl flex items-center justify-center text-white/40 hover:text-white hover:bg-white/5 transition-all shadow-lg"><Globe className="w-5 h-5" /></a>}
                       {founder.social.mail && <a href={founder.social.mail} className="w-12 h-12 border border-white/10 rounded-2xl flex items-center justify-center text-white/40 hover:text-white hover:bg-white/5 transition-all shadow-lg"><Mail className="w-5 h-5" /></a>}
                     </div>
                   </div>
                 </div>
 
-                <p className="text-white/50 leading-relaxed font-medium mb-12 flex-grow text-lg font-inter">
+                <p className="text-white/50 leading-relaxed font-medium mb-12 flex-grow text-lg font-inter text-pretty">
                   {founder.description}
                 </p>
 
@@ -151,8 +152,8 @@ const AcademyAbout = () => {
           <h2 className="text-5xl md:text-[6rem] lg:text-[7rem] font-black text-black mb-10 uppercase tracking-tighter leading-[0.85] font-manrope italic">¿Listo para asegurar tu <span className="text-police-gold">plaza</span>?</h2>
           <p className="text-black/60 font-semibold text-xl mb-16 max-w-2xl mx-auto font-inter">Únete a la nueva generación de alumnos que han dejado atrás los métodos de estudio del siglo pasado.</p>
           <div className="flex flex-col sm:flex-row gap-8 justify-center">
-            <a href="/academy/precios" className="px-14 py-7 bg-black text-white font-black rounded-2xl text-[11px] uppercase tracking-[.3em] shadow-2xl hover:scale-105 transition-all font-manrope">Ver Planes</a>
-            <a href="/academy/contacto" className="px-14 py-7 bg-white text-black font-black rounded-2xl text-[11px] border-2 border-black hover:bg-black hover:text-white transition-all uppercase tracking-[.3em] shadow-xl font-manrope">Contactar Equipo</a>
+            <Link to="/academy/precios" className="px-14 py-7 bg-black text-white font-black rounded-2xl text-[11px] uppercase tracking-[.3em] shadow-2xl hover:scale-105 transition-all font-manrope">Ver Planes</Link>
+            <Link to="/academy/contacto" className="px-14 py-7 bg-white text-black font-black rounded-2xl text-[11px] border-2 border-black hover:bg-black hover:text-white transition-all uppercase tracking-[.3em] shadow-xl font-manrope">Contactar Equipo</Link>
           </div>
         </div>
       </div>
